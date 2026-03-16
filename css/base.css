@@ -1,0 +1,127 @@
+/* =========================
+RESET
+========================= */
+
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+/* =========================
+ROOT VARIABLES
+========================= */
+
+:root {
+
+--color-bg: #0f172a;
+--color-bg-soft: #1e293b;
+
+--color-primary: #2563eb;
+--color-secondary: #38bdf8;
+
+--color-text: #f8fafc;
+--color-text-soft: #94a3b8;
+
+--color-border: #334155;
+
+--font-main: 'Inter', sans-serif;
+
+}
+
+/* =========================
+BODY
+========================= */
+
+body {
+
+background: var(--color-bg);
+color: var(--color-text);
+
+font-family: var(--font-main);
+
+line-height: 1.6;
+
+min-height: 100vh;
+
+-webkit-font-smoothing: antialiased;
+
+}
+
+/* =========================
+CONTAINERS
+========================= */
+
+.container {
+
+width: 90%;
+max-width: 1200px;
+margin: auto;
+
+}
+
+/* =========================
+HEADINGS
+========================= */
+
+h1,h2,h3,h4 {
+
+font-weight: 600;
+line-height: 1.2;
+
+}
+
+/* =========================
+LINKS
+========================= */
+
+a {
+
+color: var(--color-primary);
+text-decoration: none;
+
+transition: opacity 0.2s ease;
+
+}
+
+a:hover {
+
+opacity: 0.8;
+
+}
+
+/* =========================
+BUTTONS
+========================= */
+
+button {
+
+cursor: pointer;
+border: none;
+
+font-family: inherit;
+
+}
+
+/* =========================
+IMAGES
+========================= */
+
+img {
+
+max-width: 100%;
+display: block;
+
+}
+
+/* =========================
+SECTIONS
+========================= */
+
+section {
+
+padding: 80px 0;
+
+}

@@ -1,0 +1,91 @@
+/* =========================
+FADE IN
+========================= */
+
+.fade-in {
+
+opacity: 0;
+animation: fadeIn 1s ease forwards;
+
+}
+
+@keyframes fadeIn {
+
+from {
+opacity: 0;
+}
+
+to {
+opacity: 1;
+}
+
+}
+
+/* =========================
+SLIDE UP
+========================= */
+
+.slide-up {
+
+opacity: 0;
+transform: translateY(20px);
+animation: slideUp 0.8s ease forwards;
+
+}
+
+@keyframes slideUp {
+
+to {
+
+opacity: 1;
+transform: translateY(0);
+
+}
+
+}
+
+/* =========================
+HOVER LIFT
+========================= */
+
+.hover-lift {
+
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+}
+
+.hover-lift:hover {
+
+transform: translateY(-4px);
+box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+
+}
+
+/* =========================
+SCROLL REVEAL
+========================= */
+
+.reveal {
+
+opacity: 0;
+transform: translateY(30px);
+transition: all 0.8s ease;
+
+}
+
+.reveal.active {
+
+opacity: 1;
+transform: translateY(0);
+
+}
+
+/* =========================
+TRANSITIONS
+========================= */
+
+.smooth {
+
+transition: all 0.3s ease;
+
+}

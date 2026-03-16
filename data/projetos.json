@@ -1,0 +1,56 @@
+{
+    "vocabulario": [
+        {
+            "ingles": "apple",
+            "portugues": "maçã"
+        },
+        {
+            "ingles": "house",
+            "portugues": "casa"
+        },
+        {
+            "ingles": "book",
+            "portugues": "livro"
+        },
+        {
+            "ingles": "dog",
+            "portugues": "cachorro"
+        }
+    ],
+    "frases": [
+        {
+            "ingles": "Hello, how are you?",
+            "portugues": "Olá, como você está?"
+        },
+        {
+            "ingles": "I am learning English.",
+            "portugues": "Estou aprendendo inglês"
+        },
+        {
+            "ingles": "Where are you from?",
+            "portugues": "De onde você é?"
+        }
+    ],
+    "quiz": [
+        {
+            "pergunta": "Qual é a tradução de 'car'?",
+            "opcoes": [
+                "Casa",
+                "Carro",
+                "Livro",
+                "Mesa"
+            ],
+            "resposta": "Carro"
+        },
+        {
+            "pergunta": "Qual é a tradução de 'dog'?",
+            "opcoes": [
+                "Gato",
+                "Pássaro",
+                "Cachorro",
+                "Peixe"
+            ],
+            "resposta": "Cachorro"
+        }
+    ]
+}

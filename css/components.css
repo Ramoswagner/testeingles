@@ -1,0 +1,195 @@
+/* =========================
+BUTTONS
+========================= */
+
+.btn {
+
+display: inline-block;
+
+padding: 12px 22px;
+
+background: var(--color-primary);
+
+color: white;
+
+border-radius: 8px;
+
+font-size: 0.9rem;
+
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+}
+
+.btn:hover {
+
+transform: translateY(-2px);
+
+box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+
+}
+
+/* =========================
+CARDS
+========================= */
+
+.card {
+
+background: var(--color-bg-soft);
+
+border: 1px solid var(--color-border);
+
+border-radius: 12px;
+
+padding: 24px;
+
+transition: transform 0.2s ease;
+
+}
+
+.card:hover {
+
+transform: translateY(-5px);
+
+}
+
+/* =========================
+GRID
+========================= */
+
+.grid {
+
+display: grid;
+
+gap: 24px;
+
+}
+
+.grid-2 {
+
+grid-template-columns: repeat(2, 1fr);
+
+}
+
+.grid-3 {
+
+grid-template-columns: repeat(3, 1fr);
+
+}
+
+/* =========================
+SECTION TITLE
+========================= */
+
+.section-title {
+
+font-size: 2rem;
+
+margin-bottom: 10px;
+
+}
+
+.section-subtitle {
+
+color: var(--color-text-soft);
+
+margin-bottom: 40px;
+
+}
+
+/* =========================
+BADGES
+========================= */
+
+.badge {
+
+display: inline-block;
+
+padding: 6px 12px;
+
+border-radius: 999px;
+
+background: var(--color-primary);
+
+font-size: 0.75rem;
+
+color: white;
+
+}
+
+
+/* =========================
+SKILLS
+========================= */
+
+.skill {
+
+margin-bottom: 20px;
+
+}
+
+.progress {
+
+width: 100%;
+height: 8px;
+
+background: var(--color-border);
+
+border-radius: 6px;
+
+overflow: hidden;
+
+margin-top: 6px;
+
+}
+
+.progress-bar {
+
+height: 100%;
+
+background: var(--color-primary);
+
+transition: width 1s ease;
+
+}
+
+
+/* =========================
+TABS
+========================= */
+
+.tabs-buttons {
+
+display: flex;
+gap: 10px;
+margin-bottom: 20px;
+
+}
+
+.tab-btn {
+
+padding: 10px 16px;
+border: none;
+background: var(--color-border);
+cursor: pointer;
+border-radius: 6px;
+
+}
+
+.tab-btn.active {
+
+background: var(--color-primary);
+color: white;
+
+}
+
+.tab-content {
+
+display: none;
+
+}
+
+.tab-content.active {
+
+display: block;
+
+}

@@ -1,0 +1,116 @@
+/* =========================
+APP STRUCTURE
+========================= */
+
+#app {
+width: 100%;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+}
+
+/* =========================
+HEADER
+========================= */
+
+header {
+
+width: 100%;
+position: sticky;
+top: 0;
+
+background: rgba(15, 23, 42, 0.9);
+
+backdrop-filter: blur(10px);
+
+border-bottom: 1px solid var(--color-border);
+
+z-index: 100;
+
+}
+
+/* =========================
+NAVIGATION
+========================= */
+
+nav {
+
+width: 90%;
+max-width: 1200px;
+
+margin: auto;
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+height: 70px;
+
+}
+
+.nav-logo {
+
+font-size: 1.2rem;
+font-weight: 600;
+
+}
+
+.nav-menu {
+
+display: flex;
+gap: 30px;
+
+}
+
+.nav-menu a {
+
+font-size: 0.9rem;
+color: var(--color-text-soft);
+
+}
+
+.nav-menu a:hover {
+
+color: var(--color-text);
+
+}
+
+/* =========================
+MAIN
+========================= */
+
+main {
+
+flex: 1;
+
+}
+
+/* =========================
+FOOTER
+========================= */
+
+footer {
+
+border-top: 1px solid var(--color-border);
+
+padding: 40px 0;
+
+text-align: center;
+
+color: var(--color-text-soft);
+
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+.nav-menu {
+
+display: none;
+
+}
+
+}
