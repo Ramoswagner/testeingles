@@ -1,0 +1,116 @@
+{
+  "lbl": "Planning & Schedule",
+  "pt": "Planejamento",
+  "color": "#ec4899",
+  "desc": "Cronogramas, OKRs, KPIs e ferramentas de planejamento estratégico.",
+  "cards": [
+    {
+      "id": "pl01",
+      "term": "roadmap",
+      "ph": "/ˈrəʊdmæp/",
+      "pt": "mapa de rota / plano estratégico",
+      "def": "A high-level visual plan outlining strategic goals, key milestones, and the timeline for achieving them.",
+      "ex": "\"Our 18-month product roadmap aligns engineering capacity with commercial priorities across three verticals.\"",
+      "tip": "Strategic roadmap (macro) vs product roadmap (features/releases). Ferramenta de comunicação com stakeholders."
+    },
+    {
+      "id": "pl02",
+      "term": "OKRs",
+      "ph": "/ˌəʊ keɪ ˈɑːrz/",
+      "pt": "Objetivos e Resultados-Chave",
+      "def": "Objectives and Key Results: a framework pairing qualitative aspirational goals with quantifiable outcomes.",
+      "ex": "\"Q2 OKR — Objective: achieve LATAM market leadership; KRs: 3 enterprise contracts signed, NPS up 40%.\"",
+      "tip": "Google, McKinsey, Intel usam. O = aspiracional. KR = mensurável. Score 0.7 = success. KR ≠ KPI."
+    },
+    {
+      "id": "pl03",
+      "term": "KPIs",
+      "ph": "/ˌkeɪ piː ˈaɪz/",
+      "pt": "indicadores-chave de desempenho",
+      "def": "Key Performance Indicators: quantifiable metrics that evaluate progress toward strategic objectives.",
+      "ex": "\"Our top KPIs — revenue per employee, NPS, and time-to-market — are reviewed at every monthly business review.\"",
+      "tip": "Leading KPIs (preditivos: ex. pipeline) vs lagging KPIs (históricos: ex. revenue). Dashboard saudável tem ambos."
+    },
+    {
+      "id": "pl04",
+      "term": "capacity planning",
+      "ph": "/kəˈpæsɪti ˈplænɪŋ/",
+      "pt": "planejamento de capacidade",
+      "def": "The process of determining required team capacity to meet projected demand within time and budget constraints.",
+      "ex": "\"Capacity planning revealed we were 30% understaffed for the digital transformation workstream in Q3.\"",
+      "tip": "Recursos = pessoas, orçamento, equipamentos, tempo. Erros em capacity planning são a causa #1 de missed deadlines."
+    },
+    {
+      "id": "pl05",
+      "term": "resource allocation",
+      "ph": "/rɪˈzɔːs ˌæləˈkeɪʃən/",
+      "pt": "alocação de recursos",
+      "def": "The process of identifying and assigning available assets to maximize the probability of project success.",
+      "ex": "\"Suboptimal resource allocation was the primary driver of the six-month schedule overrun on the ERP.\"",
+      "tip": "Linked diretamente a capacity planning. Um dos top PM responsibilities. Includes: leveling e re-allocation."
+    },
+    {
+      "id": "pl06",
+      "term": "contingency plan",
+      "ph": "/kənˈtɪndʒənsi plæn/",
+      "pt": "plano de contingência",
+      "def": "A pre-defined backup strategy activated when a risk materializes, enabling a structured response.",
+      "ex": "\"Our contingency plan for the factory shutdown involved activating a secondary supplier contract within 72 hours.\"",
+      "tip": "Contingency = reação ao risco quando ocorre. Mitigation = reduz probabilidade. Dois conceitos distintos no PMBOK."
+    },
+    {
+      "id": "pl07",
+      "term": "Gantt chart",
+      "ph": "/ɡænt tʃɑːt/",
+      "pt": "gráfico de Gantt / cronograma de barras",
+      "def": "A bar chart illustrating a project schedule with tasks, durations, and dependencies visualized over time.",
+      "ex": "\"The Gantt chart revealed three critical tasks scheduled in parallel with insufficient resources.\"",
+      "tip": "Named after Henry Gantt (1910s). MS Project, Smartsheet, Monday usam. Essencial para comunicar cronograma."
+    },
+    {
+      "id": "pl08",
+      "term": "trade-off analysis",
+      "ph": "/treɪd ɒf əˈnælɪsɪs/",
+      "pt": "análise de trade-off",
+      "def": "The evaluation of competing options by weighing costs, benefits, and risks against strategic priorities.",
+      "ex": "\"The trade-off analysis between speed and quality led to a recommendation for a phased launch.\"",
+      "tip": "Central em strategic decision-making. McKinsey usa muito: \"What are we giving up, and is that acceptable?\""
+    },
+    {
+      "id": "pl09",
+      "term": "prioritization",
+      "ph": "/praɪˌɒrɪtaɪˈzeɪʃən/",
+      "pt": "priorização",
+      "def": "The process of ranking competing tasks or goals by value and urgency to direct effort most effectively.",
+      "ex": "\"Without prioritization criteria, the team spread effort across 12 initiatives and completed none satisfactorily.\"",
+      "tip": "Frameworks: MoSCoW, Eisenhower Matrix, ICE Score, RICE. Link prioritization to strategic value and feasibility."
+    },
+    {
+      "id": "pl10",
+      "term": "workstream",
+      "ph": "/ˈwɜːkstriːm/",
+      "pt": "frente de trabalho",
+      "def": "A distinct, semi-independent area of work within a larger project, managed by a dedicated sub-team.",
+      "ex": "\"The transformation had four workstreams: people, process, technology, and governance — each with a named lead.\"",
+      "tip": "Muito comum na McKinsey. Engagements são organizados em workstreams com leads. Sinônimo de \"track\" ou \"pillar\"."
+    },
+    {
+      "id": "pl11",
+      "term": "sprint planning",
+      "ph": "/sprɪnt ˈplænɪŋ/",
+      "pt": "planejamento do sprint",
+      "def": "A Scrum ceremony where the team defines the sprint goal and commits to specific backlog items.",
+      "ex": "\"Sprint planning took longer because acceptance criteria were undefined for three high-priority user stories.\"",
+      "tip": "Sprint Planning → Execution → Review → Retrospective. Regra: 2h de planning por semana de sprint."
+    },
+    {
+      "id": "pl12",
+      "term": "dependencies mapping",
+      "ph": "/dɪˈpendənsiz ˈmæpɪŋ/",
+      "pt": "mapeamento de dependências",
+      "def": "The systematic identification and documentation of relationships between project tasks or workstreams.",
+      "ex": "\"Rigorous dependencies mapping prevented three critical path collisions across workstreams.\"",
+      "tip": "Network diagram (PERT/CPM) é o resultado. Cross-workstream dependencies são as mais arriscadas em large programs."
+    }
+  ]
+}
