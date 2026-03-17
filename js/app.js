@@ -2,7 +2,6 @@
 // app.js — lógica principal com carregamento assíncrono dos JSONs
 // ========================================
 
-// CAT_ICONS permanece no código (são SVGs)
 const CAT_ICONS = {
   engineering: `<path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>`,
   pmgmt: `<rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>`,
@@ -12,10 +11,8 @@ const CAT_ICONS = {
   portfolio: `<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>`
 };
 
-// Variável que receberá os dados das categorias (carregada dos JSONs)
 let CATS = {};
 
-// Estado global
 const S = {
   cat: null,
   idx: 0,
@@ -29,13 +26,8 @@ const S = {
   lastDate: null
 };
 
-// ========================================
-// Carregar todos os JSONs
-// ========================================
 async function loadAllCategories() {
-  const categories = [
-    'engineering', 'pmgmt', 'finance', 'corporate', 'planning', 'portfolio'
-  ];
+  const categories = ['engineering', 'pmgmt', 'finance', 'corporate', 'planning', 'portfolio'];
   try {
     const promises = categories.map(async (cat) => {
       const response = await fetch(`data/${cat}.json`);
@@ -46,29 +38,22 @@ async function loadAllCategories() {
     const results = await Promise.all(promises);
     CATS = Object.assign({}, ...results);
     console.log('Dados carregados:', CATS);
-    initApp(); // Inicializa a aplicação após carregar
+    initApp();
   } catch (error) {
     console.error('Falha ao carregar dados:', error);
     document.body.innerHTML = '<p>Erro ao carregar os cards. Tente novamente mais tarde.</p>';
   }
 }
 
-// ========================================
-// Inicialização da aplicação (depende de CATS)
-// ========================================
 function initApp() {
-  load(); // carrega localStorage
+  load();
   renderHome();
   if (window.speechSynthesis) {
     window.speechSynthesis.getVoices();
     window.speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices();
   }
-  // Outras inicializações...
 }
 
-// ========================================
-// Funções de persistência (load/save)
-// ========================================
 function load() {
   try {
     const d = JSON.parse(localStorage.getItem('lp3') || '{}');
@@ -106,9 +91,6 @@ function markSeen(id) {
   save();
 }
 
-// ========================================
-// Toast
-// ========================================
 function toast(msg, type = '') {
   const t = document.getElementById('toast');
   t.textContent = msg;
@@ -117,9 +99,6 @@ function toast(msg, type = '') {
   t._t = setTimeout(() => t.className = 'toast', 2600);
 }
 
-// ========================================
-// Navegação
-// ========================================
 function showView(v) {
   document.querySelectorAll('.view').forEach(el => el.classList.remove('active'));
   document.querySelectorAll('.nav-btn').forEach(el => el.classList.remove('active'));
@@ -140,9 +119,6 @@ function goHome() {
   showView('home');
 }
 
-// ========================================
-// Áudio (versão simplificada)
-// ========================================
 let _activeBtn = null;
 let _audioEl = null;
 let _spellTmrs = [];
@@ -256,9 +232,6 @@ function spellTerm(term) {
   _spellTmrs.push(done);
 }
 
-// ========================================
-// Funções de renderização (home, study, quiz, progress)
-// ========================================
 function renderHome() {
   updateHdr();
   const progValues = Object.values(S.prog);
@@ -472,9 +445,6 @@ function renderProgress() {
   });
 }
 
-// ========================================
-// Teclado
-// ========================================
 document.addEventListener('keydown', e => {
   const v = document.querySelector('.view.active');
   if (!v || v.id !== 'view-study') return;
@@ -490,7 +460,4 @@ document.addEventListener('keydown', e => {
   }
 });
 
-// ========================================
-// Inicialização: carregar os dados primeiro
-// ========================================
 document.addEventListener('DOMContentLoaded', loadAllCategories);
