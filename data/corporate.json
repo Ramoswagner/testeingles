@@ -1,0 +1,116 @@
+{
+  "lbl": "Corporate English",
+  "pt": "Inglês Corporativo",
+  "color": "#f59e0b",
+  "desc": "Expressões do dia a dia de grandes corporações e consultorias.",
+  "cards": [
+    {
+      "id": "c01",
+      "term": "leverage (verb)",
+      "ph": "/ˈliːvərɪdʒ/",
+      "pt": "alavancar / aproveitar ao máximo",
+      "def": "To use something strategically to achieve maximum advantage from existing resources or capabilities.",
+      "ex": "\"We need to leverage our existing client relationships to accelerate market entry into the Brazilian Northeast.\"",
+      "tip": "Top 5 verbs in consulting. \"Leverage capabilities\", \"leverage synergies\". Aprenda a usá-lo naturalmente em pitch."
+    },
+    {
+      "id": "c02",
+      "term": "alignment",
+      "ph": "/əˈlaɪnmənt/",
+      "pt": "alinhamento",
+      "def": "The state of agreement and shared direction among stakeholders toward common strategic objectives.",
+      "ex": "\"Before we proceed, we need full alignment across the leadership team on the go-forward strategy.\"",
+      "tip": "Mais estratégico que \"agreement\". \"Get alignment\" = processo ativo. Crítico em client engagements."
+    },
+    {
+      "id": "c03",
+      "term": "bandwidth",
+      "ph": "/ˈbændwɪdθ/",
+      "pt": "disponibilidade / capacidade de trabalho",
+      "def": "Informal: the available time or capacity a person or team has to take on additional responsibilities.",
+      "ex": "\"I don't have the bandwidth to lead the Asian market expansion given current project commitments.\"",
+      "tip": "Metáfora de telecom usada figurativamente. Muito comum em consulting e tech. Aceito em C-suite."
+    },
+    {
+      "id": "c04",
+      "term": "deep dive",
+      "ph": "/diːp daɪv/",
+      "pt": "análise aprofundada",
+      "def": "A thorough, detailed examination of a specific topic going beyond surface-level insights.",
+      "ex": "\"Let's schedule a deep dive into the supply chain data before we finalize the client presentation.\"",
+      "tip": "Muito usado na McKinsey. Implica ir além da análise de primeiro nível — busca root causes e insights não óbvios."
+    },
+    {
+      "id": "c05",
+      "term": "circle back",
+      "ph": "/ˈsɜːkəl bæk/",
+      "pt": "retornar ao assunto / acompanhar depois",
+      "def": "To return to a topic at a later time, typically after gathering more information.",
+      "ex": "\"I don't have the numbers right now — let me circle back with you by end of day with the full breakdown.\"",
+      "tip": "Equivale a \"follow up\" com nuance de revisitar algo pendente. Extremamente comum em reuniões corporativas."
+    },
+    {
+      "id": "c06",
+      "term": "action items",
+      "ph": "/ˈækʃən ˈaɪtəmz/",
+      "pt": "pontos de ação / próximos passos",
+      "def": "Specific tasks assigned to named individuals as concrete outcomes of a meeting, with clear owners and deadlines.",
+      "ex": "\"Let's close with action items: Sarah owns the client deck, James drives vendor outreach — both due Friday.\"",
+      "tip": "Essencial em meeting facilitation. Bom PM/consultor fecha reuniões com action items: owner + deadline + output."
+    },
+    {
+      "id": "c07",
+      "term": "value proposition",
+      "ph": "/ˈvæljuː ˌprɒpəˈzɪʃən/",
+      "pt": "proposta de valor",
+      "def": "A statement of the unique benefits and differentiated value a solution delivers to its intended audience.",
+      "ex": "\"Our value proposition centers on speed-to-market combined with a 40% cost reduction vs. the incumbent.\"",
+      "tip": "Fundamental em strategy consulting. Deve responder: Why us? Why now? For whom? At what cost?"
+    },
+    {
+      "id": "c08",
+      "term": "low-hanging fruit",
+      "ph": "/ləʊ ˈhæŋɪŋ fruːt/",
+      "pt": "ganhos rápidos / oportunidades fáceis",
+      "def": "Easily achievable improvements that require minimal effort relative to the value they deliver.",
+      "ex": "\"Before the full restructuring, let's identify the low-hanging fruit — quick wins to build momentum.\"",
+      "tip": "Similar a \"quick win\" mas enfatiza facilidade. Cuidado: overuse pode soar clichê em audiences sofisticadas."
+    },
+    {
+      "id": "c09",
+      "term": "pain points",
+      "ph": "/peɪn pɔɪnts/",
+      "pt": "pontos de dor / problemas críticos",
+      "def": "Specific, recurring problems experienced by clients that a solution aims to address.",
+      "ex": "\"Discovery interviews revealed that compliance reporting is the client's primary pain point, consuming 30% of analyst time.\"",
+      "tip": "Central em problem-solving, product development e sales. Identificar pain points precede qualquer solution design."
+    },
+    {
+      "id": "c10",
+      "term": "buy-in",
+      "ph": "/baɪ ɪn/",
+      "pt": "adesão / comprometimento das partes",
+      "def": "The active support, agreement, and commitment obtained from key stakeholders for a plan or change initiative.",
+      "ex": "\"Securing executive buy-in early eliminated the political obstacles that derailed last year's transformation.\"",
+      "tip": "\"Get buy-in\" = processo de convencer. \"Secure buy-in\" = obter comprometimento formal. Tema central em org change."
+    },
+    {
+      "id": "c11",
+      "term": "go-to-market",
+      "ph": "/ɡəʊ tə ˈmɑːkɪt/",
+      "pt": "estratégia de entrada no mercado",
+      "def": "A strategic plan specifying how an organization will deliver its product to target customers.",
+      "ex": "\"Our go-to-market strategy prioritizes enterprise accounts in three LATAM metros before broader expansion.\"",
+      "tip": "GTM para abreviar. Inclui: target segment, channels, pricing, messaging. Frequente em strategy decks."
+    },
+    {
+      "id": "c12",
+      "term": "best practice",
+      "ph": "/best ˈpræktɪs/",
+      "pt": "melhor prática",
+      "def": "A method that has consistently produced superior results and is recognized as the standard to follow.",
+      "ex": "\"Industry best practices suggest a structured 30/60/90-day integration roadmap for acquisitions at this scale.\"",
+      "tip": "Plural: \"best practices\". Consultores usam para validar recommendations. Peer benchmarking = finding best practices."
+    }
+  ]
+}
