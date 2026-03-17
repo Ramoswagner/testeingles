@@ -11,6 +11,107 @@ const CAT_ICONS = {
   portfolio: `<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>`
 };
 
+// ========================================
+// Áudio premium com Google Cloud TTS
+// ========================================
+const VOICES_PREMIUM = [
+  { id: 'en-US-Wavenet-D', name: 'EUA (Masculino)', lang: 'en-US', flag: '🇺🇸' },
+  { id: 'en-US-Wavenet-E', name: 'EUA (Feminino)', lang: 'en-US', flag: '🇺🇸' },
+  { id: 'en-GB-Wavenet-B', name: 'UK (Masculino)', lang: 'en-GB', flag: '🇬🇧' },
+  { id: 'en-GB-Wavenet-C', name: 'UK (Feminino)', lang: 'en-GB', flag: '🇬🇧' }
+];
+let currentVoice = VOICES_PREMIUM[0];
+let audioCache = {}; // cache: { text+voice: audioUrl }
+
+// Função para obter áudio da Google (requer API key)
+async function fetchGoogleTTS(text, voice) {
+  const key = 'SUA_GOOGLE_API_KEY'; // substitua pela sua chave
+  const url = `https://texttospeech.googleapis.com/v1/text:synthesize?key=${key}`;
+  const body = {
+    input: { text },
+    voice: { languageCode: voice.lang, name: voice.id },
+    audioConfig: { audioEncoding: 'MP3', speakingRate: 1.0 }
+  };
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body)
+  });
+  if (!response.ok) throw new Error('Google TTS failed');
+  const data = await response.json();
+  const audioContent = data.audioContent; // base64
+  return `data:audio/mp3;base64,${audioContent}`;
+}
+
+// speak modificado para usar premium com cache
+async function speak(mode, e) {
+  e?.stopPropagation();
+  const card = CATS[S.cat].cards[S.idx];
+  const btnId = 'pb-' + mode.replace('normal','main');
+  if (_activeBtn === btnId) { stopAudio(); return; }
+  stopAudio();
+
+  if (mode === 'normal' || mode === 'main') {
+    setActiveBtn('pb-main');
+    try {
+      const cacheKey = `${card.term}_${currentVoice.id}`;
+      let audioUrl = audioCache[cacheKey];
+      if (!audioUrl) {
+        audioUrl = await fetchGoogleTTS(card.term, currentVoice);
+        audioCache[cacheKey] = audioUrl;
+        // Salvar cache no localStorage (opcional)
+        try {
+          localStorage.setItem('ttsCache', JSON.stringify(audioCache));
+        } catch (e) {}
+      }
+      const audio = new Audio(audioUrl);
+      _audioEl = audio;
+      audio.play();
+      audio.onended = () => setActiveBtn(null);
+    } catch (err) {
+      console.warn('Google TTS falhou, usando fallback Web Speech', err);
+      wsaSpeak(card.term, currentVoice.lang, 0.9, () => setActiveBtn(null));
+    }
+  } else if (mode === 'slow') {
+    setActiveBtn('pb-slow');
+    try {
+      const cacheKey = `${card.term}_${currentVoice.id}_slow`;
+      let audioUrl = audioCache[cacheKey];
+      if (!audioUrl) {
+        const key = 'SUA_GOOGLE_API_KEY';
+        const url = `https://texttospeech.googleapis.com/v1/text:synthesize?key=${key}`;
+        const body = {
+          input: { text: card.term },
+          voice: { languageCode: currentVoice.lang, name: currentVoice.id },
+          audioConfig: { audioEncoding: 'MP3', speakingRate: 0.6 }
+        };
+        const response = await fetch(url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(body)
+        });
+        const data = await response.json();
+        audioUrl = `data:audio/mp3;base64,${data.audioContent}`;
+        audioCache[cacheKey] = audioUrl;
+      }
+      const audio = new Audio(audioUrl);
+      _audioEl = audio;
+      audio.play();
+      audio.onended = () => setActiveBtn(null);
+    } catch (err) {
+      wsaSpeak(card.term, currentVoice.lang, 0.55, () => setActiveBtn(null));
+    }
+  } else if (mode === 'spell') {
+    spellTerm(card.term);
+  }
+}
+
+// Carregar cache do localStorage ao iniciar
+try {
+  const saved = localStorage.getItem('ttsCache');
+  if (saved) audioCache = JSON.parse(saved);
+} catch (e) {}
+
 let CATS = {};
 
 const S = {
