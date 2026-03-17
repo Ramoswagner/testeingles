@@ -193,3 +193,91 @@ display: none;
 display: block;
 
 }
+
+
+/* =========================
+NOVOS ESTILOS PROFISSIONAIS
+========================= */
+
+.stats-row{
+  display:flex;background:var(--s1);border:1px solid var(--b0);border-radius:var(--r-lg);overflow:hidden;margin:2rem 0
+}
+
+.stat-col{flex:1;padding:1.3rem 1.2rem;text-align:center;border-right:1px solid var(--b0);transition:background .2s;cursor:default}
+
+.stat-n{font-family:var(--font-s);font-size:2rem;font-weight:700;line-height:1}
+
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(295px,1fr));gap:.85rem}
+
+.cat-card{
+  background:var(--s1);border:1px solid var(--b0);border-radius:var(--r-xl);
+  padding:1.4rem 1.5rem;cursor:pointer;
+  transition:transform .28s cubic-bezier(.4,0,.2,1),border-color .28s,box-shadow .28s;
+  position:relative;overflow:hidden
+}
+
+.flashcard{
+  width:100%;aspect-ratio:16/10;position:relative;
+  transform-style:preserve-3d;
+  transition:transform .6s cubic-bezier(.4,0,.2,1);
+  cursor:pointer;user-select:none
+}
+
+.cf{
+  position:absolute;inset:0;
+  backface-visibility:hidden;-webkit-backface-visibility:hidden;
+  border-radius:var(--r-xl);padding:2rem 2.5rem;
+  display:flex;flex-direction:column
+}
+
+.pron-panel{
+  display:flex;flex-direction:column;align-items:center;gap:.65rem;
+  position:relative
+}
+
+.pron-btn{
+  display:flex;align-items:center;gap:.5rem;
+  border-radius:20px;border:1px solid;cursor:pointer;
+  font-family:var(--font-b);font-size:.78rem;font-weight:600;
+  padding:.46rem 1.1rem;transition:all .22s;letter-spacing:.01em;
+  -webkit-tap-highlight-color:transparent;touch-action:manipulation
+}
+
+.conf-row{display:flex;gap:.65rem;max-width:700px;margin:.9rem auto 0}
+
+.btn-conf{
+  flex:1;border-radius:12px;border:1px solid;padding:.65rem .5rem;cursor:pointer;
+  font-family:var(--font-b);display:flex;flex-direction:column;align-items:center;gap:.18rem;transition:all .2s;
+  -webkit-tap-highlight-color:transparent;touch-action:manipulation
+}
+
+.nav-row{display:flex;align-items:center;justify-content:center;gap:.85rem;margin-top:1.1rem}
+
+.btn-nav{
+  width:42px;height:42px;border-radius:50%;background:var(--s1);border:1px solid var(--b0);
+  color:var(--text-md);font-size:.95rem;display:flex;align-items:center;justify-content:center;
+  cursor:pointer;transition:all .2s;flex-shrink:0;-webkit-tap-highlight-color:transparent
+}
+
+.btn-flip{
+  display:flex;align-items:center;gap:.45rem;
+  background:linear-gradient(135deg,var(--blue),var(--violet));
+  border:none;color:#fff;padding:.58rem 1.8rem;border-radius:20px;
+  cursor:pointer;font-family:var(--font-b);font-size:.82rem;font-weight:600;
+  transition:all .22s;letter-spacing:.01em;-webkit-tap-highlight-color:transparent
+}
+
+.mode-tabs{display:flex;gap:.4rem;margin-bottom:1.75rem}
+
+.mode-tab{
+  display:flex;align-items:center;gap:.45rem;
+  background:var(--s1);border:1px solid var(--b0);color:var(--text-md);
+  padding:.48rem 1.2rem;border-radius:9px;cursor:pointer;
+  font-family:var(--font-b);font-size:.81rem;font-weight:500;transition:all .2s
+}
+
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.85rem;margin-bottom:1.3rem}
+
+.kpi{background:var(--s1);border:1px solid var(--b0);border-radius:var(--r-lg);padding:1.35rem}
+
+.mastery-box{background:var(--s1);border:1px solid var(--b0);border-radius:var(--r-lg);padding:1.4rem}

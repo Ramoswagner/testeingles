@@ -26,6 +26,7 @@ async function iniciarAplicacao() {
         "experiencia.html",
         "formacao.html",
         "projetos.html",
+        "progresso.html",
         "contato.html"
     ];
 
@@ -34,6 +35,11 @@ async function iniciarAplicacao() {
         await carregarSecao(secao);
 
     }
+    
+    // Inicializar funcionalidades após carregar todas as seções
+    if (typeof iniciarContadores === 'function') iniciarContadores();
+    if (typeof iniciarTabs === 'function') iniciarTabs();
+    if (typeof iniciarReveal === 'function') iniciarReveal();
 
 }
 
