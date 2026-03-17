@@ -1,123 +1,104 @@
-/* =========================
-FADE IN
-========================= */
+/* ========================================
+   animations.css — keyframes e transições globais
+   ======================================== */
 
-.fade-in {
-
-opacity: 0;
-animation: fadeIn 1s ease forwards;
-
-}
-
-@keyframes fadeIn {
-
-from {
-opacity: 0;
-}
-
-to {
-opacity: 1;
-}
-
-}
-
-/* =========================
-SLIDE UP
-========================= */
-
-.slide-up {
-
-opacity: 0;
-transform: translateY(20px);
-animation: slideUp 0.8s ease forwards;
-
-}
-
-@keyframes slideUp {
-
-to {
-
-opacity: 1;
-transform: translateY(0);
-
-}
-
-}
-
-/* =========================
-HOVER LIFT
-========================= */
-
-.hover-lift {
-
-transition: transform 0.2s ease, box-shadow 0.2s ease;
-
-}
-
-.hover-lift:hover {
-
-transform: translateY(-4px);
-box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-
-}
-
-/* =========================
-SCROLL REVEAL
-========================= */
-
-.reveal {
-
-opacity: 0;
-transform: translateY(30px);
-transition: all 0.8s ease;
-
-}
-
-.reveal.active {
-
-opacity: 1;
-transform: translateY(0);
-
-}
-
-/* =========================
-TRANSITIONS
-========================= */
-
-.smooth {
-
-transition: all 0.3s ease;
-
-}
-
-
-/* =========================
-ANIMAÇÕES PROFISSIONAIS
-========================= */
-
+/* ── FADE UP (para transição de views) ── */
 @keyframes fadeUp {
-from {
-opacity: 0;
-transform: translateY(16px);
-}
-to {
-opacity: 1;
-transform: translateY(0);
-}
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
+/* ── DRIFT DOS ORBS (fundos flutuantes) ── */
 @keyframes drift1 {
-0%,100% { transform: translate(0,0) scale(1); }
-40% { transform: translate(60px,-50px) scale(1.1); }
-70% { transform: translate(-30px,70px) scale(0.9); }
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  40% {
+    transform: translate(60px, -50px) scale(1.1);
+  }
+  70% {
+    transform: translate(-30px, 70px) scale(0.9);
+  }
 }
 
 @keyframes drift2 {
-0%,100% { transform: translate(0,0) scale(1); }
-35% { transform: translate(-50px,40px) scale(1.07); }
-75% { transform: translate(40px,-60px) scale(0.92); }
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  35% {
+    transform: translate(-50px, 40px) scale(1.07);
+  }
+  75% {
+    transform: translate(40px, -60px) scale(0.92);
+  }
 }
 
-.fade-up {
-animation: fadeUp 0.32s ease;
+/* ── WAVEFORM BARS (animação de áudio) ── */
+@keyframes wb {
+  0%, 100% {
+    height: 3px;
+  }
+  50% {
+    height: 18px;
+  }
+}
+
+/* ── PULSE DOS BOTÕES DE ÁUDIO ───────── */
+@keyframes btn-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 currentColor;
+  }
+  50% {
+    box-shadow: 0 0 0 6px transparent;
+  }
+}
+
+/* ── ROTAÇÃO DO ÍCONE DO PAINEL DE VOZ ── */
+.voice-pill svg {
+  transition: transform 0.2s ease;
+}
+
+.voice-pill.open svg {
+  transform: rotate(180deg);
+}
+
+/* ── TRANSIÇÕES SUAVES PARA HOVER E FOCUS ── */
+.cat-card,
+.nav-btn,
+.mode-tab,
+.pron-btn,
+.btn-conf,
+.btn-nav,
+.btn-flip,
+.btn-back,
+.q-opt,
+.voice-pill,
+.vc {
+  transition: all 0.2s ease;
+}
+
+/* ── ESCALA PARA O DESTAQUE DO SPELL ─── */
+.sl.lit {
+  transform: scale(1.15);
+}
+
+/* ── ANIMAÇÃO DE APARIÇÃO DO TOAST ───── */
+.toast {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── ANIMAÇÃO DE APARIÇÃO DO PAINEL DE VOZ ── */
+.voice-panel {
+  transition: opacity 0.22s, transform 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── FLIPCARD ─────────────────────────── */
+.flashcard {
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
