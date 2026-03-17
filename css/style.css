@@ -153,6 +153,25 @@
   50% { box-shadow: 0 0 0 6px rgba(59,130,246,0.3); }
 }
 
+.charts-container {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: var(--s1);
+  border-radius: var(--r-lg);
+  border: 1px solid var(--b0);
+}
+.charts-container h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+.chart-wrapper {
+  position: relative;
+  height: 200px;
+  margin-bottom: 2rem;
+}
+
 /* ----- Scrollbar personalizada ----- */
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: var(--s2); }
