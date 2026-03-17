@@ -1,0 +1,116 @@
+{
+  "lbl": "Finance",
+  "pt": "Financeiro",
+  "color": "#10b981",
+  "desc": "KPIs financeiros, análise de investimentos e linguagem de P&L.",
+  "cards": [
+    {
+      "id": "f01",
+      "term": "EBITDA",
+      "ph": "/iːˈbɪtdə/",
+      "pt": "LAJIDA (Lucro antes de juros, impostos, depreciação e amortização)",
+      "def": "Earnings Before Interest, Taxes, Depreciation and Amortization — a proxy for operational cash profitability.",
+      "ex": "The acquisition target had a robust EBITDA margin of 28%, making it attractive despite elevated debt levels.",
+      "tip": "Pronuncia: \"ee-BIT-dah\". EBITDA margin = EBITDA ÷ Revenue. McKinsey usa como proxy de geração de caixa operacional."
+    },
+    {
+      "id": "f02",
+      "term": "NPV",
+      "ph": "/ˌen piː ˈviː/",
+      "pt": "VPL — Valor Presente Líquido",
+      "def": "Net Present Value: the difference between the present value of cash inflows and outflows over a project's life.",
+      "ex": "The NPV analysis confirmed the $40M investment would yield a positive return of $18M over five years.",
+      "tip": "NPV > 0 = cria valor. Fórmula: Σ(CFₜ/(1+r)ᵗ) − C₀. Taxa de desconto usada: WACC da empresa."
+    },
+    {
+      "id": "f03",
+      "term": "burn rate",
+      "ph": "/bɜːn reɪt/",
+      "pt": "taxa de consumo de caixa",
+      "def": "The rate at which an organization consumes available cash, typically expressed as a monthly figure.",
+      "ex": "With a $500K monthly burn rate and $2M in reserves, the startup had a four-month runway.",
+      "tip": "Runway = caixa disponível ÷ burn rate. Crítico em startups e projetos com capital limitado."
+    },
+    {
+      "id": "f04",
+      "term": "ROI",
+      "ph": "/ˌɑːr əʊ ˈaɪ/",
+      "pt": "retorno sobre investimento",
+      "def": "Return on Investment: a ratio evaluating the efficiency of an investment relative to its cost.",
+      "ex": "The digital transformation delivered an ROI of 340% over three years, far exceeding the 150% target.",
+      "tip": "Fórmula: (Ganho − Custo) ÷ Custo. Simples mas poderoso em executive presentations e business cases."
+    },
+    {
+      "id": "f05",
+      "term": "CAPEX",
+      "ph": "/ˈkæpeks/",
+      "pt": "despesas de capital",
+      "def": "Capital Expenditures: funds used to acquire, upgrade, or maintain long-term physical or intangible assets.",
+      "ex": "The factory expansion required $12M in CAPEX, subject to board approval at the investment committee.",
+      "tip": "CAPEX → ativo no balanço, depreciado ao longo do tempo. OPEX → despesa no P&L corrente."
+    },
+    {
+      "id": "f06",
+      "term": "OPEX",
+      "ph": "/ˈɒpeks/",
+      "pt": "despesas operacionais",
+      "def": "Operating Expenditures: the ongoing costs required to run a business or project day-to-day.",
+      "ex": "Migrating to cloud shifted substantial CAPEX to predictable OPEX, improving cash flow visibility.",
+      "tip": "Cloud migration é o exemplo clássico de CAPEX→OPEX shift. OPEX aparece no P&L como despesa do período corrente."
+    },
+    {
+      "id": "f07",
+      "term": "cash flow",
+      "ph": "/kæʃ fləʊ/",
+      "pt": "fluxo de caixa",
+      "def": "The net movement of cash and cash equivalents into and out of a business over a specific period.",
+      "ex": "Despite strong revenues, poor cash flow management led the profitable firm to miss payroll cycles.",
+      "tip": "Revenue ≠ Cash Flow. Empresas lucrativas podem ir à falência por caixa insuficiente."
+    },
+    {
+      "id": "f08",
+      "term": "cost-benefit analysis",
+      "ph": "/kɒst ˈbenɪfɪt əˈnælɪsɪs/",
+      "pt": "análise de custo-benefício",
+      "def": "A systematic comparison of all costs and expected benefits to determine whether an option is worthwhile.",
+      "ex": "The cost-benefit analysis justified the $2M upgrade by projecting $7M in annual savings over four years.",
+      "tip": "Ferramenta decisiva em business cases. Inclui tangible e intangible benefits. Sensitivity analysis complementa."
+    },
+    {
+      "id": "f09",
+      "term": "budget variance",
+      "ph": "/ˈbʌdʒɪt ˈveəriəns/",
+      "pt": "variação orçamentária",
+      "def": "The difference between budgeted and actual amounts, indicating over- or underspending.",
+      "ex": "A 12% unfavorable budget variance in Q3 triggered an urgent review of procurement practices.",
+      "tip": "Favorable = abaixo do orçado (bom). Unfavorable/Adverse = acima do orçado. Distinção importante em reporting."
+    },
+    {
+      "id": "f10",
+      "term": "leverage",
+      "ph": "/ˈliːvərɪdʒ/",
+      "pt": "alavancagem financeira",
+      "def": "The use of debt or borrowed capital to amplify potential investment returns, also magnifying losses.",
+      "ex": "The PE firm leveraged the acquisition at 5x EBITDA, expecting improvements to service the debt load.",
+      "tip": "Financial leverage = dívida/equity. Operating leverage = custos fixos vs variáveis. Ambos amplificam resultados."
+    },
+    {
+      "id": "f11",
+      "term": "amortization",
+      "ph": "/əˌmɔːtɪˈzeɪʃən/",
+      "pt": "amortização",
+      "def": "The gradual reduction of an intangible asset's value or debt balance over time through scheduled charges.",
+      "ex": "The $6M software license was amortized over five years, smoothing the cost impact across operating periods.",
+      "tip": "Amortization = intangíveis (patentes, software, goodwill). Depreciation = ativos tangíveis. Confusão comum."
+    },
+    {
+      "id": "f12",
+      "term": "forecast",
+      "ph": "/ˈfɔːkɑːst/",
+      "pt": "previsão financeira",
+      "def": "A dynamic projection of future financial performance based on current data, trends, and updated assumptions.",
+      "ex": "The revised Q3 forecast showed a 15% revenue shortfall, prompting targeted cost mitigation measures.",
+      "tip": "Budget (plano fixo, anual) ≠ Forecast (projeção dinâmica, revisada). Rolling forecast = best practice em FP&A."
+    }
+  ]
+}
