@@ -2,7 +2,7 @@
 // app.js — LexiPro versão otimizada para mobile
 // ========================================
 
-// ----- CAT_ICONS (mesmos) -----
+// ----- CAT_ICONS -----
 const CAT_ICONS = {
   engineering: `<path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>`,
   pmgmt: `<rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>`,
@@ -37,6 +37,7 @@ const ACHIEVEMENTS = [
   { id: 'streak_30', name: 'Inabalável', desc: 'Estude 30 dias seguidos', icon: '⚡', condition: s => s.streak >= 30 },
   { id: 'quiz_50', name: 'Mestre do Quiz', desc: 'Acerta 50 questões', icon: '🧠', condition: s => Object.values(s.prog).reduce((acc, p) => acc + (p.qc || 0), 0) >= 50 }
 ];
+
 let unlockedAchievements = [];
 
 function checkAchievements() {
@@ -76,7 +77,7 @@ async function loadAllCategories() {
     initApp();
   } catch (error) {
     console.error('Falha ao carregar dados:', error);
-    document.body.innerHTML = '<p>Erro ao carregar os cards. Tente novamente mais tarde.</p>';
+    document.body.innerHTML = '<h1>Erro ao carregar os cards. Tente novamente mais tarde.</h1>';
   }
 }
 
@@ -154,7 +155,7 @@ function goHome() {
   showView('home');
 }
 
-// ----- Áudio simplificado: apenas Web Speech API (rápido e funciona offline) -----
+// ----- Áudio simplificado: apenas Web Speech API -----
 let _activeBtn = null;
 let _spellTmrs = [];
 
@@ -200,7 +201,6 @@ function speak(mode, e) {
   const btnId = 'pb-' + (mode === 'normal' ? 'main' : mode);
   if (_activeBtn === btnId) { stopAudio(); return; }
   stopAudio();
-
   if (mode === 'normal' || mode === 'main') {
     setActiveBtn('pb-main');
     utter(card.term, 1.0, () => setActiveBtn(null));
@@ -225,7 +225,7 @@ function utter(text, rate, onEnd) {
 
 function spellTerm(term) {
   setActiveBtn('pb-spell');
-  const letters = term.replace(/[^a-zA-Z\- ]/g, '').split('');
+  const letters = term.replace(/[^a-zA-Z- ]/g, '').split('');
   const sd = document.getElementById('spell-display');
   if (!sd) return;
   sd.innerHTML = '';
@@ -243,10 +243,8 @@ function spellTerm(term) {
     tiles.push({ el, ch, isChar: ch !== ' ' && ch !== '-' });
   });
   sd.classList.add('on');
-
   let delay = 0;
   const charDelay = 400;
-
   tiles.forEach((t) => {
     if (!t.isChar) return;
     const tmr = setTimeout(() => {
@@ -257,7 +255,6 @@ function spellTerm(term) {
     _spellTmrs.push(tmr);
     delay += charDelay;
   });
-
   const done = setTimeout(() => {
     tiles.forEach(t => { if (t.isChar) { t.el.classList.remove('lit'); t.el.classList.add('done'); } });
     setActiveBtn(null);
@@ -294,7 +291,9 @@ function renderHome() {
     card.onclick = () => openCat(key);
     card.innerHTML = `
       <div class="cc-top">
-        <div class="cc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${CAT_ICONS[key]}</svg></div>
+        <div class="cc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${CAT_ICONS[key]}</svg>
+        </div>
         <div>
           <div class="cc-cnt">${seen}/${total} estudados</div>
           <div class="cc-pct">${percent}%</div>
@@ -302,7 +301,9 @@ function renderHome() {
       </div>
       <div class="cc-name">${cat.lbl}</div>
       <div class="cc-desc">${cat.desc}</div>
-      <div class="cc-bar"><div class="cc-fill" style="width:${percent}%; background:${cat.color}"></div></div>
+      <div class="cc-bar">
+        <div class="cc-fill" style="width:${percent}%; background:${cat.color}"></div>
+      </div>
     `;
     grid.appendChild(card);
   });
@@ -475,11 +476,7 @@ function renderProgress() {
       const unlocked = unlockedAchievements.includes(ach.id);
       const card = document.createElement('div');
       card.className = `achievement-card ${unlocked ? '' : 'locked'}`;
-      card.innerHTML = `
-        <div class="achievement-icon">${ach.icon}</div>
-        <div class="achievement-name">${ach.name}</div>
-        <div class="achievement-desc">${ach.desc}</div>
-      `;
+      card.innerHTML = `<div class="achievement-icon">${ach.icon}</div><div class="achievement-name">${ach.name}</div><div class="achievement-desc">${ach.desc}</div>`;
       achGrid.appendChild(card);
     });
   }
@@ -494,29 +491,27 @@ function renderProgress() {
     masteryRows.innerHTML += `
       <div class="m-row">
         <div class="m-cat">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${CAT_ICONS[key]}</svg>
-          ${cat.pt}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${CAT_ICONS[key]}</svg> ${cat.pt}
         </div>
-        <div class="m-bg"><div class="m-fill" style="width:${percent}%; background:${cat.color}"></div></div>
+        <div class="m-bg">
+          <div class="m-fill" style="width:${percent}%; background:${cat.color}"></div>
+        </div>
         <div class="m-pct" style="color:${cat.color}">${percent}%</div>
       </div>
     `;
   });
-
   renderCharts();
 }
 
 function renderCharts() {
   const ctxDaily = document.getElementById('chart-daily');
   if (ctxDaily) {
-    // Simular dados dos últimos 7 dias (idealmente viriam do histórico real)
     const labels = [];
     const data = [];
     for (let i = 6; i >= 0; i--) {
       const d = new Date();
       d.setDate(d.getDate() - i);
       labels.push(d.toLocaleDateString('pt-BR', { weekday: 'short' }));
-      // Mock: se quiser dados reais, precisa armazenar histórico de estudos
       data.push(Math.floor(Math.random() * 8) + 1);
     }
     new Chart(ctxDaily, {
