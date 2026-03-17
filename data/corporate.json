@@ -111,6 +111,642 @@
       "def": "A method that has consistently produced superior results and is recognized as the standard to follow.",
       "ex": "\"Industry best practices suggest a structured 30/60/90-day integration roadmap for acquisitions at this scale.\"",
       "tip": "Plural: \"best practices\". Consultores usam para validar recommendations. Peer benchmarking = finding best practices."
-    }
+    },
+    {
+  "lbl": "Corporate English",
+  "pt": "Inglês Corporativo",
+  "color": "#f59e0b",
+  "desc": "Expressões, verbos e substantivos essenciais para o dia a dia em consultorias e multinacionais. Selecionados para comunicação real em reuniões, e-mails e apresentações.",
+  "cards": [
+    {
+      "id": "c13",
+      "term": "touch base",
+      "ph": "/tʌtʃ beɪs/",
+      "pt": "entrar em contato / alinhar rapidamente",
+      "def": "To make contact or have a brief conversation with someone to update them or get their input.",
+      "ex": "\"Let's touch base next week to see how the client presentation is coming along.\"",
+      "tip": "Muito usado em e-mails e conversas informais. Não é um verbo formal, mas extremamente comum."
+    },
+    {
+      "id": "c14",
+      "term": "get up to speed",
+      "ph": "/ɡet ʌp tə spiːd/",
+      "pt": "atualizar-se / colocar-se a par",
+      "def": "To become informed about the latest developments or status of a project or situation.",
+      "ex": "\"I just joined the team, can you get me up to speed on the client's main concerns?\"",
+      "tip": "Perfeito para quando você entra em um projeto novo. Mostra proatividade."
+    },
+    {
+      "id": "c15",
+      "term": "reach out",
+      "ph": "/riːtʃ aʊt/",
+      "pt": "contatar / procurar (alguém)",
+      "def": "To contact someone, especially to ask for help or to offer something.",
+      "ex": "\"I'll reach out to the IT department to get the access credentials.\"",
+      "tip": "Substituto moderno para 'contact'. Soa mais acessível e colaborativo."
+    },
+    {
+      "id": "c16",
+      "term": "keep someone in the loop",
+      "ph": "/kiːp ˈsʌmwʌn ɪn ðə luːp/",
+      "pt": "manter alguém informado / atualizado",
+      "def": "To ensure someone is informed about progress and developments.",
+      "ex": "\"Please keep the regional director in the loop as we negotiate the contract.\"",
+      "tip": "Essencial em gestão de stakeholders. Evita surpresas desagradáveis."
+    },
+    {
+      "id": "c17",
+      "term": "get the ball rolling",
+      "ph": "/ɡet ðə bɔːl ˈrəʊlɪŋ/",
+      "pt": "dar início / começar (um processo)",
+      "def": "To start an activity or process, often to avoid delay.",
+      "ex": "\"We have the green light, so let's get the ball rolling on the market analysis.\"",
+      "tip": "Expressão idiomática que transmite senso de urgência e ação."
+    },
+    {
+      "id": "c18",
+      "term": "table something",
+      "ph": "/ˈteɪbəl ˈsʌmθɪŋ/",
+      "pt": "adiar / deixar para depois (US) | colocar em pauta (UK)",
+      "def": "US: to postpone discussion of a topic. UK: to bring a topic forward for discussion.",
+      "ex": "US: \"Let's table that idea until we have more data.\" UK: \"We need to table the budget proposal at the next meeting.\"",
+      "tip": "Cuidado: significado oposto nos EUA e Reino Unido. No Brasil, use o sentido americano (adiar) ou especifique."
+    },
+    {
+      "id": "c19",
+      "term": "flag something",
+      "ph": "/flæɡ ˈsʌmθɪŋ/",
+      "pt": "sinalizar / alertar sobre algo",
+      "def": "To mark something as important or needing attention, often a problem or risk.",
+      "ex": "\"I'd like to flag a potential delay in the supplier delivery.\"",
+      "tip": "Comum em e-mails e reuniões para levantar preocupações sem soar alarmista."
+    },
+    {
+      "id": "c20",
+      "term": "drill down",
+      "ph": "/drɪl daʊn/",
+      "pt": "aprofundar-se / detalhar",
+      "def": "To examine or investigate something in greater detail.",
+      "ex": "\"The EBITDA margin is below target; we need to drill down into the cost components.\"",
+      "tip": "Sinônimo de 'deep dive'. Muito usado em análise de dados e relatórios."
+    },
+    {
+      "id": "c21",
+      "term": "game plan",
+      "ph": "/ɡeɪm plæn/",
+      "pt": "estratégia / plano de ação",
+      "def": "A detailed plan for achieving success, especially in a competitive situation.",
+      "ex": "\"What's the game plan for the client meeting tomorrow? Who's presenting what?\"",
+      "tip": "Mais informal que 'strategy'. Passa a ideia de tática prática."
+    },
+    {
+      "id": "c22",
+      "term": "run something by someone",
+      "ph": "/rʌn ˈsʌmθɪŋ baɪ ˈsʌmwʌn/",
+      "pt": "consultar / pedir opinião de alguém",
+      "def": "To show or explain something to someone to get their opinion or approval.",
+      "ex": "\"I have a draft of the proposal; let me run it by you before I send it to the client.\"",
+      "tip": "Educado e colaborativo. Mostra que você valoriza a opinião do outro."
+    },
+    {
+      "id": "c23",
+      "term": "on the same page",
+      "ph": "/ɒn ðə seɪm peɪdʒ/",
+      "pt": "alinhados / com o mesmo entendimento",
+      "def": "To be in agreement or have a shared understanding about something.",
+      "ex": "\"Before we talk to the client, let's make sure we're on the same page about the pricing.\"",
+      "tip": "Clássico. Use para evitar mal-entendidos."
+    },
+    {
+      "id": "c24",
+      "term": "devil's advocate",
+      "ph": "/ˈdevəlz ˈædvəkət/",
+      "pt": "advogado do diabo",
+      "def": "Someone who argues against the popular opinion to test the strength of an idea.",
+      "ex": "\"Let me play devil's advocate here – what if the competitor drops their price by 20%?\"",
+      "tip": "Valioso em sessões de brainstorming. Mostra pensamento crítico."
+    },
+    {
+      "id": "c25",
+      "term": "revert",
+      "ph": "/rɪˈvɜːrt/",
+      "pt": "responder / retornar (com informação)",
+      "def": "To reply or get back to someone with information or a decision.",
+      "ex": "\"I'll check with the legal team and revert by end of day.\"",
+      "tip": "Muito usado em e-mails em ambientes corporativos, especialmente na Europa e Ásia. Nos EUA, preferem 'get back to you'."
+    },
+    {
+      "id": "c26",
+      "term": "ping",
+      "ph": "/pɪŋ/",
+      "pt": "enviar mensagem / contatar rapidamente",
+      "def": "To send a quick message (email, chat, SMS) to someone, usually to remind or follow up.",
+      "ex": "\"I'll ping you on Slack when the numbers are ready.\"",
+      "tip": "Informal, comum em ambientes tech e startups. Deriva do comando de rede."
+    },
+    {
+      "id": "c27",
+      "term": "boil the ocean",
+      "ph": "/bɔɪl ði ˈəʊʃən/",
+      "pt": "tentar fazer algo impossível / querer demais",
+      "def": "To attempt something that is too ambitious or impossible, wasting time and resources.",
+      "ex": "\"We don't need to boil the ocean – let's focus on the top three markets first.\"",
+      "tip": "Expressão forte para alinhar expectativas e evitar escopo excessivo."
+    },
+    {
+      "id": "c28",
+      "term": "bleeding edge",
+      "ph": "/ˈbliːdɪŋ edʒ/",
+      "pt": "estado da arte / tecnologia de ponta (com risco)",
+      "def": "Technology or solutions that are so advanced they are unproven and risky.",
+      "ex": "\"The client wants to use bleeding-edge AI, but we need to consider the reliability risks.\"",
+      "tip": "Diferente de 'cutting edge' (que é avançado mas testado). Este é mais arriscado."
+    },
+    {
+      "id": "c29",
+      "term": "low-hanging fruit",
+      "ph": "/ləʊ ˈhæŋɪŋ fruːt/",
+      "pt": "oportunidades fáceis",
+      "def": "Easy opportunities or quick wins that require minimal effort.",
+      "ex": "\"Let's go after the low-hanging fruit first – we can implement those changes in two weeks.\"",
+      "tip": "Já existente (c08), mantido pela relevância."
+    },
+    {
+      "id": "c30",
+      "term": "quick win",
+      "ph": "/kwɪk wɪn/",
+      "pt": "vitória rápida",
+      "def": "A project or action that delivers immediate results with minimal effort.",
+      "ex": "\"Reducing meeting frequency is a quick win that will free up team time.\"",
+      "tip": "Ideal para construir momentum em projetos de transformação."
+    },
+    {
+      "id": "c31",
+      "term": "blocker",
+      "ph": "/ˈblɒkər/",
+      "pt": "impedimento / obstáculo",
+      "def": "An issue that prevents progress on a task or project.",
+      "ex": "\"The only blocker right now is the client's approval on the budget.\"",
+      "tip": "Comum em metodologias ágeis (Scrum). Use em daily stand-ups."
+    },
+    {
+      "id": "c32",
+      "term": "parking lot",
+      "ph": "/ˈpɑːrkɪŋ lɒt/",
+      "pt": "estacionamento (de ideias)",
+      "def": "A place to note topics that are not relevant to the current discussion but should be addressed later.",
+      "ex": "\"That's an important point, but let's put it in the parking lot and come back to it.\"",
+      "tip": "Técnica de facilitação de reuniões para manter o foco."
+    },
+    {
+      "id": "c33",
+      "term": "actionable",
+      "ph": "/ˈækʃənəbəl/",
+      "pt": "ação prática / que pode ser executado",
+      "def": "Something that can be acted upon or implemented.",
+      "ex": "\"The report needs to provide actionable insights, not just raw data.\"",
+      "tip": "Diferente de 'theoretical'. Resultado deve ser prático."
+    },
+    {
+      "id": "c34",
+      "term": "deliverable",
+      "ph": "/dɪˈlɪvərəbəl/",
+      "pt": "entregável",
+      "def": "A tangible or intangible output of a project phase (report, prototype, software).",
+      "ex": "\"The main deliverable for this sprint is the user authentication module.\"",
+      "tip": "Já existente (p04), mantido pela relevância."
+    },
+    {
+      "id": "c35",
+      "term": "milestone",
+      "ph": "/ˈmaɪlstəʊn/",
+      "pt": "marco",
+      "def": "A significant event or achievement in a project, usually with zero duration.",
+      "ex": "\"The project's next milestone is the prototype sign-off on June 15th.\"",
+      "tip": "Já existente (p09), mantido pela relevância."
+    },
+    {
+      "id": "c36",
+      "term": "bandwidth",
+      "ph": "/ˈbændwɪdθ/",
+      "pt": "capacidade / disponibilidade",
+      "def": "The amount of time or mental capacity a person has for additional work.",
+      "ex": "\"I'd love to help, but I don't have the bandwidth this week.\"",
+      "tip": "Já existente (c03), mantido pela relevância."
+    },
+    {
+      "id": "c37",
+      "term": "circular back",
+      "ph": "/ˈsɜːkjələr bæk/",
+      "pt": "retomar / voltar a tratar",
+      "def": "Alternative to 'circle back', common in some regions.",
+      "ex": "\"I'll circular back with you once I have the figures.\"",
+      "tip": "Variação de 'circle back' (c05). Ambos são usados."
+    },
+    {
+      "id": "c38",
+      "term": "take offline",
+      "ph": "/teɪk ɒfˈlaɪn/",
+      "pt": "discutir fora da reunião / depois",
+      "def": "To discuss a topic outside the current meeting, often because it's too detailed or off-topic.",
+      "ex": "\"This is a complex issue; let's take it offline and continue with the agenda.\"",
+      "tip": "Educado e eficiente para gerenciar tempo em reuniões."
+    },
+    {
+      "id": "c39",
+      "term": "double-click on",
+      "ph": "/ˈdʌbəl klɪk ɒn/",
+      "pt": "aprofundar / detalhar",
+      "def": "To focus on or explore a topic in more detail (metaphor from computing).",
+      "ex": "\"I'd like to double-click on the marketing numbers – why did we see a drop in Q3?\"",
+      "tip": "Muito usado em apresentações e reuniões de consultoria."
+    },
+    {
+      "id": "c40",
+      "term": "sanity check",
+      "ph": "/ˈsænɪti tʃek/",
+      "pt": "verificação de plausibilidade",
+      "def": "A quick test to ensure an idea, plan, or number is reasonable and not obviously wrong.",
+      "ex": "\"Let's do a sanity check on these projections before presenting to the board.\"",
+      "tip": "Diferente de 'validação completa'. É uma verificação rápida de senso comum."
+    },
+    {
+      "id": "c41",
+      "term": "recalibrate",
+      "ph": "/riːˈkælɪbreɪt/",
+      "pt": "reajustar / recalibrar",
+      "def": "To reassess and adjust plans, expectations, or strategies based on new information.",
+      "ex": "\"Given the new competitor launch, we need to recalibrate our pricing strategy.\"",
+      "tip": "Mais sofisticado que 'change'. Implica um ajuste fino baseado em análise."
+    },
+    {
+      "id": "c42",
+      "term": "boil down to",
+      "ph": "/bɔɪl daʊn tuː/",
+      "pt": "resumir-se a / essencialmente",
+      "def": "To be the main or most important reason for something.",
+      "ex": "\"All these issues boil down to a lack of communication between teams.\"",
+      "tip": "Útil para sintetizar problemas complexos."
+    },
+    {
+      "id": "c43",
+      "term": "on the radar",
+      "ph": "/ɒn ðə ˈreɪdɑːr/",
+      "pt": "no radar / sob atenção",
+      "def": "To be noticed or considered as important or of interest.",
+      "ex": "\"The potential merger has been on our radar for months.\"",
+      "tip": "Comum para falar de oportunidades ou ameaças futuras."
+    },
+    {
+      "id": "c44",
+      "term": "back-of-the-envelope",
+      "ph": "/bæk əv ðə ˈenvələʊp/",
+      "pt": "cálculo aproximado / rápido",
+      "def": "A rough calculation or estimate, done quickly without detailed analysis.",
+      "ex": "\"A back-of-the-envelope calculation suggests we'll need at least $2M.\"",
+      "tip": "Mostra capacidade de estimativa rápida, comum em consultoria."
+    },
+    {
+      "id": "c45",
+      "term": "critical path",
+      "ph": "/ˈkrɪtɪkəl pɑːθ/",
+      "pt": "caminho crítico",
+      "def": "The sequence of stages determining the minimum time needed for an operation.",
+      "ex": "\"The design approval is on the critical path – any delay pushes the entire launch.\"",
+      "tip": "Já existente (p02), mantido pela relevância."
+    },
+    {
+      "id": "c46",
+      "term": "lift the hood",
+      "ph": "/lɪft ðə hʊd/",
+      "pt": "abrir o capô / examinar por dentro",
+      "def": "To look closely at how something works internally, especially to find problems.",
+      "ex": "\"The numbers look good, but let's lift the hood and see the assumptions behind them.\"",
+      "tip": "Metáfora automotiva. Mostra ceticismo saudável e rigor analítico."
+    },
+    {
+      "id": "c47",
+      "term": "silo",
+      "ph": "/ˈsaɪləʊ/",
+      "pt": "departamento isolado / silo",
+      "def": "A department or group that does not share information or collaborate with others.",
+      "ex": "\"Working in silos led to duplicated efforts and conflicting messages to the client.\"",
+      "tip": "Crítico em discussões sobre cultura organizacional e eficiência."
+    },
+    {
+      "id": "c48",
+      "term": "run the numbers",
+      "ph": "/rʌn ðə ˈnʌmbəz/",
+      "pt": "fazer as contas / analisar números",
+      "def": "To perform calculations or financial analysis to evaluate a situation.",
+      "ex": "\"We need to run the numbers before committing to that acquisition.\"",
+      "tip": "Muito comum em finanças e estratégia."
+    },
+    {
+      "id": "c49",
+      "term": "blue-sky thinking",
+      "ph": "/bluː skaɪ ˈθɪŋkɪŋ/",
+      "pt": "pensamento criativo / sem limites",
+      "def": "Brainstorming without constraints, focusing on innovative ideas rather than practical limitations.",
+      "ex": "\"Let's do some blue-sky thinking – if budget were no object, what would we propose?\"",
+      "tip": "Bom para sessões de inovação. Diferente de pensamento estratégico pragmático."
+    },
+    {
+      "id": "c50",
+      "term": "drill into",
+      "ph": "/drɪl ˈɪntuː/",
+      "pt": "aprofundar em",
+      "def": "Synonym for 'drill down' or 'deep dive'.",
+      "ex": "\"We need to drill into the customer churn data to understand the root cause.\"",
+      "tip": "Intercambiável com 'drill down'."
+    },
+    {
+      "id": "c51",
+      "term": "push back",
+      "ph": "/pʊʃ bæk/",
+      "pt": "questionar / opor-se / resistir",
+      "def": "To challenge or resist an idea, plan, or decision.",
+      "ex": "\"The client pushed back on the proposed timeline, saying it was too aggressive.\"",
+      "tip": "Habilidade importante: saber quando e como 'push back' construtivamente."
+    },
+    {
+      "id": "c52",
+      "term": "loop in",
+      "ph": "/luːp ɪn/",
+      "pt": "incluir (em comunicação)",
+      "def": "To add someone to an email thread or conversation to keep them informed.",
+      "ex": "\"I'll loop in the legal team so they're aware of the contract changes.\"",
+      "tip": "Correlato de 'keep in the loop'."
+    },
+    {
+      "id": "c53",
+      "term": "move the needle",
+      "ph": "/muːv ðə ˈniːdəl/",
+      "pt": "fazer diferença / impactar significativamente",
+      "def": "To make a significant change or difference in a situation or metric.",
+      "ex": "\"Small efficiency gains won't move the needle; we need a radical redesign.\"",
+      "tip": "Usado para separar ações marginais de ações transformadoras."
+    },
+    {
+      "id": "c54",
+      "term": "boil the frog",
+      "ph": "/bɔɪl ðə frɒɡ/",
+      "pt": "mudança gradual imperceptível",
+      "def": "A metaphor for a process that happens so gradually that people don't notice the negative impact until it's too late.",
+      "ex": "\"Increasing prices slowly over years is like boiling the frog – customers don't notice until it's too high.\"",
+      "tip": "Menos comum que 'boil the ocean', mas usado em contextos de gestão de mudança."
+    },
+    {
+      "id": "c55",
+      "term": "waterfall",
+      "ph": "/ˈwɔːtəfɔːl/",
+      "pt": "modelo cascata",
+      "def": "A traditional project management approach where phases are sequential and distinct.",
+      "ex": "\"The client prefers a waterfall methodology with clear milestones and sign-offs.\"",
+      "tip": "Contraponto a 'agile'. Útil em discussões de metodologia."
+    },
+    {
+      "id": "c56",
+      "term": "agile",
+      "ph": "/ˈædʒaɪl/",
+      "pt": "metodologia ágil",
+      "def": "An iterative approach to project management, often used in software, emphasizing flexibility and collaboration.",
+      "ex": "\"We'll use an agile approach with two-week sprints to adapt to changing requirements.\"",
+      "tip": "Mais que uma metodologia, uma mentalidade. Use com confiança."
+    },
+    {
+      "id": "c57",
+      "term": "scrum",
+      "ph": "/skrʌm/",
+      "pt": "scrum (framework ágil)",
+      "def": "A specific agile framework for managing complex projects, with roles like Scrum Master and Product Owner.",
+      "ex": "\"Our team runs scrum with daily stand-ups and sprint reviews.\"",
+      "tip": "Conhecimento básico em ambientes de tecnologia e transformação digital."
+    },
+    {
+      "id": "c58",
+      "term": "lean",
+      "ph": "/liːn/",
+      "pt": "enxuto / lean",
+      "def": "A methodology focused on minimizing waste and maximizing value, originating from manufacturing.",
+      "ex": "\"We applied lean principles to streamline the approval process, cutting wait times by 40%.\"",
+      "tip": "Aplicável a qualquer processo, não só manufatura."
+    },
+    {
+      "id": "c59",
+      "term": "bottom line",
+      "ph": "/ˈbɒtəm laɪn/",
+      "pt": "resultado final / lucro líquido",
+      "def": "The final profit or loss after all expenses; also used figuratively to mean the most important point.",
+      "ex": "\"The bottom line is that we need to increase revenue or cut costs.\"",
+      "tip": "Clássico. Use literal (finanças) ou figurado (conclusão principal)."
+    },
+    {
+      "id": "c60",
+      "term": "top line",
+      "ph": "/tɒp laɪn/",
+      "pt": "receita bruta / faturamento",
+      "def": "Gross revenue or sales, before any costs are subtracted.",
+      "ex": "\"The new product boosted our top line by 15%, but margins remain thin.\"",
+      "tip": "Sempre contrastado com 'bottom line'."
+    },
+    {
+      "id": "c61",
+      "term": "run rate",
+      "ph": "/rʌn reɪt/",
+      "pt": "ritmo anual projetado",
+      "def": "A projection of future financial performance based on current data, often annualizing monthly figures.",
+      "ex": "\"Based on Q1 results, our run rate for the year is $12M.\"",
+      "tip": "Útil para startups e negócios sazonais."
+    },
+    {
+      "id": "c62",
+      "term": "in the black",
+      "ph": "/ɪn ðə blæk/",
+      "pt": "no positivo / lucrativo",
+      "def": "Being profitable or having positive earnings.",
+      "ex": "\"After three years of losses, the company is finally in the black.\"",
+      "tip": "Antônimo: 'in the red' (no vermelho)."
+    },
+    {
+      "id": "c63",
+      "term": "in the red",
+      "ph": "/ɪn ðə red/",
+      "pt": "no negativo / com prejuízo",
+      "def": "Being unprofitable or having negative earnings.",
+      "ex": "\"The division has been in the red for two consecutive quarters.\"",
+      "tip": "Origem: tinta vermelha usada para registrar perdas."
+    },
+    {
+      "id": "c64",
+      "term": "OpEx",
+      "ph": "/ˈɒpeks/",
+      "pt": "despesas operacionais",
+      "def": "Operating expenditures – day-to-day costs of running a business (rent, salaries, utilities).",
+      "ex": "\"Moving to the cloud reduced our CapEx but increased OpEx.\"",
+      "tip": "Já existente (f06), mantido pela relevância."
+    },
+    {
+      "id": "c65",
+      "term": "CapEx",
+      "ph": "/ˈkæpeks/",
+      "pt": "despesas de capital",
+      "def": "Capital expenditures – funds used to acquire or upgrade long-term assets (equipment, buildings).",
+      "ex": "\"The board approved $5M in CapEx for the new factory.\"",
+      "tip": "Já existente (f05), mantido pela relevância."
+    },
+    {
+      "id": "c66",
+      "term": "ROI",
+      "ph": "/ˌɑːr əʊ ˈaɪ/",
+      "pt": "retorno sobre investimento",
+      "def": "Return on investment – a measure of profitability relative to cost.",
+      "ex": "\"The marketing campaign delivered an ROI of 300%.\"",
+      "tip": "Já existente (f04), mantido pela relevância."
+    },
+    {
+      "id": "c67",
+      "term": "EBITDA",
+      "ph": "/iːˈbɪtdə/",
+      "pt": "EBITDA / LAJIDA",
+      "def": "Earnings Before Interest, Taxes, Depreciation, and Amortization – a proxy for operating cash flow.",
+      "ex": "\"The acquisition target has a healthy EBITDA margin of 25%.\"",
+      "tip": "Já existente (f01), mantido pela relevância."
+    },
+    {
+      "id": "c68",
+      "term": "run a tight ship",
+      "ph": "/rʌn ə taɪt ʃɪp/",
+      "pt": "gerir com disciplina / com mão firme",
+      "def": "To manage an organization or department efficiently and strictly.",
+      "ex": "\"The new COO runs a tight ship – meetings start on time and budgets are strictly followed.\"",
+      "tip": "Expressão idiomática para liderança disciplinada."
+    },
+    {
+      "id": "c69",
+      "term": "get granular",
+      "ph": "/ɡet ˈɡrænjʊlər/",
+      "pt": "detalhar / ir ao nível de detalhe",
+      "def": "To examine or discuss something in very fine detail.",
+      "ex": "\"We need to get granular on the cost drivers – line by line.\"",
+      "tip": "Sinônimo de 'drill down' mas com ênfase em detalhe extremo."
+    },
+    {
+      "id": "c70",
+      "term": "sunset",
+      "ph": "/ˈsʌnset/",
+      "pt": "descontinuar / encerrar gradualmente",
+      "def": "To phase out or discontinue a product, service, or system over time.",
+      "ex": "\"The legacy software will be sunsetted over the next 12 months.\"",
+      "tip": "Usado como verbo. Mais suave que 'kill' ou 'cancel'."
+    },
+    {
+      "id": "c71",
+      "term": "greenfield",
+      "ph": "/ˈɡriːnfiːld/",
+      "pt": "projeto do zero / novo",
+      "def": "A project that lacks constraints imposed by prior work, starting from scratch.",
+      "ex": "\"We have a greenfield opportunity to design the system without legacy integration issues.\"",
+      "tip": "Opõe-se a 'brownfield' (projeto com legado)."
+    },
+    {
+      "id": "c72",
+      "term": "brownfield",
+      "ph": "/ˈbraʊnfiːld/",
+      "pt": "projeto com legado / existente",
+      "def": "A project that must consider or integrate with existing systems and constraints.",
+      "ex": "\"The brownfield nature of the project makes it more complex than building from scratch.\"",
+      "tip": "Comum em TI e engenharia."
+    },
+    {
+      "id": "c73",
+      "term": "lift and shift",
+      "ph": "/lɪft ənd ʃɪft/",
+      "pt": "migrar sem modificar",
+      "def": "A strategy of moving a system or process to a new environment without making changes.",
+      "ex": "\"The first phase is a lift and shift of the data center to the cloud.\"",
+      "tip": "Comum em migrações de TI. Fase inicial antes de otimizações."
+    },
+    {
+      "id": "c74",
+      "term": "boil the frog",
+      "ph": "/bɔɪl ðə frɒɡ/",
+      "pt": "mudança gradual imperceptível",
+      "def": "A metaphor for a process that happens so gradually that people don't notice the negative impact until it's too late.",
+      "ex": "\"Increasing prices slowly over years is like boiling the frog – customers don't notice until it's too high.\"",
+      "tip": "Usado em contextos de gestão de mudança e riscos."
+    },
+    {
+      "id": "c75",
+      "term": "run the numbers",
+      "ph": "/rʌn ðə ˈnʌmbəz/",
+      "pt": "fazer as contas",
+      "def": "To perform calculations or financial analysis to evaluate a situation.",
+      "ex": "\"We need to run the numbers before committing to that acquisition.\"",
+      "tip": "Muito comum em finanças e estratégia."
+    },
+    {
+      "id": "c76",
+      "term": "sanity check",
+      "ph": "/ˈsænɪti tʃek/",
+      "pt": "verificação de plausibilidade",
+      "def": "A quick test to ensure an idea, plan, or number is reasonable and not obviously wrong.",
+      "ex": "\"Let's do a sanity check on these projections before presenting to the board.\"",
+      "tip": "Diferente de 'validação completa'. É uma verificação rápida de senso comum."
+    },
+    {
+      "id": "c77",
+      "term": "straw man",
+      "ph": "/strɔː mæn/",
+      "pt": "proposta inicial para discussão",
+      "def": "A first draft or preliminary version of a proposal, meant to be critiqued and improved.",
+      "ex": "\"Here's a straw man of the org chart – feel free to tear it apart.\"",
+      "tip": "Comum em consultoria para iniciar discussões. Não é pejorativo neste contexto."
+    },
+    {
+      "id": "c78",
+      "term": "deck",
+      "ph": "/dek/",
+      "pt": "apresentação de slides",
+      "def": "A slide presentation, usually in PowerPoint or Keynote.",
+      "ex": "\"I'll send you the deck after the meeting so you can review the details.\"",
+      "tip": "Onipresente em consultoria. 'Pitch deck', 'board deck'."
+    },
+    {
+      "id": "c79",
+      "term": "leave it on the field",
+      "ph": "/liːv ɪt ɒn ðə fiːld/",
+      "pt": "dar o máximo / deixar tudo",
+      "def": "To put maximum effort into something, leaving nothing in reserve.",
+      "ex": "\"We left it all on the field for this pitch – I'm proud of the team regardless of the outcome.\"",
+      "tip": "Metáfora esportiva. Usada para motivar equipes."
+    },
+    {
+      "id": "c80",
+      "term": "sweat the details",
+      "ph": "/swet ðə ˈdiːteɪlz/",
+      "pt": "preocupar-se com os detalhes",
+      "def": "To pay close attention to small details, often to ensure quality.",
+      "ex": "\"He's a great project manager because he sweats the details without losing sight of the big picture.\"",
+      "tip": "Qualidade valorizada em consultoria: rigor analítico."
+    },
+    {
+      "id": "c81",
+      "term": "air cover",
+      "ph": "/er ˈkʌvər/",
+      "pt": "proteção / suporte da alta gestão",
+      "def": "Support from senior leaders that protects a team or project from interference or criticism.",
+      "ex": "\"With the CEO's air cover, we could push through the restructuring despite resistance.\"",
+      "tip": "Metáfora militar. Essencial em projetos políticos."
+    },
+    {
+      "id": "c82",
+      "term": "tiger team",
+      "ph": "/ˈtaɪɡər tiːm/",
+      "pt": "equipe de elite para resolver problemas",
+      "def": "A specialized, cross-functional team assembled to solve a specific, often urgent, problem.",
+      "ex": "\"We formed a tiger team to address the cybersecurity breach.\"",
+      "tip": "Origem militar/NASA. Usado para crises ou desafios críticos."
+    }  
   ]
 }
