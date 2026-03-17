@@ -10,6 +10,7 @@ const urlsToCache = [
   '/data/corporate.json',
   '/data/planning.json',
   '/data/portfolio.json',
+  '/data/pmbok.json',
   'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap',
   'https://fonts.gstatic.com/s/cormorantgaramond/v16/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_v86Mmw.ttf',
   'https://fonts.gstatic.com/s/dmsans/v11/rP2Hp2ywxg089UriCZOIHQ.woff2',
