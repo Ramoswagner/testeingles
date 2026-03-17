@@ -4,23 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>LexiPro — Inglês Profissional</title>
-  
-  <!-- PWA / Manifest -->
+  <meta name="description" content="Domine o inglês executivo com flashcards e quiz">
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#2563eb">
-  
-  <!-- Fontes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- CSS principal -->
   <link rel="stylesheet" href="css/style.css">
-  
-  <!-- Chart.js para gráficos -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <!-- Fundo ambiente (opcional, pode ser removido se preferir) -->
+  <!-- Fundo ambiente (opcional) -->
   <div class="ambient">
     <div class="orb o1"></div><div class="orb o2"></div>
     <div class="orb o3"></div><div class="orb o4"></div>
@@ -57,7 +50,7 @@
       </div>
     </header>
 
-    <!-- ========== VIEW HOME ========== -->
+    <!-- View Home -->
     <div class="view active" id="view-home">
       <div class="hero">
         <div class="hero-eyebrow">
@@ -67,19 +60,17 @@
         <h1>Domine o inglês<br><em>executivo</em></h1>
         <p>Vocabulário preciso para ambientes de alta performance — engenharia, gestão de projetos e estratégia corporativa.</p>
       </div>
-
       <div class="stats-row">
         <div class="stat-col"><div class="stat-n" id="ov-studied">0</div><div class="stat-l">Estudados</div></div>
         <div class="stat-col"><div class="stat-n" id="ov-mastered">0</div><div class="stat-l">Dominados</div></div>
         <div class="stat-col"><div class="stat-n" id="ov-streak">0</div><div class="stat-l">Dias seguidos</div></div>
         <div class="stat-col"><div class="stat-n" id="ov-acc">—</div><div class="stat-l">Precisão</div></div>
       </div>
-
       <div class="sec-lbl">Categorias de vocabulário</div>
       <div class="cat-grid" id="cat-grid"></div>
     </div>
 
-    <!-- ========== VIEW STUDY ========== -->
+    <!-- View Study -->
     <div class="view" id="view-study">
       <div class="study-hdr">
         <button class="btn-back" onclick="goHome()">
@@ -95,7 +86,6 @@
           <div class="sh-cnt" id="sh-cnt">1/12</div>
         </div>
       </div>
-
       <div class="mode-tabs">
         <button class="mode-tab active" id="tab-study" onclick="setMode('study')">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
@@ -106,12 +96,9 @@
           Quiz
         </button>
       </div>
-
-      <!-- Painel Study (flashcard) -->
       <div id="pane-study">
         <div class="fc-wrap" onclick="flipCard()">
           <div class="flashcard" id="flashcard">
-            <!-- Frente -->
             <div class="cf cf-front">
               <div class="cf-badge" id="fc-badge">
                 <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
@@ -119,8 +106,6 @@
               </div>
               <div class="fc-term" id="fc-term">—</div>
               <div class="fc-phon" id="fc-phon">—</div>
-
-              <!-- Painel de pronúncia -->
               <div class="pron-panel" id="pron-panel">
                 <div class="pron-btns">
                   <button class="pron-btn pb-main" id="pb-main" onclick="speak('normal',event)">
@@ -143,14 +128,11 @@
                 </div>
                 <div class="spell-display" id="spell-display"></div>
               </div>
-
               <div class="fc-hint">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M8 10h.01M12 10h.01M16 10h.01"/></svg>
                 toque para virar
               </div>
             </div>
-
-            <!-- Verso -->
             <div class="cf cf-back">
               <div class="back-body">
                 <div class="bk-lbl">Tradução</div>
@@ -164,8 +146,6 @@
             </div>
           </div>
         </div>
-
-        <!-- Botões de confiança (aparecem após virar) -->
         <div class="conf-row" id="conf-row" style="display:none">
           <button class="btn-conf bc-h" onclick="rate('hard')">
             <span class="bc-icon">😰</span><span class="bc-lbl">Difícil</span><span class="bc-sub">ver em breve</span>
@@ -177,8 +157,6 @@
             <span class="bc-icon">✅</span><span class="bc-lbl">Fácil</span><span class="bc-sub">dominado!</span>
           </button>
         </div>
-
-        <!-- Navegação entre cards -->
         <div class="nav-row">
           <button class="btn-nav" onclick="prevCard()">
             <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
@@ -191,8 +169,6 @@
             <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
           </button>
         </div>
-
-        <!-- Dicas de teclado -->
         <div class="kb-hints">
           <div class="kb"><kbd>←</kbd><kbd>→</kbd> navegar</div>
           <div class="kb"><kbd>Space</kbd> virar</div>
@@ -200,8 +176,6 @@
           <div class="kb"><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> avaliar</div>
         </div>
       </div>
-
-      <!-- Painel Quiz -->
       <div id="pane-quiz" style="display:none">
         <div class="quiz-wrap">
           <div class="quiz-card">
@@ -219,14 +193,12 @@
       </div>
     </div>
 
-    <!-- ========== VIEW PROGRESS ========== -->
+    <!-- View Progress -->
     <div class="view" id="view-progress">
       <div class="prog-hdr">
         <h2>Seu progresso</h2>
         <p>Evolução rumo à fluência executiva em inglês.</p>
       </div>
-
-      <!-- KPIs -->
       <div class="kpi-grid">
         <div class="kpi blue"><div class="kn" id="st-studied">0</div><div class="kl">Cards revisados</div></div>
         <div class="kpi gold"><div class="kn" id="st-mastered">0</div><div class="kl">Palavras dominadas</div></div>
@@ -234,15 +206,11 @@
         <div class="kpi green"><div class="kn" id="st-streak">0</div><div class="kl">Dias consecutivos</div></div>
       </div>
 
-      <!-- Domínio por categoria -->
-      <div class="mastery-box">
-        <h3>Domínio por categoria</h3>
-        <div id="mastery-rows"></div>
+      <!-- Conquistas -->
+      <div class="achievements-section">
+        <h3>Conquistas</h3>
+        <div class="achievements-grid" id="achievements-grid"></div>
       </div>
-
-      <!-- Conquistas (gamificação) -->
-      <h3>Conquistas</h3>
-      <div class="achievements-grid" id="achievements-grid"></div>
 
       <!-- Gráficos -->
       <div class="charts-container">
@@ -255,16 +223,18 @@
           <canvas id="chart-pie" width="200" height="200"></canvas>
         </div>
       </div>
+
+      <!-- Domínio por categoria (já existente) -->
+      <div class="mastery-box">
+        <h3>Domínio por categoria</h3>
+        <div id="mastery-rows"></div>
+      </div>
     </div>
   </div>
 
-  <!-- Toast para notificações -->
   <div class="toast" id="toast"></div>
 
-  <!-- Script principal -->
   <script src="js/app.js"></script>
-
-  <!-- Registro do Service Worker para PWA -->
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js')
