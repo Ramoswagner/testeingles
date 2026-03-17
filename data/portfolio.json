@@ -1,0 +1,116 @@
+{
+  "lbl": "Portfolio & Strategy",
+  "pt": "Portfólio & Estratégia",
+  "color": "#14b8a6",
+  "desc": "Gestão de portfólio, frameworks estratégicos e executive presentations.",
+  "cards": [
+    {
+      "id": "pt01",
+      "term": "strategic alignment",
+      "ph": "/strəˈtiːdʒɪk əˈlaɪnmənt/",
+      "pt": "alinhamento estratégico",
+      "def": "The degree to which a portfolio of initiatives and capabilities points toward overarching organizational goals.",
+      "ex": "\"Only 40% of active projects showed strategic alignment, justifying an urgent portfolio rationalization.\"",
+      "tip": "Fundamento de portfolio management. Project selection deve ser filtrado por strategic fit. PMI-PfMP enfatiza isso."
+    },
+    {
+      "id": "pt02",
+      "term": "portfolio rationalization",
+      "ph": "/pɔːtˈfəʊliəʊ ˌræʃənəlaɪˈzeɪʃən/",
+      "pt": "racionalização de portfólio",
+      "def": "The systematic review of a project portfolio, eliminating low-value or misaligned initiatives.",
+      "ex": "\"Portfolio rationalization reduced active projects from 47 to 18, tripling average completion rates.\"",
+      "tip": "Identificar \"zombie projects\" — consomem recursos sem retorno. Muito impactante em consulting engagements."
+    },
+    {
+      "id": "pt03",
+      "term": "value creation",
+      "ph": "/ˈvæljuː kriˈeɪʃən/",
+      "pt": "criação de valor",
+      "def": "The generation of measurable improvements in financial performance, competitive position, or capability.",
+      "ex": "\"The team's value creation plan identified $120M in EBITDA improvement across three operational levers.\"",
+      "tip": "A linguagem central da McKinsey. Levers: revenue growth, margin improvement, capital efficiency. Always quantify."
+    },
+    {
+      "id": "pt04",
+      "term": "business case",
+      "ph": "/ˈbɪznɪs keɪs/",
+      "pt": "caso de negócio",
+      "def": "A structured justification for a proposed investment, analyzing costs, benefits, risks, and strategic fit.",
+      "ex": "\"A compelling business case with NPV and risk scenarios accelerated board approval for the $30M investment.\"",
+      "tip": "Components: executive summary, problem statement, options, recommendation, financial model, risk assessment."
+    },
+    {
+      "id": "pt05",
+      "term": "executive summary",
+      "ph": "/ɪɡˈzekjʊtɪv ˈsʌməri/",
+      "pt": "sumário executivo",
+      "def": "A concise overview giving decision-makers key findings and the recommendation without reading the full document.",
+      "ex": "\"The executive summary alone closed the deal — the data story was compelling in under two pages.\"",
+      "tip": "Write it last, present it first. McKinsey's Pyramid Principle: conclusion first, evidence second. SCQA framework."
+    },
+    {
+      "id": "pt06",
+      "term": "due diligence",
+      "ph": "/djuː ˈdɪlɪdʒəns/",
+      "pt": "diligência devida",
+      "def": "A comprehensive investigation conducted before a major transaction to verify facts and identify material risks.",
+      "ex": "\"Due diligence uncovered $8M in undisclosed liabilities that restructured the acquisition's final valuation.\"",
+      "tip": "M&A context primarily, but also used in consulting for rigorous research validation. \"We did thorough DD.\""
+    },
+    {
+      "id": "pt07",
+      "term": "go/no-go decision",
+      "ph": "/ɡəʊ nəʊ ɡəʊ dɪˈsɪʒən/",
+      "pt": "decisão de prosseguir ou não",
+      "def": "A formal checkpoint where leadership decides whether to proceed or halt based on defined criteria.",
+      "ex": "\"The go/no-go decision at Phase 2 was contingent on achieving minimum pilot metrics within 90 days.\"",
+      "tip": "Linked to stage-gate process. Clear criteria defined upfront reduce emotional decision-making at critical junctures."
+    },
+    {
+      "id": "pt08",
+      "term": "quick wins",
+      "ph": "/kwɪk wɪnz/",
+      "pt": "vitórias rápidas / ganhos imediatos",
+      "def": "Early, visible improvements achieved at the start of an initiative to demonstrate value and build credibility.",
+      "ex": "\"We engineered three quick wins in the first 30 days to maintain executive confidence during restructuring.\"",
+      "tip": "Quick wins build credibility and reduce resistance. Critical in change management. Often the most important deliverable."
+    },
+    {
+      "id": "pt09",
+      "term": "benchmark analysis",
+      "ph": "/ˈbentʃmɑːk əˈnælɪsɪs/",
+      "pt": "análise comparativa / benchmarking",
+      "def": "A structured comparison of an organization's performance against industry peers or best-in-class competitors.",
+      "ex": "\"Benchmark analysis revealed our SG&A ratio was 8 points above industry median — a clear cost opportunity.\"",
+      "tip": "External (vs. peers) vs internal (vs. own history). McKinsey: \"Based on benchmarks across 200 companies globally...\""
+    },
+    {
+      "id": "pt10",
+      "term": "north star metric",
+      "ph": "/nɔːθ stɑː ˈmetrɪk/",
+      "pt": "métrica estrela-guia",
+      "def": "The single most important metric that best captures the core value a product or strategy delivers.",
+      "ex": "\"Revenue retention became our north star metric, reflecting customer health far better than new sales volume.\"",
+      "tip": "Popularizado por growth teams. Em strategy: alinha todos os times. North Star must be leading, not lagging."
+    },
+    {
+      "id": "pt11",
+      "term": "impact assessment",
+      "ph": "/ˈɪmpækt əˈsesmənt/",
+      "pt": "avaliação de impacto",
+      "def": "A systematic analysis of the potential consequences of a proposed action, decision, or project.",
+      "ex": "\"The impact assessment quantified $15M in displaced revenue from the proposed channel restructuring.\"",
+      "tip": "Types: business, environmental, social. Precede major decisions. Rigor = credibility with skeptical stakeholders."
+    },
+    {
+      "id": "pt12",
+      "term": "risk-adjusted return",
+      "ph": "/rɪsk əˈdʒʌstɪd rɪˈtɜːn/",
+      "pt": "retorno ajustado ao risco",
+      "def": "An investment performance measure that accounts for the level of risk taken to achieve a given return.",
+      "ex": "\"On a risk-adjusted return basis, the infrastructure project outperformed the digital initiative by 2:1.\"",
+      "tip": "Sharpe Ratio é a versão financeira. In portfolio mgmt: allocate to highest risk-adjusted return, not just highest expected."
+    }
+  ]
+}
