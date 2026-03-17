@@ -857,6 +857,16 @@ nav {
   width: 100%;
 }
 
+/* ----- Pronunciation panel ----- */
+.pron-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.65rem;
+  position: relative;
+  width: 100%;
+}
+
 .pron-btns {
   display: flex;
   align-items: center;
