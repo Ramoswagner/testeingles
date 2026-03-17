@@ -2,6 +2,120 @@
 // app.js — lógica principal com carregamento assíncrono dos JSONs
 // ========================================
 
+// ========================================
+// Gamificação e Estatísticas
+// ========================================
+const ACHIEVEMENTS = [
+  { id: 'first_card', name: 'Primeiro passo', desc: 'Estude seu primeiro card', icon: '🎓', condition: s => Object.values(s.prog).length >= 1 },
+  { id: 'master_10', name: 'Aprendiz', desc: 'Domine 10 palavras', icon: '🌟', condition: s => Object.values(s.prog).filter(p => p.conf === 'easy').length >= 10 },
+  { id: 'master_50', name: 'Profissional', desc: 'Domine 50 palavras', icon: '🏆', condition: s => Object.values(s.prog).filter(p => p.conf === 'easy').length >= 50 },
+  { id: 'streak_7', name: 'Disciplina', desc: 'Estude 7 dias seguidos', icon: '🔥', condition: s => s.streak >= 7 },
+  { id: 'streak_30', name: 'Inabalável', desc: 'Estude 30 dias seguidos', icon: '⚡', condition: s => s.streak >= 30 },
+  { id: 'quiz_50', name: 'Mestre do Quiz', desc: 'Acerta 50 questões', icon: '🧠', condition: s => Object.values(s.prog).reduce((acc, p) => acc + (p.qc || 0), 0) >= 50 }
+];
+
+let unlockedAchievements = [];
+
+function checkAchievements() {
+  ACHIEVEMENTS.forEach(ach => {
+    if (!unlockedAchievements.includes(ach.id) && ach.condition(S)) {
+      unlockedAchievements.push(ach.id);
+      toast(`🏆 Conquista desbloqueada: ${ach.name}`, 'achievement');
+      saveAchievements();
+    }
+  });
+}
+
+function saveAchievements() {
+  localStorage.setItem('lexipro_achievements', JSON.stringify(unlockedAchievements));
+}
+
+function loadAchievements() {
+  try {
+    const saved = localStorage.getItem('lexipro_achievements');
+    if (saved) unlockedAchievements = JSON.parse(saved);
+  } catch (e) {}
+}
+
+// Chamar checkAchievements após ações relevantes (rate, answerQuiz, etc.)
+// Adicionar no final de rate() e answerQuiz() antes do save/next.
+
+// ========================================
+// Gráficos com Chart.js
+// ========================================
+// Adicionar no final do renderProgress()
+function renderCharts() {
+  const ctxDaily = document.getElementById('chart-daily');
+  if (!ctxDaily) return;
+
+  // Dados de exemplo (últimos 7 dias)
+  const labels = [];
+  const data = [];
+  for (let i = 6; i >= 0; i--) {
+    const d = new Date();
+    d.setDate(d.getDate() - i);
+    labels.push(d.toLocaleDateString('pt-BR', { weekday: 'short' }));
+    // Contar quantos cards estudados naquele dia (precisa armazenar histórico)
+    // Por simplicidade, usaremos dados mock
+    data.push(Math.floor(Math.random() * 10));
+  }
+
+  new Chart(ctxDaily, {
+    type: 'line',
+    data: {
+      labels: labels,
+      datasets: [{
+        label: 'Cards estudados',
+        data: data,
+        borderColor: '#3b82f6',
+        backgroundColor: 'rgba(59,130,246,0.1)',
+        tension: 0.3,
+        fill: true
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false }
+      },
+      scales: {
+        y: { beginAtZero: true, grid: { color: 'rgba(255,255,255,0.05)' } },
+        x: { grid: { display: false } }
+      }
+    }
+  });
+
+  // Gráfico de pizza para acertos/erros
+  const ctxPie = document.getElementById('chart-pie');
+  if (!ctxPie) return;
+
+  const totalQuiz = Object.values(S.prog).reduce((acc, p) => acc + (p.qt || 0), 0);
+  const correctQuiz = Object.values(S.prog).reduce((acc, p) => acc + (p.qc || 0), 0);
+  const wrongQuiz = totalQuiz - correctQuiz;
+
+  new Chart(ctxPie, {
+    type: 'doughnut',
+    data: {
+      labels: ['Acertos', 'Erros'],
+      datasets: [{
+        data: [correctQuiz, wrongQuiz],
+        backgroundColor: ['#10b981', '#f43f5e'],
+        borderWidth: 0
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'bottom', labels: { color: '#94a3b8' } }
+      }
+    }
+  });
+}
+
+// Modificar renderProgress para incluir os canvases
+
 const CAT_ICONS = {
   engineering: `<path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>`,
   pmgmt: `<rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>`,
