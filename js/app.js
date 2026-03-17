@@ -598,6 +598,8 @@ function answerQuiz(btn, isCorrect, card) {
   document.getElementById('q-score').textContent = `${S.qScore} corretas de ${S.qTotal}`;
   save();
   setTimeout(() => nextCard(), 1900);
+  checkAchievements();
+  save();
 }
 
 function prevCard() {
@@ -628,6 +630,8 @@ function rate(level) {
   const messages = { easy: '✅ Dominado!', medium: '🤔 Continue praticando!', hard: '💪 Vai chegar lá!' };
   toast(messages[level], level === 'easy' ? 'ok' : '');
   nextCard();
+  checkAchievements();
+  save();
 }
 
 function renderProgress() {
@@ -657,6 +661,21 @@ function renderProgress() {
         <div class="m-pct" style="color:${cat.color}">${percent}%</div>
       </div>
     `;
+  });
+  const achGrid = document.getElementById('achievements-grid');
+  achGrid.innerHTML = '';
+  ACHIEVEMENTS.forEach(ach => {
+    const unlocked = unlockedAchievements.includes(ach.id);
+    const card = document.createElement('div');
+    card.className = `achievement-card ${unlocked ? '' : 'locked'}`;
+    card.innerHTML = `
+      <div class="achievement-icon">${ach.icon}</div>
+      <div class="achievement-name">${ach.name}</div>
+      <div class="achievement-desc">${ach.desc}</div>
+    `;
+    achGrid.appendChild(card);
+
+    renderCharts();
   });
 }
 
