@@ -1,0 +1,116 @@
+{
+  "lbl": "Engineering",
+  "pt": "Engenharia",
+  "color": "#3b82f6",
+  "desc": "Termos técnicos de engenharia, processos e sistemas.",
+  "cards": [
+    {
+      "id": "e01",
+      "term": "feasibility study",
+      "ph": "/fiːzəˈbɪlɪti ˈstʌdi/",
+      "pt": "estudo de viabilidade",
+      "def": "An analysis to determine whether a project is technically, operationally, and financially practical before committing resources.",
+      "ex": "The feasibility study confirmed the bridge design was structurally sound and within budget constraints.",
+      "tip": "Sempre aparece no início de um projeto. McKinsey frequentemente conduz feasibility studies antes de qualquer proposta."
+    },
+    {
+      "id": "e02",
+      "term": "scope creep",
+      "ph": "/skəʊp kriːp/",
+      "pt": "expansão do escopo",
+      "def": "The uncontrolled expansion of a project's scope without corresponding adjustments to time, cost, or resources.",
+      "ex": "Scope creep turned a three-month software rollout into an eighteen-month ordeal.",
+      "tip": "Um dos maiores inimigos do PM. Combatido com formal change requests e change control boards."
+    },
+    {
+      "id": "e03",
+      "term": "technical debt",
+      "ph": "/ˈteknɪkəl det/",
+      "pt": "dívida técnica",
+      "def": "The implied cost of future rework caused by choosing a quick short-term solution over a better long-term approach.",
+      "ex": "Years of technical debt made the legacy system nearly impossible to scale.",
+      "tip": "Analogia financeira usada em tech strategy. Acumula \"juros\" — quanto mais espera, mais caro fica resolver."
+    },
+    {
+      "id": "e04",
+      "term": "bottleneck",
+      "ph": "/ˈbɒtlnek/",
+      "pt": "gargalo",
+      "def": "A point of congestion in a system that limits overall throughput and prevents reaching full potential.",
+      "ex": "The manual approval bottleneck was delaying every downstream engineering task by two days.",
+      "tip": "Termo universal — supply chain, software, processos. Theory of Constraints (TOC) de Goldratt é o framework clássico."
+    },
+    {
+      "id": "e05",
+      "term": "proof of concept",
+      "ph": "/pruːf əv ˈkɒnsept/",
+      "pt": "prova de conceito",
+      "def": "A demonstration that a proposed idea or design is feasible before full-scale investment.",
+      "ex": "We built a proof of concept in four weeks to validate the ML pipeline before committing the full $2M budget.",
+      "tip": "Abreviado POC. Frequente em pitches de inovação e digital transformation. Reduz risk antes de go-to-market."
+    },
+    {
+      "id": "e06",
+      "term": "scalability",
+      "ph": "/ˌskeɪləˈbɪlɪti/",
+      "pt": "escalabilidade",
+      "def": "The capacity of a system or business to handle growing amounts of work by adding resources proportionally.",
+      "ex": "The architecture was designed for scalability to support 10x user growth within two years.",
+      "tip": "Fundamental em tech mas também figurativo: \"Is this business model scalable?\" — pergunta central em consulting."
+    },
+    {
+      "id": "e07",
+      "term": "throughput",
+      "ph": "/ˈθruːpʊt/",
+      "pt": "vazão / rendimento",
+      "def": "The amount of work completed or data processed in a given unit of time; a measure of system efficiency.",
+      "ex": "Optimizing the assembly line increased daily throughput by 40% without additional headcount.",
+      "tip": "Usado em manufacturing e software. Ligado ao conceito de capacity. Throughput ≠ output bruto."
+    },
+    {
+      "id": "e08",
+      "term": "root cause analysis",
+      "ph": "/ruːt kɔːz əˈnælɪsɪs/",
+      "pt": "análise de causa raiz",
+      "def": "A systematic process to identify the fundamental source of a failure, rather than treating only its visible symptoms.",
+      "ex": "The root cause analysis revealed the outage stemmed from an undocumented third-party dependency.",
+      "tip": "Abreviado RCA. Ferramentas: 5 Whys, Fishbone (Ishikawa). Core em Six Sigma, Lean e incident management."
+    },
+    {
+      "id": "e09",
+      "term": "benchmark",
+      "ph": "/ˈbentʃmɑːk/",
+      "pt": "referência / parâmetro de desempenho",
+      "def": "A standard or point of reference against which performance, quality, or capabilities are measured.",
+      "ex": "Our latency benchmarks exceeded industry standards across all test scenarios in the third-party audit.",
+      "tip": "Usado como noun e verb. \"Let's benchmark our cost structure against competitors\" — pedido frequente em consulting."
+    },
+    {
+      "id": "e10",
+      "term": "dependency",
+      "ph": "/dɪˈpendənsi/",
+      "pt": "dependência",
+      "def": "A relationship in which one task or component requires another to be completed before it can proceed.",
+      "ex": "Task 7 had an undisclosed dependency on the vendor's API that blocked the entire sprint for five days.",
+      "tip": "Crítico no critical path analysis. Types: Finish-to-Start (FS), Start-to-Start (SS), Finish-to-Finish (FF)."
+    },
+    {
+      "id": "e11",
+      "term": "compliance",
+      "ph": "/kəmˈplaɪəns/",
+      "pt": "conformidade regulatória",
+      "def": "Adherence to applicable laws, regulations, standards, or specifications relevant to the project or industry.",
+      "ex": "The rollout was delayed three months to meet ISO 27001 compliance requirements before go-live.",
+      "tip": "Crítico em projetos financeiros, saúde e energia. Non-compliance = serious legal and reputational liability."
+    },
+    {
+      "id": "e12",
+      "term": "integration testing",
+      "ph": "/ˌɪntɪˈɡreɪʃən ˈtestɪŋ/",
+      "pt": "teste de integração",
+      "def": "Testing where individual modules are combined and tested as a group to expose interface defects.",
+      "ex": "Integration testing uncovered a critical data pipeline failure between two vendor APIs before launch.",
+      "tip": "Distinct from unit testing (componente isolado) e UAT (user acceptance). Ordem: unit → integration → system → UAT."
+    }
+  ]
+}
