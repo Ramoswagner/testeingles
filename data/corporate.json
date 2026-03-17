@@ -2,7 +2,7 @@
   "lbl": "Corporate English",
   "pt": "Inglês Corporativo",
   "color": "#f59e0b",
-  "desc": "Expressões do dia a dia de grandes corporações e consultorias.",
+  "desc": "Expressões, verbos e substantivos essenciais para o dia a dia em consultorias e multinacionais. Selecionados para comunicação real em reuniões, e-mails e apresentações.",
   "cards": [
     {
       "id": "c01",
@@ -112,12 +112,6 @@
       "ex": "\"Industry best practices suggest a structured 30/60/90-day integration roadmap for acquisitions at this scale.\"",
       "tip": "Plural: \"best practices\". Consultores usam para validar recommendations. Peer benchmarking = finding best practices."
     },
-    {
-  "lbl": "Corporate English",
-  "pt": "Inglês Corporativo",
-  "color": "#f59e0b",
-  "desc": "Expressões, verbos e substantivos essenciais para o dia a dia em consultorias e multinacionais. Selecionados para comunicação real em reuniões, e-mails e apresentações.",
-  "cards": [
     {
       "id": "c13",
       "term": "touch base",
@@ -264,15 +258,6 @@
     },
     {
       "id": "c29",
-      "term": "low-hanging fruit",
-      "ph": "/ləʊ ˈhæŋɪŋ fruːt/",
-      "pt": "oportunidades fáceis",
-      "def": "Easy opportunities or quick wins that require minimal effort.",
-      "ex": "\"Let's go after the low-hanging fruit first – we can implement those changes in two weeks.\"",
-      "tip": "Já existente (c08), mantido pela relevância."
-    },
-    {
-      "id": "c30",
       "term": "quick win",
       "ph": "/kwɪk wɪn/",
       "pt": "vitória rápida",
@@ -281,7 +266,7 @@
       "tip": "Ideal para construir momentum em projetos de transformação."
     },
     {
-      "id": "c31",
+      "id": "c30",
       "term": "blocker",
       "ph": "/ˈblɒkər/",
       "pt": "impedimento / obstáculo",
@@ -290,7 +275,7 @@
       "tip": "Comum em metodologias ágeis (Scrum). Use em daily stand-ups."
     },
     {
-      "id": "c32",
+      "id": "c31",
       "term": "parking lot",
       "ph": "/ˈpɑːrkɪŋ lɒt/",
       "pt": "estacionamento (de ideias)",
@@ -299,52 +284,43 @@
       "tip": "Técnica de facilitação de reuniões para manter o foco."
     },
     {
-      "id": "c33",
+      "id": "c32",
       "term": "actionable",
       "ph": "/ˈækʃənəbəl/",
-      "pt": "ação prática / que pode ser executado",
+      "pt": "ação prática / que pode ser executado",
       "def": "Something that can be acted upon or implemented.",
       "ex": "\"The report needs to provide actionable insights, not just raw data.\"",
       "tip": "Diferente de 'theoretical'. Resultado deve ser prático."
     },
     {
-      "id": "c34",
+      "id": "c33",
       "term": "deliverable",
       "ph": "/dɪˈlɪvərəbəl/",
       "pt": "entregável",
       "def": "A tangible or intangible output of a project phase (report, prototype, software).",
       "ex": "\"The main deliverable for this sprint is the user authentication module.\"",
-      "tip": "Já existente (p04), mantido pela relevância."
+      "tip": "Essencial em gestão de projetos."
     },
     {
-      "id": "c35",
+      "id": "c34",
       "term": "milestone",
       "ph": "/ˈmaɪlstəʊn/",
       "pt": "marco",
       "def": "A significant event or achievement in a project, usually with zero duration.",
       "ex": "\"The project's next milestone is the prototype sign-off on June 15th.\"",
-      "tip": "Já existente (p09), mantido pela relevância."
+      "tip": "Ajuda a monitorar o progresso."
     },
     {
-      "id": "c36",
-      "term": "bandwidth",
-      "ph": "/ˈbændwɪdθ/",
-      "pt": "capacidade / disponibilidade",
-      "def": "The amount of time or mental capacity a person has for additional work.",
-      "ex": "\"I'd love to help, but I don't have the bandwidth this week.\"",
-      "tip": "Já existente (c03), mantido pela relevância."
-    },
-    {
-      "id": "c37",
+      "id": "c35",
       "term": "circular back",
       "ph": "/ˈsɜːkjələr bæk/",
       "pt": "retomar / voltar a tratar",
       "def": "Alternative to 'circle back', common in some regions.",
       "ex": "\"I'll circular back with you once I have the figures.\"",
-      "tip": "Variação de 'circle back' (c05). Ambos são usados."
+      "tip": "Variação de 'circle back'. Ambos são usados."
     },
     {
-      "id": "c38",
+      "id": "c36",
       "term": "take offline",
       "ph": "/teɪk ɒfˈlaɪn/",
       "pt": "discutir fora da reunião / depois",
@@ -353,7 +329,7 @@
       "tip": "Educado e eficiente para gerenciar tempo em reuniões."
     },
     {
-      "id": "c39",
+      "id": "c37",
       "term": "double-click on",
       "ph": "/ˈdʌbəl klɪk ɒn/",
       "pt": "aprofundar / detalhar",
@@ -362,16 +338,16 @@
       "tip": "Muito usado em apresentações e reuniões de consultoria."
     },
     {
-      "id": "c40",
+      "id": "c38",
       "term": "sanity check",
       "ph": "/ˈsænɪti tʃek/",
       "pt": "verificação de plausibilidade",
       "def": "A quick test to ensure an idea, plan, or number is reasonable and not obviously wrong.",
       "ex": "\"Let's do a sanity check on these projections before presenting to the board.\"",
-      "tip": "Diferente de 'validação completa'. É uma verificação rápida de senso comum."
+      "tip": "É uma verificação rápida de senso comum."
     },
     {
-      "id": "c41",
+      "id": "c39",
       "term": "recalibrate",
       "ph": "/riːˈkælɪbreɪt/",
       "pt": "reajustar / recalibrar",
@@ -380,7 +356,7 @@
       "tip": "Mais sofisticado que 'change'. Implica um ajuste fino baseado em análise."
     },
     {
-      "id": "c42",
+      "id": "c40",
       "term": "boil down to",
       "ph": "/bɔɪl daʊn tuː/",
       "pt": "resumir-se a / essencialmente",
@@ -389,7 +365,7 @@
       "tip": "Útil para sintetizar problemas complexos."
     },
     {
-      "id": "c43",
+      "id": "c41",
       "term": "on the radar",
       "ph": "/ɒn ðə ˈreɪdɑːr/",
       "pt": "no radar / sob atenção",
@@ -398,7 +374,7 @@
       "tip": "Comum para falar de oportunidades ou ameaças futuras."
     },
     {
-      "id": "c44",
+      "id": "c42",
       "term": "back-of-the-envelope",
       "ph": "/bæk əv ðə ˈenvələʊp/",
       "pt": "cálculo aproximado / rápido",
@@ -407,16 +383,16 @@
       "tip": "Mostra capacidade de estimativa rápida, comum em consultoria."
     },
     {
-      "id": "c45",
+      "id": "c43",
       "term": "critical path",
       "ph": "/ˈkrɪtɪkəl pɑːθ/",
       "pt": "caminho crítico",
       "def": "The sequence of stages determining the minimum time needed for an operation.",
       "ex": "\"The design approval is on the critical path – any delay pushes the entire launch.\"",
-      "tip": "Já existente (p02), mantido pela relevância."
+      "tip": "Fundamental em gerenciamento de projetos."
     },
     {
-      "id": "c46",
+      "id": "c44",
       "term": "lift the hood",
       "ph": "/lɪft ðə hʊd/",
       "pt": "abrir o capô / examinar por dentro",
@@ -425,7 +401,7 @@
       "tip": "Metáfora automotiva. Mostra ceticismo saudável e rigor analítico."
     },
     {
-      "id": "c47",
+      "id": "c45",
       "term": "silo",
       "ph": "/ˈsaɪləʊ/",
       "pt": "departamento isolado / silo",
@@ -434,7 +410,7 @@
       "tip": "Crítico em discussões sobre cultura organizacional e eficiência."
     },
     {
-      "id": "c48",
+      "id": "c46",
       "term": "run the numbers",
       "ph": "/rʌn ðə ˈnʌmbəz/",
       "pt": "fazer as contas / analisar números",
@@ -443,16 +419,16 @@
       "tip": "Muito comum em finanças e estratégia."
     },
     {
-      "id": "c49",
+      "id": "c47",
       "term": "blue-sky thinking",
       "ph": "/bluː skaɪ ˈθɪŋkɪŋ/",
       "pt": "pensamento criativo / sem limites",
       "def": "Brainstorming without constraints, focusing on innovative ideas rather than practical limitations.",
       "ex": "\"Let's do some blue-sky thinking – if budget were no object, what would we propose?\"",
-      "tip": "Bom para sessões de inovação. Diferente de pensamento estratégico pragmático."
+      "tip": "Bom para sessões de inovação."
     },
     {
-      "id": "c50",
+      "id": "c48",
       "term": "drill into",
       "ph": "/drɪl ˈɪntuː/",
       "pt": "aprofundar em",
@@ -461,7 +437,7 @@
       "tip": "Intercambiável com 'drill down'."
     },
     {
-      "id": "c51",
+      "id": "c49",
       "term": "push back",
       "ph": "/pʊʃ bæk/",
       "pt": "questionar / opor-se / resistir",
@@ -470,7 +446,7 @@
       "tip": "Habilidade importante: saber quando e como 'push back' construtivamente."
     },
     {
-      "id": "c52",
+      "id": "c50",
       "term": "loop in",
       "ph": "/luːp ɪn/",
       "pt": "incluir (em comunicação)",
@@ -479,7 +455,7 @@
       "tip": "Correlato de 'keep in the loop'."
     },
     {
-      "id": "c53",
+      "id": "c51",
       "term": "move the needle",
       "ph": "/muːv ðə ˈniːdəl/",
       "pt": "fazer diferença / impactar significativamente",
@@ -488,187 +464,7 @@
       "tip": "Usado para separar ações marginais de ações transformadoras."
     },
     {
-      "id": "c54",
-      "term": "boil the frog",
-      "ph": "/bɔɪl ðə frɒɡ/",
-      "pt": "mudança gradual imperceptível",
-      "def": "A metaphor for a process that happens so gradually that people don't notice the negative impact until it's too late.",
-      "ex": "\"Increasing prices slowly over years is like boiling the frog – customers don't notice until it's too high.\"",
-      "tip": "Menos comum que 'boil the ocean', mas usado em contextos de gestão de mudança."
-    },
-    {
-      "id": "c55",
-      "term": "waterfall",
-      "ph": "/ˈwɔːtəfɔːl/",
-      "pt": "modelo cascata",
-      "def": "A traditional project management approach where phases are sequential and distinct.",
-      "ex": "\"The client prefers a waterfall methodology with clear milestones and sign-offs.\"",
-      "tip": "Contraponto a 'agile'. Útil em discussões de metodologia."
-    },
-    {
-      "id": "c56",
-      "term": "agile",
-      "ph": "/ˈædʒaɪl/",
-      "pt": "metodologia ágil",
-      "def": "An iterative approach to project management, often used in software, emphasizing flexibility and collaboration.",
-      "ex": "\"We'll use an agile approach with two-week sprints to adapt to changing requirements.\"",
-      "tip": "Mais que uma metodologia, uma mentalidade. Use com confiança."
-    },
-    {
-      "id": "c57",
-      "term": "scrum",
-      "ph": "/skrʌm/",
-      "pt": "scrum (framework ágil)",
-      "def": "A specific agile framework for managing complex projects, with roles like Scrum Master and Product Owner.",
-      "ex": "\"Our team runs scrum with daily stand-ups and sprint reviews.\"",
-      "tip": "Conhecimento básico em ambientes de tecnologia e transformação digital."
-    },
-    {
-      "id": "c58",
-      "term": "lean",
-      "ph": "/liːn/",
-      "pt": "enxuto / lean",
-      "def": "A methodology focused on minimizing waste and maximizing value, originating from manufacturing.",
-      "ex": "\"We applied lean principles to streamline the approval process, cutting wait times by 40%.\"",
-      "tip": "Aplicável a qualquer processo, não só manufatura."
-    },
-    {
-      "id": "c59",
-      "term": "bottom line",
-      "ph": "/ˈbɒtəm laɪn/",
-      "pt": "resultado final / lucro líquido",
-      "def": "The final profit or loss after all expenses; also used figuratively to mean the most important point.",
-      "ex": "\"The bottom line is that we need to increase revenue or cut costs.\"",
-      "tip": "Clássico. Use literal (finanças) ou figurado (conclusão principal)."
-    },
-    {
-      "id": "c60",
-      "term": "top line",
-      "ph": "/tɒp laɪn/",
-      "pt": "receita bruta / faturamento",
-      "def": "Gross revenue or sales, before any costs are subtracted.",
-      "ex": "\"The new product boosted our top line by 15%, but margins remain thin.\"",
-      "tip": "Sempre contrastado com 'bottom line'."
-    },
-    {
-      "id": "c61",
-      "term": "run rate",
-      "ph": "/rʌn reɪt/",
-      "pt": "ritmo anual projetado",
-      "def": "A projection of future financial performance based on current data, often annualizing monthly figures.",
-      "ex": "\"Based on Q1 results, our run rate for the year is $12M.\"",
-      "tip": "Útil para startups e negócios sazonais."
-    },
-    {
-      "id": "c62",
-      "term": "in the black",
-      "ph": "/ɪn ðə blæk/",
-      "pt": "no positivo / lucrativo",
-      "def": "Being profitable or having positive earnings.",
-      "ex": "\"After three years of losses, the company is finally in the black.\"",
-      "tip": "Antônimo: 'in the red' (no vermelho)."
-    },
-    {
-      "id": "c63",
-      "term": "in the red",
-      "ph": "/ɪn ðə red/",
-      "pt": "no negativo / com prejuízo",
-      "def": "Being unprofitable or having negative earnings.",
-      "ex": "\"The division has been in the red for two consecutive quarters.\"",
-      "tip": "Origem: tinta vermelha usada para registrar perdas."
-    },
-    {
-      "id": "c64",
-      "term": "OpEx",
-      "ph": "/ˈɒpeks/",
-      "pt": "despesas operacionais",
-      "def": "Operating expenditures – day-to-day costs of running a business (rent, salaries, utilities).",
-      "ex": "\"Moving to the cloud reduced our CapEx but increased OpEx.\"",
-      "tip": "Já existente (f06), mantido pela relevância."
-    },
-    {
-      "id": "c65",
-      "term": "CapEx",
-      "ph": "/ˈkæpeks/",
-      "pt": "despesas de capital",
-      "def": "Capital expenditures – funds used to acquire or upgrade long-term assets (equipment, buildings).",
-      "ex": "\"The board approved $5M in CapEx for the new factory.\"",
-      "tip": "Já existente (f05), mantido pela relevância."
-    },
-    {
-      "id": "c66",
-      "term": "ROI",
-      "ph": "/ˌɑːr əʊ ˈaɪ/",
-      "pt": "retorno sobre investimento",
-      "def": "Return on investment – a measure of profitability relative to cost.",
-      "ex": "\"The marketing campaign delivered an ROI of 300%.\"",
-      "tip": "Já existente (f04), mantido pela relevância."
-    },
-    {
-      "id": "c67",
-      "term": "EBITDA",
-      "ph": "/iːˈbɪtdə/",
-      "pt": "EBITDA / LAJIDA",
-      "def": "Earnings Before Interest, Taxes, Depreciation, and Amortization – a proxy for operating cash flow.",
-      "ex": "\"The acquisition target has a healthy EBITDA margin of 25%.\"",
-      "tip": "Já existente (f01), mantido pela relevância."
-    },
-    {
-      "id": "c68",
-      "term": "run a tight ship",
-      "ph": "/rʌn ə taɪt ʃɪp/",
-      "pt": "gerir com disciplina / com mão firme",
-      "def": "To manage an organization or department efficiently and strictly.",
-      "ex": "\"The new COO runs a tight ship – meetings start on time and budgets are strictly followed.\"",
-      "tip": "Expressão idiomática para liderança disciplinada."
-    },
-    {
-      "id": "c69",
-      "term": "get granular",
-      "ph": "/ɡet ˈɡrænjʊlər/",
-      "pt": "detalhar / ir ao nível de detalhe",
-      "def": "To examine or discuss something in very fine detail.",
-      "ex": "\"We need to get granular on the cost drivers – line by line.\"",
-      "tip": "Sinônimo de 'drill down' mas com ênfase em detalhe extremo."
-    },
-    {
-      "id": "c70",
-      "term": "sunset",
-      "ph": "/ˈsʌnset/",
-      "pt": "descontinuar / encerrar gradualmente",
-      "def": "To phase out or discontinue a product, service, or system over time.",
-      "ex": "\"The legacy software will be sunsetted over the next 12 months.\"",
-      "tip": "Usado como verbo. Mais suave que 'kill' ou 'cancel'."
-    },
-    {
-      "id": "c71",
-      "term": "greenfield",
-      "ph": "/ˈɡriːnfiːld/",
-      "pt": "projeto do zero / novo",
-      "def": "A project that lacks constraints imposed by prior work, starting from scratch.",
-      "ex": "\"We have a greenfield opportunity to design the system without legacy integration issues.\"",
-      "tip": "Opõe-se a 'brownfield' (projeto com legado)."
-    },
-    {
-      "id": "c72",
-      "term": "brownfield",
-      "ph": "/ˈbraʊnfiːld/",
-      "pt": "projeto com legado / existente",
-      "def": "A project that must consider or integrate with existing systems and constraints.",
-      "ex": "\"The brownfield nature of the project makes it more complex than building from scratch.\"",
-      "tip": "Comum em TI e engenharia."
-    },
-    {
-      "id": "c73",
-      "term": "lift and shift",
-      "ph": "/lɪft ənd ʃɪft/",
-      "pt": "migrar sem modificar",
-      "def": "A strategy of moving a system or process to a new environment without making changes.",
-      "ex": "\"The first phase is a lift and shift of the data center to the cloud.\"",
-      "tip": "Comum em migrações de TI. Fase inicial antes de otimizações."
-    },
-    {
-      "id": "c74",
+      "id": "c52",
       "term": "boil the frog",
       "ph": "/bɔɪl ðə frɒɡ/",
       "pt": "mudança gradual imperceptível",
@@ -677,43 +473,196 @@
       "tip": "Usado em contextos de gestão de mudança e riscos."
     },
     {
-      "id": "c75",
-      "term": "run the numbers",
-      "ph": "/rʌn ðə ˈnʌmbəz/",
-      "pt": "fazer as contas",
-      "def": "To perform calculations or financial analysis to evaluate a situation.",
-      "ex": "\"We need to run the numbers before committing to that acquisition.\"",
-      "tip": "Muito comum em finanças e estratégia."
+      "id": "c53",
+      "term": "waterfall",
+      "ph": "/ˈwɔːtəfɔːl/",
+      "pt": "modelo cascata",
+      "def": "A traditional project management approach where phases are sequential and distinct.",
+      "ex": "\"The client prefers a waterfall methodology with clear milestones and sign-offs.\"",
+      "tip": "Contraponto a 'agile'. Útil em discussões de metodologia."
     },
     {
-      "id": "c76",
-      "term": "sanity check",
-      "ph": "/ˈsænɪti tʃek/",
-      "pt": "verificação de plausibilidade",
-      "def": "A quick test to ensure an idea, plan, or number is reasonable and not obviously wrong.",
-      "ex": "\"Let's do a sanity check on these projections before presenting to the board.\"",
-      "tip": "Diferente de 'validação completa'. É uma verificação rápida de senso comum."
+      "id": "c54",
+      "term": "agile",
+      "ph": "/ˈædʒaɪl/",
+      "pt": "metodologia ágil",
+      "def": "An iterative approach to project management, often used in software, emphasizing flexibility and collaboration.",
+      "ex": "\"We'll use an agile approach with two-week sprints to adapt to changing requirements.\"",
+      "tip": "Mais que uma metodologia, uma mentalidade."
     },
     {
-      "id": "c77",
+      "id": "c55",
+      "term": "scrum",
+      "ph": "/skrʌm/",
+      "pt": "scrum (framework ágil)",
+      "def": "A specific agile framework for managing complex projects, with roles like Scrum Master and Product Owner.",
+      "ex": "\"Our team runs scrum with daily stand-ups and sprint reviews.\"",
+      "tip": "Conhecimento básico em ambientes de tecnologia e transformação digital."
+    },
+    {
+      "id": "c56",
+      "term": "lean",
+      "ph": "/liːn/",
+      "pt": "enxuto / lean",
+      "def": "A methodology focused on minimizing waste and maximizing value, originating from manufacturing.",
+      "ex": "\"We applied lean principles to streamline the approval process, cutting wait times by 40%.\"",
+      "tip": "Aplicável a qualquer processo, não só manufatura."
+    },
+    {
+      "id": "c57",
+      "term": "bottom line",
+      "ph": "/ˈbɒtəm laɪn/",
+      "pt": "resultado final / lucro líquido",
+      "def": "The final profit or loss after all expenses; also used figuratively to mean the most important point.",
+      "ex": "\"The bottom line is that we need to increase revenue or cut costs.\"",
+      "tip": "Clássico. Use literal (finanças) ou figurado (conclusão principal)."
+    },
+    {
+      "id": "c58",
+      "term": "top line",
+      "ph": "/tɒp laɪn/",
+      "pt": "receita bruta / faturamento",
+      "def": "Gross revenue or sales, before any costs are subtracted.",
+      "ex": "\"The new product boosted our top line by 15%, but margins remain thin.\"",
+      "tip": "Sempre contrastado com 'bottom line'."
+    },
+    {
+      "id": "c59",
+      "term": "run rate",
+      "ph": "/rʌn reɪt/",
+      "pt": "ritmo anual projetado",
+      "def": "A projection of future financial performance based on current data, often annualizing monthly figures.",
+      "ex": "\"Based on Q1 results, our run rate for the year is $12M.\"",
+      "tip": "Útil para startups e negócios sazonais."
+    },
+    {
+      "id": "c60",
+      "term": "in the black",
+      "ph": "/ɪn ðə blæk/",
+      "pt": "no positivo / lucrativo",
+      "def": "Being profitable or having positive earnings.",
+      "ex": "\"After three years of losses, the company is finally in the black.\"",
+      "tip": "Antônimo: 'in the red'."
+    },
+    {
+      "id": "c61",
+      "term": "in the red",
+      "ph": "/ɪn ðə red/",
+      "pt": "no negativo / com prejuízo",
+      "def": "Being unprofitable or having negative earnings.",
+      "ex": "\"The division has been in the red for two consecutive quarters.\"",
+      "tip": "Origem: tinta vermelha usada para registrar perdas."
+    },
+    {
+      "id": "c62",
+      "term": "OpEx",
+      "ph": "/ˈɒpeks/",
+      "pt": "despesas operacionais",
+      "def": "Operating expenditures – day-to-day costs of running a business (rent, salaries, utilities).",
+      "ex": "\"Moving to the cloud reduced our CapEx but increased OpEx.\"",
+      "tip": "Jargão financeiro essencial."
+    },
+    {
+      "id": "c63",
+      "term": "CapEx",
+      "ph": "/ˈkæpeks/",
+      "pt": "despesas de capital",
+      "def": "Capital expenditures – funds used to acquire or upgrade long-term assets (equipment, buildings).",
+      "ex": "\"The board approved $5M in CapEx for the new factory.\"",
+      "tip": "Jargão financeiro essencial."
+    },
+    {
+      "id": "c64",
+      "term": "ROI",
+      "ph": "/ˌɑːr əʊ ˈaɪ/",
+      "pt": "retorno sobre investimento",
+      "def": "Return on investment – a measure of profitability relative to cost.",
+      "ex": "\"The marketing campaign delivered an ROI of 300%.\"",
+      "tip": "Métrica universal."
+    },
+    {
+      "id": "c65",
+      "term": "EBITDA",
+      "ph": "/iːˈbɪtdə/",
+      "pt": "EBITDA / LAJIDA",
+      "def": "Earnings Before Interest, Taxes, Depreciation, and Amortization – a proxy for operating cash flow.",
+      "ex": "\"The acquisition target has a healthy EBITDA margin of 25%.\"",
+      "tip": "Pronúncia: 'ee-bit-dah'."
+    },
+    {
+      "id": "c66",
+      "term": "run a tight ship",
+      "ph": "/rʌn ə taɪt ʃɪp/",
+      "pt": "gerir com disciplina / com mão firme",
+      "def": "To manage an organization or department efficiently and strictly.",
+      "ex": "\"The new COO runs a tight ship – meetings start on time and budgets are strictly followed.\"",
+      "tip": "Expressão idiomática para liderança disciplinada."
+    },
+    {
+      "id": "c67",
+      "term": "get granular",
+      "ph": "/ɡet ˈɡrænjʊlər/",
+      "pt": "detalhar / ir ao nível de detalhe",
+      "def": "To examine or discuss something in very fine detail.",
+      "ex": "\"We need to get granular on the cost drivers – line by line.\"",
+      "tip": "Sinônimo de 'drill down' mas com ênfase em detalhe extremo."
+    },
+    {
+      "id": "c68",
+      "term": "sunset",
+      "ph": "/ˈsʌnset/",
+      "pt": "descontinuar / encerrar gradualmente",
+      "def": "To phase out or discontinue a product, service, or system over time.",
+      "ex": "\"The legacy software will be sunsetted over the next 12 months.\"",
+      "tip": "Usado como verbo. Mais suave que 'kill' ou 'cancel'."
+    },
+    {
+      "id": "c69",
+      "term": "greenfield",
+      "ph": "/ˈɡriːnfiːld/",
+      "pt": "projeto do zero / novo",
+      "def": "A project that lacks constraints imposed by prior work, starting from scratch.",
+      "ex": "\"We have a greenfield opportunity to design the system without legacy integration issues.\"",
+      "tip": "Opõe-se a 'brownfield'."
+    },
+    {
+      "id": "c70",
+      "term": "brownfield",
+      "ph": "/ˈbraʊnfiːld/",
+      "pt": "projeto com legado / existente",
+      "def": "A project that must consider or integrate with existing systems and constraints.",
+      "ex": "\"The brownfield nature of the project makes it more complex than building from scratch.\"",
+      "tip": "Comum em TI e engenharia."
+    },
+    {
+      "id": "c71",
+      "term": "lift and shift",
+      "ph": "/lɪft ənd ʃɪft/",
+      "pt": "migrar sem modificar",
+      "def": "A strategy of moving a system or process to a new environment without making changes.",
+      "ex": "\"The first phase is a lift and shift of the data center to the cloud.\"",
+      "tip": "Comum em migrações de TI."
+    },
+    {
+      "id": "c72",
       "term": "straw man",
       "ph": "/strɔː mæn/",
       "pt": "proposta inicial para discussão",
       "def": "A first draft or preliminary version of a proposal, meant to be critiqued and improved.",
       "ex": "\"Here's a straw man of the org chart – feel free to tear it apart.\"",
-      "tip": "Comum em consultoria para iniciar discussões. Não é pejorativo neste contexto."
+      "tip": "Comum em consultoria para iniciar discussões."
     },
     {
-      "id": "c78",
+      "id": "c73",
       "term": "deck",
       "ph": "/dek/",
       "pt": "apresentação de slides",
       "def": "A slide presentation, usually in PowerPoint or Keynote.",
       "ex": "\"I'll send you the deck after the meeting so you can review the details.\"",
-      "tip": "Onipresente em consultoria. 'Pitch deck', 'board deck'."
+      "tip": "Onipresente em consultoria."
     },
     {
-      "id": "c79",
+      "id": "c74",
       "term": "leave it on the field",
       "ph": "/liːv ɪt ɒn ðə fiːld/",
       "pt": "dar o máximo / deixar tudo",
@@ -722,7 +671,7 @@
       "tip": "Metáfora esportiva. Usada para motivar equipes."
     },
     {
-      "id": "c80",
+      "id": "c75",
       "term": "sweat the details",
       "ph": "/swet ðə ˈdiːteɪlz/",
       "pt": "preocupar-se com os detalhes",
@@ -731,7 +680,7 @@
       "tip": "Qualidade valorizada em consultoria: rigor analítico."
     },
     {
-      "id": "c81",
+      "id": "c76",
       "term": "air cover",
       "ph": "/er ˈkʌvər/",
       "pt": "proteção / suporte da alta gestão",
@@ -740,13 +689,58 @@
       "tip": "Metáfora militar. Essencial em projetos políticos."
     },
     {
-      "id": "c82",
+      "id": "c77",
       "term": "tiger team",
       "ph": "/ˈtaɪɡər tiːm/",
       "pt": "equipe de elite para resolver problemas",
       "def": "A specialized, cross-functional team assembled to solve a specific, often urgent, problem.",
       "ex": "\"We formed a tiger team to address the cybersecurity breach.\"",
-      "tip": "Origem militar/NASA. Usado para crises ou desafios críticos."
-    }  
+      "tip": "Origem militar/NASA."
+    },
+    {
+      "id": "c78",
+      "term": "boil the frog",
+      "ph": "/bɔɪl ðə frɒɡ/",
+      "pt": "mudança gradual imperceptível",
+      "def": "A metaphor for a process that happens so gradually that people don't notice the negative impact until it's too late.",
+      "ex": "\"Increasing prices slowly over years is like boiling the frog – customers don't notice until it's too high.\"",
+      "tip": "Usado em contextos de gestão de mudança e riscos."
+    },
+    {
+      "id": "c79",
+      "term": "run the numbers",
+      "ph": "/rʌn ðə ˈnʌmbəz/",
+      "pt": "fazer as contas",
+      "def": "To perform calculations or financial analysis to evaluate a situation.",
+      "ex": "\"We need to run the numbers before committing to that acquisition.\"",
+      "tip": "Muito comum em finanças e estratégia."
+    },
+    {
+      "id": "c80",
+      "term": "sanity check",
+      "ph": "/ˈsænɪti tʃek/",
+      "pt": "verificação de plausibilidade",
+      "def": "A quick test to ensure an idea, plan, or number is reasonable and not obviously wrong.",
+      "ex": "\"Let's do a sanity check on these projections before presenting to the board.\"",
+      "tip": "É uma verificação rápida de senso comum."
+    },
+    {
+      "id": "c81",
+      "term": "get granular",
+      "ph": "/ɡet ˈɡrænjʊlər/",
+      "pt": "detalhar / ir ao nível de detalhe",
+      "def": "To examine or discuss something in very fine detail.",
+      "ex": "\"We need to get granular on the cost drivers – line by line.\"",
+      "tip": "Sinônimo de 'drill down' mas com ênfase em detalhe extremo."
+    },
+    {
+      "id": "c82",
+      "term": "sunset",
+      "ph": "/ˈsʌnset/",
+      "pt": "descontinuar / encerrar gradualmente",
+      "def": "To phase out or discontinue a product, service, or system over time.",
+      "ex": "\"The legacy software will be sunsetted over the next 12 months.\"",
+      "tip": "Usado como verbo. Mais suave que 'kill' ou 'cancel'."
+    }
   ]
 }
