@@ -1,5 +1,5 @@
 // ========================================
-// app.js — LexiPro versão premium
+// app.js — LexiPro versão otimizada para mobile
 // ========================================
 
 // ----- CAT_ICONS (mesmos) -----
@@ -84,10 +84,6 @@ function initApp() {
   load();
   loadAchievements();
   renderHome();
-  if (window.speechSynthesis) {
-    window.speechSynthesis.getVoices();
-    window.speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices();
-  }
 }
 
 // ----- Persistência -----
@@ -158,36 +154,8 @@ function goHome() {
   showView('home');
 }
 
-// ----- Áudio premium (Google TTS com fallback) -----
-const VOICES_PREMIUM = [
-  { id: 'en-US-Wavenet-D', name: 'EUA (Masculino)', lang: 'en-US', flag: '🇺🇸' },
-  { id: 'en-US-Wavenet-E', name: 'EUA (Feminino)', lang: 'en-US', flag: '🇺🇸' },
-  { id: 'en-GB-Wavenet-B', name: 'UK (Masculino)', lang: 'en-GB', flag: '🇬🇧' },
-  { id: 'en-GB-Wavenet-C', name: 'UK (Feminino)', lang: 'en-GB', flag: '🇬🇧' }
-];
-let currentVoice = VOICES_PREMIUM[0];
-let audioCache = {};
-
-async function fetchGoogleTTS(text, voice, rate = 1.0) {
-  const key = 'SUA_GOOGLE_API_KEY'; // Substitua pela sua chave
-  const url = `https://texttospeech.googleapis.com/v1/text:synthesize?key=${key}`;
-  const body = {
-    input: { text },
-    voice: { languageCode: voice.lang, name: voice.id },
-    audioConfig: { audioEncoding: 'MP3', speakingRate: rate }
-  };
-  const response = await fetch(url, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(body)
-  });
-  if (!response.ok) throw new Error('Google TTS failed');
-  const data = await response.json();
-  return `data:audio/mp3;base64,${data.audioContent}`;
-}
-
+// ----- Áudio simplificado: apenas Web Speech API (rápido e funciona offline) -----
 let _activeBtn = null;
-let _audioEl = null;
 let _spellTmrs = [];
 
 function setActiveBtn(id) {
@@ -212,7 +180,6 @@ function setActiveBtn(id) {
 function stopAudio() {
   _spellTmrs.forEach(clearTimeout);
   _spellTmrs = [];
-  if (_audioEl) { try { _audioEl.pause(); } catch (e) {}; _audioEl = null; }
   if (window.speechSynthesis) window.speechSynthesis.cancel();
   setActiveBtn(null);
   resetSpellDisplay();
@@ -220,73 +187,47 @@ function stopAudio() {
 
 function resetSpellDisplay() {
   const sd = document.getElementById('spell-display');
-  sd.classList.remove('on');
-  sd.innerHTML = '';
+  if (sd) {
+    sd.classList.remove('on');
+    sd.innerHTML = '';
+  }
 }
 
-function wsaSpeak(text, lang, rate, onEnd) {
-  if (!window.speechSynthesis) { onEnd?.(); return; }
-  window.speechSynthesis.cancel();
-  const utt = new SpeechSynthesisUtterance(text);
-  utt.lang = lang;
-  utt.rate = rate;
-  utt.pitch = 1;
-  utt.onend = utt.onerror = () => onEnd?.();
-  window.speechSynthesis.speak(utt);
-}
-
-async function speak(mode, e) {
+function speak(mode, e) {
   e?.stopPropagation();
   const card = CATS[S.cat]?.cards[S.idx];
   if (!card) return;
-  const btnId = 'pb-' + mode.replace('normal', 'main');
+  const btnId = 'pb-' + (mode === 'normal' ? 'main' : mode);
   if (_activeBtn === btnId) { stopAudio(); return; }
   stopAudio();
 
   if (mode === 'normal' || mode === 'main') {
     setActiveBtn('pb-main');
-    try {
-      const cacheKey = `${card.term}_${currentVoice.id}`;
-      let audioUrl = audioCache[cacheKey];
-      if (!audioUrl) {
-        audioUrl = await fetchGoogleTTS(card.term, currentVoice, 1.0);
-        audioCache[cacheKey] = audioUrl;
-        try { localStorage.setItem('ttsCache', JSON.stringify(audioCache)); } catch (e) {}
-      }
-      const audio = new Audio(audioUrl);
-      _audioEl = audio;
-      audio.play();
-      audio.onended = () => setActiveBtn(null);
-    } catch (err) {
-      console.warn('Google TTS falhou, usando fallback', err);
-      wsaSpeak(card.term, currentVoice.lang, 0.9, () => setActiveBtn(null));
-    }
+    utter(card.term, 1.0, () => setActiveBtn(null));
   } else if (mode === 'slow') {
     setActiveBtn('pb-slow');
-    try {
-      const cacheKey = `${card.term}_${currentVoice.id}_slow`;
-      let audioUrl = audioCache[cacheKey];
-      if (!audioUrl) {
-        audioUrl = await fetchGoogleTTS(card.term, currentVoice, 0.6);
-        audioCache[cacheKey] = audioUrl;
-        try { localStorage.setItem('ttsCache', JSON.stringify(audioCache)); } catch (e) {}
-      }
-      const audio = new Audio(audioUrl);
-      _audioEl = audio;
-      audio.play();
-      audio.onended = () => setActiveBtn(null);
-    } catch (err) {
-      wsaSpeak(card.term, currentVoice.lang, 0.55, () => setActiveBtn(null));
-    }
+    utter(card.term, 0.5, () => setActiveBtn(null));
   } else if (mode === 'spell') {
     spellTerm(card.term);
   }
+}
+
+function utter(text, rate, onEnd) {
+  if (!window.speechSynthesis) { onEnd(); return; }
+  window.speechSynthesis.cancel();
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = 'en-US';
+  utterance.rate = rate;
+  utterance.pitch = 1;
+  utterance.onend = utterance.onerror = onEnd;
+  window.speechSynthesis.speak(utterance);
 }
 
 function spellTerm(term) {
   setActiveBtn('pb-spell');
   const letters = term.replace(/[^a-zA-Z\- ]/g, '').split('');
   const sd = document.getElementById('spell-display');
+  if (!sd) return;
   sd.innerHTML = '';
   const tiles = [];
   letters.forEach((ch) => {
@@ -302,25 +243,21 @@ function spellTerm(term) {
     tiles.push({ el, ch, isChar: ch !== ' ' && ch !== '-' });
   });
   sd.classList.add('on');
+
   let delay = 0;
   const charDelay = 400;
+
   tiles.forEach((t) => {
     if (!t.isChar) return;
     const tmr = setTimeout(() => {
       tiles.forEach(x => { if (x.el.classList.contains('lit')) x.el.classList.replace('lit', 'done'); });
       t.el.classList.add('lit');
-      if (window.speechSynthesis) {
-        window.speechSynthesis.cancel();
-        const utt = new SpeechSynthesisUtterance(t.ch.toUpperCase());
-        utt.lang = currentVoice.lang;
-        utt.rate = 0.8;
-        utt.pitch = 1;
-        window.speechSynthesis.speak(utt);
-      }
+      utter(t.ch.toUpperCase(), 0.8, () => {});
     }, delay);
     _spellTmrs.push(tmr);
     delay += charDelay;
   });
+
   const done = setTimeout(() => {
     tiles.forEach(t => { if (t.isChar) { t.el.classList.remove('lit'); t.el.classList.add('done'); } });
     setActiveBtn(null);
