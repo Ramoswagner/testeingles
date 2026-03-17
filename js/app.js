@@ -64,7 +64,7 @@ function loadAchievements() {
 
 // ----- Carregar JSONs -----
 async function loadAllCategories() {
-  const categories = ['engineering', 'pmgmt', 'finance', 'corporate', 'planning', 'portfolio'];
+  const categories = ['engineering', 'pmgmt', 'finance', 'corporate', 'planning', 'portfolio', 'pmbok'];
   try {
     const promises = categories.map(async (cat) => {
       const response = await fetch(`data/${cat}.json`);
