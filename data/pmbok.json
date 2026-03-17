@@ -1,0 +1,1808 @@
+{
+  "lbl": "PMBOK",
+  "pt": "Gerenciamento de Projetos (PMBOK)",
+  "color": "#8b5cf6",
+  "desc": "Termos, processos e conceitos do Project Management Body of Knowledge (PMBOK Guide).",
+  "cards": [
+    {
+      "id": "pm001",
+      "term": "project charter",
+      "ph": "/ˈprɒdʒekt ˈtʃɑːrtər/",
+      "pt": "termo de abertura do projeto",
+      "def": "A document issued by the project sponsor that formally authorizes the existence of a project and provides the project manager with the authority to apply organizational resources.",
+      "ex": "The project charter was signed by the CEO, giving the green light to the new product development.",
+      "tip": "O project charter é o primeiro documento oficial do projeto e deve conter objetivos, principais stakeholders e orçamento preliminar."
+    },
+    {
+      "id": "pm002",
+      "term": "project management plan",
+      "ph": "/ˈprɒdʒekt ˈmænɪdʒmənt plæn/",
+      "pt": "plano de gerenciamento do projeto",
+      "def": "A formal, approved document that defines how the project is executed, monitored, and controlled.",
+      "ex": "The project management plan integrated the scope, schedule, and cost baselines.",
+      "tip": "É um documento composto por vários planos auxiliares (escopo, cronograma, riscos, etc.) e linhas de base."
+    },
+    {
+      "id": "pm003",
+      "term": "work breakdown structure (WBS)",
+      "ph": "/wɜːrk ˈbreɪkdaʊn ˈstrʌktʃər/",
+      "pt": "estrutura analítica do projeto (EAP)",
+      "def": "A hierarchical decomposition of the total scope of work to be carried out by the project team.",
+      "ex": "The WBS broke the project down into 25 work packages, each assigned to a team member.",
+      "tip": "A regra 100% é fundamental: a EAP deve incluir todo o trabalho definido no escopo, nem mais, nem menos."
+    },
+    {
+      "id": "pm004",
+      "term": "work package",
+      "ph": "/wɜːrk ˈpækɪdʒ/",
+      "pt": "pacote de trabalho",
+      "def": "The lowest level of the work breakdown structure, where work can be estimated, scheduled, and managed.",
+      "ex": "Each work package was estimated in hours and assigned to a specific department.",
+      "tip": "Pacotes de trabalho são a base para o cronograma, orçamento e alocação de recursos."
+    },
+    {
+      "id": "pm005",
+      "term": "scope statement",
+      "ph": "/skəʊp ˈsteɪtmənt/",
+      "pt": "declaração de escopo",
+      "def": "A detailed description of the project scope, including major deliverables, assumptions, and constraints.",
+      "ex": "The scope statement clarified that the software would be delivered only for iOS initially.",
+      "tip": "A declaração de escopo serve como base para decisões futuras e para evitar scope creep."
+    },
+    {
+      "id": "pm006",
+      "term": "scope creep",
+      "ph": "/skəʊp kriːp/",
+      "pt": "expansão descontrolada do escopo",
+      "def": "Uncontrolled changes or continuous growth in a project’s scope, without adjustments to time, cost, or resources.",
+      "ex": "Scope creep turned a three-month project into a one-year nightmare.",
+      "tip": "Evite scope creep com um processo formal de controle de mudanças."
+    },
+    {
+      "id": "pm007",
+      "term": "change control board (CCB)",
+      "ph": "/tʃeɪndʒ kənˈtrəʊl bɔːrd/",
+      "pt": "comitê de controle de mudanças",
+      "def": "A formally chartered group responsible for reviewing, evaluating, approving, or rejecting changes to the project.",
+      "ex": "The CCB met weekly to assess change requests and their impact on the baseline.",
+      "tip": "A CCB geralmente é formada por stakeholders-chave e tem autoridade para aprovar ou rejeitar mudanças."
+    },
+    {
+      "id": "pm008",
+      "term": "change request",
+      "ph": "/tʃeɪndʒ rɪˈkwest/",
+      "pt": "solicitação de mudança",
+      "def": "A formal proposal to modify any document, deliverable, or baseline.",
+      "ex": "The client submitted a change request to add a new feature to the mobile app.",
+      "tip": "Toda mudança deve ser documentada e avaliada quanto ao impacto em custo, prazo e qualidade."
+    },
+    {
+      "id": "pm009",
+      "term": "corrective action",
+      "ph": "/kəˈrektɪv ˈækʃən/",
+      "pt": "ação corretiva",
+      "def": "An intentional activity that realigns the performance of the project work with the project management plan.",
+      "ex": "The team implemented corrective action by adding two developers to meet the deadline.",
+      "tip": "Ação corretiva é diferente de ação preventiva: corrige um desvio já ocorrido."
+    },
+    {
+      "id": "pm010",
+      "term": "preventive action",
+      "ph": "/prɪˈventɪv ˈækʃən/",
+      "pt": "ação preventiva",
+      "def": "An intentional activity that ensures the future performance of the project work is aligned with the project management plan.",
+      "ex": "Preventive action was taken by conducting extra tests to avoid potential failures.",
+      "tip": "Ação preventiva visa reduzir a probabilidade de impactos negativos."
+    },
+    {
+      "id": "pm011",
+      "term": "defect repair",
+      "ph": "/ˈdiːfekt rɪˈper/",
+      "pt": "reparo de defeito",
+      "def": "An activity to fix a nonconformance or defect found in a deliverable.",
+      "ex": "Defect repair involved rewriting the faulty module to meet the specification.",
+      "tip": "Defeitos devem ser registrados e tratados como parte do controle de qualidade."
+    },
+    {
+      "id": "pm012",
+      "term": "lessons learned",
+      "ph": "/ˈlesənz ˈlɜːrnd/",
+      "pt": "lições aprendidas",
+      "def": "The knowledge gained during a project, which shows how project events were addressed or should be addressed for future projects.",
+      "ex": "The lessons learned session highlighted the importance of early stakeholder engagement.",
+      "tip": "Lições aprendidas devem ser documentadas ao longo do projeto, não apenas no final."
+    },
+    {
+      "id": "pm013",
+      "term": "historical information",
+      "ph": "/hɪˈstɒrɪkəl ˌɪnfərˈmeɪʃən/",
+      "pt": "informações históricas",
+      "def": "Data and documents from previous projects used to inform current project decisions.",
+      "ex": "The team used historical information from similar projects to estimate costs more accurately.",
+      "tip": "Informações históricas são valiosas para estimativas e planejamento."
+    },
+    {
+      "id": "pm014",
+      "term": "organizational process assets",
+      "ph": "/ˌɔːrɡənaɪˈzeɪʃənəl ˈprɒses ˈæsets/",
+      "pt": "ativos de processos organizacionais",
+      "def": "Plans, processes, policies, procedures, and knowledge bases specific to the performing organization.",
+      "ex": "The project followed the organizational process assets, including the standard risk template.",
+      "tip": "Ativos de processos organizacionais podem ser processos formais ou informais, como templates e lições aprendidas."
+    },
+    {
+      "id": "pm015",
+      "term": "enterprise environmental factors",
+      "ph": "/ˈentərpraɪz ɪnˌvaɪrənˈmentl ˈfæktərz/",
+      "pt": "fatores ambientais da empresa",
+      "def": "Conditions, not under the immediate control of the team, that influence, constrain, or direct the project.",
+      "ex": "Government regulations were enterprise environmental factors that affected the project timeline.",
+      "tip": "Exemplos: cultura organizacional, infraestrutura, condições de mercado, regulamentações."
+    },
+    {
+      "id": "pm016",
+      "term": "stakeholder",
+      "ph": "/ˈsteɪkhəʊldər/",
+      "pt": "parte interessada",
+      "def": "An individual, group, or organization that may affect, be affected by, or perceive itself to be affected by a project.",
+      "ex": "Key stakeholders included the sponsor, the customer, and the regulatory agency.",
+      "tip": "Identificar stakeholders cedo é crucial para o sucesso do projeto."
+    },
+    {
+      "id": "pm017",
+      "term": "stakeholder register",
+      "ph": "/ˈsteɪkhəʊldər ˈredʒɪstər/",
+      "pt": "registro das partes interessadas",
+      "def": "A document containing the identification, assessment, and classification of project stakeholders.",
+      "ex": "The stakeholder register listed each stakeholder's influence, interest, and communication preferences.",
+      "tip": "O registro de stakeholders é atualizado ao longo do projeto."
+    },
+    {
+      "id": "pm018",
+      "term": "stakeholder analysis",
+      "ph": "/ˈsteɪkhəʊldər əˈnælɪsɪs/",
+      "pt": "análise das partes interessadas",
+      "def": "A technique of systematically gathering and analyzing quantitative and qualitative information to determine whose interests should be taken into account.",
+      "ex": "Stakeholder analysis revealed that the operations manager had high influence but low interest.",
+      "tip": "Ferramentas comuns: matriz poder/interesse, modelo de saliência."
+    },
+    {
+      "id": "pm019",
+      "term": "project life cycle",
+      "ph": "/ˈprɒdʒekt laɪf ˈsaɪkəl/",
+      "pt": "ciclo de vida do projeto",
+      "def": "The series of phases that a project passes through from its start to its completion.",
+      "ex": "The project life cycle included initiation, planning, execution, and closure phases.",
+      "tip": "O ciclo de vida pode ser preditivo, iterativo, incremental ou ágil."
+    },
+    {
+      "id": "pm020",
+      "term": "phase gate",
+      "ph": "/feɪz ɡeɪt/",
+      "pt": "ponto de decisão / fase gate",
+      "def": "A review at the end of a phase in which a decision is made to continue, modify, or end a project.",
+      "ex": "At the phase gate, the steering committee approved moving to the construction phase.",
+      "tip": "Também chamado de stage gate ou kill point."
+    },
+    {
+      "id": "pm021",
+      "term": "project sponsor",
+      "ph": "/ˈprɒdʒekt ˈspɒnsər/",
+      "pt": "patrocinador do projeto",
+      "def": "A person or group who provides resources and support for the project and is accountable for enabling success.",
+      "ex": "The project sponsor secured the budget and helped remove organizational obstacles.",
+      "tip": "O sponsor é diferente do gerente de projetos; ele tem autoridade executiva."
+    },
+    {
+      "id": "pm022",
+      "term": "project manager",
+      "ph": "/ˈprɒdʒekt ˈmænɪdʒər/",
+      "pt": "gerente de projetos",
+      "def": "The person assigned by the performing organization to lead the team and achieve the project objectives.",
+      "ex": "The project manager coordinated the team, managed risks, and reported progress to the sponsor.",
+      "tip": "O gerente de projetos integra as áreas de conhecimento e lidera a equipe."
+    },
+    {
+      "id": "pm023",
+      "term": "project team",
+      "ph": "/ˈprɒdʒekt tiːm/",
+      "pt": "equipe do projeto",
+      "def": "A set of individuals who support the project manager in performing the work of the project.",
+      "ex": "The project team consisted of developers, testers, and a business analyst.",
+      "tip": "A equipe pode ser interna, terceirizada ou virtual."
+    },
+    {
+      "id": "pm024",
+      "term": "functional manager",
+      "ph": "/ˈfʌŋkʃənəl ˈmænɪdʒər/",
+      "pt": "gerente funcional",
+      "def": "Someone with management authority over an organizational unit, such as a department.",
+      "ex": "The functional manager provided resources and technical guidance to the project team.",
+      "tip": "Em organizações matriciais, o functional manager compartilha autoridade com o gerente de projetos."
+    },
+    {
+      "id": "pm025",
+      "term": "project management office (PMO)",
+      "ph": "/ˈprɒdʒekt ˈmænɪdʒmənt ˈɒfɪs/",
+      "pt": "escritório de gerenciamento de projetos",
+      "def": "An organizational structure that standardizes project-related governance processes and facilitates the sharing of resources, methodologies, tools, and techniques.",
+      "ex": "The PMO provided templates and conducted audits to ensure compliance with the methodology.",
+      "tip": "PMOs podem ser de suporte, controle ou diretivo."
+    },
+    {
+      "id": "pm026",
+      "term": "business case",
+      "ph": "/ˈbɪznəs keɪs/",
+      "pt": "caso de negócio",
+      "def": "A documented economic feasibility study used to justify the investment and authorize the project.",
+      "ex": "The business case showed a net present value of $2M, leading to project approval.",
+      "tip": "O business case é criado antes do project charter e ajuda a decidir se o projeto vale a pena."
+    },
+    {
+      "id": "pm027",
+      "term": "benefits management plan",
+      "ph": "/ˈbenɪfɪts ˈmænɪdʒmənt plæn/",
+      "pt": "plano de gerenciamento de benefícios",
+      "def": "A document that describes how and when the benefits of the project will be delivered and measured.",
+      "ex": "The benefits management plan outlined key performance indicators for the new system.",
+      "tip": "Os benefícios devem ser mensuráveis e alinhados aos objetivos estratégicos."
+    },
+    {
+      "id": "pm028",
+      "term": "requirements",
+      "ph": "/rɪˈkwaɪərmənts/",
+      "pt": "requisitos",
+      "def": "Conditions or capabilities that must be met by the project or present in the product, service, or result.",
+      "ex": "The requirements included both functional and non-functional specifications.",
+      "tip": "Requisitos bem definidos reduzem retrabalho e aumentam a satisfação do cliente."
+    },
+    {
+      "id": "pm029",
+      "term": "requirements traceability matrix",
+      "ph": "/rɪˈkwaɪərmənts ˌtreɪsəˈbɪlɪti ˈmeɪtrɪks/",
+      "pt": "matriz de rastreabilidade de requisitos",
+      "def": "A grid that links requirements to their origin and traces them throughout the project life cycle.",
+      "ex": "The traceability matrix ensured that every requirement was tested and delivered.",
+      "tip": "Ajuda a garantir que todos os requisitos sejam atendidos e facilita o impacto de mudanças."
+    },
+    {
+      "id": "pm030",
+      "term": "scope baseline",
+      "ph": "/skəʊp ˈbeɪslaɪn/",
+      "pt": "linha de base do escopo",
+      "def": "The approved version of the scope statement, WBS, and WBS dictionary, used as a basis for comparison.",
+      "ex": "Any change to the scope baseline required formal approval through the change control process.",
+      "tip": "A linha de base do escopo é parte do plano de gerenciamento do projeto."
+    },
+    {
+      "id": "pm031",
+      "term": "WBS dictionary",
+      "ph": "/dʌbəl juː biː es ˈdɪkʃəneri/",
+      "pt": "dicionário da EAP",
+      "def": "A document that provides detailed deliverable, activity, and scheduling information about each component in the WBS.",
+      "ex": "The WBS dictionary described each work package, its cost, and acceptance criteria.",
+      "tip": "Complementa a EAP com informações detalhadas."
+    },
+    {
+      "id": "pm032",
+      "term": "activity",
+      "ph": "/ækˈtɪvɪti/",
+      "pt": "atividade",
+      "def": "A distinct, scheduled portion of work performed during the course of a project.",
+      "ex": "The activity 'code review' was estimated to take four hours.",
+      "tip": "Atividades são os menores componentes do cronograma."
+    },
+    {
+      "id": "pm033",
+      "term": "activity list",
+      "ph": "/ækˈtɪvɪti lɪst/",
+      "pt": "lista de atividades",
+      "def": "A documented tabulation of schedule activities that includes the activity name, identifier, and description.",
+      "ex": "The activity list contained 150 tasks, each with a unique ID.",
+      "tip": "A lista de atividades é uma saída do processo de definição das atividades."
+    },
+    {
+      "id": "pm034",
+      "term": "activity attributes",
+      "ph": "/ækˈtɪvɪti ˈætrɪbjuːts/",
+      "pt": "atributos da atividade",
+      "def": "Multiple attributes associated with each schedule activity, such as predecessors, resources, and constraints.",
+      "ex": "Activity attributes included the required skill level and the earliest start date.",
+      "tip": "Os atributos se expandem à medida que o planejamento avança."
+    },
+    {
+      "id": "pm035",
+      "term": "milestone",
+      "ph": "/ˈmaɪlstəʊn/",
+      "pt": "marco",
+      "def": "A significant point or event in a project, usually with zero duration.",
+      "ex": "The project milestone 'design approval' was achieved on March 15th.",
+      "tip": "Marcos ajudam a monitorar o progresso e a comunicar eventos importantes."
+    },
+    {
+      "id": "pm036",
+      "term": "predecessor",
+      "ph": "/ˈpriːdɪsesər/",
+      "pt": "atividade predecessora",
+      "def": "An activity that logically comes before a dependent activity in a schedule.",
+      "ex": "The predecessor of 'testing' was 'development'.",
+      "tip": "As relações entre atividades podem ser finish-to-start, start-to-start, etc."
+    },
+    {
+      "id": "pm037",
+      "term": "successor",
+      "ph": "/səkˈsesər/",
+      "pt": "atividade sucessora",
+      "def": "An activity that logically follows another activity in a schedule.",
+      "ex": "'Deployment' was the successor to 'testing'.",
+      "tip": "Identificar sucessores ajuda a construir a rede do cronograma."
+    },
+    {
+      "id": "pm038",
+      "term": "lag",
+      "ph": "/læɡ/",
+      "pt": "espera / lag",
+      "def": "A modification of a logical relationship that directs a delay in the successor activity.",
+      "ex": "A lag of two days was added after painting to allow the paint to dry.",
+      "tip": "Lag é um tempo de espera; lead é uma antecipação."
+    },
+    {
+      "id": "pm039",
+      "term": "lead",
+      "ph": "/liːd/",
+      "pt": "antecipação / lead",
+      "def": "A modification of a logical relationship that allows an acceleration of the successor activity.",
+      "ex": "A lead of one week allowed the procurement team to start ordering materials before the design was fully complete.",
+      "tip": "Lead acelera o cronograma, mas aumenta riscos."
+    },
+    {
+      "id": "pm040",
+      "term": "critical path",
+      "ph": "/ˈkrɪtɪkəl pæθ/",
+      "pt": "caminho crítico",
+      "def": "The sequence of activities that represents the longest path through a project, determining the shortest possible duration.",
+      "ex": "Any delay on the critical path would directly push the project end date.",
+      "tip": "O caminho crítico tem folga zero ou negativa."
+    },
+    {
+      "id": "pm041",
+      "term": "float (slack)",
+      "ph": "/fləʊt/",
+      "pt": "folga",
+      "def": "The amount of time an activity can be delayed without delaying the project finish date.",
+      "ex": "The activity had five days of float, so it was not on the critical path.",
+      "tip": "Float total e float livre são conceitos importantes na análise de rede."
+    },
+    {
+      "id": "pm042",
+      "term": "schedule baseline",
+      "ph": "/ˈʃedjuːl ˈbeɪslaɪn/",
+      "pt": "linha de base do cronograma",
+      "def": "The approved version of the project schedule, used as a basis for comparison.",
+      "ex": "The schedule baseline was established after the planning phase.",
+      "tip": "Mudanças no cronograma devem ser aprovadas e a linha de base atualizada."
+    },
+    {
+      "id": "pm043",
+      "term": "schedule compression",
+      "ph": "/ˈʃedjuːl kəmˈpreʃən/",
+      "pt": "compressão do cronograma",
+      "def": "Techniques used to shorten the project duration without reducing the project scope.",
+      "ex": "Crashing and fast tracking are two common schedule compression techniques.",
+      "tip": "Crashing adiciona recursos; fast tracking executa atividades em paralelo."
+    },
+    {
+      "id": "pm044",
+      "term": "crashing",
+      "ph": "/ˈkræʃɪŋ/",
+      "pt": "compressão (com adição de recursos)",
+      "def": "A technique for shortening the schedule by adding resources, typically at a higher cost.",
+      "ex": "Crashing involved adding two more developers to the coding phase.",
+      "tip": "Crashing aumenta custo, mas pode reduzir prazo."
+    },
+    {
+      "id": "pm045",
+      "term": "fast tracking",
+      "ph": "/fɑːst ˈtrækɪŋ/",
+      "pt": "paralelismo",
+      "def": "A technique for shortening the schedule by performing activities in parallel that would normally be done sequentially.",
+      "ex": "Fast tracking allowed design and development to overlap, saving two months.",
+      "tip": "Fast tracking aumenta risco de retrabalho."
+    },
+    {
+      "id": "pm046",
+      "term": "cost baseline",
+      "ph": "/kɒst ˈbeɪslaɪn/",
+      "pt": "linha de base dos custos",
+      "def": "The approved version of the time-phased project budget, used for comparison and control.",
+      "ex": "The cost baseline included all planned expenditures over the project life.",
+      "tip": "A linha de base de custos exclui reservas de contingência."
+    },
+    {
+      "id": "pm047",
+      "term": "contingency reserve",
+      "ph": "/kənˈtɪndʒənsi rɪˈzɜːrv/",
+      "pt": "reserva de contingência",
+      "def": "Time or budget allocated for identified risks that are accepted.",
+      "ex": "The project had a 10% contingency reserve for unexpected cost overruns.",
+      "tip": "A reserva de contingência faz parte da linha de base e é gerenciada pelo gerente de projetos."
+    },
+    {
+      "id": "pm048",
+      "term": "management reserve",
+      "ph": "/ˈmænɪdʒmənt rɪˈzɜːrv/",
+      "pt": "reserva de gerenciamento",
+      "def": "An amount of the project budget withheld for management control purposes for unforeseen work that is within scope.",
+      "ex": "The management reserve was only accessible with sponsor approval.",
+      "tip": "A reserva de gerenciamento não faz parte da linha de base."
+    },
+    {
+      "id": "pm049",
+      "term": "cost estimate",
+      "ph": "/kɒst ˈestɪmət/",
+      "pt": "estimativa de custos",
+      "def": "A quantitative assessment of the likely costs of the resources required to complete project activities.",
+      "ex": "The cost estimate was developed using analogous estimating based on past projects.",
+      "tip": "Existem vários níveis de estimativa: ordem de grandeza, orçamento, definitiva."
+    },
+    {
+      "id": "pm050",
+      "term": "analogous estimating",
+      "ph": "/əˈnæləɡəs ˈestɪmeɪtɪŋ/",
+      "pt": "estimativa análoga",
+      "def": "A technique for estimating the duration or cost of an activity using historical data from a similar activity.",
+      "ex": "Using analogous estimating, the team predicted the project would take six months.",
+      "tip": "É uma técnica de estimativa rápida, mas menos precisa."
+    },
+    {
+      "id": "pm051",
+      "term": "parametric estimating",
+      "ph": "/ˌpærəˈmetrɪk ˈestɪmeɪtɪŋ/",
+      "pt": "estimativa paramétrica",
+      "def": "A technique that uses a statistical relationship between historical data and other variables to calculate an estimate.",
+      "ex": "Parametric estimating calculated the cost as $100 per square meter, totaling $500k.",
+      "tip": "A precisão depende da qualidade dos dados e da relação paramétrica."
+    },
+    {
+      "id": "pm052",
+      "term": "bottom-up estimating",
+      "ph": "/ˈbɒtəm ʌp ˈestɪmeɪtɪŋ/",
+      "pt": "estimativa bottom-up",
+      "def": "A method of estimating project duration or cost by aggregating the estimates of the lower-level components.",
+      "ex": "Bottom-up estimating started with each work package and rolled up to the total project cost.",
+      "tip": "É a técnica mais precisa, mas também a mais demorada."
+    },
+    {
+      "id": "pm053",
+      "term": "three-point estimating",
+      "ph": "/θriː pɔɪnt ˈestɪmeɪtɪŋ/",
+      "pt": "estimativa de três pontos",
+      "def": "A technique that uses optimistic, pessimistic, and most likely estimates to improve accuracy.",
+      "ex": "Three-point estimating gave a weighted average duration of 12 days.",
+      "tip": "A fórmula triangular (P+M+O)/3 ou PERT (P+4M+O)/6."
+    },
+    {
+      "id": "pm054",
+      "term": "earned value management (EVM)",
+      "ph": "/ɜːrnd ˈvæljuː ˈmænɪdʒmənt/",
+      "pt": "gestão do valor agregado",
+      "def": "A methodology that combines scope, schedule, and resource measurements to assess project performance.",
+      "ex": "EVM showed that the project was behind schedule but under budget.",
+      "tip": "Indicadores-chave: PV, EV, AC, CV, SV, CPI, SPI."
+    },
+    {
+      "id": "pm055",
+      "term": "planned value (PV)",
+      "ph": "/plænd ˈvæljuː/",
+      "pt": "valor planejado",
+      "def": "The authorized budget assigned to scheduled work.",
+      "ex": "The planned value at month three was $200,000.",
+      "tip": "PV é a linha de base do orçamento até a data."
+    },
+    {
+      "id": "pm056",
+      "term": "earned value (EV)",
+      "ph": "/ɜːrnd ˈvæljuː/",
+      "pt": "valor agregado",
+      "def": "The measure of work performed expressed in terms of the budget authorized for that work.",
+      "ex": "The earned value at this point is $180,000, meaning 90% of planned work is done.",
+      "tip": "EV = % concluído × orçamento total."
+    },
+    {
+      "id": "pm057",
+      "term": "actual cost (AC)",
+      "ph": "/ˈæktʃuəl kɒst/",
+      "pt": "custo real",
+      "def": "The realized cost incurred for the work performed on an activity during a specific time period.",
+      "ex": "The actual cost so far is $190,000.",
+      "tip": "AC é o custo efetivamente gasto."
+    },
+    {
+      "id": "pm058",
+      "term": "cost variance (CV)",
+      "ph": "/kɒst ˈveriəns/",
+      "pt": "variação de custo",
+      "def": "The difference between earned value and actual cost (CV = EV – AC).",
+      "ex": "CV = –$10,000 indicates the project is over budget.",
+      "tip": "CV negativo = acima do orçamento; positivo = abaixo."
+    },
+    {
+      "id": "pm059",
+      "term": "schedule variance (SV)",
+      "ph": "/ˈʃedjuːl ˈveriəns/",
+      "pt": "variação de prazo",
+      "def": "The difference between earned value and planned value (SV = EV – PV).",
+      "ex": "SV = –$20,000 means the project is behind schedule.",
+      "tip": "SV negativo = atrasado; positivo = adiantado."
+    },
+    {
+      "id": "pm060",
+      "term": "cost performance index (CPI)",
+      "ph": "/kɒst pərˈfɔːrməns ˈɪndeks/",
+      "pt": "índice de desempenho de custos",
+      "def": "A measure of cost efficiency (CPI = EV / AC).",
+      "ex": "CPI = 0.95 means for every $1 spent, only $0.95 of work was earned.",
+      "tip": "CPI < 1 = acima do orçamento; > 1 = abaixo."
+    },
+    {
+      "id": "pm061",
+      "term": "schedule performance index (SPI)",
+      "ph": "/ˈʃedjuːl pərˈfɔːrməns ˈɪndeks/",
+      "pt": "índice de desempenho de prazos",
+      "def": "A measure of schedule efficiency (SPI = EV / PV).",
+      "ex": "SPI = 0.9 indicates the project is 10% behind schedule.",
+      "tip": "SPI < 1 = atrasado; > 1 = adiantado."
+    },
+    {
+      "id": "pm062",
+      "term": "estimate at completion (EAC)",
+      "ph": "/ˈestɪmət ət kəmˈpliːʃən/",
+      "pt": "estimativa no término",
+      "def": "The expected total cost of completing all work, expressed as the sum of actual cost and estimate to complete.",
+      "ex": "EAC = AC + (BAC – EV) / CPI, projecting a final cost of $1.1M.",
+      "tip": "Várias fórmulas de EAC dependem das condições do projeto."
+    },
+    {
+      "id": "pm063",
+      "term": "estimate to complete (ETC)",
+      "ph": "/ˈestɪmət tə kəmˈpliːt/",
+      "pt": "estimativa para concluir",
+      "def": "The expected cost to finish all the remaining project work.",
+      "ex": "ETC = EAC – AC, or a new bottom-up estimate.",
+      "tip": "ETC pode ser calculado de diferentes formas."
+    },
+    {
+      "id": "pm064",
+      "term": "variance at completion (VAC)",
+      "ph": "/ˈveriəns ət kəmˈpliːʃən/",
+      "pt": "variação no término",
+      "def": "The projected budget surplus or deficit (VAC = BAC – EAC).",
+      "ex": "VAC = –$50,000 means the project is expected to be $50k over budget.",
+      "tip": "VAC negativo = acima do orçamento."
+    },
+    {
+      "id": "pm065",
+      "term": "to-complete performance index (TCPI)",
+      "ph": "/tə kəmˈpliːt pərˈfɔːrməns ˈɪndeks/",
+      "pt": "índice de desempenho para conclusão",
+      "def": "The cost performance needed to achieve a specific management goal, such as BAC or EAC.",
+      "ex": "TCPI = (BAC – EV) / (BAC – AC) = 1.2, requiring tight cost control.",
+      "tip": "TCPI > 1 é difícil de alcançar."
+    },
+    {
+      "id": "pm066",
+      "term": "quality",
+      "ph": "/ˈkwɒləti/",
+      "pt": "qualidade",
+      "def": "The degree to which a set of inherent characteristics fulfills requirements.",
+      "ex": "Quality was measured by the number of defects per module.",
+      "tip": "Qualidade não é apenas ausência de defeitos, mas atender às necessidades."
+    },
+    {
+      "id": "pm067",
+      "term": "grade",
+      "ph": "/ɡreɪd/",
+      "pt": "grau / categoria",
+      "def": "A category assigned to products or services having the same functional use but different technical characteristics.",
+      "ex": "The software was delivered in three grades: basic, professional, and enterprise.",
+      "tip": "Baixa qualidade é sempre um problema; baixo grau pode ser aceitável."
+    },
+    {
+      "id": "pm068",
+      "term": "precision",
+      "ph": "/prɪˈsɪʒən/",
+      "pt": "precisão",
+      "def": "The closeness of repeated measurements to each other.",
+      "ex": "The measurements had high precision but low accuracy.",
+      "tip": "Precisão ≠ exatidão (accuracy)."
+    },
+    {
+      "id": "pm069",
+      "term": "accuracy",
+      "ph": "/ˈækjərəsi/",
+      "pt": "exatidão",
+      "def": "The closeness of measured values to the true value.",
+      "ex": "The instrument provided accurate readings within 0.1%.",
+      "tip": "Exatidão é o alvo; precisão é a consistência."
+    },
+    {
+      "id": "pm070",
+      "term": "cost of quality (COQ)",
+      "ph": "/kɒst əv ˈkwɒləti/",
+      "pt": "custo da qualidade",
+      "def": "All costs incurred over the life of the product to prevent poor quality or to correct defects.",
+      "ex": "COQ included training, testing, and rework expenses.",
+      "tip": "Divide-se em custos de conformidade (prevenção, avaliação) e não conformidade (falhas internas, externas)."
+    },
+    {
+      "id": "pm071",
+      "term": "prevention costs",
+      "ph": "/prɪˈvenʃən kɒsts/",
+      "pt": "custos de prevenção",
+      "def": "Costs incurred to prevent defects and keep quality high, such as training and process documentation.",
+      "ex": "Prevention costs included quality training for the team.",
+      "tip": "Investir em prevenção reduz falhas futuras."
+    },
+    {
+      "id": "pm072",
+      "term": "appraisal costs",
+      "ph": "/əˈpreɪzəl kɒsts/",
+      "pt": "custos de avaliação",
+      "def": "Costs incurred to assess quality, such as testing and inspections.",
+      "ex": "Appraisal costs covered the third-party audit.",
+      "tip": "Avaliação detecta defeitos, mas não os previne."
+    },
+    {
+      "id": "pm073",
+      "term": "failure costs",
+      "ph": "/ˈfeɪljər kɒsts/",
+      "pt": "custos de falha",
+      "def": "Costs incurred to correct defects, divided into internal and external failure costs.",
+      "ex": "Rework was a major failure cost in the project.",
+      "tip": "Falhas externas (após entrega) são mais caras que internas."
+    },
+    {
+      "id": "pm074",
+      "term": "quality management plan",
+      "ph": "/ˈkwɒləti ˈmænɪdʒmənt plæn/",
+      "pt": "plano de gerenciamento da qualidade",
+      "def": "A component of the project management plan that describes how quality will be managed and controlled.",
+      "ex": "The quality management plan specified peer reviews and testing phases.",
+      "tip": "Inclui métricas, papéis e responsabilidades."
+    },
+    {
+      "id": "pm075",
+      "term": "quality metrics",
+      "ph": "/ˈkwɒləti ˈmetrɪks/",
+      "pt": "métricas de qualidade",
+      "def": "A description of a project or product attribute and how to measure it.",
+      "ex": "Quality metrics included defect density and customer satisfaction score.",
+      "tip": "As métricas devem ser SMART (específicas, mensuráveis, etc.)."
+    },
+    {
+      "id": "pm076",
+      "term": "quality audits",
+      "ph": "/ˈkwɒləti ˈɔːdɪts/",
+      "pt": "auditorias de qualidade",
+      "def": "A structured, independent process to determine if project activities comply with organizational and project policies.",
+      "ex": "The quality audit identified gaps in the testing process.",
+      "tip": "Auditorias podem ser internas ou externas."
+    },
+    {
+      "id": "pm077",
+      "term": "process analysis",
+      "ph": "/ˈprəʊses əˈnælɪsɪs/",
+      "pt": "análise de processos",
+      "def": "A technique to identify opportunities for process improvements.",
+      "ex": "Process analysis revealed bottlenecks in the approval workflow.",
+      "tip": "Utiliza ferramentas como diagramas de fluxo e value stream mapping."
+    },
+    {
+      "id": "pm078",
+      "term": "control charts",
+      "ph": "/kənˈtrəʊl tʃɑːrts/",
+      "pt": "gráficos de controle",
+      "def": "Graphical displays of data over time with predetermined control limits.",
+      "ex": "The control chart showed that the defect rate was within acceptable limits.",
+      "tip": "Usados para monitorar a estabilidade de um processo."
+    },
+    {
+      "id": "pm079",
+      "term": "cause and effect diagram",
+      "ph": "/kɔːz ənd ɪˈfekt ˈdaɪəɡræm/",
+      "pt": "diagrama de causa e efeito",
+      "def": "A visual tool that lists potential causes of a problem, often called fishbone diagram.",
+      "ex": "The team used a cause-and-effect diagram to explore reasons for delays.",
+      "tip": "Ajuda a encontrar causas raiz de problemas."
+    },
+    {
+      "id": "pm080",
+      "term": "flowchart",
+      "ph": "/ˈfləʊtʃɑːrt/",
+      "pt": "fluxograma",
+      "def": "A diagram that shows the steps in a process and their relationships.",
+      "ex": "The flowchart illustrated the software deployment process.",
+      "tip": "Útil para entender e melhorar processos."
+    },
+    {
+      "id": "pm081",
+      "term": "histogram",
+      "ph": "/ˈhɪstəɡræm/",
+      "pt": "histograma",
+      "def": "A bar chart that shows the distribution of data over categories.",
+      "ex": "The histogram showed that most delays occurred in the testing phase.",
+      "tip": "Também chamado de diagrama de distribuição de frequências."
+    },
+    {
+      "id": "pm082",
+      "term": "Pareto chart",
+      "ph": "/pəˈreɪtoʊ tʃɑːrt/",
+      "pt": "diagrama de Pareto",
+      "def": "A histogram, ordered by frequency, that shows which factors are most significant.",
+      "ex": "The Pareto chart revealed that 80% of defects came from 20% of modules.",
+      "tip": "Baseado no princípio 80/20."
+    },
+    {
+      "id": "pm083",
+      "term": "scatter diagram",
+      "ph": "/ˈskætər ˈdaɪəɡræm/",
+      "pt": "diagrama de dispersão",
+      "def": "A graph that shows the relationship between two variables.",
+      "ex": "The scatter diagram suggested a correlation between team size and productivity.",
+      "tip": "Ajuda a identificar tendências e correlações."
+    },
+    {
+      "id": "pm084",
+      "term": "statistical sampling",
+      "ph": "/stəˈtɪstɪkəl ˈsæmplɪŋ/",
+      "pt": "amostragem estatística",
+      "def": "Choosing a part of a population of interest for inspection.",
+      "ex": "Statistical sampling was used to test 10% of the deliverables.",
+      "tip": "Reduz custo e tempo de inspeção."
+    },
+    {
+      "id": "pm085",
+      "term": "human resource management",
+      "ph": "/ˈhjuːmən rɪˈzɔːrs ˈmænɪdʒmənt/",
+      "pt": "gerenciamento de recursos humanos",
+      "def": "The processes that organize, manage, and lead the project team.",
+      "ex": "Human resource management included team building and performance reviews.",
+      "tip": "Hoje parte do gerenciamento de recursos (pessoas)."
+    },
+    {
+      "id": "pm086",
+      "term": "project organizational chart",
+      "ph": "/ˈprɒdʒekt ˌɔːrɡənaɪˈzeɪʃənəl tʃɑːrt/",
+      "pt": "organograma do projeto",
+      "def": "A graphical display of project team members and their reporting relationships.",
+      "ex": "The project organizational chart showed the project manager reporting to the sponsor.",
+      "tip": "Pode incluir funções e responsabilidades."
+    },
+    {
+      "id": "pm087",
+      "term": "responsibility assignment matrix (RAM)",
+      "ph": "/rɪˌspɒnsəˈbɪləti əˈsaɪnmənt ˈmeɪtrɪks/",
+      "pt": "matriz de responsabilidades",
+      "def": "A grid that shows the project resources assigned to each work package.",
+      "ex": "The RAM, often a RACI matrix, clarified who was accountable for each task.",
+      "tip": "RACI = Responsible, Accountable, Consulted, Informed."
+    },
+    {
+      "id": "pm088",
+      "term": "RACI matrix",
+      "ph": "/ˈreɪsi ˈmeɪtrɪks/",
+      "pt": "matriz RACI",
+      "def": "A common type of RAM that uses the categories Responsible, Accountable, Consulted, and Informed.",
+      "ex": "The RACI matrix eliminated confusion about who approved changes.",
+      "tip": "A = Accountable (apenas um por tarefa)."
+    },
+    {
+      "id": "pm089",
+      "term": "staffing management plan",
+      "ph": "/ˈstæfɪŋ ˈmænɪdʒmənt plæn/",
+      "pt": "plano de gerenciamento de pessoal",
+      "def": "A document that describes how and when human resources will be acquired and released.",
+      "ex": "The staffing management plan included a timeline for hiring contractors.",
+      "tip": "Pode incluir treinamento e reconhecimento."
+    },
+    {
+      "id": "pm090",
+      "term": "team charter",
+      "ph": "/tiːm ˈtʃɑːrtər/",
+      "pt": "carta da equipe",
+      "def": "A document that establishes the team values, agreements, and operating guidelines.",
+      "ex": "The team charter defined communication norms and meeting schedules.",
+      "tip": "Ajuda a alinhar a equipe desde o início."
+    },
+    {
+      "id": "pm091",
+      "term": "conflict management",
+      "ph": "/ˈkɒnflɪkt ˈmænɪdʒmənt/",
+      "pt": "gerenciamento de conflitos",
+      "def": "The process of handling disagreements within the project team or with stakeholders.",
+      "ex": "Conflict management techniques included collaborating and compromising.",
+      "tip": "Cinco modos: competir, colaborar, comprometer, evitar, acomodar."
+    },
+    {
+      "id": "pm092",
+      "term": "motivation theories",
+      "ph": "/ˌməʊtɪˈveɪʃən ˈθɪəriz/",
+      "pt": "teorias de motivação",
+      "def": "Concepts like Maslow's hierarchy, Herzberg's theory, and McGregor's XY.",
+      "ex": "Applying motivation theories helped improve team morale.",
+      "tip": "Útil para entender o que engaja a equipe."
+    },
+    {
+      "id": "pm093",
+      "term": "communications management",
+      "ph": "/kəˌmjuːnɪˈkeɪʃənz ˈmænɪdʒmənt/",
+      "pt": "gerenciamento das comunicações",
+      "def": "The processes to ensure timely and appropriate generation, collection, distribution, and storage of project information.",
+      "ex": "Effective communications management avoided misunderstandings.",
+      "tip": "Plano de comunicações define quem, o quê, quando e como."
+    },
+    {
+      "id": "pm094",
+      "term": "communications management plan",
+      "ph": "/kəˌmjuːnɪˈkeɪʃənz ˈmænɪdʒmənt plæn/",
+      "pt": "plano de gerenciamento das comunicações",
+      "def": "A document that describes how project communications will be planned, structured, and monitored.",
+      "ex": "The communications plan specified weekly status reports and monthly steering meetings.",
+      "tip": "Inclui formato, frequência e responsáveis."
+    },
+    {
+      "id": "pm095",
+      "term": "communication channels",
+      "ph": "/kəˌmjuːnɪˈkeɪʃən ˈtʃænəlz/",
+      "pt": "canais de comunicação",
+      "def": "The number of potential communication paths in a project, calculated as n(n–1)/2.",
+      "ex": "With 10 stakeholders, there are 45 communication channels.",
+      "tip": "Mais stakeholders = mais complexidade de comunicação."
+    },
+    {
+      "id": "pm096",
+      "term": "push communication",
+      "ph": "/pʊʃ kəˌmjuːnɪˈkeɪʃən/",
+      "pt": "comunicação push",
+      "def": "Information sent to recipients, such as emails, memos, and reports.",
+      "ex": "Push communication was used for weekly status updates.",
+      "tip": "Garante que a informação foi enviada, mas não que foi recebida."
+    },
+    {
+      "id": "pm097",
+      "term": "pull communication",
+      "ph": "/pʊl kəˌmjuːnɪˈkeɪʃən/",
+      "pt": "comunicação pull",
+      "def": "Information accessed by recipients at their own discretion, like intranet or shared drives.",
+      "ex": "Project documents were available via pull communication on the SharePoint site.",
+      "tip": "Útil para grandes volumes de informação."
+    },
+    {
+      "id": "pm098",
+      "term": "interactive communication",
+      "ph": "/ˌɪntərˈæktɪv kəˌmjuːnɪˈkeɪʃən/",
+      "pt": "comunicação interativa",
+      "def": "Multi-directional exchange of information in real time, such as meetings and calls.",
+      "ex": "Interactive communication in the daily stand-up resolved issues quickly.",
+      "tip": "Mais eficaz para esclarecer dúvidas."
+    },
+    {
+      "id": "pm099",
+      "term": "risk",
+      "ph": "/rɪsk/",
+      "pt": "risco",
+      "def": "An uncertain event or condition that, if it occurs, has a positive or negative effect on one or more project objectives.",
+      "ex": "The risk of a supplier delay was identified early.",
+      "tip": "Riscos podem ser ameaças (negativos) ou oportunidades (positivos)."
+    },
+    {
+      "id": "pm100",
+      "term": "risk management plan",
+      "ph": "/rɪsk ˈmænɪdʒmənt plæn/",
+      "pt": "plano de gerenciamento dos riscos",
+      "def": "A document describing how risk management will be structured and performed.",
+      "ex": "The risk management plan defined the risk categories and probability-impact matrix.",
+      "tip": "Inclui metodologia, papéis, orçamento e frequência."
+    },
+    {
+      "id": "pm101",
+      "term": "risk register",
+      "ph": "/rɪsk ˈredʒɪstər/",
+      "pt": "registro de riscos",
+      "def": "A document in which the results of risk analysis and response planning are recorded.",
+      "ex": "The risk register listed each risk, its probability, impact, and owner.",
+      "tip": "Atualizado ao longo do projeto."
+    },
+    {
+      "id": "pm102",
+      "term": "risk report",
+      "ph": "/rɪsk rɪˈpɔːrt/",
+      "pt": "relatório de riscos",
+      "def": "A document presenting the overall risk exposure and key risk information.",
+      "ex": "The risk report highlighted the top three risks for executive attention.",
+      "tip": "Pode incluir tendências e análise de reservas."
+    },
+    {
+      "id": "pm103",
+      "term": "risk appetite",
+      "ph": "/rɪsk ˈæpɪtaɪt/",
+      "pt": "apetite a risco",
+      "def": "The degree of uncertainty an organization is willing to accept in anticipation of a reward.",
+      "ex": "The organization had a high risk appetite for innovative projects.",
+      "tip": "Diferente de tolerância e limiar de risco."
+    },
+    {
+      "id": "pm104",
+      "term": "risk tolerance",
+      "ph": "/rɪsk ˈtɒlərəns/",
+      "pt": "tolerância a risco",
+      "def": "The level of risk that an organization can withstand.",
+      "ex": "The risk tolerance for cost overrun was 10% of the budget.",
+      "tip": "É a faixa aceitável de variação."
+    },
+    {
+      "id": "pm105",
+      "term": "risk threshold",
+      "ph": "/rɪsk ˈθreʃhəʊld/",
+      "pt": "limiar de risco",
+      "def": "The level of risk exposure above which risks are addressed and below which they may be accepted.",
+      "ex": "Any risk with impact > $50k required a response plan.",
+      "tip": "Acima do limiar, ação é necessária."
+    },
+    {
+      "id": "pm106",
+      "term": "risk identification",
+      "ph": "/rɪsk aɪˌdentɪfɪˈkeɪʃən/",
+      "pt": "identificação de riscos",
+      "def": "The process of determining which risks may affect the project and documenting their characteristics.",
+      "ex": "Brainstorming sessions were used for risk identification.",
+      "tip": "Envolve a equipe e stakeholders."
+    },
+    {
+      "id": "pm107",
+      "term": "risk category",
+      "ph": "/rɪsk ˈkætəɡəri/",
+      "pt": "categoria de risco",
+      "def": "A group of potential causes of risk, such as technical, external, organizational, or project management.",
+      "ex": "Risk categories were defined in the risk breakdown structure (RBS).",
+      "tip": "RBS é uma estrutura hierárquica de categorias."
+    },
+    {
+      "id": "pm108",
+      "term": "risk breakdown structure (RBS)",
+      "ph": "/rɪsk ˈbreɪkdaʊn ˈstrʌktʃər/",
+      "pt": "estrutura analítica de riscos",
+      "def": "A hierarchical representation of risks according to their categories.",
+      "ex": "The RBS helped the team think of risks in a structured way.",
+      "tip": "Similar à WBS, mas para riscos."
+    },
+    {
+      "id": "pm109",
+      "term": "qualitative risk analysis",
+      "ph": "/ˈkwɒlɪtətɪv rɪsk əˈnælɪsɪs/",
+      "pt": "análise qualitativa de riscos",
+      "def": "The process of prioritizing individual risks for further analysis or action by assessing their probability and impact.",
+      "ex": "Qualitative analysis classified risks as high, medium, or low.",
+      "tip": "Utiliza matriz probabilidade-impacto."
+    },
+    {
+      "id": "pm110",
+      "term": "probability and impact matrix",
+      "ph": "/ˌprɒbəˈbɪləti ənd ˈɪmpækt ˈmeɪtrɪks/",
+      "pt": "matriz probabilidade-impacto",
+      "def": "A grid for ranking risks based on their probability of occurrence and impact on objectives.",
+      "ex": "The matrix showed which risks needed immediate response.",
+      "tip": "Cores (vermelho, amarelo, verde) indicam prioridade."
+    },
+    {
+      "id": "pm111",
+      "term": "quantitative risk analysis",
+      "ph": "/ˈkwɒntɪtətɪv rɪsk əˈnælɪsɪs/",
+      "pt": "análise quantitativa de riscos",
+      "def": "The process of numerically analyzing the effect of identified risks on overall project objectives.",
+      "ex": "Monte Carlo simulation was used for quantitative risk analysis.",
+      "tip": "Mais usada em projetos grandes e complexos."
+    },
+    {
+      "id": "pm112",
+      "term": "expected monetary value (EMV)",
+      "ph": "/ɪkˈspektɪd ˈmʌnɪtəri ˈvæljuː/",
+      "pt": "valor monetário esperado",
+      "def": "A statistical technique that calculates the average outcome when the future includes scenarios that may or may not happen.",
+      "ex": "EMV = probability × impact, used in decision tree analysis.",
+      "tip": "Útil para comparar opções."
+    },
+    {
+      "id": "pm113",
+      "term": "decision tree analysis",
+      "ph": "/dɪˈsɪʒən triː əˈnælɪsɪs/",
+      "pt": "análise de árvore de decisão",
+      "def": "A diagram that shows the implications of choosing one alternative over another.",
+      "ex": "The decision tree helped choose between building or buying the software.",
+      "tip": "Incorpora probabilidades e EMV."
+    },
+    {
+      "id": "pm114",
+      "term": "sensitivity analysis",
+      "ph": "/ˌsensɪˈtɪvɪti əˈnælɪsɪs/",
+      "pt": "análise de sensibilidade",
+      "def": "A technique to determine which risks have the most potential impact on the project.",
+      "ex": "Tornado diagrams are often used in sensitivity analysis.",
+      "tip": "Ajuda a focar nos riscos mais críticos."
+    },
+    {
+      "id": "pm115",
+      "term": "Monte Carlo simulation",
+      "ph": "/ˈmɒnti ˈkɑːrləʊ ˌsɪmjəˈleɪʃən/",
+      "pt": "simulação de Monte Carlo",
+      "def": "A technique that computes the distribution of possible project outcomes by running multiple trials.",
+      "ex": "Monte Carlo simulation showed a 75% chance of finishing on budget.",
+      "tip": "Usada para avaliar prazos e custos."
+    },
+    {
+      "id": "pm116",
+      "term": "risk response planning",
+      "ph": "/rɪsk rɪˈspɒns ˈplænɪŋ/",
+      "pt": "planejamento de respostas a riscos",
+      "def": "The process of developing options and actions to enhance opportunities and reduce threats.",
+      "ex": "Risk response planning included mitigation strategies for top risks.",
+      "tip": "Envolve estratégias para ameaças e oportunidades."
+    },
+    {
+      "id": "pm117",
+      "term": "avoid",
+      "ph": "/əˈvɔɪd/",
+      "pt": "evitar",
+      "def": "A risk response strategy for threats where the project team acts to eliminate the threat or protect the project from its impact.",
+      "ex": "The team avoided the risk by using a proven technology instead of an experimental one.",
+      "tip": "Elimina a incerteza."
+    },
+    {
+      "id": "pm118",
+      "term": "mitigate",
+      "ph": "/ˈmɪtɪɡeɪt/",
+      "pt": "mitigar",
+      "def": "A risk response strategy for threats where the team acts to reduce the probability or impact of a risk.",
+      "ex": "Additional testing mitigated the risk of software defects.",
+      "tip": "Reduz, mas não elimina completamente."
+    },
+    {
+      "id": "pm119",
+      "term": "transfer",
+      "ph": "/trænsˈfɜːr/",
+      "pt": "transferir",
+      "def": "A risk response strategy for threats where the team shifts the impact to a third party.",
+      "ex": "The project transferred the financial risk by purchasing insurance.",
+      "tip": "Não elimina o risco, apenas transfere a responsabilidade."
+    },
+    {
+      "id": "pm120",
+      "term": "accept",
+      "ph": "/əkˈsept/",
+      "pt": "aceitar",
+      "def": "A risk response strategy where the team acknowledges the risk and takes no action unless it occurs.",
+      "ex": "The team accepted the low-impact risk and set aside a contingency reserve.",
+      "tip": "Aceitação pode ser ativa (reserva) ou passiva."
+    },
+    {
+      "id": "pm121",
+      "term": "exploit",
+      "ph": "/ɪkˈsplɔɪt/",
+      "pt": "explorar",
+      "def": "A risk response strategy for opportunities where the team acts to ensure the opportunity is realized.",
+      "ex": "The team exploited the opportunity by assigning top developers to accelerate delivery.",
+      "tip": "Usado para oportunidades de alto impacto."
+    },
+    {
+      "id": "pm122",
+      "term": "enhance",
+      "ph": "/ɪnˈhɑːns/",
+      "pt": "potencializar",
+      "def": "A risk response strategy for opportunities where the team acts to increase the probability or impact of an opportunity.",
+      "ex": "The team enhanced the opportunity by adding more features.",
+      "tip": "Aumenta os benefícios potenciais."
+    },
+    {
+      "id": "pm123",
+      "term": "share",
+      "ph": "/ʃer/",
+      "pt": "compartilhar",
+      "def": "A risk response strategy for opportunities where the team allocates ownership to a third party best able to capture the opportunity.",
+      "ex": "The project shared the opportunity by partnering with a specialist firm.",
+      "tip": "Parcerias são comuns."
+    },
+    {
+      "id": "pm124",
+      "term": "procurement management",
+      "ph": "/prəˈkjʊərmənt ˈmænɪdʒmənt/",
+      "pt": "gerenciamento de aquisições",
+      "def": "The processes necessary to purchase or acquire products, services, or results from outside the project team.",
+      "ex": "Procurement management included vendor selection and contract administration.",
+      "tip": "Envolve contratos e relacionamento com fornecedores."
+    },
+    {
+      "id": "pm125",
+      "term": "procurement management plan",
+      "ph": "/prəˈkjʊərmənt ˈmænɪdʒmənt plæn/",
+      "pt": "plano de gerenciamento das aquisições",
+      "def": "A document that describes how procurement processes will be managed.",
+      "ex": "The procurement plan defined the bidding process and evaluation criteria.",
+      "tip": "Define tipos de contrato, prazos e responsáveis."
+    },
+    {
+      "id": "pm126",
+      "term": "procurement statement of work (SOW)",
+      "ph": "/prəˈkjʊərmənt ˈsteɪtmənt əv wɜːrk/",
+      "pt": "declaração de trabalho da aquisição",
+      "def": "A description of the procurement item sufficient to allow prospective sellers to determine if they can meet the requirement.",
+      "ex": "The SOW detailed the technical specifications for the software to be purchased.",
+      "tip": "Parte do pacote de licitação."
+    },
+    {
+      "id": "pm127",
+      "term": "source selection criteria",
+      "ph": "/sɔːrs sɪˈlekʃən kraɪˈtɪəriə/",
+      "pt": "critérios de seleção de fontes",
+      "def": "The set of attributes used to select a seller, such as price, technical capability, and past performance.",
+      "ex": "Source selection criteria included cost, quality, and delivery time.",
+      "tip": "Podem ser objetivos ou subjetivos."
+    },
+    {
+      "id": "pm128",
+      "term": "make-or-buy analysis",
+      "ph": "/meɪk ɔːr baɪ əˈnælɪsɪs/",
+      "pt": "análise fazer ou comprar",
+      "def": "A technique used to determine whether a particular product or service should be produced internally or purchased.",
+      "ex": "Make-or-buy analysis concluded that outsourcing was cheaper.",
+      "tip": "Considera custos, capacidade e riscos."
+    },
+    {
+      "id": "pm129",
+      "term": "contract types",
+      "ph": "/ˈkɒntrækt taɪps/",
+      "pt": "tipos de contrato",
+      "def": "Categories of contracts, such as fixed-price, cost-reimbursable, and time and materials.",
+      "ex": "A fixed-price contract transferred cost risk to the seller.",
+      "tip": "Cada tipo aloca riscos de forma diferente."
+    },
+    {
+      "id": "pm130",
+      "term": "fixed-price contract",
+      "ph": "/fɪkst praɪs ˈkɒntrækt/",
+      "pt": "contrato de preço fixo",
+      "def": "A contract where the price is set and not subject to change unless scope changes.",
+      "ex": "The fixed-price contract protected the buyer from cost overruns.",
+      "tip": "Também chamado lump sum."
+    },
+    {
+      "id": "pm131",
+      "term": "cost-reimbursable contract",
+      "ph": "/kɒst ˌriːɪˈmɜːrsəbəl ˈkɒntrækt/",
+      "pt": "contrato de custo reembolsável",
+      "def": "A contract where the seller is paid for actual costs plus a fee.",
+      "ex": "Cost-reimbursable contracts are used when scope is uncertain.",
+      "tip": "Pode incluir incentivos."
+    },
+    {
+      "id": "pm132",
+      "term": "time and materials contract",
+      "ph": "/taɪm ənd məˈtɪəriəlz ˈkɒntrækt/",
+      "pt": "contrato de tempo e material",
+      "def": "A hybrid contract that includes aspects of both fixed-price and cost-reimbursable.",
+      "ex": "Time and materials contracts are common for consulting services.",
+      "tip": "Usado quando não é possível estimar o esforço."
+    },
+    {
+      "id": "pm133",
+      "term": "request for proposal (RFP)",
+      "ph": "/rɪˈkwest fər prəˈpəʊzəl/",
+      "pt": "solicitação de proposta",
+      "def": "A document used to solicit proposals from prospective sellers.",
+      "ex": "The RFP was sent to five vendors, asking for detailed solutions and pricing.",
+      "tip": "RFI (informação), RFP (proposta), RFQ (cotação)."
+    },
+    {
+      "id": "pm134",
+      "term": "request for quotation (RFQ)",
+      "ph": "/rɪˈkwest fər kwəʊˈteɪʃən/",
+      "pt": "solicitação de cotação",
+      "def": "A document used to solicit price quotations from sellers.",
+      "ex": "The RFQ requested unit prices for 1000 units.",
+      "tip": "Mais comum para produtos padronizados."
+    },
+    {
+      "id": "pm135",
+      "term": "proposal evaluation",
+      "ph": "/prəˈpəʊzəl ɪˌvæljuˈeɪʃən/",
+      "pt": "avaliação de propostas",
+      "def": "The process of reviewing seller proposals against the criteria.",
+      "ex": "Proposal evaluation used a weighted scoring system.",
+      "tip": "Pode envolver equipe multidisciplinar."
+    },
+    {
+      "id": "pm136",
+      "term": "negotiation",
+      "ph": "/nɪˌɡəʊʃiˈeɪʃən/",
+      "pt": "negociação",
+      "def": "The process of reaching an agreement between buyer and seller on contract terms.",
+      "ex": "Negotiation focused on price, delivery schedule, and warranties.",
+      "tip": "Deve ser ganha-ganha."
+    },
+    {
+      "id": "pm137",
+      "term": "contract change control system",
+      "ph": "/ˈkɒntrækt tʃeɪndʒ kənˈtrəʊl ˈsɪstəm/",
+      "pt": "sistema de controle de mudanças em contratos",
+      "def": "The process for modifying contracts, including paperwork and approval levels.",
+      "ex": "Any contract change required a signed change order.",
+      "tip": "Protege ambas as partes."
+    },
+    {
+      "id": "pm138",
+      "term": "procurement documents",
+      "ph": "/prəˈkjʊərmənt ˈdɒkjʊmənts/",
+      "pt": "documentos de aquisição",
+      "def": "Documents used in procurement activities, such as RFPs, RFQs, and contracts.",
+      "ex": "All procurement documents were stored in a shared repository.",
+      "tip": "Devem ser claros e completos."
+    },
+    {
+      "id": "pm139",
+      "term": "statement of work (SOW)",
+      "ph": "/ˈsteɪtmənt əv wɜːrk/",
+      "pt": "declaração de trabalho",
+      "def": "A narrative description of the work required for the project or procurement.",
+      "ex": "The SOW outlined the deliverables and acceptance criteria.",
+      "tip": "Pode ser para projeto inteiro ou para um contrato."
+    },
+    {
+      "id": "pm140",
+      "term": "work performance data",
+      "ph": "/wɜːrk pərˈfɔːrməns ˈdeɪtə/",
+      "pt": "dados de desempenho do trabalho",
+      "def": "Raw observations and measurements identified during activities.",
+      "ex": "Work performance data included hours worked and units completed.",
+      "tip": "É a base para informações de desempenho."
+    },
+    {
+      "id": "pm141",
+      "term": "work performance information",
+      "ph": "/wɜːrk pərˈfɔːrməns ˌɪnfərˈmeɪʃən/",
+      "pt": "informações de desempenho do trabalho",
+      "def": "Performance data analyzed to provide context, such as variance analysis.",
+      "ex": "Work performance information showed that the project was 10% behind.",
+      "tip": "Usado para relatórios."
+    },
+    {
+      "id": "pm142",
+      "term": "work performance reports",
+      "ph": "/wɜːrk pərˈfɔːrməns rɪˈpɔːrts/",
+      "pt": "relatórios de desempenho do trabalho",
+      "def": "Physical or electronic representations of work performance information compiled to facilitate decision-making.",
+      "ex": "The monthly report included SPI, CPI, and status updates.",
+      "tip": "Destinado a stakeholders."
+    },
+    {
+      "id": "pm143",
+      "term": "issue log",
+      "ph": "/ˈɪʃuː lɒɡ/",
+      "pt": "registro de issues",
+      "def": "A document where project issues are recorded and tracked.",
+      "ex": "The issue log tracked each problem, its owner, and resolution date.",
+      "tip": "Diferente de risco: issue já ocorreu."
+    },
+    {
+      "id": "pm144",
+      "term": "change log",
+      "ph": "/tʃeɪndʒ lɒɡ/",
+      "pt": "registro de mudanças",
+      "def": "A document listing all change requests and their status.",
+      "ex": "The change log showed that three changes were approved this month.",
+      "tip": "Ajuda a rastrear o histórico."
+    },
+    {
+      "id": "pm145",
+      "term": "decision log",
+      "ph": "/dɪˈsɪʒən lɒɡ/",
+      "pt": "registro de decisões",
+      "def": "A document recording key decisions made during the project.",
+      "ex": "The decision log included the rationale for choosing the cloud provider.",
+      "tip": "Útil para auditoria e lições aprendidas."
+    },
+    {
+      "id": "pm146",
+      "term": "assumption log",
+      "ph": "/əˈsʌmpʃən lɒɡ/",
+      "pt": "registro de premissas",
+      "def": "A document where assumptions and constraints are recorded throughout the project.",
+      "ex": "The assumption log noted that the exchange rate would remain stable.",
+      "tip": "Premissas devem ser validadas."
+    },
+    {
+      "id": "pm147",
+      "term": "constraint",
+      "ph": "/kənˈstreɪnt/",
+      "pt": "restrição",
+      "def": "A limiting factor that affects the execution of a project, such as budget, time, or resources.",
+      "ex": "The fixed deadline was a major constraint.",
+      "tip": "Restrições são conhecidas desde o início."
+    },
+    {
+      "id": "pm148",
+      "term": "assumption",
+      "ph": "/əˈsʌmpʃən/",
+      "pt": "premissa",
+      "def": "A factor that, for planning purposes, is considered to be true, real, or certain.",
+      "ex": "The assumption that key personnel would be available proved false.",
+      "tip": "Premissas envolvem risco."
+    },
+    {
+      "id": "pm149",
+      "term": "integration management",
+      "ph": "/ˌɪntɪˈɡreɪʃən ˈmænɪdʒmənt/",
+      "pt": "gerenciamento da integração",
+      "def": "The processes and activities to identify, define, combine, unify, and coordinate the various project management processes.",
+      "ex": "Integration management ensured all parts of the plan worked together.",
+      "tip": "É a área que une todas as outras."
+    },
+    {
+      "id": "pm150",
+      "term": "project selection methods",
+      "ph": "/ˈprɒdʒekt sɪˈlekʃən ˈmeθədz/",
+      "pt": "métodos de seleção de projetos",
+      "def": "Techniques used to evaluate and choose among projects, such as NPV, IRR, payback period.",
+      "ex": "NPV was the primary project selection method.",
+      "tip": "Ajuda a priorizar projetos."
+    },
+    {
+      "id": "pm151",
+      "term": "net present value (NPV)",
+      "ph": "/net ˈprezənt ˈvæljuː/",
+      "pt": "valor presente líquido",
+      "def": "The sum of the present values of cash flows over time, minus the initial investment.",
+      "ex": "A positive NPV of $500k justified the project.",
+      "tip": "NPV > 0 significa que o projeto agrega valor."
+    },
+    {
+      "id": "pm152",
+      "term": "internal rate of return (IRR)",
+      "ph": "/ɪnˈtɜːrnəl reɪt əv rɪˈtɜːrn/",
+      "pt": "taxa interna de retorno",
+      "def": "The discount rate at which the NPV of cash flows equals zero.",
+      "ex": "The IRR of 15% exceeded the company's hurdle rate.",
+      "tip": "Quanto maior, melhor."
+    },
+    {
+      "id": "pm153",
+      "term": "payback period",
+      "ph": "/ˈpeɪbæk ˈpɪəriəd/",
+      "pt": "período de payback",
+      "def": "The time required to recover the investment.",
+      "ex": "The payback period was estimated at 3 years.",
+      "tip": "Não considera o valor do dinheiro no tempo."
+    },
+    {
+      "id": "pm154",
+      "term": "benefit-cost ratio (BCR)",
+      "ph": "/ˈbenɪfɪt kɒst ˈreɪʃiəʊ/",
+      "pt": "relação benefício-custo",
+      "def": "The ratio of benefits to costs.",
+      "ex": "A BCR of 2.5 means for every $1 spent, $2.5 are returned.",
+      "tip": "BCR > 1 é favorável."
+    },
+    {
+      "id": "pm155",
+      "term": "opportunity cost",
+      "ph": "/ˌɒpəˈtjuːnɪti kɒst/",
+      "pt": "custo de oportunidade",
+      "def": "The value of the forgone alternative when a decision is made.",
+      "ex": "Choosing project A means the opportunity cost is the benefit of project B.",
+      "tip": "Importante na seleção de projetos."
+    },
+    {
+      "id": "pm156",
+      "term": "sunk cost",
+      "ph": "/sʌŋk kɒst/",
+      "pt": "custo irrecuperável",
+      "def": "Money already spent that cannot be recovered.",
+      "ex": "Sunk costs should not influence future decisions.",
+      "tip": "Evite a falácia do custo irrecuperável."
+    },
+    {
+      "id": "pm157",
+      "term": "law of diminishing returns",
+      "ph": "/lɔː əv dɪˈmɪnɪʃɪŋ rɪˈtɜːrnz/",
+      "pt": "lei dos rendimentos decrescentes",
+      "def": "Adding more resources does not always increase output proportionally.",
+      "ex": "Adding a third developer to a two-person team may not double productivity.",
+      "tip": "Lembre-se ao fazer crashing."
+    },
+    {
+      "id": "pm158",
+      "term": "working capital",
+      "ph": "/ˈwɜːrkɪŋ ˈkæpɪtəl/",
+      "pt": "capital de giro",
+      "def": "Current assets minus current liabilities; used for day-to-day operations.",
+      "ex": "The project needed working capital to pay suppliers.",
+      "tip": "Relevante em projetos internos."
+    },
+    {
+      "id": "pm159",
+      "term": "depreciation",
+      "ph": "/dɪˌpriːʃiˈeɪʃən/",
+      "pt": "depreciação",
+      "def": "The decrease in value of an asset over time.",
+      "ex": "The equipment was depreciated over five years.",
+      "tip": "Pode ser linear ou acelerada."
+    },
+    {
+      "id": "pm160",
+      "term": "amortization",
+      "ph": "/əˌmɔːrtɪˈzeɪʃən/",
+      "pt": "amortização",
+      "def": "The gradual write-off of an intangible asset.",
+      "ex": "Software development costs were amortized over three years.",
+      "tip": "Diferente de depreciação (tangíveis)."
+    },
+    {
+      "id": "pm161",
+      "term": "project management information system (PMIS)",
+      "ph": "/ˈprɒdʒekt ˈmænɪdʒmənt ˌɪnfərˈmeɪʃən ˈsɪstəm/",
+      "pt": "sistema de informações de gerenciamento de projetos",
+      "def": "A system that provides information to support project management, such as scheduling software.",
+      "ex": "The PMIS was used to track progress and generate reports.",
+      "tip": "Pode ser uma ferramenta ou conjunto delas."
+    },
+    {
+      "id": "pm162",
+      "term": "configuration management system",
+      "ph": "/kənˌfɪɡjəˈreɪʃən ˈmænɪdʒmənt ˈsɪstəm/",
+      "pt": "sistema de gerenciamento de configuração",
+      "def": "A system for managing and controlling versions of project documents and deliverables.",
+      "ex": "The configuration management system ensured the latest design was used.",
+      "tip": "Inclui controle de versão."
+    },
+    {
+      "id": "pm163",
+      "term": "change control system",
+      "ph": "/tʃeɪndʒ kənˈtrəʊl ˈsɪstəm/",
+      "pt": "sistema de controle de mudanças",
+      "def": "A set of procedures that describes how changes to project deliverables and documents are managed.",
+      "ex": "The change control system required a change request form and CCB approval.",
+      "tip": "Parte do plano de gerenciamento."
+    },
+    {
+      "id": "pm164",
+      "term": "version control",
+      "ph": "/ˈvɜːrʒən kənˈtrəʊl/",
+      "pt": "controle de versão",
+      "def": "The management of changes to documents, files, or code.",
+      "ex": "Version control prevented accidental overwrites.",
+      "tip": "Ferramentas como Git são comuns."
+    },
+    {
+      "id": "pm165",
+      "term": "document management",
+      "ph": "/ˈdɒkjʊmənt ˈmænɪdʒmənt/",
+      "pt": "gerenciamento de documentos",
+      "def": "The process of storing, tracking, and retrieving project documents.",
+      "ex": "A document management system organized all project files.",
+      "tip": "Inclui nomeação, versionamento e acesso."
+    },
+    {
+      "id": "pm166",
+      "term": "knowledge management",
+      "ph": "/ˈnɒlɪdʒ ˈmænɪdʒmənt/",
+      "pt": "gerenciamento do conhecimento",
+      "def": "The process of creating, sharing, and using knowledge within an organization.",
+      "ex": "Lessons learned databases are a form of knowledge management.",
+      "tip": "Ajuda a reter aprendizado."
+    },
+    {
+      "id": "pm167",
+      "term": "lessons learned register",
+      "ph": "/ˈlesənz ˈlɜːrnd ˈredʒɪstər/",
+      "pt": "registro de lições aprendidas",
+      "def": "A document where lessons learned are recorded throughout the project.",
+      "ex": "The lessons learned register was updated after each phase.",
+      "tip": "Alimenta a base de conhecimento."
+    },
+    {
+      "id": "pm168",
+      "term": "post-project review",
+      "ph": "/pəʊst ˈprɒdʒekt rɪˈvjuː/",
+      "pt": "revisão pós-projeto",
+      "def": "A review conducted after project completion to evaluate success and capture lessons.",
+      "ex": "The post-project review highlighted what went well and what could be improved.",
+      "tip": "Também chamado de post-mortem."
+    },
+    {
+      "id": "pm169",
+      "term": "project closure",
+      "ph": "/ˈprɒdʒekt ˈkləʊʒər/",
+      "pt": "encerramento do projeto",
+      "def": "The process of finalizing all activities and formally closing the project.",
+      "ex": "Project closure involved handing over deliverables and releasing resources.",
+      "tip": "Inclui aceitação do cliente e arquivamento."
+    },
+    {
+      "id": "pm170",
+      "term": "administrative closure",
+      "ph": "/ədˈmɪnɪstrətɪv ˈkləʊʒər/",
+      "pt": "encerramento administrativo",
+      "def": "The activities to collect project records, analyze success, and archive information.",
+      "ex": "Administrative closure ensured all documents were filed.",
+      "tip": "Parte do encerramento."
+    },
+    {
+      "id": "pm171",
+      "term": "procurement closure",
+      "ph": "/prəˈkjʊərmənt ˈkləʊʒər/",
+      "pt": "encerramento de aquisições",
+      "def": "The process of finalizing open contracts and settling any claims.",
+      "ex": "Procurement closure included a final payment and release of liability.",
+      "tip": "Garante que todas as obrigações foram cumpridas."
+    },
+    {
+      "id": "pm172",
+      "term": "final report",
+      "ph": "/ˈfaɪnəl rɪˈpɔːrt/",
+      "pt": "relatório final",
+      "def": "A document summarizing project performance, including outcomes and lessons.",
+      "ex": "The final report was presented to the steering committee.",
+      "tip": "Entregável obrigatório no encerramento."
+    },
+    {
+      "id": "pm173",
+      "term": "handover",
+      "ph": "/ˈhændəʊvər/",
+      "pt": "transferência",
+      "def": "The process of transferring deliverables to the customer or operations.",
+      "ex": "The handover included training and documentation.",
+      "tip": "Pode ser faseada."
+    },
+    {
+      "id": "pm174",
+      "term": "transition plan",
+      "ph": "/trænˈzɪʃən plæn/",
+      "pt": "plano de transição",
+      "def": "A plan describing how the project's outputs will be transferred to operations.",
+      "ex": "The transition plan outlined support responsibilities after launch.",
+      "tip": "Garante continuidade."
+    },
+    {
+      "id": "pm175",
+      "term": "benefits realization",
+      "ph": "/ˈbenɪfɪts ˌriːəlaɪˈzeɪʃən/",
+      "pt": "realização de benefícios",
+      "def": "The process of ensuring that the project's benefits are achieved as planned.",
+      "ex": "Benefits realization was measured six months after project completion.",
+      "tip": "Pode ocorrer após o projeto."
+    },
+    {
+      "id": "pm176",
+      "term": "value engineering",
+      "ph": "/ˈvæljuː ˌendʒɪˈnɪərɪŋ/",
+      "pt": "engenharia de valor",
+      "def": "A systematic approach to improve the value of a project by optimizing costs and functions.",
+      "ex": "Value engineering suggested using a cheaper material without compromising quality.",
+      "tip": "Foco em função/custo."
+    },
+    {
+      "id": "pm177",
+      "term": "life cycle costing",
+      "ph": "/laɪf ˈsaɪkəl ˈkɒstɪŋ/",
+      "pt": "custeio do ciclo de vida",
+      "def": "The total cost of ownership over the life of an asset, including acquisition, operation, and disposal.",
+      "ex": "Life cycle costing showed that a more expensive machine was cheaper in the long run.",
+      "tip": "Importante para decisões de investimento."
+    },
+    {
+      "id": "pm178",
+      "term": "target cost",
+      "ph": "/ˈtɑːrɡɪt kɒst/",
+      "pt": "custo meta",
+      "def": "The estimated cost of a product or service that is the target for development.",
+      "ex": "The target cost for the new feature was $50,000.",
+      "tip": "Usado em contratos de incentivo."
+    },
+    {
+      "id": "pm179",
+      "term": "should-cost estimate",
+      "ph": "/ʃʊd kɒst ˈestɪmət/",
+      "pt": "estimativa de custo justo",
+      "def": "An estimate of what a product or service should cost, used to evaluate seller proposals.",
+      "ex": "The should-cost estimate helped negotiate a fair price.",
+      "tip": "Baseado em análise detalhada."
+    },
+    {
+      "id": "pm180",
+      "term": "market research",
+      "ph": "/ˈmɑːrkɪt rɪˈsɜːrtʃ/",
+      "pt": "pesquisa de mercado",
+      "def": "The process of gathering information about market conditions and capabilities.",
+      "ex": "Market research identified three potential suppliers.",
+      "tip": "Parte do planejamento de aquisições."
+    },
+    {
+      "id": "pm181",
+      "term": "bidder conference",
+      "ph": "/ˈbɪdər ˈkɒnfərəns/",
+      "pt": "conferência de licitantes",
+      "def": "A meeting with prospective sellers to ensure they have a clear understanding of the procurement.",
+      "ex": "The bidder conference clarified questions about the RFP.",
+      "tip": "Também chamado de contractor conference."
+    },
+    {
+      "id": "pm182",
+      "term": "proposal",
+      "ph": "/prəˈpəʊzəl/",
+      "pt": "proposta",
+      "def": "A document from a seller offering to provide a product or service in response to a request.",
+      "ex": "The proposal included technical and commercial sections.",
+      "tip": "Avaliada conforme critérios."
+    },
+    {
+      "id": "pm183",
+      "term": "quote",
+      "ph": "/kwəʊt/",
+      "pt": "cotação",
+      "def": "A statement of price for a product or service, often with terms.",
+      "ex": "The quote was valid for 30 days.",
+      "tip": "Menos detalhada que uma proposta."
+    },
+    {
+      "id": "pm184",
+      "term": "bid",
+      "ph": "/bɪd/",
+      "pt": "lance",
+      "def": "An offer by a seller to provide a product or service at a specified price.",
+      "ex": "The lowest bid was $1.2M.",
+      "tip": "Em leilões, pode ser competitivo."
+    },
+    {
+      "id": "pm185",
+      "term": "award",
+      "ph": "/əˈwɔːrd/",
+      "pt": "adjudicação",
+      "def": "The decision to select a seller and enter into a contract.",
+      "ex": "The award was given to the vendor with the best technical score.",
+      "tip": "Formalizado por carta de adjudicação."
+    },
+    {
+      "id": "pm186",
+      "term": "contract",
+      "ph": "/ˈkɒntrækt/",
+      "pt": "contrato",
+      "def": "A legally binding agreement between buyer and seller.",
+      "ex": "The contract specified deliverables, price, and terms.",
+      "tip": "Pode ser escrito ou verbal, mas escrito é preferível."
+    },
+    {
+      "id": "pm187",
+      "term": "terms and conditions",
+      "ph": "/tɜːrmz ənd kənˈdɪʃənz/",
+      "pt": "termos e condições",
+      "def": "The legal and commercial clauses in a contract.",
+      "ex": "Payment terms were net 30 days.",
+      "tip": "Devem ser claras para evitar disputas."
+    },
+    {
+      "id": "pm188",
+      "term": "warranty",
+      "ph": "/ˈwɒrənti/",
+      "pt": "garantia",
+      "def": "A promise by the seller to fix defects for a specified period.",
+      "ex": "The software came with a 12-month warranty.",
+      "tip": "Pode ser incluída no contrato."
+    },
+    {
+      "id": "pm189",
+      "term": "liability",
+      "ph": "/ˌlaɪəˈbɪləti/",
+      "pt": "responsabilidade",
+      "def": "Legal responsibility for something, such as damages.",
+      "ex": "The contract limited the seller's liability to the contract value.",
+      "tip": "Importante definir limites."
+    },
+    {
+      "id": "pm190",
+      "term": "indemnification",
+      "ph": "/ɪnˌdemnɪfɪˈkeɪʃən/",
+      "pt": "indenização",
+      "def": "An obligation to compensate for loss or damage.",
+      "ex": "The seller agreed to indemnify the buyer against third-party claims.",
+      "tip": "Comum em contratos de serviços."
+    },
+    {
+      "id": "pm191",
+      "term": "force majeure",
+      "ph": "/fɔːrs mæˈʒɜːr/",
+      "pt": "força maior",
+      "def": "Unforeseeable circumstances that prevent someone from fulfilling a contract.",
+      "ex": "The contract included a force majeure clause for natural disasters.",
+      "tip": "Isenta as partes de responsabilidade."
+    },
+    {
+      "id": "pm192",
+      "term": "termination",
+      "ph": "/ˌtɜːrmɪˈneɪʃən/",
+      "pt": "rescisão",
+      "def": "The ending of a contract before completion, either by agreement or for cause.",
+      "ex": "The project was terminated due to budget cuts.",
+      "tip": "Deve prever direitos e obrigações na rescisão."
+    },
+    {
+      "id": "pm193",
+      "term": "close-out",
+      "ph": "/kləʊz aʊt/",
+      "pt": "encerramento",
+      "def": "The finalization of a contract, including payment and release.",
+      "ex": "Close-out documents included a final invoice and release of claims.",
+      "tip": "Sinônimo de closure."
+    },
+    {
+      "id": "pm194",
+      "term": "audit",
+      "ph": "/ˈɔːdɪt/",
+      "pt": "auditoria",
+      "def": "A formal examination of project records, processes, or deliverables.",
+      "ex": "The audit confirmed compliance with the quality plan.",
+      "tip": "Pode ser interna ou externa."
+    },
+    {
+      "id": "pm195",
+      "term": "compliance",
+      "ph": "/kəmˈplaɪəns/",
+      "pt": "conformidade",
+      "def": "Adherence to laws, regulations, standards, or requirements.",
+      "ex": "The project ensured compliance with data protection laws.",
+      "tip": "Monitoramento contínuo."
+    },
+    {
+      "id": "pm196",
+      "term": "governance",
+      "ph": "/ˈɡʌvərnəns/",
+      "pt": "governança",
+      "def": "The framework of authority and control within which projects are managed.",
+      "ex": "Project governance included steering committee oversight.",
+      "tip": "Define papéis e responsabilidades."
+    },
+    {
+      "id": "pm197",
+      "term": "steering committee",
+      "ph": "/ˈstɪərɪŋ kəˈmɪti/",
+      "pt": "comitê diretivo",
+      "def": "A group of senior stakeholders who provide guidance and approve key decisions.",
+      "ex": "The steering committee met quarterly to review progress.",
+      "tip": "Geralmente inclui o sponsor."
+    },
+    {
+      "id": "pm198",
+      "term": "project board",
+      "ph": "/ˈprɒdʒekt bɔːrd/",
+      "pt": "conselho do projeto",
+      "def": "Another term for steering committee, common in PRINCE2.",
+      "ex": "The project board included the executive, senior user, and senior supplier.",
+      "tip": "Responsável pela direção do projeto."
+    },
+    {
+      "id": "pm199",
+      "term": "kick-off meeting",
+      "ph": "/ˈkɪk ɒf ˈmiːtɪŋ/",
+      "pt": "reunião de início",
+      "def": "The first meeting with the project team and stakeholders to align on objectives and plans.",
+      "ex": "The kick-off meeting introduced the team and reviewed the project charter.",
+      "tip": "Marca o início da execução."
+    },
+    {
+      "id": "pm200",
+      "term": "status meeting",
+      "ph": "/ˈsteɪtəs ˈmiːtɪŋ/",
+      "pt": "reunião de acompanhamento",
+      "def": "Regular meetings to review progress, issues, and next steps.",
+      "ex": "Weekly status meetings kept everyone informed.",
+      "tip": "Devem ser objetivas e focadas."
+    }
+  ]
+}
