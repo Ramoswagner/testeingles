@@ -172,6 +172,37 @@
   margin-bottom: 2rem;
 }
 
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px,1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.achievement-card {
+  background: var(--s2);
+  border: 1px solid var(--b0);
+  border-radius: var(--r);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s;
+}
+.achievement-card.locked {
+  opacity: 0.4;
+  filter: grayscale(0.8);
+}
+.achievement-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.achievement-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.achievement-desc {
+  font-size: 0.7rem;
+  color: var(--text-md);
+}
+
 /* ----- Scrollbar personalizada ----- */
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: var(--s2); }
