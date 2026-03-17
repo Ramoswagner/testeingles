@@ -1,0 +1,116 @@
+{
+  "lbl": "Project Management",
+  "pt": "Gestão de Projetos",
+  "color": "#8b5cf6",
+  "desc": "PMBOK, Agile, PMI e comunicação com stakeholders.",
+  "cards": [
+    {
+      "id": "p01",
+      "term": "work breakdown structure",
+      "ph": "/wɜːk ˈbreɪkdaʊn ˈstrʌktʃə/",
+      "pt": "estrutura analítica do projeto (EAP)",
+      "def": "A hierarchical decomposition of the total project scope into manageable work packages.",
+      "ex": "The WBS identified 23 work packages that had been entirely overlooked in initial planning.",
+      "tip": "Abreviado WBS. Pilar do PMBOK. Regra 100%: captura 100% do trabalho — nem mais, nem menos."
+    },
+    {
+      "id": "p02",
+      "term": "critical path",
+      "ph": "/ˈkrɪtɪkəl pɑːθ/",
+      "pt": "caminho crítico",
+      "def": "The longest sequence of dependent tasks that determines the minimum project completion time.",
+      "ex": "Any delay on the critical path would push the product launch beyond the Q3 board-mandated deadline.",
+      "tip": "Método CPM. Zero float no critical path. Qualquer atraso = atraso no projeto inteiro."
+    },
+    {
+      "id": "p03",
+      "term": "earned value",
+      "ph": "/ɜːnd ˈvæljuː/",
+      "pt": "valor agregado",
+      "def": "A performance metric comparing planned work against actual progress and costs at a given point in time.",
+      "ex": "Earned value analysis revealed the project was 15% behind schedule with only 60% of budget remaining.",
+      "tip": "EVM: SPI = Schedule Performance Index. CPI = Cost Performance Index. CPI < 1 = acima do orçamento."
+    },
+    {
+      "id": "p04",
+      "term": "deliverable",
+      "ph": "/dɪˈlɪvərəbəl/",
+      "pt": "entregável",
+      "def": "A tangible or intangible output that must be produced to complete a project or phase.",
+      "ex": "The final deliverable was a fully documented API with integration guides for three enterprise clients.",
+      "tip": "Deliverable ≠ milestone. Deliverable = O QUÊ é entregue (produto). Milestone = QUANDO um evento-chave ocorre."
+    },
+    {
+      "id": "p05",
+      "term": "risk register",
+      "ph": "/rɪsk ˈredʒɪstə/",
+      "pt": "registro de riscos",
+      "def": "A document capturing identified risks with their probability, impact, owners, and response strategies.",
+      "ex": "The risk register flagged single-supplier dependency as high-probability, triggering a dual-source strategy.",
+      "tip": "Ferramenta viva — atualizada em cada ciclo. Includes: probability × impact matrix, risk owner, response plan."
+    },
+    {
+      "id": "p06",
+      "term": "stakeholder",
+      "ph": "/ˈsteɪkhəʊldə/",
+      "pt": "parte interessada",
+      "def": "Any individual, group, or organization that may affect or be affected by a project decision.",
+      "ex": "Identifying all stakeholders in week one prevented a major political misalignment during implementation.",
+      "tip": "Stakeholder ≠ shareholder. Stakeholder management é uma das competências mais valorizadas em McKinsey engagements."
+    },
+    {
+      "id": "p07",
+      "term": "change management",
+      "ph": "/tʃeɪndʒ ˈmænɪdʒmənt/",
+      "pt": "gestão de mudanças",
+      "def": "A systematic approach to transitioning people and organizations from a current state to a desired future state.",
+      "ex": "Without a robust change management strategy, the ERP rollout met fierce frontline resistance.",
+      "tip": "McKinsey usa o OHI (Organizational Health Index). Kotter 8 Steps e ADKAR são frameworks de mercado."
+    },
+    {
+      "id": "p08",
+      "term": "RACI matrix",
+      "ph": "/ˈreɪsi ˈmeɪtrɪks/",
+      "pt": "matriz RACI",
+      "def": "A responsibility chart mapping tasks to roles: Responsible, Accountable, Consulted, Informed.",
+      "ex": "The RACI matrix eliminated confusion about who had final sign-off authority on design decisions.",
+      "tip": "R = faz o trabalho. A = dono único do resultado. C = consultado antes. I = informado depois."
+    },
+    {
+      "id": "p09",
+      "term": "milestone",
+      "ph": "/ˈmaɪlstəʊn/",
+      "pt": "marco do projeto",
+      "def": "A significant, zero-duration event marking the completion of a major phase or decision point.",
+      "ex": "The board required monthly milestone updates to validate continued investment in the transformation.",
+      "tip": "Zero duration — é um ponto no tempo. Em Gantt charts: representado por diamante (◆). Usado em gate reviews."
+    },
+    {
+      "id": "p10",
+      "term": "baseline",
+      "ph": "/ˈbeɪslaɪn/",
+      "pt": "linha de base",
+      "def": "The approved plan against which project performance is measured, capturing scope, schedule, and cost.",
+      "ex": "After the client added new features, we formally re-baselined the project to reflect the expanded scope.",
+      "tip": "PMBOK: scope + schedule + cost baseline = Performance Measurement Baseline (PMB). Changes requerem formal approval."
+    },
+    {
+      "id": "p11",
+      "term": "sprint",
+      "ph": "/sprɪnt/",
+      "pt": "sprint",
+      "def": "A fixed time-box in Scrum (typically 1–4 weeks) during which a committed set of work is completed.",
+      "ex": "Each two-week sprint concluded with a working-software demo aligned to client expectations.",
+      "tip": "Key events: Planning, Daily Scrum, Review, Retrospective. Key artifacts: Sprint Goal, Backlog, Increment."
+    },
+    {
+      "id": "p12",
+      "term": "lessons learned",
+      "ph": "/ˈlesənz lɜːnd/",
+      "pt": "lições aprendidas",
+      "def": "Documented knowledge from a project capturing successes, failures, and recommendations for future performance.",
+      "ex": "The lessons learned session became a mandatory reference document for all subsequent deployments.",
+      "tip": "Obrigatório no closing process group (PMBOK). Alimenta organizational process assets (OPA)."
+    }
+  ]
+}
