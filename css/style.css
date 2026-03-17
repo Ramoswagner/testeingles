@@ -1,5 +1,5 @@
 /* ========================================
-style.css — versão premium com responsividade refinada
+style.css — LexiPro versão premium mobile
 ======================================== */
 
 /* ----- Variáveis ----- */
@@ -1615,7 +1615,7 @@ kbd {
 }
 
 /* ========================================
-RESPONSIVIDADE AVANÇADA
+RESPONSIVIDADE MOBILE
 ======================================== */
 
 /* Telas muito pequenas (<= 480px) */
@@ -1625,121 +1625,157 @@ RESPONSIVIDADE AVANÇADA
     --r-lg: 18px;
     --r-xl: 24px;
   }
+  
   header {
     padding: 0.75rem 1rem;
   }
+  
   .logo-name {
     font-size: 1.2rem;
   }
+  
   .logo-tagline {
     font-size: 0.5rem;
   }
+  
   .nav-btn {
     padding: 0.35rem 0.7rem;
     font-size: 0.7rem;
   }
+  
   .nav-btn svg {
     width: 12px;
     height: 12px;
   }
+  
   .streak-pill {
     font-size: 0.7rem;
     padding: 0.2rem 0.6rem;
   }
+  
   .mastery-pill {
     font-size: 0.7rem;
   }
+  
   .view {
     padding: 0.75rem;
   }
+  
   .hero {
     padding: 1.5rem 0 1rem;
   }
+  
   .hero h1 {
     font-size: 2rem;
   }
+  
   .hero p {
     font-size: 0.8rem;
   }
+  
   .stat-n {
     font-size: 1.5rem;
   }
+  
   .stat-l {
     font-size: 0.55rem;
   }
+  
   .cat-card {
     padding: 1rem;
   }
+  
   .cc-icon {
     width: 40px;
     height: 40px;
   }
+  
   .cc-icon svg {
     width: 20px;
     height: 20px;
   }
+  
   .cc-name {
     font-size: 0.9rem;
   }
+  
   .cc-desc {
     font-size: 0.7rem;
   }
+  
   .flashcard {
     aspect-ratio: 3/4;
   }
+  
   .cf {
     padding: 1.5rem;
   }
+  
   .fc-term {
     font-size: 1.8rem;
   }
+  
   .fc-phon {
     font-size: 0.9rem;
   }
+  
   .pron-btn {
     padding: 0.4rem 0.8rem;
     font-size: 0.7rem;
   }
+  
   .pron-btn svg {
     width: 12px;
     height: 12px;
   }
+  
   .conf-row {
     flex-direction: column;
     gap: 0.5rem;
   }
+  
   .btn-conf {
     padding: 0.8rem;
   }
+  
   .btn-flip {
     padding: 0.5rem 1.2rem;
     font-size: 0.75rem;
   }
+  
   .btn-nav {
     width: 40px;
     height: 40px;
   }
+  
   .kb-hints {
     display: none;
   }
+  
   .quiz-card {
     padding: 1.5rem;
   }
+  
   .q-prompt {
     font-size: 1.3rem;
   }
+  
   .q-opts {
     grid-template-columns: 1fr;
   }
+  
   .opt-term {
     font-size: 1rem;
   }
+  
   .kpi .kn {
     font-size: 1.8rem;
   }
+  
   .achievements-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  
   .m-cat {
     width: 120px;
   }
@@ -1750,18 +1786,23 @@ RESPONSIVIDADE AVANÇADA
   .view {
     padding: 1.25rem;
   }
+  
   .cat-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  
   .flashcard {
     aspect-ratio: 4/3;
   }
+  
   .q-opts {
     grid-template-columns: 1fr;
   }
+  
   .conf-row {
     flex-wrap: wrap;
   }
+  
   .btn-conf {
     flex: 1 1 30%;
   }
@@ -1772,19 +1813,22 @@ RESPONSIVIDADE AVANÇADA
   .view {
     max-width: 960px;
   }
+  
   .cat-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* Ajustes para telas muito grandes */
+/* Telas muito grandes */
 @media (min-width: 1400px) {
   .view {
     max-width: 1200px;
   }
+  
   .fc-wrap {
     max-width: 800px;
   }
+  
   .flashcard {
     aspect-ratio: 16/9;
   }
@@ -1795,19 +1839,24 @@ RESPONSIVIDADE AVANÇADA
   .flashcard {
     aspect-ratio: 16/9;
   }
+  
   .cf {
     padding: 1rem 2rem;
   }
+  
   .fc-term {
     font-size: 2rem;
   }
+  
   .fc-phon {
     margin-bottom: 0.5rem;
   }
+  
   .pron-panel {
     flex-direction: row;
     flex-wrap: wrap;
   }
+  
   .conf-row {
     flex-direction: row;
   }
