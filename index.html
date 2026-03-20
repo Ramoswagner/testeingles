@@ -3,382 +3,306 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#080B12">
-  <meta name="description" content="Vocabulário executivo para carreiras de alta performance — engenharia, gestão e estratégia.">
-  <title>Project English — Vocabulário Executivo</title>
+  <meta name="theme-color" content="#131F2C">
+  <meta name="description" content="Vocabulário executivo por Wagner Ramos — engenharia, gestão e estratégia.">
+  <title>Wagner.English — Vocabulário Executivo</title>
   <link rel="manifest" href="manifest.json">
-  <link rel="icon" type="image/png" href="assets/icons/icon-192x192.png">
-  <link rel="apple-touch-icon" href="assets/icons/icon-192x192.png">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200;12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Ambient atmosphere -->
+  <div class="grain" aria-hidden="true"></div>
   <div class="ambient" aria-hidden="true">
-    <div class="amb-orb o1"></div>
-    <div class="amb-orb o2"></div>
-    <div class="amb-grain"></div>
+    <div class="orb o1"></div>
+    <div class="orb o2"></div>
+    <div class="orb o3"></div>
   </div>
 
   <div id="app">
 
     <!-- HEADER -->
-    <header id="site-header">
-      <a href="#" class="brand" onclick="goHome(); return false;" aria-label="Project English — Início">
-        <div class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="1" y="1" width="26" height="26" rx="3" stroke="currentColor" stroke-width="1.2"/>
-            <path d="M8 8h7a4 4 0 0 1 0 8H8V8z" fill="currentColor" opacity="0.9"/>
-            <path d="M8 16h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M15 20l3-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
-          </svg>
+    <header id="hdr">
+      <a href="#" class="brand" onclick="goHome(); return false;">
+        <div class="brand-wordmark">
+          <span class="bw-wagner">Wagner</span><span class="bw-dot">.</span><span class="bw-english">English</span>
         </div>
-        <div class="brand-text">
-          <span class="brand-name">Project<em>English</em></span>
-          <span class="brand-sub">by Wagner Ramos</span>
-        </div>
+        <div class="brand-descriptor">Executive Vocabulary</div>
       </a>
 
-      <nav aria-label="Navegação principal">
-        <button class="nav-item active" id="nb-home" onclick="showView('home')" aria-current="page">
-          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2.5 7.5L10 2l7.5 5.5V17a1 1 0 01-1 1H14v-5H6v5H3.5a1 1 0 01-1-1V7.5z"/></svg>
+      <nav>
+        <button class="nv active" id="nb-home" onclick="showView('home')">
+          <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 7L9 1.5 16 7v9a1 1 0 01-1 1H3a1 1 0 01-1-1V7z"/><path d="M6.5 17.5v-6h5v6"/></svg>
           Início
         </button>
-        <button class="nav-item" id="nb-prog" onclick="showView('progress')">
-          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 14l4-4 3 3 4-5 3 3"/><rect x="2" y="3" width="16" height="14" rx="1.5"/></svg>
+        <button class="nv" id="nb-prog" onclick="showView('progress')">
+          <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 13l4-4 3 3 4-5 3 3"/></svg>
           Progresso
         </button>
       </nav>
 
-      <div class="header-actions">
-        <div class="streak-badge" id="streak-badge" title="Sequência de dias">
-          <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1.5c0 0-5 3.2-5 7.5 0 2.76 2.24 5 5 5s5-2.24 5-5c0-4.3-5-7.5-5-7.5z"/></svg>
+      <div class="hdr-end">
+        <div class="streak-chip" id="streak-badge">
+          <svg viewBox="0 0 14 14" fill="currentColor"><path d="M7 1c0 0-4.5 2.8-4.5 6.5C2.5 9.9 4.6 12 7 12s4.5-2.1 4.5-4.5C11.5 3.8 7 1 7 1z"/></svg>
           <span id="streak-n">0</span>
         </div>
-        <div class="mastery-badge" id="mastery-pill">
-          <span>0</span> dominadas
-        </div>
+        <div class="mastery-chip" id="mastery-pill"><span>0</span> dominadas</div>
       </div>
     </header>
 
-    <!-- ═══════════════════════════════════
-         VIEW: HOME
-    ═══════════════════════════════════ -->
-    <main id="view-home" class="view active" role="main">
-
-      <!-- Hero -->
+    <!-- HOME -->
+    <main id="view-home" class="view active">
       <section class="hero">
-        <div class="hero-content">
-          <p class="hero-eyebrow">
-            <span class="eyebrow-dot" aria-hidden="true"></span>
-            Engenharia · Gestão · Estratégia
-          </p>
-          <h1 class="hero-heading">
-            Inglês executivo<br>
-            para carreiras de<br>
-            <em>alta performance.</em>
-          </h1>
-          <p class="hero-body">
-            Vocabulário preciso selecionado para ambientes consultivos e de engenharia. Cada termo com fonética, contexto real e dica estratégica.
-          </p>
+        <div class="hero-tag">
+          <span class="tag-pip"></span>Engenharia · Gestão · Estratégia
         </div>
-        <div class="hero-stat-cluster" aria-label="Estatísticas de vocabulário">
-          <div class="hero-stat">
-            <span class="hs-n" id="hs-total-cards">—</span>
-            <span class="hs-l">termos</span>
+        <h1 class="hero-h">
+          <span class="h-line1">Inglês</span>
+          <span class="h-line2">executivo.</span>
+        </h1>
+        <p class="hero-sub">Vocabulário de alta precisão para ambientes consultivos. Cada termo com fonética, contexto real e dica estratégica — criado por Wagner Ramos.</p>
+        <div class="hero-nums">
+          <div class="hero-num">
+            <strong id="hs-total-cards">—</strong>
+            <em>termos</em>
           </div>
-          <div class="hero-divider" aria-hidden="true"></div>
-          <div class="hero-stat">
-            <span class="hs-n">7</span>
-            <span class="hs-l">categorias</span>
+          <div class="hero-divider"></div>
+          <div class="hero-num">
+            <strong>7</strong>
+            <em>categorias</em>
           </div>
         </div>
       </section>
 
-      <!-- Overview stats bar -->
-      <div class="overview-bar" role="region" aria-label="Resumo do progresso">
-        <div class="ov-item">
-          <span class="ov-val" id="ov-studied">0</span>
-          <span class="ov-key">Estudados</span>
+      <div class="ov-strip">
+        <div class="ov-cell">
+          <span class="ov-v" id="ov-studied">0</span>
+          <span class="ov-k">Estudados</span>
         </div>
-        <div class="ov-sep" aria-hidden="true"></div>
-        <div class="ov-item">
-          <span class="ov-val accent" id="ov-mastered">0</span>
-          <span class="ov-key">Dominados</span>
+        <span class="ov-line"></span>
+        <div class="ov-cell">
+          <span class="ov-v warm" id="ov-mastered">0</span>
+          <span class="ov-k">Dominados</span>
         </div>
-        <div class="ov-sep" aria-hidden="true"></div>
-        <div class="ov-item">
-          <span class="ov-val" id="ov-streak">0</span>
-          <span class="ov-key">Sequência</span>
+        <span class="ov-line"></span>
+        <div class="ov-cell">
+          <span class="ov-v" id="ov-streak">0</span>
+          <span class="ov-k">Sequência</span>
         </div>
-        <div class="ov-sep" aria-hidden="true"></div>
-        <div class="ov-item">
-          <span class="ov-val" id="ov-acc">—</span>
-          <span class="ov-key">Precisão quiz</span>
+        <span class="ov-line"></span>
+        <div class="ov-cell">
+          <span class="ov-v" id="ov-acc">—</span>
+          <span class="ov-k">Precisão</span>
         </div>
       </div>
 
-      <!-- Category grid -->
-      <section class="section-block" aria-labelledby="cats-label">
-        <header class="section-hdr">
-          <span class="section-label" id="cats-label">Categorias</span>
-          <span class="section-rule" aria-hidden="true"></span>
-        </header>
-        <div class="cat-grid" id="cat-grid" role="list"></div>
+      <section class="cats-section">
+        <div class="section-eyebrow">
+          <span>Categorias</span>
+          <div class="eyebrow-line"></div>
+        </div>
+        <div class="cat-grid" id="cat-grid"></div>
       </section>
-
     </main>
 
-    <!-- ═══════════════════════════════════
-         VIEW: STUDY
-    ═══════════════════════════════════ -->
-    <main id="view-study" class="view" role="main">
-
-      <!-- Study topbar -->
-      <div class="study-topbar">
-        <button class="btn-back" onclick="goHome()" aria-label="Voltar ao início">
-          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 4L6 10l6 6"/></svg>
+    <!-- STUDY -->
+    <main id="view-study" class="view">
+      <div class="study-bar">
+        <button class="back-btn" onclick="goHome()">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 3L5 8l5 5"/></svg>
           Voltar
         </button>
-        <div class="study-meta">
-          <span class="study-title" id="sh-title">—</span>
-          <span class="study-mode-label" id="sh-sub">Modo estudo</span>
+        <div class="study-info">
+          <span class="si-title" id="sh-title">—</span>
+          <span class="si-mode" id="sh-sub">flashcard</span>
         </div>
-        <div class="study-position">
-          <div class="prog-track" id="prog-dots" role="progressbar" aria-label="Progresso no deck"></div>
-          <span class="study-cnt" id="sh-cnt">—</span>
+        <div class="study-nav-dots">
+          <div class="dot-track" id="prog-dots"></div>
+          <span class="dot-cnt" id="sh-cnt">—</span>
         </div>
       </div>
 
-      <!-- Mode selector -->
-      <div class="mode-row" role="tablist" aria-label="Modo de estudo">
-        <button class="mode-btn active" id="tab-study" onclick="setMode('study')" role="tab" aria-selected="true" aria-controls="pane-study">
-          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h5a3 3 0 010 6H4zm0 6h7m-7 4h5"/></svg>
+      <div class="mode-strip">
+        <button class="mode-pill active" id="tab-study" onclick="setMode('study')">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 3h5a2.5 2.5 0 010 5H3zm0 5h6M3 12h4"/></svg>
           Flashcard
         </button>
-        <button class="mode-btn" id="tab-quiz" onclick="setMode('quiz')" role="tab" aria-selected="false" aria-controls="pane-quiz">
-          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="10" cy="10" r="8"/><path d="M7.5 7.5a2.5 2.5 0 114.33 2.5C11 11.5 10 12 10 13"/><circle cx="10" cy="15.5" r=".75" fill="currentColor"/></svg>
+        <button class="mode-pill" id="tab-quiz" onclick="setMode('quiz')">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6.5"/><path d="M6 6.2a2 2 0 113.46 2C9 9 8 9.5 8 10.5"/><circle cx="8" cy="12.5" r=".6" fill="currentColor"/></svg>
           Quiz
         </button>
       </div>
 
-      <!-- ── STUDY PANE ── -->
-      <div id="pane-study" role="tabpanel" aria-labelledby="tab-study">
-
-        <!-- Flashcard -->
+      <!-- STUDY PANE -->
+      <div id="pane-study">
         <div class="fc-stage">
           <div class="fc-wrap">
-            <div class="flashcard" id="flashcard" onclick="flipCard()" tabindex="0" role="button" aria-label="Virar flashcard">
-
+            <div class="flashcard" id="flashcard" onclick="flipCard()" tabindex="0">
               <!-- Front -->
-              <div class="card-face card-front">
-                <div class="card-corner tl" aria-hidden="true"></div>
-                <div class="card-corner tr" aria-hidden="true"></div>
-                <div class="card-corner bl" aria-hidden="true"></div>
-                <div class="card-corner br" aria-hidden="true"></div>
-                <div class="card-cat-badge">
-                  <span id="fc-badge-txt">—</span>
+              <div class="cface cfront">
+                <div class="c-mark" id="fc-badge-txt">—</div>
+                <div class="cfront-body">
+                  <div class="fc-word" id="fc-term">—</div>
+                  <div class="fc-ipa" id="fc-phon">—</div>
                 </div>
-                <div class="card-center">
-                  <div class="fc-term" id="fc-term" lang="en">—</div>
-                  <div class="fc-phon" id="fc-phon">—</div>
-                </div>
-                <div class="card-flip-cue" aria-hidden="true">
-                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-                  toque para revelar
+                <div class="c-cue">
+                  <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+                  revelar
                 </div>
               </div>
-
               <!-- Back -->
-              <div class="card-face card-back" id="cf-back">
-                <div class="card-back-scroll">
-                  <div class="back-row">
-                    <span class="back-label">Tradução</span>
-                    <span class="back-translation" id="bk-pt" lang="pt-BR">—</span>
+              <div class="cface cback" id="cf-back">
+                <div class="cback-scroll">
+                  <div class="cb-block">
+                    <span class="cb-lbl">PT</span>
+                    <span class="cb-trans" id="bk-pt">—</span>
                   </div>
-                  <div class="back-divider" aria-hidden="true"></div>
-                  <div class="back-row">
-                    <span class="back-label">Definição</span>
-                    <p class="back-def" id="bk-def" lang="en">—</p>
+                  <hr class="cb-hr">
+                  <div class="cb-block">
+                    <span class="cb-lbl">DEF</span>
+                    <p class="cb-def" id="bk-def">—</p>
                   </div>
-                  <div class="back-row">
-                    <span class="back-label">Exemplo</span>
-                    <p class="back-ex" id="bk-ex" lang="en">—</p>
+                  <div class="cb-block">
+                    <span class="cb-lbl">EX</span>
+                    <p class="cb-ex" id="bk-ex">—</p>
                   </div>
-                  <div class="back-row">
-                    <span class="back-label">Dica</span>
-                    <p class="back-tip" id="bk-tip">—</p>
+                  <div class="cb-block">
+                    <span class="cb-lbl">TIP</span>
+                    <p class="cb-tip" id="bk-tip">—</p>
                   </div>
                 </div>
-                <!-- Confidence buttons -->
-                <div class="conf-panel" id="conf-row" style="display:none;" role="group" aria-label="Avalie sua confiança">
-                  <button class="conf-btn cb-hard" onclick="rate('hard')" aria-label="Difícil — ver em breve">
-                    <span class="cb-dot" aria-hidden="true"></span>
-                    <span class="cb-label">Difícil</span>
-                    <span class="cb-sub">em breve</span>
+                <div class="conf-bar" id="conf-row" style="display:none">
+                  <button class="conf-btn cb-hard" onclick="rate('hard')">
+                    <span class="cb-pip"></span><span class="cb-txt">Difícil</span>
                   </button>
-                  <button class="conf-btn cb-med" onclick="rate('medium')" aria-label="Médio — revisar amanhã">
-                    <span class="cb-dot" aria-hidden="true"></span>
-                    <span class="cb-label">Médio</span>
-                    <span class="cb-sub">amanhã</span>
+                  <button class="conf-btn cb-med" onclick="rate('medium')">
+                    <span class="cb-pip"></span><span class="cb-txt">Médio</span>
                   </button>
-                  <button class="conf-btn cb-easy" onclick="rate('easy')" aria-label="Fácil — dominado">
-                    <span class="cb-dot" aria-hidden="true"></span>
-                    <span class="cb-label">Fácil</span>
-                    <span class="cb-sub">dominado</span>
+                  <button class="conf-btn cb-easy" onclick="rate('easy')">
+                    <span class="cb-pip"></span><span class="cb-txt">Fácil</span>
                   </button>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
 
-        <!-- Pronunciation panel -->
-        <div class="pron-panel" role="region" aria-label="Pronúncia">
-          <div class="pron-wave" id="wave-line" aria-hidden="true">
+        <!-- Audio -->
+        <div class="audio-row">
+          <div class="wave-viz" id="wave-line">
             <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
           </div>
-          <div class="spell-display" id="spell-display" aria-live="polite"></div>
-          <div class="pron-actions">
-            <button class="pron-btn pb-normal" id="pb-main" onclick="speak('normal', event)" aria-label="Pronunciar em velocidade normal">
-              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 3l10 5-10 5V3z"/></svg>
+          <div class="spell-out" id="spell-display"></div>
+          <div class="audio-btns">
+            <button class="abtn abtn-play" id="pb-main" onclick="speak('normal',event)">
+              <svg viewBox="0 0 14 14" fill="currentColor"><path d="M3 2l9 5-9 5V2z"/></svg>
               Pronunciar
             </button>
-            <button class="pron-btn pb-slow" id="pb-slow" onclick="speak('slow', event)" aria-label="Pronunciar devagar">
-              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 3l10 5-10 5V3z" opacity=".5"/><circle cx="8" cy="8" r="2.5" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+            <button class="abtn abtn-slow" id="pb-slow" onclick="speak('slow',event)">
+              <svg viewBox="0 0 14 14" fill="currentColor"><path d="M3 2l9 5-9 5V2z" opacity=".45"/><circle cx="7" cy="7" r="2.2" fill="none" stroke="currentColor" stroke-width="1.1"/></svg>
               Devagar
             </button>
-            <button class="pron-btn pb-spell" id="pb-spell" onclick="speak('spell', event)" aria-label="Soletrar">
-              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M3 4h10M8 4v9M5 13h6"/></svg>
+            <button class="abtn abtn-spell" id="pb-spell" onclick="speak('spell',event)">
+              <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M2 3h10M7 3v8M4 11h6"/></svg>
               Soletrar
             </button>
           </div>
         </div>
 
-        <!-- Card navigation -->
-        <div class="card-nav" role="navigation" aria-label="Navegação entre cards">
-          <button class="nav-arrow" onclick="prevCard()" aria-label="Card anterior">
-            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 4L6 10l6 6"/></svg>
+        <!-- Nav -->
+        <div class="cn-row">
+          <button class="cn-arrow" onclick="prevCard()">
+            <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 4L6 9l5 5"/></svg>
           </button>
-          <button class="flip-btn" onclick="flipCard()" aria-label="Virar card">
-            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 3a7 7 0 100 14A7 7 0 0010 3z"/><circle cx="10" cy="10" r="2.5" fill="currentColor"/></svg>
+          <button class="cn-flip" onclick="flipCard()">
+            <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="9" r="7"/><circle cx="9" cy="9" r="2.5" fill="currentColor"/></svg>
             Virar card
           </button>
-          <button class="nav-arrow" onclick="nextCard()" aria-label="Próximo card">
-            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 4l6 6-6 6"/></svg>
+          <button class="cn-arrow" onclick="nextCard()">
+            <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 4l5 5-5 5"/></svg>
           </button>
         </div>
 
-        <!-- Keyboard hints -->
-        <div class="kb-row" aria-label="Atalhos de teclado">
-          <span><kbd>←</kbd><kbd>→</kbd> navegar</span>
+        <div class="kb-hints">
+          <span><kbd>←</kbd><kbd>→</kbd></span>
           <span><kbd>Space</kbd> virar</span>
           <span><kbd>P</kbd> áudio</span>
           <span><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> avaliar</span>
         </div>
+      </div>
 
-      </div><!-- /pane-study -->
-
-      <!-- ── QUIZ PANE ── -->
-      <div id="pane-quiz" role="tabpanel" aria-labelledby="tab-quiz" style="display:none;">
-        <div class="quiz-container">
+      <!-- QUIZ PANE -->
+      <div id="pane-quiz" style="display:none">
+        <div class="quiz-wrap">
           <div class="quiz-card">
-            <p class="quiz-prompt-label">Qual é o termo em inglês?</p>
-            <h2 class="quiz-prompt" id="q-prompt" lang="pt-BR">—</h2>
-            <p class="quiz-context" id="q-ctx" lang="en">—</p>
-            <div class="quiz-options" id="q-opts" role="group" aria-label="Opções de resposta"></div>
-            <div class="quiz-score-row">
-              <span id="q-score">0 corretas de 0</span>
-            </div>
+            <p class="qz-eyebrow">Qual é o termo em inglês?</p>
+            <h2 class="qz-prompt" id="q-prompt">—</h2>
+            <p class="qz-ctx" id="q-ctx">—</p>
+            <div class="qz-opts" id="q-opts"></div>
+            <div class="qz-score"><span id="q-score">0 corretas de 0</span></div>
           </div>
         </div>
       </div>
-
     </main>
 
-    <!-- ═══════════════════════════════════
-         VIEW: PROGRESS
-    ═══════════════════════════════════ -->
-    <main id="view-progress" class="view" role="main">
-
-      <header class="progress-hdr">
+    <!-- PROGRESS -->
+    <main id="view-progress" class="view">
+      <header class="prog-hdr">
         <h2>Progresso</h2>
-        <p>Sua evolução rumo à fluência executiva.</p>
+        <p>Sua evolução em vocabulário executivo.</p>
       </header>
 
-      <div class="kpi-row" role="region" aria-label="Indicadores de desempenho">
-        <div class="kpi-card kpi-blue">
-          <span class="kpi-val" id="st-studied">0</span>
-          <span class="kpi-key">Cards revisados</span>
+      <div class="kpi-grid">
+        <div class="kpi-card kpi-ocean">
+          <span class="kpi-n" id="st-studied">0</span>
+          <span class="kpi-l">Cards revisados</span>
         </div>
-        <div class="kpi-card kpi-brass">
-          <span class="kpi-val" id="st-mastered">0</span>
-          <span class="kpi-key">Palavras dominadas</span>
+        <div class="kpi-card kpi-warm">
+          <span class="kpi-n" id="st-mastered">0</span>
+          <span class="kpi-l">Dominados</span>
         </div>
-        <div class="kpi-card kpi-muted">
-          <span class="kpi-val" id="st-acc">—</span>
-          <span class="kpi-key">Acertos no quiz</span>
+        <div class="kpi-card kpi-slate">
+          <span class="kpi-n" id="st-acc">—</span>
+          <span class="kpi-l">Acertos quiz</span>
         </div>
-        <div class="kpi-card kpi-muted">
-          <span class="kpi-val" id="st-streak">0</span>
-          <span class="kpi-key">Dias consecutivos</span>
+        <div class="kpi-card kpi-slate">
+          <span class="kpi-n" id="st-streak">0</span>
+          <span class="kpi-l">Dias seguidos</span>
         </div>
       </div>
 
-      <!-- Domínio por categoria -->
-      <section class="section-block" aria-labelledby="mastery-label">
-        <header class="section-hdr">
-          <span class="section-label" id="mastery-label">Domínio por categoria</span>
-          <span class="section-rule" aria-hidden="true"></span>
-        </header>
-        <div class="mastery-list" id="mastery-rows" role="list"></div>
+      <section class="prog-section">
+        <div class="section-eyebrow"><span>Domínio por categoria</span><div class="eyebrow-line"></div></div>
+        <div id="mastery-rows"></div>
       </section>
 
-      <!-- Charts -->
-      <section class="section-block charts-section" aria-labelledby="charts-label">
-        <header class="section-hdr">
-          <span class="section-label" id="charts-label">Atividade e quiz</span>
-          <span class="section-rule" aria-hidden="true"></span>
-        </header>
-        <div class="charts-row">
-          <div class="chart-block">
-            <span class="chart-label">Evolução diária</span>
-            <div class="chart-canvas-wrap">
-              <canvas id="chart-daily" aria-label="Gráfico de evolução diária"></canvas>
-            </div>
+      <section class="prog-section charts-sec">
+        <div class="section-eyebrow"><span>Atividade</span><div class="eyebrow-line"></div></div>
+        <div class="charts-grid">
+          <div class="chart-panel">
+            <span class="chart-lbl">Evolução diária</span>
+            <div class="chart-box"><canvas id="chart-daily"></canvas></div>
           </div>
-          <div class="chart-block chart-block-sm">
-            <span class="chart-label">Quiz</span>
-            <div class="chart-canvas-wrap">
-              <canvas id="chart-pie" aria-label="Gráfico de acertos no quiz"></canvas>
-            </div>
+          <div class="chart-panel chart-sm">
+            <span class="chart-lbl">Quiz</span>
+            <div class="chart-box"><canvas id="chart-pie"></canvas></div>
           </div>
         </div>
       </section>
 
-      <!-- Achievements -->
-      <section class="section-block" aria-labelledby="ach-label">
-        <header class="section-hdr">
-          <span class="section-label" id="ach-label">Conquistas</span>
-          <span class="section-rule" aria-hidden="true"></span>
-        </header>
-        <div class="ach-grid" id="achievements-grid" role="list"></div>
+      <section class="prog-section">
+        <div class="section-eyebrow"><span>Conquistas</span><div class="eyebrow-line"></div></div>
+        <div class="ach-grid" id="achievements-grid"></div>
       </section>
-
     </main>
 
-  </div><!-- /app -->
+  </div>
 
-  <!-- Toast notification -->
-  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="js/app.js"></script>
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js').catch(() => {});
-    }
-  </script>
+  <script>if('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js').catch(()=>{});</script>
 </body>
 </html>
