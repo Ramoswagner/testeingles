@@ -1,5 +1,5 @@
 // ========================================
-// app.js — LexiPro versão otimizada para mobile
+// app.js — LexiPro — versão corrigida
 // ========================================
 
 // ----- CAT_ICONS -----
@@ -26,8 +26,12 @@ const S = {
   qAnswered: false,
   prog: {},
   streak: 0,
-  lastDate: null
+  lastDate: null,
+  daily: {}   // BUG FIX: rastreia cards estudados por data
 };
+
+// ----- BUG FIX: instâncias de gráfico armazenadas para destruição -----
+const _chartInstances = {};
 
 // ----- Conquistas -----
 const ACHIEVEMENTS = [
@@ -36,7 +40,7 @@ const ACHIEVEMENTS = [
   { id: 'master_50', name: 'Profissional', desc: 'Domine 50 palavras', icon: '🏆', condition: s => Object.values(s.prog).filter(p => p.conf === 'easy').length >= 50 },
   { id: 'streak_7', name: 'Disciplina', desc: 'Estude 7 dias seguidos', icon: '🔥', condition: s => s.streak >= 7 },
   { id: 'streak_30', name: 'Inabalável', desc: 'Estude 30 dias seguidos', icon: '⚡', condition: s => s.streak >= 30 },
-  { id: 'quiz_50', name: 'Mestre do Quiz', desc: 'Acerta 50 questões', icon: '🧠', condition: s => Object.values(s.prog).reduce((acc, p) => acc + (p.qc || 0), 0) >= 50 }
+  { id: 'quiz_50', name: 'Mestre do Quiz', desc: 'Acerte 50 questões', icon: '🧠', condition: s => Object.values(s.prog).reduce((acc, p) => acc + (p.qc || 0), 0) >= 50 }
 ];
 
 let unlockedAchievements = [];
@@ -78,7 +82,7 @@ async function loadAllCategories() {
     initApp();
   } catch (error) {
     console.error('Falha ao carregar dados:', error);
-    document.body.innerHTML = '<h1>Erro ao carregar os cards. Tente novamente mais tarde.</h1>';
+    document.body.innerHTML = '<h1 style="padding:2rem;font-family:sans-serif;">Erro ao carregar os cards. Tente novamente mais tarde.</h1>';
   }
 }
 
@@ -95,6 +99,7 @@ function load() {
     S.prog = d.prog || {};
     S.streak = d.streak || 0;
     S.lastDate = d.lastDate || null;
+    S.daily = d.daily || {};   // BUG FIX: carrega dados diários salvos
   } catch (e) {}
   checkStreak();
 }
@@ -104,25 +109,37 @@ function save() {
     localStorage.setItem('lp3', JSON.stringify({
       prog: S.prog,
       streak: S.streak,
-      lastDate: S.lastDate
+      lastDate: S.lastDate,
+      daily: S.daily    // BUG FIX: salva dados diários
     }));
   } catch (e) {}
 }
 
+// BUG FIX: streak agora começa em 1 no primeiro dia de uso (não 0)
 function checkStreak() {
   const today = new Date().toDateString();
   const yest = new Date(Date.now() - 864e5).toDateString();
   if (S.lastDate === today) return;
-  if (S.lastDate === yest) S.streak++;
-  else if (S.lastDate && S.lastDate !== today) S.streak = 0;
+  if (S.lastDate === yest) {
+    S.streak++;
+  } else if (S.lastDate && S.lastDate !== today) {
+    S.streak = 0;     // mais de 1 dia sem estudar: zera
+  } else if (!S.lastDate) {
+    S.streak = 1;     // BUG FIX: primeiro dia de uso → streak = 1
+  }
   S.lastDate = today;
   save();
 }
 
+// BUG FIX: rastreia contagem de cards por data para o gráfico diário
 function markSeen(id) {
   if (!S.prog[id]) S.prog[id] = { seen: true, conf: null, qc: 0, qt: 0 };
   S.prog[id].seen = true;
-  S.lastDate = new Date().toDateString();
+  const today = new Date().toDateString();
+  S.lastDate = today;
+  // Incrementa contagem diária
+  if (!S.daily) S.daily = {};
+  S.daily[today] = (S.daily[today] || 0) + 1;
   save();
 }
 
@@ -156,7 +173,7 @@ function goHome() {
   showView('home');
 }
 
-// ----- Áudio simplificado: apenas Web Speech API -----
+// ----- Áudio: Web Speech API -----
 let _activeBtn = null;
 let _spellTmrs = [];
 
@@ -456,7 +473,7 @@ function rate(level) {
   nextCard();
 }
 
-// ----- Progresso (com gráficos e conquistas) -----
+// ----- Progresso -----
 function renderProgress() {
   const progValues = Object.values(S.prog);
   const studied = progValues.filter(p => p.seen).length;
@@ -476,7 +493,7 @@ function renderProgress() {
     ACHIEVEMENTS.forEach(ach => {
       const unlocked = unlockedAchievements.includes(ach.id);
       const card = document.createElement('div');
-      card.className = `achievement-card ${unlocked ? '' : 'locked'}`;
+      card.className = `achievement-card ${unlocked ? 'unlocked' : 'locked'}`;
       card.innerHTML = `<div class="achievement-icon">${ach.icon}</div><div class="achievement-name">${ach.name}</div><div class="achievement-desc">${ach.desc}</div>`;
       achGrid.appendChild(card);
     });
@@ -501,31 +518,42 @@ function renderProgress() {
       </div>
     `;
   });
+
   renderCharts();
 }
 
+// BUG FIX: destrói instâncias existentes antes de recriar; usa dados reais do S.daily
 function renderCharts() {
+  // Destruir instâncias anteriores para evitar erro "Canvas already in use"
+  if (_chartInstances.daily) { _chartInstances.daily.destroy(); delete _chartInstances.daily; }
+  if (_chartInstances.pie)   { _chartInstances.pie.destroy();   delete _chartInstances.pie;   }
+
   const ctxDaily = document.getElementById('chart-daily');
   if (ctxDaily) {
     const labels = [];
     const data = [];
+    // BUG FIX: usa dados reais de S.daily em vez de Math.random()
     for (let i = 6; i >= 0; i--) {
       const d = new Date();
       d.setDate(d.getDate() - i);
+      const key = d.toDateString();
       labels.push(d.toLocaleDateString('pt-BR', { weekday: 'short' }));
-      data.push(Math.floor(Math.random() * 8) + 1);
+      data.push(S.daily[key] || 0);
     }
-    new Chart(ctxDaily, {
+    _chartInstances.daily = new Chart(ctxDaily, {
       type: 'line',
       data: {
-        labels: labels,
+        labels,
         datasets: [{
           label: 'Cards estudados',
-          data: data,
+          data,
           borderColor: '#3b82f6',
-          backgroundColor: 'rgba(59,130,246,0.1)',
-          tension: 0.3,
-          fill: true
+          backgroundColor: 'rgba(59,130,246,0.12)',
+          tension: 0.4,
+          fill: true,
+          pointBackgroundColor: '#3b82f6',
+          pointRadius: 4,
+          pointHoverRadius: 6
         }]
       },
       options: {
@@ -533,8 +561,15 @@ function renderCharts() {
         maintainAspectRatio: false,
         plugins: { legend: { display: false } },
         scales: {
-          y: { beginAtZero: true, grid: { color: 'rgba(255,255,255,0.05)' } },
-          x: { grid: { display: false } }
+          y: {
+            beginAtZero: true,
+            ticks: { color: '#64748b', stepSize: 1 },
+            grid: { color: 'rgba(255,255,255,0.04)' }
+          },
+          x: {
+            ticks: { color: '#64748b' },
+            grid: { display: false }
+          }
         }
       }
     });
@@ -545,21 +580,26 @@ function renderCharts() {
     const totalQuiz = Object.values(S.prog).reduce((acc, p) => acc + (p.qt || 0), 0);
     const correctQuiz = Object.values(S.prog).reduce((acc, p) => acc + (p.qc || 0), 0);
     const wrongQuiz = totalQuiz - correctQuiz;
-    new Chart(ctxPie, {
+    _chartInstances.pie = new Chart(ctxPie, {
       type: 'doughnut',
       data: {
         labels: ['Acertos', 'Erros'],
         datasets: [{
-          data: [correctQuiz, wrongQuiz],
-          backgroundColor: ['#10b981', '#f43f5e'],
-          borderWidth: 0
+          data: totalQuiz > 0 ? [correctQuiz, wrongQuiz] : [1, 0],
+          backgroundColor: totalQuiz > 0 ? ['#10b981', '#f43f5e'] : ['#1e293b', '#1e293b'],
+          borderWidth: 0,
+          hoverOffset: 6
         }]
       },
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        cutout: '68%',
         plugins: {
-          legend: { position: 'bottom', labels: { color: '#94a3b8' } }
+          legend: {
+            position: 'bottom',
+            labels: { color: '#94a3b8', padding: 16, font: { size: 12 } }
+          }
         }
       }
     });
@@ -572,13 +612,13 @@ document.addEventListener('keydown', e => {
   if (!v || v.id !== 'view-study') return;
   if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
   switch (e.key) {
-    case 'ArrowLeft': prevCard(); break;
+    case 'ArrowLeft':  prevCard(); break;
     case 'ArrowRight': nextCard(); break;
-    case ' ': e.preventDefault(); if (S.mode === 'study') flipCard(); break;
+    case ' ':          e.preventDefault(); if (S.mode === 'study') flipCard(); break;
     case 'p': case 'P': if (S.mode === 'study') speak('normal', null); break;
-    case '1': if (S.flipped) rate('hard'); break;
-    case '2': if (S.flipped) rate('medium'); break;
-    case '3': if (S.flipped) rate('easy'); break;
+    case '1':          if (S.flipped) rate('hard'); break;
+    case '2':          if (S.flipped) rate('medium'); break;
+    case '3':          if (S.flipped) rate('easy'); break;
   }
 });
 
