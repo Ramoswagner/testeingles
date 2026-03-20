@@ -2,151 +2,907 @@
   "lbl": "Phrases",
   "pt": "Frases Executivas",
   "color": "#6366f1",
-  "desc": "Frases completas de reuniões, e-mails e apresentações. Veja a frase em inglês e entenda o contexto real.",
+  "desc": "100 frases reais de reuniões, apresentações, negociações e e-mails. Do hospital à McKinsey.",
   "cards": [
     {
       "id": "ph01",
-      "term": "Let's take this offline.",
-      "ph": "/lets teɪk ðɪs ˈɒflaɪn/",
-      "pt": "Vamos resolver isso em separado / fora da reunião.",
-      "def": "Said in a meeting to suggest that a topic should be discussed privately or in a smaller group, to avoid consuming everyone's time.",
-      "ex": "\"That's a valid concern — let's take this offline and I'll loop you in before end of day.\"",
-      "tip": "Muito usado quando um assunto começa a desviar o foco da reunião. Sinaliza que você valoriza o tempo dos outros."
+      "term": "Let's make sure we use our time well today.",
+      "ph": "/lets meɪk ʃɔːr wiː juːz ˈaʊər taɪm wel təˈdeɪ/",
+      "pt": "Vamos garantir que usamos nosso tempo bem hoje.",
+      "def": "An opening statement that sets an expectation of focus and efficiency before a meeting begins.",
+      "ex": "\"We have a lot to cover and limited time — let's make sure we use our time well today.\"",
+      "tip": "Sinaliza que você respeita o tempo de todos. Abre permissão implícita para cortar tangentes."
     },
     {
       "id": "ph02",
-      "term": "Can you walk me through your thinking?",
-      "ph": "/kæn juː wɔːk miː θruː jɔːr ˈθɪŋkɪŋ/",
-      "pt": "Pode me explicar o raciocínio por trás disso?",
-      "def": "A polite and curious way to ask someone to explain the logic or reasoning behind a decision, recommendation, or analysis.",
-      "ex": "\"Before we commit to this direction, can you walk me through your thinking on the risk assumptions?\"",
-      "tip": "Preferível a 'Why did you do this?' — muito mais colaborativo. Sinal de curiosidade genuína, não crítica."
+      "term": "Can everyone see the agenda?",
+      "ph": "/kæn ˈevriwʌn siː ðə əˈdʒendə/",
+      "pt": "Todos conseguem ver a pauta?",
+      "def": "A practical opening question that confirms shared context and signals that the meeting is structured.",
+      "ex": "\"Before we start — can everyone see the agenda? We have three items: status, scope decision, and next steps.\"",
+      "tip": "Meetings com agenda publicada terminam 40% mais rápido. Quem facilita a agenda, controla a narrativa."
     },
     {
       "id": "ph03",
-      "term": "I want to make sure we're aligned on the next steps.",
-      "ph": "/aɪ wɒnt tə meɪk ʃɔːr wiːr əˈlaɪnd ɒn ðə nekst steps/",
-      "pt": "Quero garantir que estamos alinhados nos próximos passos.",
-      "def": "A closing phrase used to confirm shared understanding of action items, owners, and deadlines before ending a meeting.",
-      "ex": "\"Before we wrap up — I want to make sure we're aligned on the next steps. Sarah owns the deck, deadline Friday.\"",
-      "tip": "Use sempre ao fechar uma reunião. Evita o clássico problema de todo mundo sair com entendimentos diferentes."
+      "term": "Let's take this offline.",
+      "ph": "/lets teɪk ðɪs ˈɒflaɪn/",
+      "pt": "Vamos resolver isso em separado, fora da reunião.",
+      "def": "Said to move a detailed or contentious topic out of the current meeting to a smaller, more appropriate setting.",
+      "ex": "\"That's a valid point — let's take this offline and I'll loop you in before end of day.\"",
+      "tip": "Essencial para proteger o foco coletivo. Sinaliza que você valoriza o tema sem sequestrar a reunião."
     },
     {
       "id": "ph04",
-      "term": "What's the headline here?",
-      "ph": "/wɒts ðə ˈhedlaɪn hɪər/",
-      "pt": "Qual é o ponto principal? / Qual é a mensagem-chave?",
-      "def": "A direct request for the most important insight or conclusion, cutting through detail to get to the core message.",
-      "ex": "\"We have three minutes before the CEO joins — what's the headline here?\"",
-      "tip": "Clássico de consultoria. Força o interlocutor a ser conciso. Ligado ao Pyramid Principle da McKinsey."
+      "term": "I want to make sure we're aligned on the next steps.",
+      "ph": "/aɪ wɒnt tə meɪk ʃɔːr wiːr əˈlaɪnd ɒn ðə nekst steps/",
+      "pt": "Quero garantir que estamos alinhados nos próximos passos.",
+      "def": "A closing phrase confirming shared understanding of action items, owners, and deadlines before ending a meeting.",
+      "ex": "\"Before we wrap up — I want to make sure we're aligned on next steps: Sarah owns the deck, deadline Friday.\"",
+      "tip": "Evita o clássico problema de todo mundo sair com entendimentos diferentes. Sempre feche reuniões assim."
     },
     {
       "id": "ph05",
-      "term": "Let's pressure-test this assumption.",
-      "ph": "/lets ˈpreʃər test ðɪs əˈsʌmpʃən/",
-      "pt": "Vamos questionar / testar essa premissa com rigor.",
-      "def": "To rigorously examine and challenge a key assumption to see if it holds under scrutiny before moving forward.",
-      "ex": "\"The entire model hinges on 12% growth — we need to pressure-test this assumption before the board meeting.\"",
-      "tip": "Mostra rigor analítico. Muito usado antes de apresentar recomendações a stakeholders céticos."
+      "term": "Who is the decision-maker on this?",
+      "ph": "/huː ɪz ðə dɪˈsɪʒən meɪkər ɒn ðɪs/",
+      "pt": "Quem é o tomador de decisão nisso?",
+      "def": "A direct question clarifying accountability and authority before spending time on debate without a clear owner.",
+      "ex": "\"Before we debate this further — who is the decision-maker on this? We need one person to own the call.\"",
+      "tip": "Clareza de RACI antes de qualquer debate poupa horas. Quem não sabe quem decide, não decide nada."
     },
     {
       "id": "ph06",
-      "term": "I'll circle back to you by end of day.",
-      "ph": "/aɪl ˈsɜːkəl bæk tə juː baɪ end əv deɪ/",
-      "pt": "Retorno para você até o final do dia.",
-      "def": "A commitment to follow up with someone later, typically with more information, a decision, or a completed task.",
-      "ex": "\"I don't have the numbers in front of me — I'll circle back to you by end of day with the full breakdown.\"",
-      "tip": "Substituto elegante para 'I'll get back to you'. Implica comprometimento com prazo específico."
+      "term": "Let's park that for now and come back to it.",
+      "ph": "/lets pɑːk ðæt fɔːr naʊ ænd kʌm bæk tə ɪt/",
+      "pt": "Vamos deixar isso de lado por agora e voltamos depois.",
+      "def": "A facilitation phrase used to acknowledge a topic without letting it derail the current agenda.",
+      "ex": "\"That's worth exploring — let's park that for now and come back to it in the last ten minutes.\"",
+      "tip": "'Parking lot' é uma técnica real de facilitação. Demonstra que você ouviu, sem perder o fio condutor."
     },
     {
       "id": "ph07",
-      "term": "We need to move the needle on this.",
-      "ph": "/wiː niːd tə muːv ðə ˈniːdəl ɒn ðɪs/",
-      "pt": "Precisamos gerar progresso real / mover o ponteiro nessa questão.",
-      "def": "To make meaningful, measurable progress on a problem or initiative, rather than just discussing it.",
-      "ex": "\"We've been talking about NPS for six months. We need to actually move the needle on this before Q3.\"",
-      "tip": "Implica urgência e orientação a resultado. Cuidado: se tudo é 'move the needle', nada é prioritário."
+      "term": "Can we do a quick round of introductions?",
+      "ph": "/kæn wiː duː ə kwɪk raʊnd əv ˌɪntrəˈdʌkʃənz/",
+      "pt": "Podemos fazer uma rodada rápida de apresentações?",
+      "def": "A standard opening in cross-functional or external meetings to ensure everyone knows who is in the room.",
+      "ex": "\"We have a few new faces today — can we do a quick round of introductions before we dive in?\"",
+      "tip": "Essencial em reuniões multidisciplinares. Cria contexto de quem fala com qual autoridade."
     },
     {
       "id": "ph08",
-      "term": "Let's not boil the ocean.",
-      "ph": "/lets nɒt bɔɪl ðə ˈəʊʃən/",
-      "pt": "Não vamos tentar resolver tudo de uma vez / não sobrecomplicar.",
-      "def": "A warning against trying to solve every problem simultaneously or making a project unnecessarily complex and comprehensive.",
-      "ex": "\"I appreciate the thoroughness, but let's not boil the ocean — what are the three levers with the most impact?\"",
-      "tip": "Sinal de maturidade estratégica: saber o que NÃO fazer é tão importante quanto o que fazer."
+      "term": "I'd like to set some ground rules for today.",
+      "ph": "/aɪd laɪk tə set sʌm ɡraʊnd ruːlz fɔːr təˈdeɪ/",
+      "pt": "Gostaria de estabelecer algumas regras básicas para hoje.",
+      "def": "An opening statement that defines expected behaviors — cameras on, one conversation at a time, decisions recorded.",
+      "ex": "\"Before we start — I'd like to set some ground rules for today: cameras on, one voice at a time, no phones.\"",
+      "tip": "Quem define as regras controla o ambiente. Sinaliza liderança de facilitação desde os primeiros segundos."
     },
     {
       "id": "ph09",
+      "term": "Let's timebox this discussion to ten minutes.",
+      "ph": "/lets ˈtaɪmbɒks ðɪs dɪsˈkʌʃən tə ten ˈmɪnɪts/",
+      "pt": "Vamos limitar essa discussão a dez minutos.",
+      "def": "A time management technique that bounds a discussion to prevent overrun and maintain meeting momentum.",
+      "ex": "\"We have five agenda items — let's timebox this to ten minutes and then move on.\"",
+      "tip": "'Timebox' vem do Agile mas é usado em qualquer meeting profissional. Quem timeboxa, lidera."
+    },
+    {
+      "id": "ph10",
+      "term": "Are there any blockers I should know about?",
+      "ph": "/ɑːr ðeər ˈeni ˈblɒkərz aɪ ʃʊd nəʊ əˈbaʊt/",
+      "pt": "Há algum impedimento que eu deva saber?",
+      "def": "A direct check-in question in status meetings to surface obstacles early before they escalate.",
+      "ex": "\"Quick check-in before we move on — are there any blockers I should know about on the integration track?\"",
+      "tip": "Cria ambiente seguro para reportar problemas. Bloqueios escondidos afundam projetos."
+    },
+    {
+      "id": "ph11",
+      "term": "I want to make sure everyone has a chance to speak.",
+      "ph": "/aɪ wɒnt tə meɪk ʃɔːr ˈevriwʌn hæz ə tʃɑːns tə spiːk/",
+      "pt": "Quero garantir que todos tenham chance de falar.",
+      "def": "An inclusive facilitation phrase that invites quieter participants and distributes voice in a meeting.",
+      "ex": "\"We've heard a few strong perspectives — I want to make sure everyone has a chance to speak before we decide.\"",
+      "tip": "Mostra liderança inclusiva. Em consultoria, a perspectiva silenciosa frequentemente é a mais importante."
+    },
+    {
+      "id": "ph12",
+      "term": "Let's summarize what we agreed on before we close.",
+      "ph": "/lets ˈsʌməraɪz wɒt wiː əˈɡriːd ɒn bɪˈfɔːr wiː kləʊz/",
+      "pt": "Vamos resumir o que acordamos antes de encerrar.",
+      "def": "A closing discipline that verbally confirms all decisions and commitments made during the meeting.",
+      "ex": "\"Two minutes left — let's summarize what we agreed on before we close so there's no ambiguity.\"",
+      "tip": "A reunião não termina com 'ok, bye'. Termina com clareza. Isso diferencia facilitador de participante."
+    },
+    {
+      "id": "ph13",
+      "term": "What's the headline here?",
+      "ph": "/wɒts ðə ˈhedlaɪn hɪər/",
+      "pt": "Qual é o ponto principal? A mensagem-chave?",
+      "def": "A direct request for the most important insight or conclusion, cutting through detail to get to the core message.",
+      "ex": "\"We have three minutes before the CEO joins — what's the headline here?\"",
+      "tip": "Clássico de consultoria. Ligado ao Pyramid Principle da McKinsey: conclusão primeiro, evidência depois."
+    },
+    {
+      "id": "ph14",
+      "term": "The bottom line is this.",
+      "ph": "/ðə ˈbɒtəm laɪn ɪz ðɪs/",
+      "pt": "A conclusão é a seguinte. O que importa é:",
+      "def": "A phrase that signals you are about to state the most critical point after providing context or background.",
+      "ex": "\"I know we've covered a lot of data today — the bottom line is this: we need to act in the next 30 days.\"",
+      "tip": "Líderes ocupados precisam da conclusão antes dos dados. 'Bottom line' entrega isso sem ambiguidade."
+    },
+    {
+      "id": "ph15",
+      "term": "Let me give you the thirty-thousand-foot view.",
+      "ph": "/let miː ɡɪv juː ðə ˈθɜːti ˈθaʊzənd fʊt vjuː/",
+      "pt": "Deixa eu te dar a visão panorâmica, o contexto geral.",
+      "def": "An offer to provide a high-level, strategic overview before going into operational or analytical details.",
+      "ex": "\"Before we dive into the numbers — let me give you the thirty-thousand-foot view of where the program stands.\"",
+      "tip": "Mostra domínio do contexto macro. Em apresentações executivas, sempre macro antes do micro."
+    },
+    {
+      "id": "ph16",
+      "term": "I'll take you through three key points.",
+      "ph": "/aɪl teɪk juː θruː θriː kiː pɔɪnts/",
+      "pt": "Vou apresentar três pontos-chave.",
+      "def": "An organizing statement that frames the structure of a presentation and sets audience expectations upfront.",
+      "ex": "\"Good morning — I'll take you through three key points: where we are, what we recommend, and what we need from you.\"",
+      "tip": "Estrutura em três pontos é o padrão de clareza executiva. Quem não estrutura a fala, perde o ouvinte."
+    },
+    {
+      "id": "ph17",
+      "term": "The data tells a compelling story.",
+      "ph": "/ðə ˈdeɪtə telz ə kəmˈpelɪŋ ˈstɔːri/",
+      "pt": "Os dados mostram um cenário convincente, contam uma história clara.",
+      "def": "A phrase used to introduce a data-driven argument, framing numbers as a narrative rather than a data dump.",
+      "ex": "\"The data tells a compelling story — every metric points to the same structural issue in the intake process.\"",
+      "tip": "Dados sem narrativa são ruído. Consultores transformam números em histórias que levam à ação."
+    },
+    {
+      "id": "ph18",
+      "term": "Our recommendation rests on three assumptions.",
+      "ph": "/ˈaʊər ˌrekəmenˈdeɪʃən rests ɒn θriː əˈsʌmpʃənz/",
+      "pt": "Nossa recomendação se apoia em três premissas.",
+      "def": "A transparent framing statement that explicitly names the assumptions behind a recommendation, building credibility.",
+      "ex": "\"Before you approve this — our recommendation rests on three assumptions I want to be upfront about.\"",
+      "tip": "Transparência sobre premissas = credibilidade. Ocultar premissas = risco de colapso na implementação."
+    },
+    {
+      "id": "ph19",
+      "term": "With that context in mind, here is our proposal.",
+      "ph": "/wɪð ðæt ˈkɒntekst ɪn maɪnd hɪər ɪz ˈaʊər prəˈpəʊzəl/",
+      "pt": "Tendo esse contexto em mente, aqui está nossa proposta.",
+      "def": "A transition phrase that links the diagnostic analysis to the recommendation, connecting problem to solution.",
+      "ex": "\"We've walked you through root causes — with that context in mind, here is our proposal.\"",
+      "tip": "O pivô da apresentação consultiva. Tudo antes é contexto. Tudo depois é proposta. Esta frase é a charneira."
+    },
+    {
+      "id": "ph20",
+      "term": "We modeled three scenarios.",
+      "ph": "/wiː ˈmɒdəld θriː sɪˈnɪəriəʊz/",
+      "pt": "Modelamos três cenários.",
+      "def": "An introduction to a scenario analysis that shows rigor and acknowledges uncertainty in projections.",
+      "ex": "\"Rather than a single forecast, we modeled three scenarios: base case, upside, and stress case.\"",
+      "tip": "Análise de cenários mostra maturidade analítica. Evita parecer ingênuo ao apresentar projeção única."
+    },
+    {
+      "id": "ph21",
+      "term": "I want to be transparent about the risks.",
+      "ph": "/aɪ wɒnt tə biː trænsˈpærənt əˈbaʊt ðə rɪsks/",
+      "pt": "Quero ser transparente sobre os riscos.",
+      "def": "A candid statement that proactively addresses potential downsides before the audience raises them.",
+      "ex": "\"Before we finalize the recommendation — I want to be transparent about the risks we identified.\"",
+      "tip": "Consultores que só falam do upside perdem credibilidade. Nomear o risco primeiro é uma vantagem."
+    },
+    {
+      "id": "ph22",
+      "term": "Are there any questions before I move on?",
+      "ph": "/ɑːr ðeər ˈeni ˈkwestʃənz bɪˈfɔːr aɪ muːv ɒn/",
+      "pt": "Há alguma pergunta antes de eu continuar?",
+      "def": "A structured check-in during a presentation that ensures comprehension before advancing.",
+      "ex": "\"That covers the diagnosis — are there any questions before I move on to the recommendation?\"",
+      "tip": "Apresentadores inseguros evitam perguntas durante a apresentação. Experientes as convidam."
+    },
+    {
+      "id": "ph23",
+      "term": "What we're asking from you today is a decision on this.",
+      "ph": "/wɒt wiːr ˈɑːskɪŋ frɒm juː təˈdeɪ ɪz ə dɪˈsɪʒən ɒn ðɪs/",
+      "pt": "O que pedimos de vocês hoje é uma decisão sobre isso.",
+      "def": "A direct ask that clearly names what the presenter needs from the audience — a decision, not just a discussion.",
+      "ex": "\"What we're asking from you today is a decision on whether to proceed with Phase 2.\"",
+      "tip": "Nunca saia de reunião executiva sem ask claro. Reunião sem ask é relatório com pessoas na sala."
+    },
+    {
+      "id": "ph24",
+      "term": "Let me bring this back to the strategic question.",
+      "ph": "/let miː brɪŋ ðɪs bæk tə ðə strəˈtiːdʒɪk ˈkwestʃən/",
+      "pt": "Deixa eu trazer isso de volta para a questão estratégica.",
+      "def": "A redirect phrase used when discussion drifts into operational detail, pulling it back to the core strategic issue.",
+      "ex": "\"Those are valid operational concerns — but let me bring this back to the strategic question.\"",
+      "tip": "Operações são meios. Estratégia é o fim. Mantenha o fim em vista sempre."
+    },
+    {
+      "id": "ph25",
       "term": "Can we put a number on that?",
       "ph": "/kæn wiː pʊt ə ˈnʌmbər ɒn ðæt/",
       "pt": "Conseguimos quantificar isso?",
       "def": "A request to attach a specific, measurable figure to a claim, risk, or opportunity instead of leaving it qualitative.",
-      "ex": "\"You're saying the delay creates 'significant risk' — can we put a number on that? What's the financial exposure?\"",
-      "tip": "Transforma percepções vagas em dados acionáveis. Pergunta frequente de consultores e executivos."
+      "ex": "\"You said the delay creates 'significant risk' — can we put a number on that? What's the financial exposure?\"",
+      "tip": "Transforma percepções vagas em dados acionáveis. Pergunta frequente de consultores e CFOs."
     },
     {
-      "id": "ph10",
-      "term": "What does success look like for you?",
-      "ph": "/wɒt dʌz səkˈses lʊk laɪk fɔːr juː/",
-      "pt": "Como o sucesso se parece para você? / Qual é o seu critério de sucesso?",
-      "def": "An open question used to understand the client's or stakeholder's specific definition of a successful outcome.",
-      "ex": "\"Before we finalize the scope — what does success look like for you twelve months from now?\"",
-      "tip": "Pergunta de ouro em discovery meetings. Alinha expectativas antes de começar qualquer entrega."
+      "id": "ph26",
+      "term": "The numbers tell a different story.",
+      "ph": "/ðə ˈnʌmbərz tel ə ˈdɪfrənt ˈstɔːri/",
+      "pt": "Os números mostram uma realidade diferente, contradizem o que foi dito.",
+      "def": "A phrase used to introduce data that contradicts a narrative or assumption being presented.",
+      "ex": "\"The team believes we're outperforming, but the numbers tell a different story — churn is up 18%.\"",
+      "tip": "Contestar com dados, não com opinião. Atribui o argumento à evidência, reduz conflito pessoal."
     },
     {
-      "id": "ph11",
-      "term": "We're burning daylight on this.",
-      "ph": "/wiːr bɜːnɪŋ ˈdeɪlaɪt ɒn ðɪs/",
-      "pt": "Estamos perdendo tempo / gastando tempo precioso nisso.",
-      "def": "An informal expression indicating that time is being wasted on a topic or discussion that isn't progressing.",
-      "ex": "\"We've debated the naming for thirty minutes. We're burning daylight — let's vote and move on.\"",
-      "tip": "Mais direto que 'we're wasting time'. Transmite senso de urgência sem soar agressivo."
+      "id": "ph27",
+      "term": "Let's pressure-test this assumption.",
+      "ph": "/lets ˈpreʃər test ðɪs əˈsʌmpʃən/",
+      "pt": "Vamos questionar e testar essa premissa com rigor.",
+      "def": "To rigorously examine and challenge a key assumption to see if it holds under scrutiny.",
+      "ex": "\"The entire model hinges on 12% growth — we need to pressure-test this assumption before the board.\"",
+      "tip": "Mostra rigor analítico. Muito usado antes de apresentar recomendações a stakeholders céticos."
     },
     {
-      "id": "ph12",
+      "id": "ph28",
+      "term": "What are the key drivers of this result?",
+      "ph": "/wɒt ɑːr ðə kiː ˈdraɪvərz əv ðɪs rɪˈzʌlt/",
+      "pt": "Quais são os principais fatores que explicam esse resultado?",
+      "def": "An analytical question seeking to identify the root causes or primary variables behind a metric or outcome.",
+      "ex": "\"Revenue dropped 15% — what are the key drivers of this result? Volume, price, or mix?\"",
+      "tip": "'Driver' é a unidade de análise em consultoria. Decomposição de drivers é o começo de qualquer diagnóstico."
+    },
+    {
+      "id": "ph29",
+      "term": "How sensitive is this to changes in the assumptions?",
+      "ph": "/haʊ ˈsensɪtɪv ɪz ðɪs tə ˈtʃeɪndʒɪz ɪn ðə əˈsʌmpʃənz/",
+      "pt": "Qual é a sensibilidade disso a mudanças nas premissas?",
+      "def": "A sensitivity analysis question that tests how robust a conclusion is when inputs change.",
+      "ex": "\"How sensitive is this to changes in the assumptions on cost of capital? What breaks the model?\"",
+      "tip": "Sensitivity analysis = maturidade financeira. Toda projeção muda com as premissas. Sempre pergunte isso."
+    },
+    {
+      "id": "ph30",
+      "term": "Can you walk me through your thinking?",
+      "ph": "/kæn juː wɔːk miː θruː jɔːr ˈθɪŋkɪŋ/",
+      "pt": "Pode me explicar o raciocínio por trás disso?",
+      "def": "A polite and curious way to ask someone to explain the logic behind a decision, recommendation, or analysis.",
+      "ex": "\"Before we commit to this direction — can you walk me through your thinking on the risk assumptions?\"",
+      "tip": "Preferível a 'Why did you do this?' — muito mais colaborativo. Sinaliza curiosidade genuína, não crítica."
+    },
+    {
+      "id": "ph31",
+      "term": "Let's triangulate this with another data source.",
+      "ph": "/lets traɪˈæŋɡjʊleɪt ðɪs wɪð əˈnʌðər ˈdeɪtə sɔːs/",
+      "pt": "Vamos validar isso com outra fonte de dados.",
+      "def": "A methodological suggestion to confirm findings by cross-referencing with a second, independent source.",
+      "ex": "\"The survey says 70% satisfaction — let's triangulate this with the NPS data before we report to leadership.\"",
+      "tip": "Uma fonte é anedota. Duas são coincidência. Três são padrão. Triangule sempre."
+    },
+    {
+      "id": "ph32",
+      "term": "What's the order of magnitude here?",
+      "ph": "/wɒts ðə ˈɔːdər əv ˈmæɡnɪtjuːd hɪər/",
+      "pt": "Qual é a grandeza, a escala disso?",
+      "def": "A question asking for a rough sense of scale rather than precision, to assess if something is material.",
+      "ex": "\"I don't need the exact figure — what's the order of magnitude here? Thousands or millions?\"",
+      "tip": "Consultores são rápidos em escala. A grandeza antes do detalhe economiza análise desnecessária."
+    },
+    {
+      "id": "ph33",
+      "term": "Correlation is strong, but causation is harder to prove.",
+      "ph": "/ˌkɒrəˈleɪʃən ɪz strɒŋ bʌt kɔːˈzeɪʃən ɪz ˈhɑːdər tə pruːv/",
+      "pt": "A correlação é forte, mas a causalidade é mais difícil de provar.",
+      "def": "A statistical caveat distinguishing correlation from causation — a critical analytical safeguard.",
+      "ex": "\"The correlation is strong — but causation is harder to prove. We need to rule out confounding variables first.\"",
+      "tip": "A armadilha #1 de análise de dados. Confundir correlação e causalidade destrói credibilidade."
+    },
+    {
+      "id": "ph34",
+      "term": "What would change your mind on this?",
+      "ph": "/wɒt wʊd tʃeɪndʒ jɔːr maɪnd ɒn ðɪs/",
+      "pt": "O que mudaria sua opinião sobre isso?",
+      "def": "A Socratic question that forces someone to articulate the conditions under which they would revise their position.",
+      "ex": "\"You seem unconvinced — what would change your mind? What evidence would you need to see?\"",
+      "tip": "Poderosa em negociação e análise. Revela o critério real de decisão do interlocutor."
+    },
+    {
+      "id": "ph35",
+      "term": "This is a leading indicator, not a lagging one.",
+      "ph": "/ðɪs ɪz ə ˈliːdɪŋ ˈɪndɪkeɪtər nɒt ə ˈlæɡɪŋ wʌn/",
+      "pt": "Esse é um indicador antecedente, não retrospectivo.",
+      "def": "A distinction between predictive metrics (leading) and historical performance metrics (lagging).",
+      "ex": "\"Watch the pipeline, not just closed deals — this is a leading indicator of where revenue will be in 90 days.\"",
+      "tip": "Leading indicators permitem agir antes do problema. Lagging confirmam o que já aconteceu."
+    },
+    {
+      "id": "ph36",
+      "term": "We need to separate signal from noise.",
+      "ph": "/wiː niːd tə ˈsepəreɪt ˈsɪɡnəl frɒm nɔɪz/",
+      "pt": "Precisamos separar o sinal do ruído.",
+      "def": "An analytical discipline of distinguishing meaningful trends from random variation or irrelevant data points.",
+      "ex": "\"There's a lot of data coming in — we need to separate signal from noise and focus on what actually matters.\"",
+      "tip": "Metáfora de teoria da informação. Todo analista sênior pergunta: 'Isso é sinal ou ruído?' antes de agir."
+    },
+    {
+      "id": "ph37",
       "term": "Let me push back on that for a second.",
       "ph": "/let miː pʊʃ bæk ɒn ðæt fɔːr ə ˈsekənd/",
-      "pt": "Deixa eu questionar isso por um momento / discordo respeitosamente.",
-      "def": "A polite but assertive way to express disagreement or challenge a statement without being aggressive.",
-      "ex": "\"I want to push back on that for a second — the data we saw last quarter suggests a different pattern.\"",
-      "tip": "O prefácio 'for a second' suaviza a resistência. Essencial para ambientes onde discordância direta é difícil."
+      "pt": "Deixa eu questionar isso por um momento. Discordo respeitosamente.",
+      "def": "A polite but assertive way to express disagreement without being aggressive.",
+      "ex": "\"I want to push back on that for a second — last quarter's data suggests a different pattern.\"",
+      "tip": "'For a second' suaviza a resistência. Essencial em ambientes onde discordância direta é difícil."
     },
     {
-      "id": "ph13",
+      "id": "ph38",
+      "term": "I hear you, and I see it differently.",
+      "ph": "/aɪ hɪər juː ænd aɪ siː ɪt ˈdɪfrəntli/",
+      "pt": "Entendo sua perspectiva, mas vejo de forma diferente.",
+      "def": "A conflict phrase that validates the other party's view before asserting a different one.",
+      "ex": "\"I hear you on the urgency — and I see it differently. The risk of moving too fast outweighs the delay risk.\"",
+      "tip": "Validate first, then diverge. Estrutura da Comunicação Não-Violenta e da Negociação Harvard."
+    },
+    {
+      "id": "ph39",
+      "term": "That's a fair point. Here is the other side of it.",
+      "ph": "/ðæts ə feər pɔɪnt hɪər ɪz ðə ˈʌðər saɪd əv ɪt/",
+      "pt": "Esse é um ponto justo. Aqui está o outro lado.",
+      "def": "A balanced response that acknowledges merit in an opposing argument before presenting a counterpoint.",
+      "ex": "\"That's a fair point about the timeline risk. Here is the other side — delay also has a real cost.\"",
+      "tip": "Conceder o que é verdade no argumento do outro fortalece sua posição. Harvard Negotiation 101."
+    },
+    {
+      "id": "ph40",
+      "term": "What would it take to get to yes?",
+      "ph": "/wɒt wʊd ɪt teɪk tə ɡet tə jes/",
+      "pt": "O que seria necessário para chegarmos a um 'sim'?",
+      "def": "A solution-oriented negotiation question that moves from stated positions to underlying interests.",
+      "ex": "\"You've flagged concerns about cost and timing — what would it take to get to yes on the core proposal?\"",
+      "tip": "Referência direta ao livro Getting to Yes (Fisher & Ury). Foca em interesses, não em posições."
+    },
+    {
+      "id": "ph41",
+      "term": "I want to understand your concerns before we move forward.",
+      "ph": "/aɪ wɒnt tə ʌndəˈstænd jɔːr kənˈsɜːnz bɪˈfɔːr wiː muːv ˈfɔːwəd/",
+      "pt": "Quero entender suas preocupações antes de seguirmos em frente.",
+      "def": "An empathetic statement that creates space for resistance to be heard before pushing toward a decision.",
+      "ex": "\"I notice some hesitation — I want to understand your concerns before we move forward.\"",
+      "tip": "Resistência não enfrentada sabota implementação. Melhor surfar a objeção do que ignorá-la."
+    },
+    {
+      "id": "ph42",
+      "term": "Let's find a middle ground.",
+      "ph": "/lets faɪnd ə ˈmɪdəl ɡraʊnd/",
+      "pt": "Vamos encontrar um meio-termo.",
+      "def": "An invitation to negotiate toward a compromise position that partially satisfies both parties' interests.",
+      "ex": "\"Neither position is fully workable — let's find a middle ground that both teams can commit to.\"",
+      "tip": "Meio-termo não é fraqueza — é ZOPA (Zone of Possible Agreement) na prática."
+    },
+    {
+      "id": "ph43",
+      "term": "Can we agree to disagree on this one?",
+      "ph": "/kæn wiː əˈɡriː tə dɪsəˈɡriː ɒn ðɪs wʌn/",
+      "pt": "Podemos concordar em discordar nisso?",
+      "def": "A phrase that closes an irresolvable disagreement respectfully, without forcing artificial consensus.",
+      "ex": "\"We've spent 20 minutes on this — can we agree to disagree and note both views in the minutes?\"",
+      "tip": "Saber quando parar um debate é uma habilidade. Não toda discordância precisa de resolução."
+    },
+    {
+      "id": "ph44",
+      "term": "I need to understand the constraints on your side.",
+      "ph": "/aɪ niːd tə ʌndəˈstænd ðə kənˈstreɪnts ɒn jɔːr saɪd/",
+      "pt": "Preciso entender as restrições do seu lado.",
+      "def": "A question that seeks to understand the limitations, pressures, or boundaries the other party operates under.",
+      "ex": "\"Before I respond to the proposal — I need to understand the constraints on your side: budget, timeline?\"",
+      "tip": "BATNA começa pelo entendimento das restrições do outro. Negocie com informação, não suposições."
+    },
+    {
+      "id": "ph45",
+      "term": "What's your walk-away position?",
+      "ph": "/wɒts jɔːr ˈwɔːkəweɪ pəˈzɪʃən/",
+      "pt": "Qual é sua posição de recuo, seu limite mínimo aceitável?",
+      "def": "A direct question about the minimum acceptable outcome below which a party would rather walk away from a deal.",
+      "ex": "\"We're close but not there yet — what's your walk-away position so we know if there is a deal to be made?\"",
+      "tip": "Equivalente a perguntar pelo BATNA alheio. Só funciona com trust já estabelecido."
+    },
+    {
+      "id": "ph46",
+      "term": "I'm going to flag this as a risk.",
+      "ph": "/aɪm ˈɡəʊɪŋ tə flæɡ ðɪs æz ə rɪsk/",
+      "pt": "Vou registrar isso como um risco.",
+      "def": "A formal statement of intent to document a concern in a risk register or meeting record.",
+      "ex": "\"I support the decision — but I'm going to flag this as a risk so it's on record if the timeline slips.\"",
+      "tip": "Flagging protege você e cria responsabilidade. O que não está no registro, não existe."
+    },
+    {
+      "id": "ph47",
+      "term": "Let's separate the issue from the person.",
+      "ph": "/lets ˈsepəreɪt ðə ˈɪʃuː frɒm ðə ˈpɜːsən/",
+      "pt": "Vamos separar o problema da pessoa.",
+      "def": "A conflict resolution principle that redirects personal disagreement toward the issue at hand.",
+      "ex": "\"I sense some tension here — let's separate the issue from the person and focus on what the data says.\"",
+      "tip": "Princípio #1 de Harvard Negotiation. Atacar a posição, nunca a pessoa."
+    },
+    {
+      "id": "ph48",
+      "term": "I'd like to propose a structured trade-off.",
+      "ph": "/aɪd laɪk tə prəˈpəʊz ə ˈstrʌktʃəd treɪd ɒf/",
+      "pt": "Gostaria de propor uma troca estruturada, uma concessão balanceada.",
+      "def": "An offer to exchange concessions in a systematic way, making both sides feel the outcome is fair.",
+      "ex": "\"I'd like to propose a structured trade-off: we move on timeline if you move on scope.\"",
+      "tip": "Troca estruturada é mais eficaz que concessão unilateral. Ambas as partes percebem valor na troca."
+    },
+    {
+      "id": "ph49",
+      "term": "This isn't about winning the argument.",
+      "ph": "/ðɪs ɪznt əˈbaʊt ˈwɪnɪŋ ðə ˈɑːɡjʊmənt/",
+      "pt": "Não se trata de ganhar o debate.",
+      "def": "A de-escalation statement that redirects from positional arguing to collaborative problem-solving.",
+      "ex": "\"This isn't about winning the argument — it's about finding the option with the best risk-adjusted outcome.\"",
+      "tip": "Vencer um debate e perder a implementação é a pior vitória possível. Prefira a solução ao troféu."
+    },
+    {
+      "id": "ph50",
+      "term": "We're aligned on the goal — let's figure out the path.",
+      "ph": "/wiːr əˈlaɪnd ɒn ðə ɡəʊl lets ˈfɪɡər aʊt ðə pɑːθ/",
+      "pt": "Estamos alinhados no objetivo — vamos descobrir o caminho.",
+      "def": "A framing phrase that separates disagreement about method from agreement on the desired outcome.",
+      "ex": "\"I know we disagree on the approach — but we're aligned on the goal. Let's figure out the path together.\"",
+      "tip": "Denominador comum (o objetivo) antes do debate do método reduz a resistência drasticamente."
+    },
+    {
+      "id": "ph51",
+      "term": "What does success look like for you?",
+      "ph": "/wɒt dʌz səkˈses lʊk laɪk fɔːr juː/",
+      "pt": "Como o sucesso se parece para você? Qual é seu critério de sucesso?",
+      "def": "An open question used to understand the stakeholder's specific definition of a successful outcome.",
+      "ex": "\"Before we finalize the scope — what does success look like for you twelve months from now?\"",
+      "tip": "Pergunta de ouro em discovery meetings. Alinha expectativas antes de qualquer entrega. Use sempre."
+    },
+    {
+      "id": "ph52",
+      "term": "Who else needs to be in the room for this decision?",
+      "ph": "/huː els niːdz tə biː ɪn ðə ruːm fɔːr ðɪs dɪˈsɪʒən/",
+      "pt": "Quem mais precisa estar presente para essa decisão?",
+      "def": "A stakeholder mapping question ensuring key decision-makers and influencers are included before committing.",
+      "ex": "\"Before we lock in the direction — who else needs to be in the room for this decision?\"",
+      "tip": "A decisão sem o stakeholder certo não é uma decisão — é um rascunho."
+    },
+    {
+      "id": "ph53",
+      "term": "I want to keep you in the loop on this.",
+      "ph": "/aɪ wɒnt tə kiːp juː ɪn ðə luːp ɒn ðɪs/",
+      "pt": "Quero manter você informado sobre isso.",
+      "def": "A proactive communication phrase signaling that someone will be regularly updated about a developing situation.",
+      "ex": "\"This is still evolving — but I want to keep you in the loop as the situation develops.\"",
+      "tip": "Stakeholders que se sentem 'fora do loop' criam resistência. Informação proativa compra confiança."
+    },
+    {
+      "id": "ph54",
       "term": "What's keeping you up at night?",
       "ph": "/wɒts ˈkiːpɪŋ juː ʌp æt naɪt/",
-      "pt": "O que mais te preocupa? / Qual é sua maior preocupação?",
-      "def": "An empathetic question that invites a client or colleague to share their deepest concerns or worries about a situation.",
+      "pt": "O que mais te preocupa? Qual é sua maior preocupação?",
+      "def": "An empathetic question that invites a stakeholder to share their deepest concerns about a situation.",
       "ex": "\"We can talk deliverables, but honestly — what's keeping you up at night about this integration?\"",
-      "tip": "Vai além do racional e acessa o emocional. Abre espaço para riscos que o cliente não teria mencionado espontaneamente."
+      "tip": "Acessa o emocional, não só o racional. Abre riscos que o stakeholder não mencionaria espontaneamente."
     },
     {
-      "id": "ph14",
+      "id": "ph55",
       "term": "I'd like to get your read on this.",
       "ph": "/aɪd laɪk tə ɡet jɔːr riːd ɒn ðɪs/",
-      "pt": "Gostaria de saber sua leitura / perspectiva sobre isso.",
+      "pt": "Gostaria de saber sua leitura, sua perspectiva sobre isso.",
       "def": "A request for someone's interpretation, opinion, or assessment of a situation or piece of information.",
-      "ex": "\"Before I respond to the client, I'd like to get your read on this — does their concern seem legitimate to you?\"",
+      "ex": "\"Before I respond to the client — I'd like to get your read on this. Does their concern seem legitimate?\"",
       "tip": "Menos formal que 'What is your assessment?' Convida perspectiva sem impor pressão."
     },
     {
-      "id": "ph15",
-      "term": "We're looking at a two-speed approach.",
-      "ph": "/wiːr ˈlʊkɪŋ æt ə tuː spiːd əˈprəʊtʃ/",
-      "pt": "Estamos pensando em uma abordagem em dois ritmos / paralela.",
-      "def": "A strategy that runs two workstreams at different paces — one for quick wins and another for deeper, longer-term transformation.",
-      "ex": "\"For the turnaround, we're looking at a two-speed approach: stabilize cash flow in 90 days while redesigning the operating model.\"",
-      "tip": "Comum em projetos de transformação. Equilibra urgência de curto prazo com mudança estrutural de longo prazo."
+      "id": "ph56",
+      "term": "Let me manage expectations upfront.",
+      "ph": "/let miː ˈmænɪdʒ ekspekˈteɪʃənz ˈʌpfrʌnt/",
+      "pt": "Deixa eu alinhar as expectativas desde o início.",
+      "def": "A proactive phrase that sets realistic expectations early, preventing disappointment or misalignment later.",
+      "ex": "\"Before we kick off — let me manage expectations upfront: the first phase will take 90 days, not 30.\"",
+      "tip": "A maioria dos conflitos com stakeholders nasce de expectativas mal alinhadas. Prevenir é mais barato que consertar."
     },
     {
-      "id": "ph16",
-      "term": "The numbers tell a different story.",
-      "ph": "/ðə ˈnʌmbərz tel ə ˈdɪfrənt ˈstɔːri/",
-      "pt": "Os números mostram uma realidade diferente / contradizem o que foi dito.",
-      "def": "A phrase used to introduce data that contradicts a narrative or assumption being presented, based on evidence.",
-      "ex": "\"The team believes the product is outperforming, but the numbers tell a different story — churn is up 18% this quarter.\"",
-      "tip": "Forma elegante de contestar com dados. Atribui o argumento à evidência, não a você — reduz conflito pessoal."
+      "id": "ph57",
+      "term": "I'll escalate this if we can't resolve it at this level.",
+      "ph": "/aɪl ˈeskəleɪt ðɪs ɪf wiː kɑːnt rɪˈzɒlv ɪt æt ðɪs ˈlevəl/",
+      "pt": "Vou escalar isso se não conseguirmos resolver neste nível.",
+      "def": "A clear statement of intent to involve senior leadership if an impasse cannot be resolved at the current level.",
+      "ex": "\"I respect your position — but I'll escalate this if we can't resolve it at this level by end of week.\"",
+      "tip": "Escalada não é fraqueza. É gestão de impasse. Dizer 'vou escalar' frequentemente resolve sem precisar escalar."
+    },
+    {
+      "id": "ph58",
+      "term": "I need your air cover on this.",
+      "ph": "/aɪ niːd jɔːr eər ˈkʌvər ɒn ðɪs/",
+      "pt": "Preciso do seu apoio, do suporte da sua posição nisso.",
+      "def": "An informal request for senior-level backing that protects you or your team from interference or resistance.",
+      "ex": "\"The restructuring will face pushback — I need your air cover to signal executive commitment.\"",
+      "tip": "Metáfora militar. 'Air cover' = patrocínio executivo ativo. Sem ele, projetos de mudança falham."
+    },
+    {
+      "id": "ph59",
+      "term": "How do you want me to communicate this to the team?",
+      "ph": "/haʊ duː juː wɒnt miː tə kəˈmjuːnɪkeɪt ðɪs tə ðə tiːm/",
+      "pt": "Como você quer que eu comunique isso para o time?",
+      "def": "A question that invites a stakeholder to co-own the communication strategy before it is delivered.",
+      "ex": "\"We've agreed on the direction — how do you want me to communicate this to the team? Tone and timing matter.\"",
+      "tip": "Comunicação de mudança sem alinhamento gera ruído. Quem não alinha improvisa — e improviso cria crise."
+    },
+    {
+      "id": "ph60",
+      "term": "I want to flag a potential conflict of interest.",
+      "ph": "/aɪ wɒnt tə flæɡ ə pəˈtenʃəl ˈkɒnflɪkt əv ˈɪntrəst/",
+      "pt": "Quero sinalizar um potencial conflito de interesse.",
+      "def": "A transparency statement that proactively discloses a situation where personal interest could influence objectivity.",
+      "ex": "\"Before we discuss vendor selection — I want to flag a potential conflict of interest given my previous role.\"",
+      "tip": "Transparência sobre conflitos protege credibilidade. O que você não declara, alguém vai declarar por você."
+    },
+    {
+      "id": "ph61",
+      "term": "Let's agree on the communication cadence.",
+      "ph": "/lets əˈɡriː ɒn ðə kəˈmjuːnɪkeɪʃən ˈkeɪdəns/",
+      "pt": "Vamos definir a frequência de comunicação.",
+      "def": "An agreement on how often and through which channels updates will be shared between parties.",
+      "ex": "\"To avoid proliferating status meetings — let's agree on the cadence: weekly email, monthly call.\"",
+      "tip": "Cadência definida reduz reuniões desnecessárias. Stakeholders ansiosos pedem mais reuniões — dê-lhes estrutura."
+    },
+    {
+      "id": "ph62",
+      "term": "I want to make sure we have executive sponsorship for this.",
+      "ph": "/aɪ wɒnt tə meɪk ʃɔːr wiː hæv ɪɡˈzekjʊtɪv ˈspɒnsərʃɪp fɔːr ðɪs/",
+      "pt": "Quero garantir que temos patrocínio executivo para isso.",
+      "def": "A governance question ensuring that senior leadership is actively committed to and accountable for the initiative.",
+      "ex": "\"Before we launch — I want to make sure we have executive sponsorship. Who is the named exec sponsor?\"",
+      "tip": "70% dos projetos de transformação falham por falta de sponsor ativo (PMI). Nomear não basta. Sponsor precisa agir."
+    },
+    {
+      "id": "ph63",
+      "term": "I'll circle back to you by end of day.",
+      "ph": "/aɪl ˈsɜːkəl bæk tə juː baɪ end əv deɪ/",
+      "pt": "Retorno para você até o final do dia.",
+      "def": "A commitment to follow up with someone later, typically with more information, a decision, or a completed task.",
+      "ex": "\"I don't have the numbers — I'll circle back to you by end of day with the full breakdown.\"",
+      "tip": "Substituto elegante para 'I'll get back to you'. Implica comprometimento com prazo específico."
+    },
+    {
+      "id": "ph64",
+      "term": "As per our conversation earlier today...",
+      "ph": "/æz pɜːr ˈaʊər ˌkɒnvəˈseɪʃən ˈɜːliər təˈdeɪ/",
+      "pt": "Conforme nossa conversa de hoje mais cedo...",
+      "def": "An e-mail opening phrase that references a prior verbal agreement, creating a written record of what was discussed.",
+      "ex": "\"As per our conversation earlier today, I'm sending the revised timeline and the action items agreed.\"",
+      "tip": "Cria trilha documental. Em projetos com conflito potencial, o que não está por escrito, não aconteceu."
+    },
+    {
+      "id": "ph65",
+      "term": "Please find attached the document we discussed.",
+      "ph": "/pliːz faɪnd əˈtætʃt ðə ˈdɒkjʊmənt wiː dɪˈskʌst/",
+      "pt": "Segue em anexo o documento que discutimos.",
+      "def": "A standard formal e-mail phrase used to introduce an attachment previously referenced in a meeting.",
+      "ex": "\"Please find attached the document we discussed — let me know if you have questions before Thursday.\"",
+      "tip": "Clássico de e-mail executivo. Formal, claro, sem ambiguidade."
+    },
+    {
+      "id": "ph66",
+      "term": "Just looping in [name] for visibility.",
+      "ph": "/dʒʌst ˈluːpɪŋ ɪn neɪm fɔːr vɪˈzɪbɪlɪti/",
+      "pt": "Apenas incluindo [nome] para visibilidade, para manter informado.",
+      "def": "An e-mail phrase used when adding someone to a thread to keep them informed without requiring action from them.",
+      "ex": "\"Just looping in Sarah for visibility — she's overseeing procurement and this touches her workstream.\"",
+      "tip": "Distingue 'para ciência' de 'para ação'. Sempre deixe claro o que é visibilidade e o que é ask."
+    },
+    {
+      "id": "ph67",
+      "term": "Could you please confirm receipt of this message?",
+      "ph": "/kʊd juː pliːz kənˈfɜːm rɪˈsiːt əv ðɪs ˈmesɪdʒ/",
+      "pt": "Pode confirmar o recebimento desta mensagem?",
+      "def": "A formal request for acknowledgement of receipt, used for critical decisions or sensitive communications.",
+      "ex": "\"Given the urgency of the deadline — could you please confirm receipt of this message by noon tomorrow?\"",
+      "tip": "Usado quando a não-resposta pode ser usada como desculpa. Cria accountability de leitura."
+    },
+    {
+      "id": "ph68",
+      "term": "I wanted to follow up on my previous e-mail.",
+      "ph": "/aɪ ˈwɒntɪd tə ˈfɒləʊ ʌp ɒn maɪ ˈpriːviəs ˈiːmeɪl/",
+      "pt": "Queria fazer um acompanhamento do meu e-mail anterior.",
+      "def": "A polite nudge reminding the recipient of a previous unanswered message without appearing aggressive.",
+      "ex": "\"I wanted to follow up on my e-mail from Tuesday — could you share your thoughts by end of week?\"",
+      "tip": "Nunca diga 'I haven't heard back' (soa agressivo). 'Follow up' é a forma profissional de cobrar resposta."
+    },
+    {
+      "id": "ph69",
+      "term": "Please revert with your comments by [date].",
+      "ph": "/pliːz rɪˈvɜːt wɪð jɔːr ˈkɒments baɪ deɪt/",
+      "pt": "Por favor, retorne com seus comentários até [data].",
+      "def": "A formal request for feedback or review by a specific deadline — common in consulting and formal correspondence.",
+      "ex": "\"The draft is attached — please revert with your comments by Friday so we can finalize before submission.\"",
+      "tip": "'Revert' nesse sentido é inglês formal (UK). No contexto americano: 'please respond with your comments'."
+    },
+    {
+      "id": "ph70",
+      "term": "I'm writing to request your input on...",
+      "ph": "/aɪm ˈraɪtɪŋ tə rɪˈkwest jɔːr ˈɪnpʊt ɒn/",
+      "pt": "Escrevo para solicitar sua contribuição sobre...",
+      "def": "A formal e-mail opening that states the purpose clearly and signals that a specific type of response is expected.",
+      "ex": "\"I'm writing to request your input on the proposed governance model before we present it to the board.\"",
+      "tip": "E-mails eficazes têm propósito claro na primeira linha. Quem esconde o ask no final não recebe resposta."
+    },
+    {
+      "id": "ph71",
+      "term": "For reference, I'm including the previous thread below.",
+      "ph": "/fɔːr ˈrefrəns aɪm ɪnˈkluːdɪŋ ðə ˈpriːviəs θred bɪˈləʊ/",
+      "pt": "Para referência, incluo o fio de conversa anterior abaixo.",
+      "def": "A phrase indicating that context from a previous email exchange is included for the recipient's reference.",
+      "ex": "\"For reference, I'm including the previous thread — the decision on Phase 2 was made on March 12th.\"",
+      "tip": "Cria trilha de auditoria. Em conflitos sobre 'quem disse o quê', o thread é sua proteção."
+    },
+    {
+      "id": "ph72",
+      "term": "Please don't hesitate to reach out if you have questions.",
+      "ph": "/pliːz dəʊnt ˈhezɪteɪt tə riːtʃ aʊt ɪf juː hæv ˈkwestʃənz/",
+      "pt": "Não hesite em entrar em contato se tiver dúvidas.",
+      "def": "A standard e-mail closing that signals openness and invites the recipient to ask follow-up questions.",
+      "ex": "\"The report is attached — please don't hesitate to reach out if you have questions before the presentation.\"",
+      "tip": "Encerramento padrão em e-mails profissionais formais. Cria abertura sem criar obrigação de resposta imediata."
+    },
+    {
+      "id": "ph73",
+      "term": "We need to move the needle on this.",
+      "ph": "/wiː niːd tə muːv ðə ˈniːdəl ɒn ðɪs/",
+      "pt": "Precisamos gerar progresso real nisso.",
+      "def": "To make meaningful, measurable progress on a problem or initiative, rather than just discussing it.",
+      "ex": "\"We've been talking about NPS for six months. We need to actually move the needle on this before Q3.\"",
+      "tip": "Implica urgência e orientação a resultado. Se tudo é 'move the needle', nada é prioritário."
+    },
+    {
+      "id": "ph74",
+      "term": "Let's not boil the ocean.",
+      "ph": "/lets nɒt bɔɪl ðə ˈəʊʃən/",
+      "pt": "Não vamos tentar resolver tudo de uma vez.",
+      "def": "A warning against trying to solve every problem simultaneously or making a project unnecessarily complex.",
+      "ex": "\"Let's not boil the ocean — what are the three levers with the most impact? Focus there.\"",
+      "tip": "Maturidade estratégica: saber o que NÃO fazer é tão importante quanto o que fazer."
+    },
+    {
+      "id": "ph75",
+      "term": "What is the highest-leverage action we can take right now?",
+      "ph": "/wɒt ɪz ðə ˈhaɪɪst ˈliːvərɪdʒ ˈækʃən wiː kæn teɪk raɪt naʊ/",
+      "pt": "Qual é a ação de maior alavancagem que podemos tomar agora?",
+      "def": "A prioritization question seeking the single action with the greatest impact relative to the effort required.",
+      "ex": "\"We have limited bandwidth — what is the highest-leverage action we can take right now to stabilize this?\"",
+      "tip": "Leverage = impacto ÷ esforço. A pergunta força a escolha do 20% que gera 80% do resultado."
+    },
+    {
+      "id": "ph76",
+      "term": "This is a burning platform.",
+      "ph": "/ðɪs ɪz ə ˈbɜːnɪŋ ˈplætfɔːm/",
+      "pt": "Essa situação exige ação imediata — não há tempo para hesitar.",
+      "def": "A metaphor from crisis management indicating the cost of inaction exceeds the risk of acting.",
+      "ex": "\"I know change is hard — but this is a burning platform. If we don't act this quarter, the window closes.\"",
+      "tip": "Urgência existencial, não operacional. Força a saída da zona de conforto da inação."
+    },
+    {
+      "id": "ph77",
+      "term": "We're running out of runway.",
+      "ph": "/wiːr ˈrʌnɪŋ aʊt əv ˈrʌnweɪ/",
+      "pt": "Estamos ficando sem tempo, sem margem para agir.",
+      "def": "A phrase indicating that available time, budget, or resources are nearing exhaustion.",
+      "ex": "\"The Board expects results in 60 days — we're running out of runway and need to prioritize ruthlessly.\"",
+      "tip": "Runway = caixa ou tempo restante. Do universo de startups, agora comum em qualquer gestão de crise."
+    },
+    {
+      "id": "ph78",
+      "term": "What's the critical path here?",
+      "ph": "/wɒts ðə ˈkrɪtɪkəl pɑːθ hɪər/",
+      "pt": "Qual é o caminho crítico aqui?",
+      "def": "A project management question seeking the sequence of dependent tasks that determines minimum completion time.",
+      "ex": "\"Before we assign resources — what's the critical path? Which tasks cannot slip without affecting launch?\"",
+      "tip": "Caminho crítico tem zero float. Qualquer atraso nele = atraso total. Priorize o crítico, não o urgente."
+    },
+    {
+      "id": "ph79",
+      "term": "We need to triage this.",
+      "ph": "/wiː niːd tə ˈtriːɑːʒ ðɪs/",
+      "pt": "Precisamos priorizar e classificar isso.",
+      "def": "The process of sorting issues by urgency and impact to focus limited resources optimally.",
+      "ex": "\"We have twelve open issues and a team of three — we need to triage this and focus on what will kill the project.\"",
+      "tip": "Metáfora médica. Em projetos: urgência × impacto = prioridade. Não tudo que grita é crítico."
+    },
+    {
+      "id": "ph80",
+      "term": "Let's focus on what we can control.",
+      "ph": "/lets ˈfəʊkəs ɒn wɒt wiː kæn kənˈtrəʊl/",
+      "pt": "Vamos focar no que está sob nosso controle.",
+      "def": "A pragmatic redirect that separates controllable factors from external constraints and channels energy productively.",
+      "ex": "\"There's a lot of uncertainty — let's focus on what we can control and execute with discipline.\"",
+      "tip": "Stoic leadership principle. Em crise, equipes que focam no controlável performam melhor."
+    },
+    {
+      "id": "ph81",
+      "term": "We're burning daylight on this.",
+      "ph": "/wiːr bɜːnɪŋ ˈdeɪlaɪt ɒn ðɪs/",
+      "pt": "Estamos perdendo tempo precioso nisso.",
+      "def": "An informal expression indicating time is being wasted on a topic that isn't progressing.",
+      "ex": "\"We've debated the naming for thirty minutes. We're burning daylight — let's vote and move on.\"",
+      "tip": "Mais direto que 'we're wasting time'. Transmite urgência sem soar agressivo."
+    },
+    {
+      "id": "ph82",
+      "term": "What's the minimum viable version of this?",
+      "ph": "/wɒts ðə ˈmɪnɪməm ˈvaɪəbəl ˈvɜːʃən əv ðɪs/",
+      "pt": "Qual é a versão mínima viável disso?",
+      "def": "A question seeking the simplest version that still delivers core value — borrowed from startup methodology.",
+      "ex": "\"We don't have time for the full solution — what's the minimum viable version that still moves the needle?\"",
+      "tip": "MVP não é só para software. Em gestão, é a arte de entregas parciais com valor total. Feito bate perfeito."
+    },
+    {
+      "id": "ph83",
+      "term": "What's the cost of doing nothing?",
+      "ph": "/wɒts ðə kɒst əv ˈduːɪŋ ˈnʌθɪŋ/",
+      "pt": "Qual é o custo de não fazer nada?",
+      "def": "A decision-forcing question that quantifies the risk of inaction, countering the bias toward the status quo.",
+      "ex": "\"Before you defer this — what's the cost of doing nothing for another six months?\"",
+      "tip": "Status quo bias é real. Quantificar o custo da inação é a forma mais eficaz de criar urgência de decisão."
+    },
+    {
+      "id": "ph84",
+      "term": "We're looking at a two-speed approach.",
+      "ph": "/wiːr ˈlʊkɪŋ æt ə tuː spiːd əˈprəʊtʃ/",
+      "pt": "Estamos pensando em uma abordagem em dois ritmos, paralela.",
+      "def": "A strategy that runs two workstreams at different paces — quick wins and longer-term transformation.",
+      "ex": "\"Two-speed approach: stabilize cash flow in 90 days while redesigning the operating model.\"",
+      "tip": "Equilibra urgência de curto prazo com mudança estrutural. Comum em projetos de transformação."
+    },
+    {
+      "id": "ph85",
+      "term": "I want to challenge you on that assumption.",
+      "ph": "/aɪ wɒnt tə ˈtʃælɪndʒ juː ɒn ðæt əˈsʌmpʃən/",
+      "pt": "Quero te desafiar nessa premissa.",
+      "def": "A coaching phrase that invites a person to re-examine a belief or assumption they are taking for granted.",
+      "ex": "\"I want to challenge you on that assumption — what evidence do you have that the timeline is achievable?\"",
+      "tip": "Coaches não dão respostas. Dão perguntas que fazem a pessoa encontrar a resposta. Desenvolvimento real."
+    },
+    {
+      "id": "ph86",
+      "term": "What's stopping you from making that call?",
+      "ph": "/wɒts ˈstɒpɪŋ juː frɒm ˈmeɪkɪŋ ðæt kɔːl/",
+      "pt": "O que está te impedindo de tomar essa decisão?",
+      "def": "A direct coaching question that surfaces the real barrier — fear, uncertainty, or lack of authority — behind hesitation.",
+      "ex": "\"You know what the right answer is — what's stopping you from making that call?\"",
+      "tip": "Identifica o bloqueio real (medo, falta de dados, política) que a hesitação disfarça. Direto ao ponto."
+    },
+    {
+      "id": "ph87",
+      "term": "Here is my honest assessment.",
+      "ph": "/hɪər ɪz maɪ ˈɒnɪst əˈsesmənt/",
+      "pt": "Aqui está minha avaliação honesta.",
+      "def": "A preface signaling that what follows is candid, unfiltered feedback rather than diplomatic softening.",
+      "ex": "\"You asked for my perspective — here is my honest assessment: the plan is solid but the team isn't ready.\"",
+      "tip": "Prefaciar com 'honest assessment' cria permissão para candor. Feedback sem aviso pode soar como ataque."
+    },
+    {
+      "id": "ph88",
+      "term": "What would you do if you had full authority?",
+      "ph": "/wɒt wʊd juː duː ɪf juː hæd fʊl ɔːˈθɒrɪti/",
+      "pt": "O que você faria se tivesse total autoridade?",
+      "def": "A powerful coaching question that removes political constraints and reveals a person's genuine preferred course of action.",
+      "ex": "\"What would you do if you had full authority and no pushback? Then — what stops you from proposing that?\"",
+      "tip": "Remove o filtro político e revela a resposta real. Depois: 'então o que impede você de propor isso?'"
+    },
+    {
+      "id": "ph89",
+      "term": "I want to give you some candid feedback.",
+      "ph": "/aɪ wɒnt tə ɡɪv juː sʌm ˈkændɪd ˈfiːdbæk/",
+      "pt": "Quero te dar um feedback sincero.",
+      "def": "A transparent opening that signals the feedback will be direct and honest, preparing the recipient to listen openly.",
+      "ex": "\"I want to give you some candid feedback — your analysis is strong but the communication of it needs work.\"",
+      "tip": "'Candid' implica coragem de dizer o que precisa ser dito, não o que é confortável."
+    },
+    {
+      "id": "ph90",
+      "term": "You are closer to this than I am — what's your instinct?",
+      "ph": "/juː ɑːr ˈkləʊsər tə ðɪs ðæn aɪ æm wɒts jɔːr ˈɪnstɪŋkt/",
+      "pt": "Você está mais perto disso do que eu — qual é o seu instinto?",
+      "def": "A humble leadership phrase that defers to the person with more direct context, validating their expertise.",
+      "ex": "\"You've been working this account for two years — you are closer to this than I am. What's your instinct?\"",
+      "tip": "Liderança situacional: quem tem mais contexto deve liderar a análise. Humildade intelectual como ferramenta."
+    },
+    {
+      "id": "ph91",
+      "term": "How can I help remove the barriers for you?",
+      "ph": "/haʊ kæn aɪ help rɪˈmuːv ðə ˈbæriərz fɔːr juː/",
+      "pt": "Como posso ajudar a remover os obstáculos para você?",
+      "def": "A servant leadership phrase that offers active support for a team member facing obstacles to their work.",
+      "ex": "\"You've flagged two blockers this week — how can I help remove the barriers for you?\"",
+      "tip": "O trabalho do líder é remover obstáculos, não adicionar tarefas. Isso muda o tipo de liderança que você exerce."
+    },
+    {
+      "id": "ph92",
+      "term": "What's the lesson learned here?",
+      "ph": "/wɒts ðə ˈlesən lɜːnd hɪər/",
+      "pt": "Qual é a lição aprendida aqui?",
+      "def": "A retrospective question that transforms a mistake, setback, or success into institutional knowledge.",
+      "ex": "\"We missed the deadline — I'm not here to blame. What's the lesson learned that we apply next time?\"",
+      "tip": "Lições aprendidas sem documentação desaparecem. Documentadas, viram ativos organizacionais."
+    },
+    {
+      "id": "ph93",
+      "term": "I want to recognize the work you did on this.",
+      "ph": "/aɪ wɒnt tə ˈrekəɡnaɪz ðə wɜːk juː dɪd ɒn ðɪs/",
+      "pt": "Quero reconhecer o trabalho que você fez nisso.",
+      "def": "A deliberate phrase of specific recognition that names the work done, rather than a generic compliment.",
+      "ex": "\"Before we move on — I want to recognize the work you did on this. The stakeholder mapping was exceptional.\"",
+      "tip": "Reconhecimento específico vale 10x mais que genérico. 'Great job' é vago. 'Your analysis was decisive' é concreto."
+    },
+    {
+      "id": "ph94",
+      "term": "Let's do a pre-mortem on this.",
+      "ph": "/lets duː ə priː ˈmɔːtəm ɒn ðɪs/",
+      "pt": "Vamos fazer um pré-mortem nisso.",
+      "def": "A prospective technique where a team imagines the project has failed and works backward to identify what went wrong.",
+      "ex": "\"Before we launch — let's do a pre-mortem. Imagine it's 6 months from now and the project failed. Why?\"",
+      "tip": "Técnica de Gary Klein. Contraria pensamento de grupo. Perspectiva do fracasso revela riscos que otimismo esconde."
+    },
+    {
+      "id": "ph95",
+      "term": "What's your biggest concern about this approach?",
+      "ph": "/wɒts jɔːr ˈbɪɡɪst kənˈsɜːn əˈbaʊt ðɪs əˈprəʊtʃ/",
+      "pt": "Qual é sua maior preocupação com essa abordagem?",
+      "def": "An open question designed to surface hidden objections or risks that a person may not volunteer spontaneously.",
+      "ex": "\"Everyone seems supportive — what's your biggest concern about this approach? I want the honest read.\"",
+      "tip": "Convida dissidência explicitamente. Grupos que não nomeiam preocupações constroem consenso frágil."
+    },
+    {
+      "id": "ph96",
+      "term": "How would you frame this to senior leadership?",
+      "ph": "/haʊ wʊd juː freɪm ðɪs tə ˈsiːniər ˈliːdəʃɪp/",
+      "pt": "Como você enquadraria isso para a alta liderança?",
+      "def": "A coaching question that develops executive communication skills by asking someone to think from the top.",
+      "ex": "\"The analysis is ready — how would you frame this to senior leadership? What's the headline and the ask?\"",
+      "tip": "Desenvolve comunicação executiva no time. Quem consegue fazer isso vira consultor, não analista."
+    },
+    {
+      "id": "ph97",
+      "term": "I'm going to be straight with you.",
+      "ph": "/aɪm ˈɡəʊɪŋ tə biː streɪt wɪð juː/",
+      "pt": "Vou ser direto com você.",
+      "def": "A candor signal that prepares the listener for frank, unfiltered information, establishing psychological safety.",
+      "ex": "\"I'm going to be straight with you — this proposal won't land well with the board in its current form.\"",
+      "tip": "Aviso de candor cria receptividade. Dizer 'vou ser direto' antes de ser direto reduz o choque do conteúdo."
+    },
+    {
+      "id": "ph98",
+      "term": "What's your theory of change here?",
+      "ph": "/wɒts jɔːr ˈθɪəri əv tʃeɪndʒ hɪər/",
+      "pt": "Qual é a sua teoria de mudança aqui?",
+      "def": "A strategic question asking someone to articulate the causal logic between proposed actions and the desired outcome.",
+      "ex": "\"You're proposing a training program — what's your theory of change? How does training translate to behavior change?\"",
+      "tip": "Separa ação de impacto. Muitas intervenções existem sem teoria de mudança clara. Exigir uma é rigor."
+    },
+    {
+      "id": "ph99",
+      "term": "Let's make sure the incentives are aligned.",
+      "ph": "/lets meɪk ʃɔːr ðə ɪnˈsentɪvz ɑːr əˈlaɪnd/",
+      "pt": "Vamos garantir que os incentivos estão alinhados.",
+      "def": "A systems-thinking phrase ensuring that reward structures motivate the desired behaviors across all parties.",
+      "ex": "\"The plan looks good on paper — let's make sure the incentives are aligned so people actually behave as expected.\"",
+      "tip": "Comportamento segue incentivo. O plano que ignora incentivos reais falha na implementação, sempre."
+    },
+    {
+      "id": "ph100",
+      "term": "We need to build a coalition around this.",
+      "ph": "/wiː niːd tə bɪld ə kəʊˈɪlɪʃən əˈraʊnd ðɪs/",
+      "pt": "Precisamos construir uma coalizão em torno disso.",
+      "def": "A political strategy of building a critical mass of supporters before presenting or implementing a major initiative.",
+      "ex": "\"The idea is strong — but we need to build a coalition around this before taking it to the executive committee.\"",
+      "tip": "Mudança organizacional não é decidida em reuniões — é preparada nos corredores. Coalizão antes de arena."
     }
   ]
 }
