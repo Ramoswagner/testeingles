@@ -3,281 +3,381 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#2563eb">
-  <meta name="description" content="Domine o inglês executivo com flashcards e quiz">
-  <title>LexiPro — Inglês Profissional</title>
+  <meta name="theme-color" content="#080B12">
+  <meta name="description" content="Vocabulário executivo para carreiras de alta performance — engenharia, gestão e estratégia.">
+  <title>Project English — Vocabulário Executivo</title>
   <link rel="manifest" href="manifest.json">
   <link rel="icon" type="image/png" href="assets/icons/icon-192x192.png">
   <link rel="apple-touch-icon" href="assets/icons/icon-192x192.png">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="ambient">
-    <div class="orb o1"></div>
-    <div class="orb o2"></div>
-    <div class="orb o3"></div>
-    <div class="orb o4"></div>
+  <!-- Ambient atmosphere -->
+  <div class="ambient" aria-hidden="true">
+    <div class="amb-orb o1"></div>
+    <div class="amb-orb o2"></div>
+    <div class="amb-grain"></div>
   </div>
 
   <div id="app">
-    <header>
-      <a href="#" class="logo" onclick="goHome(); return false;">
-        <div class="logo-gem">
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+
+    <!-- HEADER -->
+    <header id="site-header">
+      <a href="#" class="brand" onclick="goHome(); return false;" aria-label="Project English — Início">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="26" height="26" rx="3" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M8 8h7a4 4 0 0 1 0 8H8V8z" fill="currentColor" opacity="0.9"/>
+            <path d="M8 16h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M15 20l3-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+          </svg>
         </div>
-        <div>
-          <div class="logo-name">Lexi<span>Pro</span></div>
-          <div class="logo-tagline">Professional English</div>
+        <div class="brand-text">
+          <span class="brand-name">Project<em>English</em></span>
+          <span class="brand-sub">by Wagner Ramos</span>
         </div>
       </a>
-      <nav>
-        <button class="nav-btn active" id="nb-home" onclick="showView('home')">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+
+      <nav aria-label="Navegação principal">
+        <button class="nav-item active" id="nb-home" onclick="showView('home')" aria-current="page">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2.5 7.5L10 2l7.5 5.5V17a1 1 0 01-1 1H14v-5H6v5H3.5a1 1 0 01-1-1V7.5z"/></svg>
           Início
         </button>
-        <button class="nav-btn" id="nb-prog" onclick="showView('progress')">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        <button class="nav-item" id="nb-prog" onclick="showView('progress')">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 14l4-4 3 3 4-5 3 3"/><rect x="2" y="3" width="16" height="14" rx="1.5"/></svg>
           Progresso
         </button>
       </nav>
-      <div class="hdr-r">
-        <div class="streak-pill">
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 2c0 0-8 5-8 12 0 4.4 3.6 8 8 8s8-3.6 8-8c0-7-8-12-8-12z"/></svg>
-          <span id="streak-n">0</span> dias
+
+      <div class="header-actions">
+        <div class="streak-badge" id="streak-badge" title="Sequência de dias">
+          <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1.5c0 0-5 3.2-5 7.5 0 2.76 2.24 5 5 5s5-2.24 5-5c0-4.3-5-7.5-5-7.5z"/></svg>
+          <span id="streak-n">0</span>
         </div>
-        <div class="mastery-pill" id="mastery-pill">0 dominadas</div>
+        <div class="mastery-badge" id="mastery-pill">
+          <span>0</span> dominadas
+        </div>
       </div>
     </header>
 
-    <!-- VIEW: HOME -->
-    <main id="view-home" class="view active">
+    <!-- ═══════════════════════════════════
+         VIEW: HOME
+    ═══════════════════════════════════ -->
+    <main id="view-home" class="view active" role="main">
+
+      <!-- Hero -->
       <section class="hero">
-        <div class="hero-eyebrow">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>
-          Inglês para Consultoria & Engenharia
+        <div class="hero-content">
+          <p class="hero-eyebrow">
+            <span class="eyebrow-dot" aria-hidden="true"></span>
+            Engenharia · Gestão · Estratégia
+          </p>
+          <h1 class="hero-heading">
+            Inglês executivo<br>
+            para carreiras de<br>
+            <em>alta performance.</em>
+          </h1>
+          <p class="hero-body">
+            Vocabulário preciso selecionado para ambientes consultivos e de engenharia. Cada termo com fonética, contexto real e dica estratégica.
+          </p>
         </div>
-        <h1>Domine o inglês <em>executivo</em></h1>
-        <p>Vocabulário preciso para ambientes de alta performance — engenharia, gestão de projetos e estratégia corporativa.</p>
+        <div class="hero-stat-cluster" aria-label="Estatísticas de vocabulário">
+          <div class="hero-stat">
+            <span class="hs-n" id="hs-total-cards">—</span>
+            <span class="hs-l">termos</span>
+          </div>
+          <div class="hero-divider" aria-hidden="true"></div>
+          <div class="hero-stat">
+            <span class="hs-n">7</span>
+            <span class="hs-l">categorias</span>
+          </div>
+        </div>
       </section>
 
-      <section class="stats-row">
-        <div class="stat-col">
-          <div class="stat-n" id="ov-studied">0</div>
-          <div class="stat-l">Estudados</div>
+      <!-- Overview stats bar -->
+      <div class="overview-bar" role="region" aria-label="Resumo do progresso">
+        <div class="ov-item">
+          <span class="ov-val" id="ov-studied">0</span>
+          <span class="ov-key">Estudados</span>
         </div>
-        <div class="stat-col">
-          <div class="stat-n" id="ov-mastered">0</div>
-          <div class="stat-l">Dominados</div>
+        <div class="ov-sep" aria-hidden="true"></div>
+        <div class="ov-item">
+          <span class="ov-val accent" id="ov-mastered">0</span>
+          <span class="ov-key">Dominados</span>
         </div>
-        <div class="stat-col">
-          <div class="stat-n" id="ov-streak">0</div>
-          <div class="stat-l">Dias seguidos</div>
+        <div class="ov-sep" aria-hidden="true"></div>
+        <div class="ov-item">
+          <span class="ov-val" id="ov-streak">0</span>
+          <span class="ov-key">Sequência</span>
         </div>
-        <div class="stat-col">
-          <div class="stat-n" id="ov-acc">—</div>
-          <div class="stat-l">Precisão</div>
-        </div>
-      </section>
-
-      <section>
-        <div class="sec-lbl">Categorias de vocabulário</div>
-        <div class="cat-grid" id="cat-grid"></div>
-      </section>
-    </main>
-
-    <!-- VIEW: STUDY -->
-    <main id="view-study" class="view">
-      <div class="study-hdr">
-        <button class="btn-back" onclick="goHome()">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-          Voltar
-        </button>
-        <div class="sh-info">
-          <div class="sh-title" id="sh-title">—</div>
-          <div class="sh-sub" id="sh-sub">Modo estudo</div>
-        </div>
-        <div class="sh-prog">
-          <div class="prog-dots" id="prog-dots"></div>
-          <div class="sh-cnt" id="sh-cnt">1/12</div>
+        <div class="ov-sep" aria-hidden="true"></div>
+        <div class="ov-item">
+          <span class="ov-val" id="ov-acc">—</span>
+          <span class="ov-key">Precisão quiz</span>
         </div>
       </div>
 
-      <div class="mode-tabs">
-        <button class="mode-tab active" id="tab-study" onclick="setMode('study')">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
-          Estudo
+      <!-- Category grid -->
+      <section class="section-block" aria-labelledby="cats-label">
+        <header class="section-hdr">
+          <span class="section-label" id="cats-label">Categorias</span>
+          <span class="section-rule" aria-hidden="true"></span>
+        </header>
+        <div class="cat-grid" id="cat-grid" role="list"></div>
+      </section>
+
+    </main>
+
+    <!-- ═══════════════════════════════════
+         VIEW: STUDY
+    ═══════════════════════════════════ -->
+    <main id="view-study" class="view" role="main">
+
+      <!-- Study topbar -->
+      <div class="study-topbar">
+        <button class="btn-back" onclick="goHome()" aria-label="Voltar ao início">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 4L6 10l6 6"/></svg>
+          Voltar
         </button>
-        <button class="mode-tab" id="tab-quiz" onclick="setMode('quiz')">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <div class="study-meta">
+          <span class="study-title" id="sh-title">—</span>
+          <span class="study-mode-label" id="sh-sub">Modo estudo</span>
+        </div>
+        <div class="study-position">
+          <div class="prog-track" id="prog-dots" role="progressbar" aria-label="Progresso no deck"></div>
+          <span class="study-cnt" id="sh-cnt">—</span>
+        </div>
+      </div>
+
+      <!-- Mode selector -->
+      <div class="mode-row" role="tablist" aria-label="Modo de estudo">
+        <button class="mode-btn active" id="tab-study" onclick="setMode('study')" role="tab" aria-selected="true" aria-controls="pane-study">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h5a3 3 0 010 6H4zm0 6h7m-7 4h5"/></svg>
+          Flashcard
+        </button>
+        <button class="mode-btn" id="tab-quiz" onclick="setMode('quiz')" role="tab" aria-selected="false" aria-controls="pane-quiz">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="10" cy="10" r="8"/><path d="M7.5 7.5a2.5 2.5 0 114.33 2.5C11 11.5 10 12 10 13"/><circle cx="10" cy="15.5" r=".75" fill="currentColor"/></svg>
           Quiz
         </button>
       </div>
 
-      <!-- PAINEL ESTUDO -->
-      <div id="pane-study">
-        <div class="fc-wrap">
-          <div class="flashcard" id="flashcard" onclick="flipCard()">
-            <div class="cf cf-front">
-              <div class="cf-badge">
-                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                <span id="fc-badge-txt">—</span>
+      <!-- ── STUDY PANE ── -->
+      <div id="pane-study" role="tabpanel" aria-labelledby="tab-study">
+
+        <!-- Flashcard -->
+        <div class="fc-stage">
+          <div class="fc-wrap">
+            <div class="flashcard" id="flashcard" onclick="flipCard()" tabindex="0" role="button" aria-label="Virar flashcard">
+
+              <!-- Front -->
+              <div class="card-face card-front">
+                <div class="card-corner tl" aria-hidden="true"></div>
+                <div class="card-corner tr" aria-hidden="true"></div>
+                <div class="card-corner bl" aria-hidden="true"></div>
+                <div class="card-corner br" aria-hidden="true"></div>
+                <div class="card-cat-badge">
+                  <span id="fc-badge-txt">—</span>
+                </div>
+                <div class="card-center">
+                  <div class="fc-term" id="fc-term" lang="en">—</div>
+                  <div class="fc-phon" id="fc-phon">—</div>
+                </div>
+                <div class="card-flip-cue" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                  toque para revelar
+                </div>
               </div>
-              <div class="fc-term" id="fc-term">—</div>
-              <div class="fc-phon" id="fc-phon">—</div>
-              <div class="fc-hint">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                toque para virar
+
+              <!-- Back -->
+              <div class="card-face card-back" id="cf-back">
+                <div class="card-back-scroll">
+                  <div class="back-row">
+                    <span class="back-label">Tradução</span>
+                    <span class="back-translation" id="bk-pt" lang="pt-BR">—</span>
+                  </div>
+                  <div class="back-divider" aria-hidden="true"></div>
+                  <div class="back-row">
+                    <span class="back-label">Definição</span>
+                    <p class="back-def" id="bk-def" lang="en">—</p>
+                  </div>
+                  <div class="back-row">
+                    <span class="back-label">Exemplo</span>
+                    <p class="back-ex" id="bk-ex" lang="en">—</p>
+                  </div>
+                  <div class="back-row">
+                    <span class="back-label">Dica</span>
+                    <p class="back-tip" id="bk-tip">—</p>
+                  </div>
+                </div>
+                <!-- Confidence buttons -->
+                <div class="conf-panel" id="conf-row" style="display:none;" role="group" aria-label="Avalie sua confiança">
+                  <button class="conf-btn cb-hard" onclick="rate('hard')" aria-label="Difícil — ver em breve">
+                    <span class="cb-dot" aria-hidden="true"></span>
+                    <span class="cb-label">Difícil</span>
+                    <span class="cb-sub">em breve</span>
+                  </button>
+                  <button class="conf-btn cb-med" onclick="rate('medium')" aria-label="Médio — revisar amanhã">
+                    <span class="cb-dot" aria-hidden="true"></span>
+                    <span class="cb-label">Médio</span>
+                    <span class="cb-sub">amanhã</span>
+                  </button>
+                  <button class="conf-btn cb-easy" onclick="rate('easy')" aria-label="Fácil — dominado">
+                    <span class="cb-dot" aria-hidden="true"></span>
+                    <span class="cb-label">Fácil</span>
+                    <span class="cb-sub">dominado</span>
+                  </button>
+                </div>
               </div>
-            </div>
-            <div class="cf cf-back" id="cf-back">
-              <div class="back-body">
-                <div class="bk-lbl">Tradução</div>
-                <div class="bk-pt" id="bk-pt">—</div>
-                <div class="bk-lbl">Definição</div>
-                <div class="bk-def" id="bk-def">—</div>
-                <div class="bk-lbl">Exemplo em contexto</div>
-                <div class="bk-ex" id="bk-ex">—</div>
-                <div class="bk-lbl">Dica</div>
-                <div class="bk-tip" id="bk-tip">—</div>
-              </div>
-              <div class="conf-row" id="conf-row">
-                <button class="btn-conf bc-h" onclick="rate('hard')">
-                  <div class="bc-icon">😰</div>
-                  <div class="bc-lbl">Difícil</div>
-                  <div class="bc-sub">ver em breve</div>
-                </button>
-                <button class="btn-conf bc-m" onclick="rate('medium')">
-                  <div class="bc-icon">🤔</div>
-                  <div class="bc-lbl">Médio</div>
-                  <div class="bc-sub">amanhã</div>
-                </button>
-                <button class="btn-conf bc-e" onclick="rate('easy')">
-                  <div class="bc-icon">✅</div>
-                  <div class="bc-lbl">Fácil</div>
-                  <div class="bc-sub">dominado!</div>
-                </button>
-              </div>
+
             </div>
           </div>
         </div>
 
-        <div class="pron-panel">
-          <div class="wave-line" id="wave-line">
-            <div class="wbar"></div><div class="wbar"></div><div class="wbar"></div>
-            <div class="wbar"></div><div class="wbar"></div><div class="wbar"></div>
-            <div class="wbar"></div>
+        <!-- Pronunciation panel -->
+        <div class="pron-panel" role="region" aria-label="Pronúncia">
+          <div class="pron-wave" id="wave-line" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
           </div>
-          <div class="spell-display" id="spell-display"></div>
-          <div class="pron-btns">
-            <button class="pron-btn pb-main" id="pb-main" onclick="speak('normal', event)">
-              <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <div class="spell-display" id="spell-display" aria-live="polite"></div>
+          <div class="pron-actions">
+            <button class="pron-btn pb-normal" id="pb-main" onclick="speak('normal', event)" aria-label="Pronunciar em velocidade normal">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 3l10 5-10 5V3z"/></svg>
               Pronunciar
             </button>
-            <button class="pron-btn pb-slow" id="pb-slow" onclick="speak('slow', event)">
-              <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/><circle cx="12" cy="12" r="3"/></svg>
+            <button class="pron-btn pb-slow" id="pb-slow" onclick="speak('slow', event)" aria-label="Pronunciar devagar">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 3l10 5-10 5V3z" opacity=".5"/><circle cx="8" cy="8" r="2.5" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
               Devagar
             </button>
-            <button class="pron-btn pb-spell" id="pb-spell" onclick="speak('spell', event)">
-              <svg viewBox="0 0 24 24"><path d="M4 7V4h16v3M9 20h6M12 4v16"/></svg>
+            <button class="pron-btn pb-spell" id="pb-spell" onclick="speak('spell', event)" aria-label="Soletrar">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M3 4h10M8 4v9M5 13h6"/></svg>
               Soletrar
             </button>
           </div>
         </div>
 
-        <div class="nav-row">
-          <button class="btn-nav" onclick="prevCard()">
-            <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        <!-- Card navigation -->
+        <div class="card-nav" role="navigation" aria-label="Navegação entre cards">
+          <button class="nav-arrow" onclick="prevCard()" aria-label="Card anterior">
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 4L6 10l6 6"/></svg>
           </button>
-          <button class="btn-flip" onclick="flipCard()">
-            <svg viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+          <button class="flip-btn" onclick="flipCard()" aria-label="Virar card">
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 3a7 7 0 100 14A7 7 0 0010 3z"/><circle cx="10" cy="10" r="2.5" fill="currentColor"/></svg>
             Virar card
           </button>
-          <button class="btn-nav" onclick="nextCard()">
-            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <button class="nav-arrow" onclick="nextCard()" aria-label="Próximo card">
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 4l6 6-6 6"/></svg>
           </button>
         </div>
 
-        <div class="kb-hints">
-          <div class="kb"><kbd>←</kbd> <kbd>→</kbd> navegar</div>
-          <div class="kb"><kbd>Space</kbd> virar</div>
-          <div class="kb"><kbd>P</kbd> pronunciar</div>
-          <div class="kb"><kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> avaliar</div>
+        <!-- Keyboard hints -->
+        <div class="kb-row" aria-label="Atalhos de teclado">
+          <span><kbd>←</kbd><kbd>→</kbd> navegar</span>
+          <span><kbd>Space</kbd> virar</span>
+          <span><kbd>P</kbd> áudio</span>
+          <span><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> avaliar</span>
         </div>
-      </div>
 
-      <!-- PAINEL QUIZ -->
-      <div id="pane-quiz" style="display:none;">
-        <div class="quiz-wrap">
+      </div><!-- /pane-study -->
+
+      <!-- ── QUIZ PANE ── -->
+      <div id="pane-quiz" role="tabpanel" aria-labelledby="tab-quiz" style="display:none;">
+        <div class="quiz-container">
           <div class="quiz-card">
-            <div class="q-lbl">Qual é o termo em inglês?</div>
-            <div class="q-prompt" id="q-prompt">—</div>
-            <div class="q-ctx" id="q-ctx">—</div>
-            <div class="q-opts" id="q-opts"></div>
-            <div class="q-score-bar">
+            <p class="quiz-prompt-label">Qual é o termo em inglês?</p>
+            <h2 class="quiz-prompt" id="q-prompt" lang="pt-BR">—</h2>
+            <p class="quiz-context" id="q-ctx" lang="en">—</p>
+            <div class="quiz-options" id="q-opts" role="group" aria-label="Opções de resposta"></div>
+            <div class="quiz-score-row">
               <span id="q-score">0 corretas de 0</span>
             </div>
           </div>
         </div>
       </div>
+
     </main>
 
-    <!-- VIEW: PROGRESS -->
-    <main id="view-progress" class="view">
-      <div class="prog-hdr">
-        <h2>Seu progresso</h2>
-        <p>Evolução rumo à fluência executiva em inglês.</p>
-      </div>
+    <!-- ═══════════════════════════════════
+         VIEW: PROGRESS
+    ═══════════════════════════════════ -->
+    <main id="view-progress" class="view" role="main">
 
-      <div class="kpi-grid">
-        <div class="kpi blue">
-          <div class="kn" id="st-studied">0</div>
-          <div class="kl">Cards revisados</div>
-        </div>
-        <div class="kpi cyan">
-          <div class="kn" id="st-mastered">0</div>
-          <div class="kl">Palavras dominadas</div>
-        </div>
-        <div class="kpi gold">
-          <div class="kn" id="st-acc">—</div>
-          <div class="kl">Acertos no quiz</div>
-        </div>
-        <div class="kpi green">
-          <div class="kn" id="st-streak">0</div>
-          <div class="kl">Dias consecutivos</div>
-        </div>
-      </div>
+      <header class="progress-hdr">
+        <h2>Progresso</h2>
+        <p>Sua evolução rumo à fluência executiva.</p>
+      </header>
 
-      <div class="achievements-section">
-        <h3>Conquistas</h3>
-        <div class="achievements-grid" id="achievements-grid"></div>
-      </div>
-
-      <div class="charts-container">
-        <h3>Evolução diária</h3>
-        <div class="chart-wrapper">
-          <canvas id="chart-daily"></canvas>
+      <div class="kpi-row" role="region" aria-label="Indicadores de desempenho">
+        <div class="kpi-card kpi-blue">
+          <span class="kpi-val" id="st-studied">0</span>
+          <span class="kpi-key">Cards revisados</span>
         </div>
-        <h3>Desempenho no quiz</h3>
-        <div class="chart-wrapper">
-          <canvas id="chart-pie"></canvas>
+        <div class="kpi-card kpi-brass">
+          <span class="kpi-val" id="st-mastered">0</span>
+          <span class="kpi-key">Palavras dominadas</span>
+        </div>
+        <div class="kpi-card kpi-muted">
+          <span class="kpi-val" id="st-acc">—</span>
+          <span class="kpi-key">Acertos no quiz</span>
+        </div>
+        <div class="kpi-card kpi-muted">
+          <span class="kpi-val" id="st-streak">0</span>
+          <span class="kpi-key">Dias consecutivos</span>
         </div>
       </div>
 
-      <div class="mastery-box">
-        <h3>Domínio por categoria</h3>
-        <div id="mastery-rows"></div>
-      </div>
+      <!-- Domínio por categoria -->
+      <section class="section-block" aria-labelledby="mastery-label">
+        <header class="section-hdr">
+          <span class="section-label" id="mastery-label">Domínio por categoria</span>
+          <span class="section-rule" aria-hidden="true"></span>
+        </header>
+        <div class="mastery-list" id="mastery-rows" role="list"></div>
+      </section>
+
+      <!-- Charts -->
+      <section class="section-block charts-section" aria-labelledby="charts-label">
+        <header class="section-hdr">
+          <span class="section-label" id="charts-label">Atividade e quiz</span>
+          <span class="section-rule" aria-hidden="true"></span>
+        </header>
+        <div class="charts-row">
+          <div class="chart-block">
+            <span class="chart-label">Evolução diária</span>
+            <div class="chart-canvas-wrap">
+              <canvas id="chart-daily" aria-label="Gráfico de evolução diária"></canvas>
+            </div>
+          </div>
+          <div class="chart-block chart-block-sm">
+            <span class="chart-label">Quiz</span>
+            <div class="chart-canvas-wrap">
+              <canvas id="chart-pie" aria-label="Gráfico de acertos no quiz"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Achievements -->
+      <section class="section-block" aria-labelledby="ach-label">
+        <header class="section-hdr">
+          <span class="section-label" id="ach-label">Conquistas</span>
+          <span class="section-rule" aria-hidden="true"></span>
+        </header>
+        <div class="ach-grid" id="achievements-grid" role="list"></div>
+      </section>
+
     </main>
-  </div>
 
-  <div class="toast" id="toast"></div>
+  </div><!-- /app -->
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="js/app.js"></script>
   <script>
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js');
+      navigator.serviceWorker.register('/sw.js').catch(() => {});
     }
   </script>
 </body>
