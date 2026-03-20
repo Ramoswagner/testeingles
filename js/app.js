@@ -1,46 +1,36 @@
-// ========================================
-// app.js — LexiPro — versão corrigida
-// ========================================
+// ══════════════════════════════════════════════════
+// Project English — by Wagner Ramos
+// app.js — versão corrigida + nova identidade
+// ══════════════════════════════════════════════════
 
-// ----- CAT_ICONS -----
 const CAT_ICONS = {
   engineering: `<path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>`,
-  pmgmt: `<rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>`,
-  finance: `<line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>`,
-  corporate: `<path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>`,
-  planning: `<rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="14" x2="8" y2="14"/><line x1="12" y1="14" x2="12" y2="14"/><line x1="16" y1="14" x2="16" y2="14"/>`,
-  portfolio: `<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>`,
-  pmbok: `<path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>`
+  pmgmt:        `<rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>`,
+  finance:      `<line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>`,
+  corporate:    `<path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>`,
+  planning:     `<rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="14" x2="8" y2="14"/><line x1="12" y1="14" x2="12" y2="14"/><line x1="16" y1="14" x2="16" y2="14"/>`,
+  portfolio:    `<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>`,
+  pmbok:        `<path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>`
 };
 
 let CATS = {};
 
-// ----- Estado global -----
 const S = {
-  cat: null,
-  idx: 0,
-  flipped: false,
-  mode: 'study',
-  qScore: 0,
-  qTotal: 0,
-  qAnswered: false,
-  prog: {},
-  streak: 0,
-  lastDate: null,
-  daily: {}   // BUG FIX: rastreia cards estudados por data
+  cat: null, idx: 0, flipped: false,
+  mode: 'study', qScore: 0, qTotal: 0, qAnswered: false,
+  prog: {}, streak: 0, lastDate: null, daily: {}
 };
 
-// ----- BUG FIX: instâncias de gráfico armazenadas para destruição -----
-const _chartInstances = {};
+const _charts = {};
 
-// ----- Conquistas -----
+// ── Conquistas ──────────────────────────────────
 const ACHIEVEMENTS = [
-  { id: 'first_card', name: 'Primeiro passo', desc: 'Estude seu primeiro card', icon: '🎓', condition: s => Object.values(s.prog).length >= 1 },
-  { id: 'master_10', name: 'Aprendiz', desc: 'Domine 10 palavras', icon: '🌟', condition: s => Object.values(s.prog).filter(p => p.conf === 'easy').length >= 10 },
-  { id: 'master_50', name: 'Profissional', desc: 'Domine 50 palavras', icon: '🏆', condition: s => Object.values(s.prog).filter(p => p.conf === 'easy').length >= 50 },
-  { id: 'streak_7', name: 'Disciplina', desc: 'Estude 7 dias seguidos', icon: '🔥', condition: s => s.streak >= 7 },
-  { id: 'streak_30', name: 'Inabalável', desc: 'Estude 30 dias seguidos', icon: '⚡', condition: s => s.streak >= 30 },
-  { id: 'quiz_50', name: 'Mestre do Quiz', desc: 'Acerte 50 questões', icon: '🧠', condition: s => Object.values(s.prog).reduce((acc, p) => acc + (p.qc || 0), 0) >= 50 }
+  { id: 'first_card',  name: 'Primeiro passo',  desc: 'Estude seu primeiro card',      icon: '🎓', condition: s => Object.values(s.prog).length >= 1 },
+  { id: 'master_10',   name: 'Aprendiz',         desc: 'Domine 10 palavras',            icon: '🌟', condition: s => Object.values(s.prog).filter(p => p.conf === 'easy').length >= 10 },
+  { id: 'master_50',   name: 'Profissional',     desc: 'Domine 50 palavras',            icon: '🏆', condition: s => Object.values(s.prog).filter(p => p.conf === 'easy').length >= 50 },
+  { id: 'streak_7',    name: 'Disciplina',       desc: 'Estude 7 dias seguidos',        icon: '🔥', condition: s => s.streak >= 7 },
+  { id: 'streak_30',   name: 'Inabalável',       desc: 'Estude 30 dias seguidos',       icon: '⚡', condition: s => s.streak >= 30 },
+  { id: 'quiz_50',     name: 'Mestre do Quiz',   desc: 'Acerte 50 questões no quiz',   icon: '🧠', condition: s => Object.values(s.prog).reduce((a, p) => a + (p.qc || 0), 0) >= 50 }
 ];
 
 let unlockedAchievements = [];
@@ -49,335 +39,272 @@ function checkAchievements() {
   ACHIEVEMENTS.forEach(ach => {
     if (!unlockedAchievements.includes(ach.id) && ach.condition(S)) {
       unlockedAchievements.push(ach.id);
-      toast(`🏆 Conquista desbloqueada: ${ach.name}`, 'achievement');
+      toast(`🏆 ${ach.name} desbloqueada!`, 'achievement');
       saveAchievements();
     }
   });
 }
-
-function saveAchievements() {
-  localStorage.setItem('lexipro_achievements', JSON.stringify(unlockedAchievements));
-}
-
+function saveAchievements() { localStorage.setItem('pe_achievements', JSON.stringify(unlockedAchievements)); }
 function loadAchievements() {
-  try {
-    const saved = localStorage.getItem('lexipro_achievements');
-    if (saved) unlockedAchievements = JSON.parse(saved);
-  } catch (e) {}
+  try { const s = localStorage.getItem('pe_achievements'); if (s) unlockedAchievements = JSON.parse(s); } catch(e) {}
 }
 
-// ----- Carregar JSONs -----
+// ── Carregar dados ───────────────────────────────
 async function loadAllCategories() {
-  const categories = ['engineering', 'pmgmt', 'finance', 'corporate', 'planning', 'portfolio', 'pmbok'];
+  const cats = ['engineering','pmgmt','finance','corporate','planning','portfolio','pmbok'];
   try {
-    const promises = categories.map(async (cat) => {
-      const response = await fetch(`data/${cat}.json`);
-      if (!response.ok) throw new Error(`Erro ao carregar ${cat}.json`);
-      const data = await response.json();
-      return { [cat]: data };
-    });
-    const results = await Promise.all(promises);
+    const results = await Promise.all(cats.map(async c => {
+      const r = await fetch(`data/${c}.json`);
+      if (!r.ok) throw new Error(`Falha: ${c}.json`);
+      return { [c]: await r.json() };
+    }));
     CATS = Object.assign({}, ...results);
-    console.log('Dados carregados');
     initApp();
-  } catch (error) {
-    console.error('Falha ao carregar dados:', error);
-    document.body.innerHTML = '<h1 style="padding:2rem;font-family:sans-serif;">Erro ao carregar os cards. Tente novamente mais tarde.</h1>';
+  } catch(err) {
+    console.error(err);
+    document.body.innerHTML = '<div style="padding:2rem;font-family:sans-serif;color:#f87171">Erro ao carregar os dados. Verifique a pasta /data e recarregue a página.</div>';
   }
 }
 
 function initApp() {
   load();
   loadAchievements();
+  updateTotalCount();
   renderHome();
 }
 
-// ----- Persistência -----
+// ── Persistência ─────────────────────────────────
 function load() {
   try {
-    const d = JSON.parse(localStorage.getItem('lp3') || '{}');
-    S.prog = d.prog || {};
-    S.streak = d.streak || 0;
+    const d = JSON.parse(localStorage.getItem('pe_data') || '{}');
+    S.prog     = d.prog     || {};
+    S.streak   = d.streak   || 0;
     S.lastDate = d.lastDate || null;
-    S.daily = d.daily || {};   // BUG FIX: carrega dados diários salvos
-  } catch (e) {}
+    S.daily    = d.daily    || {};
+  } catch(e) {}
   checkStreak();
 }
-
 function save() {
   try {
-    localStorage.setItem('lp3', JSON.stringify({
-      prog: S.prog,
-      streak: S.streak,
-      lastDate: S.lastDate,
-      daily: S.daily    // BUG FIX: salva dados diários
+    localStorage.setItem('pe_data', JSON.stringify({
+      prog: S.prog, streak: S.streak, lastDate: S.lastDate, daily: S.daily
     }));
-  } catch (e) {}
+  } catch(e) {}
 }
-
-// BUG FIX: streak agora começa em 1 no primeiro dia de uso (não 0)
 function checkStreak() {
   const today = new Date().toDateString();
-  const yest = new Date(Date.now() - 864e5).toDateString();
+  const yest  = new Date(Date.now() - 864e5).toDateString();
   if (S.lastDate === today) return;
-  if (S.lastDate === yest) {
-    S.streak++;
-  } else if (S.lastDate && S.lastDate !== today) {
-    S.streak = 0;     // mais de 1 dia sem estudar: zera
-  } else if (!S.lastDate) {
-    S.streak = 1;     // BUG FIX: primeiro dia de uso → streak = 1
-  }
+  if (S.lastDate === yest)      S.streak++;
+  else if (!S.lastDate)         S.streak = 1;
+  else                          S.streak = 0;
   S.lastDate = today;
   save();
 }
-
-// BUG FIX: rastreia contagem de cards por data para o gráfico diário
 function markSeen(id) {
   if (!S.prog[id]) S.prog[id] = { seen: true, conf: null, qc: 0, qt: 0 };
   S.prog[id].seen = true;
   const today = new Date().toDateString();
   S.lastDate = today;
-  // Incrementa contagem diária
   if (!S.daily) S.daily = {};
   S.daily[today] = (S.daily[today] || 0) + 1;
   save();
 }
 
-// ----- Toast -----
+// ── Total count ──────────────────────────────────
+function updateTotalCount() {
+  const total = Object.values(CATS).reduce((a, c) => a + c.cards.length, 0);
+  const el = document.getElementById('hs-total-cards');
+  if (el) el.textContent = total;
+}
+
+// ── Toast ────────────────────────────────────────
 function toast(msg, type = '') {
   const t = document.getElementById('toast');
   t.textContent = msg;
-  t.className = 'toast on ' + (type || '');
+  t.className = 'toast on ' + type;
   clearTimeout(t._t);
-  t._t = setTimeout(() => t.className = 'toast', 2600);
+  t._t = setTimeout(() => { t.className = 'toast'; }, 2800);
 }
 
-// ----- Navegação -----
+// ── Navigation ───────────────────────────────────
 function showView(v) {
   document.querySelectorAll('.view').forEach(el => el.classList.remove('active'));
-  document.querySelectorAll('.nav-btn').forEach(el => el.classList.remove('active'));
-  const viewEl = document.getElementById('view-' + v);
-  if (viewEl) viewEl.classList.add('active');
-  const btnMap = { home: 'nb-home', progress: 'nb-prog', study: 'nb-home' };
-  const btnId = btnMap[v];
-  if (btnId) {
-    const btn = document.getElementById(btnId);
-    if (btn) btn.classList.add('active');
-  }
-  if (v === 'home') renderHome();
-  else if (v === 'progress') renderProgress();
+  document.querySelectorAll('.nav-item').forEach(el => { el.classList.remove('active'); el.setAttribute('aria-current', 'false'); });
+  const vEl = document.getElementById('view-' + v);
+  if (vEl) vEl.classList.add('active');
+  const map = { home: 'nb-home', progress: 'nb-prog', study: 'nb-home' };
+  const btn = document.getElementById(map[v]);
+  if (btn) { btn.classList.add('active'); btn.setAttribute('aria-current', 'page'); }
+  if (v === 'home')     renderHome();
+  if (v === 'progress') renderProgress();
 }
+function goHome() { stopAudio(); showView('home'); }
 
-function goHome() {
-  stopAudio();
-  showView('home');
-}
-
-// ----- Áudio: Web Speech API -----
+// ── Audio ─────────────────────────────────────────
 let _activeBtn = null;
 let _spellTmrs = [];
 
 function setActiveBtn(id) {
   if (_activeBtn) {
-    const prev = document.getElementById(_activeBtn);
-    if (prev) prev.classList.remove('playing');
+    const p = document.getElementById(_activeBtn);
+    if (p) p.classList.remove('playing');
   }
   _activeBtn = id;
+  const wl = document.getElementById('wave-line');
   if (id) {
     const el = document.getElementById(id);
     if (el) el.classList.add('playing');
-    document.getElementById('wave-line').classList.add('on');
-    const wl = document.getElementById('wave-line');
-    if (id === 'pb-main') wl.style.color = 'var(--blue-l)';
-    else if (id === 'pb-slow') wl.style.color = 'var(--cyan)';
-    else wl.style.color = '#a78bfa';
+    wl.classList.add('on');
+    wl.style.color = id === 'pb-main' ? 'var(--blue-hi)' : id === 'pb-slow' ? 'var(--brass-hi)' : '#a78bfa';
   } else {
-    document.getElementById('wave-line').classList.remove('on');
+    wl.classList.remove('on');
   }
 }
-
 function stopAudio() {
-  _spellTmrs.forEach(clearTimeout);
-  _spellTmrs = [];
+  _spellTmrs.forEach(clearTimeout); _spellTmrs = [];
   if (window.speechSynthesis) window.speechSynthesis.cancel();
   setActiveBtn(null);
-  resetSpellDisplay();
+  resetSpell();
 }
-
-function resetSpellDisplay() {
+function resetSpell() {
   const sd = document.getElementById('spell-display');
-  if (sd) {
-    sd.classList.remove('on');
-    sd.innerHTML = '';
-  }
+  if (sd) { sd.classList.remove('on'); sd.innerHTML = ''; }
 }
-
 function speak(mode, e) {
   e?.stopPropagation();
   const card = CATS[S.cat]?.cards[S.idx];
   if (!card) return;
-  const btnId = 'pb-' + (mode === 'normal' ? 'main' : mode);
+  const btnId = mode === 'normal' ? 'pb-main' : 'pb-' + mode;
   if (_activeBtn === btnId) { stopAudio(); return; }
   stopAudio();
-  if (mode === 'normal' || mode === 'main') {
-    setActiveBtn('pb-main');
-    utter(card.term, 1.0, () => setActiveBtn(null));
-  } else if (mode === 'slow') {
-    setActiveBtn('pb-slow');
-    utter(card.term, 0.5, () => setActiveBtn(null));
-  } else if (mode === 'spell') {
-    spellTerm(card.term);
-  }
+  if (mode === 'normal') { setActiveBtn('pb-main'); utter(card.term, 1.0, () => setActiveBtn(null)); }
+  else if (mode === 'slow')  { setActiveBtn('pb-slow'); utter(card.term, 0.5, () => setActiveBtn(null)); }
+  else if (mode === 'spell') { spellTerm(card.term); }
 }
-
 function utter(text, rate, onEnd) {
   if (!window.speechSynthesis) { onEnd(); return; }
   window.speechSynthesis.cancel();
-  const utterance = new SpeechSynthesisUtterance(text);
-  utterance.lang = 'en-US';
-  utterance.rate = rate;
-  utterance.pitch = 1;
-  utterance.onend = utterance.onerror = onEnd;
-  window.speechSynthesis.speak(utterance);
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = 'en-US'; u.rate = rate; u.pitch = 1;
+  u.onend = u.onerror = onEnd;
+  window.speechSynthesis.speak(u);
 }
-
 function spellTerm(term) {
   setActiveBtn('pb-spell');
-  const letters = term.replace(/[^a-zA-Z- ]/g, '').split('');
+  const letters = term.replace(/[^a-zA-Z\- ]/g, '').split('');
   const sd = document.getElementById('spell-display');
   if (!sd) return;
   sd.innerHTML = '';
   const tiles = [];
-  letters.forEach((ch) => {
+  letters.forEach(ch => {
     const el = document.createElement('span');
-    if (ch === ' ' || ch === '-') {
-      el.className = 'sl sep';
-      el.textContent = ch;
-    } else {
-      el.className = 'sl';
-      el.textContent = ch.toUpperCase();
-    }
+    if (ch === ' ' || ch === '-') { el.className = 'sl sep'; el.textContent = ch; }
+    else { el.className = 'sl'; el.textContent = ch.toUpperCase(); }
     sd.appendChild(el);
     tiles.push({ el, ch, isChar: ch !== ' ' && ch !== '-' });
   });
   sd.classList.add('on');
   let delay = 0;
-  const charDelay = 400;
-  tiles.forEach((t) => {
+  tiles.forEach(t => {
     if (!t.isChar) return;
-    const tmr = setTimeout(() => {
-      tiles.forEach(x => { if (x.el.classList.contains('lit')) x.el.classList.replace('lit', 'done'); });
+    _spellTmrs.push(setTimeout(() => {
+      tiles.forEach(x => { if (x.el.classList.contains('lit')) x.el.classList.replace('lit','done'); });
       t.el.classList.add('lit');
       utter(t.ch.toUpperCase(), 0.8, () => {});
-    }, delay);
-    _spellTmrs.push(tmr);
-    delay += charDelay;
+    }, delay));
+    delay += 400;
   });
-  const done = setTimeout(() => {
+  _spellTmrs.push(setTimeout(() => {
     tiles.forEach(t => { if (t.isChar) { t.el.classList.remove('lit'); t.el.classList.add('done'); } });
     setActiveBtn(null);
-    const fade = setTimeout(() => resetSpellDisplay(), 1500);
-    _spellTmrs.push(fade);
-  }, delay + 200);
-  _spellTmrs.push(done);
+    _spellTmrs.push(setTimeout(resetSpell, 1500));
+  }, delay + 200));
 }
 
-// ----- Render Home -----
+// ── Home ─────────────────────────────────────────
 function renderHome() {
   updateHdr();
-  const progValues = Object.values(S.prog);
-  const studied = progValues.filter(p => p.seen).length;
-  const mastered = progValues.filter(p => p.conf === 'easy').length;
-  const totalQuiz = progValues.reduce((acc, p) => acc + (p.qt || 0), 0);
-  const correctQuiz = progValues.reduce((acc, p) => acc + (p.qc || 0), 0);
-  const accuracy = totalQuiz ? Math.round((correctQuiz / totalQuiz) * 100) + '%' : '—';
-  document.getElementById('ov-studied').textContent = studied;
+  const pv = Object.values(S.prog);
+  const studied  = pv.filter(p => p.seen).length;
+  const mastered = pv.filter(p => p.conf === 'easy').length;
+  const tQ = pv.reduce((a, p) => a + (p.qt || 0), 0);
+  const cQ = pv.reduce((a, p) => a + (p.qc || 0), 0);
+  const acc = tQ ? Math.round((cQ / tQ) * 100) + '%' : '—';
+  document.getElementById('ov-studied').textContent  = studied;
   document.getElementById('ov-mastered').textContent = mastered;
-  document.getElementById('ov-streak').textContent = S.streak;
-  document.getElementById('ov-acc').textContent = accuracy;
+  document.getElementById('ov-streak').textContent   = S.streak;
+  document.getElementById('ov-acc').textContent      = acc;
 
   const grid = document.getElementById('cat-grid');
   grid.innerHTML = '';
   Object.entries(CATS).forEach(([key, cat]) => {
-    const total = cat.cards.length;
-    const seen = cat.cards.filter(c => S.prog[c.id]?.seen).length;
-    const masteredCat = cat.cards.filter(c => S.prog[c.id]?.conf === 'easy').length;
-    const percent = total ? Math.round((masteredCat / total) * 100) : 0;
+    const total      = cat.cards.length;
+    const seen       = cat.cards.filter(c => S.prog[c.id]?.seen).length;
+    const masteredCt = cat.cards.filter(c => S.prog[c.id]?.conf === 'easy').length;
+    const pct        = total ? Math.round((masteredCt / total) * 100) : 0;
     const card = document.createElement('div');
     card.className = 'cat-card';
     card.style.setProperty('--cc', cat.color);
+    card.setAttribute('role', 'listitem');
     card.onclick = () => openCat(key);
     card.innerHTML = `
-      <div class="cc-top">
-        <div class="cc-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${CAT_ICONS[key]}</svg>
+      <div class="cc-header">
+        <div class="cc-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${CAT_ICONS[key]}</svg>
         </div>
-        <div>
-          <div class="cc-cnt">${seen}/${total} estudados</div>
-          <div class="cc-pct">${percent}%</div>
+        <div class="cc-stat">
+          <div class="cc-count">${seen}/${total} estudados</div>
+          <div class="cc-pct">${pct}%</div>
         </div>
       </div>
       <div class="cc-name">${cat.lbl}</div>
       <div class="cc-desc">${cat.desc}</div>
-      <div class="cc-bar">
-        <div class="cc-fill" style="width:${percent}%; background:${cat.color}"></div>
-      </div>
+      <div class="cc-progress"><div class="cc-fill" style="width:${pct}%"></div></div>
     `;
     grid.appendChild(card);
   });
 }
-
 function updateHdr() {
-  const masteredCount = Object.values(S.prog).filter(p => p.conf === 'easy').length;
+  const mc = Object.values(S.prog).filter(p => p.conf === 'easy').length;
   document.getElementById('streak-n').textContent = S.streak;
-  document.getElementById('mastery-pill').textContent = masteredCount + ' dominadas';
+  const mp = document.getElementById('mastery-pill');
+  if (mp) { mp.innerHTML = `<span>${mc}</span> dominadas`; }
 }
 
-// ----- Study / Quiz -----
+// ── Study/Quiz ───────────────────────────────────
 function openCat(catKey) {
-  S.cat = catKey;
-  S.idx = 0;
-  S.flipped = false;
-  S.qScore = 0;
-  S.qTotal = 0;
-  const cat = CATS[catKey];
-  document.getElementById('sh-title').textContent = cat.lbl;
+  S.cat = catKey; S.idx = 0; S.flipped = false; S.qScore = 0; S.qTotal = 0;
+  document.getElementById('sh-title').textContent = CATS[catKey].lbl;
   showView('study');
   setMode('study');
 }
-
 function setMode(mode) {
-  S.mode = mode;
-  S.flipped = false;
-  stopAudio();
+  S.mode = mode; S.flipped = false; stopAudio();
   document.getElementById('tab-study').classList.toggle('active', mode === 'study');
   document.getElementById('tab-quiz').classList.toggle('active', mode === 'quiz');
+  document.getElementById('tab-study').setAttribute('aria-selected', mode === 'study');
+  document.getElementById('tab-quiz').setAttribute('aria-selected', mode === 'quiz');
   document.getElementById('pane-study').style.display = mode === 'study' ? 'block' : 'none';
-  document.getElementById('pane-quiz').style.display = mode === 'quiz' ? 'block' : 'none';
-  document.getElementById('sh-sub').textContent = mode === 'study' ? 'Modo estudo' : 'Modo quiz';
+  document.getElementById('pane-quiz').style.display  = mode === 'quiz'  ? 'block' : 'none';
+  document.getElementById('sh-sub').textContent = mode === 'study' ? 'Modo flashcard' : 'Modo quiz';
   renderCard();
 }
-
 function renderCard() {
-  const cat = CATS[S.cat];
-  const cards = cat.cards;
-  const card = cards[S.idx];
-  const dotsContainer = document.getElementById('prog-dots');
-  dotsContainer.innerHTML = '';
+  const cat = CATS[S.cat], cards = cat.cards, card = cards[S.idx];
+  const dots = document.getElementById('prog-dots');
+  dots.innerHTML = '';
   const vis = Math.min(cards.length, 14);
   for (let i = 0; i < vis; i++) {
-    const dot = document.createElement('div');
-    dot.className = 'pdot';
-    if (i === S.idx) dot.classList.add('cur');
-    else if (S.prog[cards[i]?.id]?.seen) dot.classList.add('done');
-    dotsContainer.appendChild(dot);
+    const d = document.createElement('div');
+    d.className = 'pdot' + (i === S.idx ? ' cur' : S.prog[cards[i]?.id]?.seen ? ' done' : '');
+    dots.appendChild(d);
   }
-  document.getElementById('sh-cnt').textContent = `${S.idx + 1}/${cards.length}`;
+  document.getElementById('sh-cnt').textContent = `${S.idx + 1} / ${cards.length}`;
   if (S.mode === 'study') renderStudy(card, cat);
   else renderQuiz(card, cat, cards);
   markSeen(card.id);
 }
-
 function renderStudy(card, cat) {
   const fc = document.getElementById('flashcard');
   fc.classList.remove('flipped');
@@ -386,190 +313,154 @@ function renderStudy(card, cat) {
   document.getElementById('fc-badge-txt').textContent = cat.lbl;
   document.getElementById('fc-term').textContent = card.term;
   document.getElementById('fc-phon').textContent = card.ph;
-  document.getElementById('bk-pt').textContent = card.pt;
+  document.getElementById('bk-pt').textContent  = card.pt;
   document.getElementById('bk-def').textContent = card.def;
-  document.getElementById('bk-ex').textContent = `"${card.ex}"`;
+  document.getElementById('bk-ex').textContent  = `"${card.ex}"`;
   document.getElementById('bk-tip').textContent = card.tip;
-  resetSpellDisplay();
-  stopAudio();
+  resetSpell(); stopAudio();
 }
-
-function renderQuiz(card, cat, cards) {
+function renderQuiz(card) {
   document.getElementById('q-prompt').textContent = card.pt;
-  document.getElementById('q-ctx').textContent = card.def;
-  document.getElementById('q-score').textContent = `${S.qScore} corretas de ${S.qTotal}`;
+  document.getElementById('q-ctx').textContent    = card.def;
+  document.getElementById('q-score').textContent  = `${S.qScore} corretas de ${S.qTotal}`;
   S.qAnswered = false;
-  const allCards = Object.values(CATS).flatMap(c => c.cards);
-  const pool = allCards.filter(c => c.id !== card.id);
-  const wrongs = pool.sort(() => Math.random() - 0.5).slice(0, 3);
+  const pool    = Object.values(CATS).flatMap(c => c.cards).filter(c => c.id !== card.id);
+  const wrongs  = pool.sort(() => Math.random() - 0.5).slice(0, 3);
   const options = [card, ...wrongs].sort(() => Math.random() - 0.5);
-  const optsContainer = document.getElementById('q-opts');
-  optsContainer.innerHTML = '';
-  ['A', 'B', 'C', 'D'].forEach((letter, i) => {
+  const container = document.getElementById('q-opts');
+  container.innerHTML = '';
+  ['A','B','C','D'].forEach((letter, i) => {
     if (!options[i]) return;
     const btn = document.createElement('button');
     btn.className = 'q-opt';
     btn.innerHTML = `<span class="opt-letter">${letter}</span><span class="opt-term">${options[i].term}</span>`;
     btn.onclick = () => answerQuiz(btn, options[i].id === card.id, card);
-    optsContainer.appendChild(btn);
+    container.appendChild(btn);
   });
 }
-
 function answerQuiz(btn, isCorrect, card) {
   if (S.qAnswered) return;
-  S.qAnswered = true;
-  S.qTotal++;
+  S.qAnswered = true; S.qTotal++;
   if (!S.prog[card.id]) S.prog[card.id] = { seen: true, qc: 0, qt: 0 };
   S.prog[card.id].qt = (S.prog[card.id].qt || 0) + 1;
   if (isCorrect) {
-    btn.classList.add('correct');
-    S.qScore++;
+    btn.classList.add('correct'); S.qScore++;
     S.prog[card.id].qc = (S.prog[card.id].qc || 0) + 1;
-    toast('✅ Correto!', 'ok');
+    toast('✓ Correto!', 'ok');
   } else {
     btn.classList.add('wrong');
     document.querySelectorAll('.q-opt').forEach(b => {
-      if (b.querySelector('.opt-term')?.textContent === card.term) {
-        b.classList.add('correct');
-      }
+      if (b.querySelector('.opt-term')?.textContent === card.term) b.classList.add('correct');
     });
-    toast(`❌ Era: ${card.term}`, 'err');
+    toast(`✗ Era: ${card.term}`, 'err');
   }
   document.querySelectorAll('.q-opt').forEach(b => b.disabled = true);
   document.getElementById('q-score').textContent = `${S.qScore} corretas de ${S.qTotal}`;
-  save();
-  checkAchievements();
-  setTimeout(() => nextCard(), 1900);
+  save(); checkAchievements();
+  setTimeout(nextCard, 1900);
 }
-
-function prevCard() {
-  const cards = CATS[S.cat].cards;
-  S.idx = (S.idx - 1 + cards.length) % cards.length;
-  renderCard();
-}
-
-function nextCard() {
-  const cards = CATS[S.cat].cards;
-  S.idx = (S.idx + 1) % cards.length;
-  renderCard();
-}
-
+function prevCard() { S.idx = (S.idx - 1 + CATS[S.cat].cards.length) % CATS[S.cat].cards.length; renderCard(); }
+function nextCard() { S.idx = (S.idx + 1) % CATS[S.cat].cards.length; renderCard(); }
 function flipCard() {
   if (S.mode !== 'study') return;
-  const fc = document.getElementById('flashcard');
   S.flipped = !S.flipped;
-  fc.classList.toggle('flipped', S.flipped);
+  document.getElementById('flashcard').classList.toggle('flipped', S.flipped);
   document.getElementById('conf-row').style.display = S.flipped ? 'flex' : 'none';
 }
-
 function rate(level) {
   const card = CATS[S.cat].cards[S.idx];
   if (!S.prog[card.id]) S.prog[card.id] = { seen: true };
   S.prog[card.id].conf = level;
-  save();
-  const messages = { easy: '✅ Dominado!', medium: '🤔 Continue praticando!', hard: '💪 Vai chegar lá!' };
-  toast(messages[level], level === 'easy' ? 'ok' : '');
-  checkAchievements();
+  save(); checkAchievements();
+  const msg = { easy: '✓ Dominado!', medium: 'Continue praticando.', hard: 'Você vai chegar lá.' };
+  toast(msg[level], level === 'easy' ? 'ok' : '');
   nextCard();
 }
 
-// ----- Progresso -----
+// ── Progress ─────────────────────────────────────
 function renderProgress() {
-  const progValues = Object.values(S.prog);
-  const studied = progValues.filter(p => p.seen).length;
-  const mastered = progValues.filter(p => p.conf === 'easy').length;
-  const totalQuiz = progValues.reduce((acc, p) => acc + (p.qt || 0), 0);
-  const correctQuiz = progValues.reduce((acc, p) => acc + (p.qc || 0), 0);
-  const accuracy = totalQuiz ? Math.round((correctQuiz / totalQuiz) * 100) + '%' : '—';
-  document.getElementById('st-studied').textContent = studied;
+  const pv = Object.values(S.prog);
+  const studied  = pv.filter(p => p.seen).length;
+  const mastered = pv.filter(p => p.conf === 'easy').length;
+  const tQ = pv.reduce((a, p) => a + (p.qt || 0), 0);
+  const cQ = pv.reduce((a, p) => a + (p.qc || 0), 0);
+  const acc = tQ ? Math.round((cQ / tQ) * 100) + '%' : '—';
+  document.getElementById('st-studied').textContent  = studied;
   document.getElementById('st-mastered').textContent = mastered;
-  document.getElementById('st-acc').textContent = accuracy;
-  document.getElementById('st-streak').textContent = S.streak;
+  document.getElementById('st-acc').textContent      = acc;
+  document.getElementById('st-streak').textContent   = S.streak;
 
-  // Conquistas
+  // Achievements
   const achGrid = document.getElementById('achievements-grid');
   if (achGrid) {
     achGrid.innerHTML = '';
     ACHIEVEMENTS.forEach(ach => {
       const unlocked = unlockedAchievements.includes(ach.id);
-      const card = document.createElement('div');
-      card.className = `achievement-card ${unlocked ? 'unlocked' : 'locked'}`;
-      card.innerHTML = `<div class="achievement-icon">${ach.icon}</div><div class="achievement-name">${ach.name}</div><div class="achievement-desc">${ach.desc}</div>`;
-      achGrid.appendChild(card);
+      const el = document.createElement('div');
+      el.className = `achievement-card ${unlocked ? 'unlocked' : 'locked'}`;
+      el.setAttribute('role', 'listitem');
+      el.innerHTML = `<div class="achievement-icon">${ach.icon}</div><div class="achievement-name">${ach.name}</div><div class="achievement-desc">${ach.desc}</div>`;
+      achGrid.appendChild(el);
     });
   }
 
-  // Domínio por categoria
+  // Mastery rows
   const masteryRows = document.getElementById('mastery-rows');
   masteryRows.innerHTML = '';
   Object.entries(CATS).forEach(([key, cat]) => {
-    const total = cat.cards.length;
-    const masteredCat = cat.cards.filter(c => S.prog[c.id]?.conf === 'easy').length;
-    const percent = total ? Math.round((masteredCat / total) * 100) : 0;
-    masteryRows.innerHTML += `
-      <div class="m-row">
-        <div class="m-cat">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${CAT_ICONS[key]}</svg> ${cat.pt}
-        </div>
-        <div class="m-bg">
-          <div class="m-fill" style="width:${percent}%; background:${cat.color}"></div>
-        </div>
-        <div class="m-pct" style="color:${cat.color}">${percent}%</div>
+    const total   = cat.cards.length;
+    const mCat    = cat.cards.filter(c => S.prog[c.id]?.conf === 'easy').length;
+    const pct     = total ? Math.round((mCat / total) * 100) : 0;
+    const row = document.createElement('div');
+    row.className = 'm-row';
+    row.setAttribute('role', 'listitem');
+    row.innerHTML = `
+      <div class="m-cat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${CAT_ICONS[key]}</svg>
+        ${cat.pt}
       </div>
+      <div class="m-bg"><div class="m-fill" style="width:${pct}%; background:${cat.color}"></div></div>
+      <div class="m-pct" style="color:${cat.color}">${pct}%</div>
     `;
+    masteryRows.appendChild(row);
   });
 
   renderCharts();
 }
 
-// BUG FIX: destrói instâncias existentes antes de recriar; usa dados reais do S.daily
 function renderCharts() {
-  // Destruir instâncias anteriores para evitar erro "Canvas already in use"
-  if (_chartInstances.daily) { _chartInstances.daily.destroy(); delete _chartInstances.daily; }
-  if (_chartInstances.pie)   { _chartInstances.pie.destroy();   delete _chartInstances.pie;   }
+  // Destroy existing instances to prevent "Canvas already in use" error
+  if (_charts.daily) { _charts.daily.destroy(); delete _charts.daily; }
+  if (_charts.pie)   { _charts.pie.destroy();   delete _charts.pie;   }
 
   const ctxDaily = document.getElementById('chart-daily');
   if (ctxDaily) {
-    const labels = [];
-    const data = [];
-    // BUG FIX: usa dados reais de S.daily em vez de Math.random()
+    const labels = [], data = [];
     for (let i = 6; i >= 0; i--) {
-      const d = new Date();
-      d.setDate(d.getDate() - i);
-      const key = d.toDateString();
+      const d = new Date(); d.setDate(d.getDate() - i);
       labels.push(d.toLocaleDateString('pt-BR', { weekday: 'short' }));
-      data.push(S.daily[key] || 0);
+      data.push(S.daily[d.toDateString()] || 0);
     }
-    _chartInstances.daily = new Chart(ctxDaily, {
+    _charts.daily = new Chart(ctxDaily, {
       type: 'line',
       data: {
         labels,
         datasets: [{
-          label: 'Cards estudados',
           data,
-          borderColor: '#3b82f6',
-          backgroundColor: 'rgba(59,130,246,0.12)',
-          tension: 0.4,
-          fill: true,
-          pointBackgroundColor: '#3b82f6',
-          pointRadius: 4,
-          pointHoverRadius: 6
+          borderColor: '#3B7DF0',
+          backgroundColor: 'rgba(59,125,240,0.08)',
+          tension: 0.4, fill: true,
+          pointBackgroundColor: '#3B7DF0',
+          pointRadius: 4, pointHoverRadius: 6,
+          borderWidth: 1.5
         }]
       },
       options: {
-        responsive: true,
-        maintainAspectRatio: false,
+        responsive: true, maintainAspectRatio: false,
         plugins: { legend: { display: false } },
         scales: {
-          y: {
-            beginAtZero: true,
-            ticks: { color: '#64748b', stepSize: 1 },
-            grid: { color: 'rgba(255,255,255,0.04)' }
-          },
-          x: {
-            ticks: { color: '#64748b' },
-            grid: { display: false }
-          }
+          y: { beginAtZero: true, ticks: { color: '#3D5470', stepSize: 1, font: { size: 11 } }, grid: { color: 'rgba(255,255,255,0.03)' } },
+          x: { ticks: { color: '#3D5470', font: { size: 11 } }, grid: { display: false } }
         }
       }
     });
@@ -577,50 +468,41 @@ function renderCharts() {
 
   const ctxPie = document.getElementById('chart-pie');
   if (ctxPie) {
-    const totalQuiz = Object.values(S.prog).reduce((acc, p) => acc + (p.qt || 0), 0);
-    const correctQuiz = Object.values(S.prog).reduce((acc, p) => acc + (p.qc || 0), 0);
-    const wrongQuiz = totalQuiz - correctQuiz;
-    _chartInstances.pie = new Chart(ctxPie, {
+    const tQ = Object.values(S.prog).reduce((a, p) => a + (p.qt || 0), 0);
+    const cQ = Object.values(S.prog).reduce((a, p) => a + (p.qc || 0), 0);
+    _charts.pie = new Chart(ctxPie, {
       type: 'doughnut',
       data: {
         labels: ['Acertos', 'Erros'],
         datasets: [{
-          data: totalQuiz > 0 ? [correctQuiz, wrongQuiz] : [1, 0],
-          backgroundColor: totalQuiz > 0 ? ['#10b981', '#f43f5e'] : ['#1e293b', '#1e293b'],
-          borderWidth: 0,
-          hoverOffset: 6
+          data: tQ > 0 ? [cQ, tQ - cQ] : [1, 0],
+          backgroundColor: tQ > 0 ? ['#3B7DF0', '#1D2940'] : ['#1D2940', '#1D2940'],
+          borderWidth: 0, hoverOffset: 6
         }]
       },
       options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        cutout: '68%',
-        plugins: {
-          legend: {
-            position: 'bottom',
-            labels: { color: '#94a3b8', padding: 16, font: { size: 12 } }
-          }
-        }
+        responsive: true, maintainAspectRatio: false, cutout: '70%',
+        plugins: { legend: { position: 'bottom', labels: { color: '#7A95B5', padding: 16, font: { size: 11 } } } }
       }
     });
   }
 }
 
-// ----- Keyboard shortcuts -----
+// ── Keyboard shortcuts ───────────────────────────
 document.addEventListener('keydown', e => {
   const v = document.querySelector('.view.active');
   if (!v || v.id !== 'view-study') return;
   if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
-  switch (e.key) {
-    case 'ArrowLeft':  prevCard(); break;
-    case 'ArrowRight': nextCard(); break;
-    case ' ':          e.preventDefault(); if (S.mode === 'study') flipCard(); break;
-    case 'p': case 'P': if (S.mode === 'study') speak('normal', null); break;
-    case '1':          if (S.flipped) rate('hard'); break;
-    case '2':          if (S.flipped) rate('medium'); break;
-    case '3':          if (S.flipped) rate('easy'); break;
+  switch(e.key) {
+    case 'ArrowLeft':       prevCard(); break;
+    case 'ArrowRight':      nextCard(); break;
+    case ' ':               e.preventDefault(); if (S.mode === 'study') flipCard(); break;
+    case 'p': case 'P':    if (S.mode === 'study') speak('normal', null); break;
+    case '1':               if (S.flipped) rate('hard');   break;
+    case '2':               if (S.flipped) rate('medium'); break;
+    case '3':               if (S.flipped) rate('easy');   break;
   }
 });
 
-// ----- Inicialização -----
+// ── Boot ─────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', loadAllCategories);
