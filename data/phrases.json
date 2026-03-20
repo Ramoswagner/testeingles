@@ -1,0 +1,152 @@
+{
+  "lbl": "Phrases",
+  "pt": "Frases Executivas",
+  "color": "#6366f1",
+  "desc": "Frases completas de reuniões, e-mails e apresentações. Veja a frase em inglês e entenda o contexto real.",
+  "cards": [
+    {
+      "id": "ph01",
+      "term": "Let's take this offline.",
+      "ph": "/lets teɪk ðɪs ˈɒflaɪn/",
+      "pt": "Vamos resolver isso em separado / fora da reunião.",
+      "def": "Said in a meeting to suggest that a topic should be discussed privately or in a smaller group, to avoid consuming everyone's time.",
+      "ex": "\"That's a valid concern — let's take this offline and I'll loop you in before end of day.\"",
+      "tip": "Muito usado quando um assunto começa a desviar o foco da reunião. Sinaliza que você valoriza o tempo dos outros."
+    },
+    {
+      "id": "ph02",
+      "term": "Can you walk me through your thinking?",
+      "ph": "/kæn juː wɔːk miː θruː jɔːr ˈθɪŋkɪŋ/",
+      "pt": "Pode me explicar o raciocínio por trás disso?",
+      "def": "A polite and curious way to ask someone to explain the logic or reasoning behind a decision, recommendation, or analysis.",
+      "ex": "\"Before we commit to this direction, can you walk me through your thinking on the risk assumptions?\"",
+      "tip": "Preferível a 'Why did you do this?' — muito mais colaborativo. Sinal de curiosidade genuína, não crítica."
+    },
+    {
+      "id": "ph03",
+      "term": "I want to make sure we're aligned on the next steps.",
+      "ph": "/aɪ wɒnt tə meɪk ʃɔːr wiːr əˈlaɪnd ɒn ðə nekst steps/",
+      "pt": "Quero garantir que estamos alinhados nos próximos passos.",
+      "def": "A closing phrase used to confirm shared understanding of action items, owners, and deadlines before ending a meeting.",
+      "ex": "\"Before we wrap up — I want to make sure we're aligned on the next steps. Sarah owns the deck, deadline Friday.\"",
+      "tip": "Use sempre ao fechar uma reunião. Evita o clássico problema de todo mundo sair com entendimentos diferentes."
+    },
+    {
+      "id": "ph04",
+      "term": "What's the headline here?",
+      "ph": "/wɒts ðə ˈhedlaɪn hɪər/",
+      "pt": "Qual é o ponto principal? / Qual é a mensagem-chave?",
+      "def": "A direct request for the most important insight or conclusion, cutting through detail to get to the core message.",
+      "ex": "\"We have three minutes before the CEO joins — what's the headline here?\"",
+      "tip": "Clássico de consultoria. Força o interlocutor a ser conciso. Ligado ao Pyramid Principle da McKinsey."
+    },
+    {
+      "id": "ph05",
+      "term": "Let's pressure-test this assumption.",
+      "ph": "/lets ˈpreʃər test ðɪs əˈsʌmpʃən/",
+      "pt": "Vamos questionar / testar essa premissa com rigor.",
+      "def": "To rigorously examine and challenge a key assumption to see if it holds under scrutiny before moving forward.",
+      "ex": "\"The entire model hinges on 12% growth — we need to pressure-test this assumption before the board meeting.\"",
+      "tip": "Mostra rigor analítico. Muito usado antes de apresentar recomendações a stakeholders céticos."
+    },
+    {
+      "id": "ph06",
+      "term": "I'll circle back to you by end of day.",
+      "ph": "/aɪl ˈsɜːkəl bæk tə juː baɪ end əv deɪ/",
+      "pt": "Retorno para você até o final do dia.",
+      "def": "A commitment to follow up with someone later, typically with more information, a decision, or a completed task.",
+      "ex": "\"I don't have the numbers in front of me — I'll circle back to you by end of day with the full breakdown.\"",
+      "tip": "Substituto elegante para 'I'll get back to you'. Implica comprometimento com prazo específico."
+    },
+    {
+      "id": "ph07",
+      "term": "We need to move the needle on this.",
+      "ph": "/wiː niːd tə muːv ðə ˈniːdəl ɒn ðɪs/",
+      "pt": "Precisamos gerar progresso real / mover o ponteiro nessa questão.",
+      "def": "To make meaningful, measurable progress on a problem or initiative, rather than just discussing it.",
+      "ex": "\"We've been talking about NPS for six months. We need to actually move the needle on this before Q3.\"",
+      "tip": "Implica urgência e orientação a resultado. Cuidado: se tudo é 'move the needle', nada é prioritário."
+    },
+    {
+      "id": "ph08",
+      "term": "Let's not boil the ocean.",
+      "ph": "/lets nɒt bɔɪl ðə ˈəʊʃən/",
+      "pt": "Não vamos tentar resolver tudo de uma vez / não sobrecomplicar.",
+      "def": "A warning against trying to solve every problem simultaneously or making a project unnecessarily complex and comprehensive.",
+      "ex": "\"I appreciate the thoroughness, but let's not boil the ocean — what are the three levers with the most impact?\"",
+      "tip": "Sinal de maturidade estratégica: saber o que NÃO fazer é tão importante quanto o que fazer."
+    },
+    {
+      "id": "ph09",
+      "term": "Can we put a number on that?",
+      "ph": "/kæn wiː pʊt ə ˈnʌmbər ɒn ðæt/",
+      "pt": "Conseguimos quantificar isso?",
+      "def": "A request to attach a specific, measurable figure to a claim, risk, or opportunity instead of leaving it qualitative.",
+      "ex": "\"You're saying the delay creates 'significant risk' — can we put a number on that? What's the financial exposure?\"",
+      "tip": "Transforma percepções vagas em dados acionáveis. Pergunta frequente de consultores e executivos."
+    },
+    {
+      "id": "ph10",
+      "term": "What does success look like for you?",
+      "ph": "/wɒt dʌz səkˈses lʊk laɪk fɔːr juː/",
+      "pt": "Como o sucesso se parece para você? / Qual é o seu critério de sucesso?",
+      "def": "An open question used to understand the client's or stakeholder's specific definition of a successful outcome.",
+      "ex": "\"Before we finalize the scope — what does success look like for you twelve months from now?\"",
+      "tip": "Pergunta de ouro em discovery meetings. Alinha expectativas antes de começar qualquer entrega."
+    },
+    {
+      "id": "ph11",
+      "term": "We're burning daylight on this.",
+      "ph": "/wiːr bɜːnɪŋ ˈdeɪlaɪt ɒn ðɪs/",
+      "pt": "Estamos perdendo tempo / gastando tempo precioso nisso.",
+      "def": "An informal expression indicating that time is being wasted on a topic or discussion that isn't progressing.",
+      "ex": "\"We've debated the naming for thirty minutes. We're burning daylight — let's vote and move on.\"",
+      "tip": "Mais direto que 'we're wasting time'. Transmite senso de urgência sem soar agressivo."
+    },
+    {
+      "id": "ph12",
+      "term": "Let me push back on that for a second.",
+      "ph": "/let miː pʊʃ bæk ɒn ðæt fɔːr ə ˈsekənd/",
+      "pt": "Deixa eu questionar isso por um momento / discordo respeitosamente.",
+      "def": "A polite but assertive way to express disagreement or challenge a statement without being aggressive.",
+      "ex": "\"I want to push back on that for a second — the data we saw last quarter suggests a different pattern.\"",
+      "tip": "O prefácio 'for a second' suaviza a resistência. Essencial para ambientes onde discordância direta é difícil."
+    },
+    {
+      "id": "ph13",
+      "term": "What's keeping you up at night?",
+      "ph": "/wɒts ˈkiːpɪŋ juː ʌp æt naɪt/",
+      "pt": "O que mais te preocupa? / Qual é sua maior preocupação?",
+      "def": "An empathetic question that invites a client or colleague to share their deepest concerns or worries about a situation.",
+      "ex": "\"We can talk deliverables, but honestly — what's keeping you up at night about this integration?\"",
+      "tip": "Vai além do racional e acessa o emocional. Abre espaço para riscos que o cliente não teria mencionado espontaneamente."
+    },
+    {
+      "id": "ph14",
+      "term": "I'd like to get your read on this.",
+      "ph": "/aɪd laɪk tə ɡet jɔːr riːd ɒn ðɪs/",
+      "pt": "Gostaria de saber sua leitura / perspectiva sobre isso.",
+      "def": "A request for someone's interpretation, opinion, or assessment of a situation or piece of information.",
+      "ex": "\"Before I respond to the client, I'd like to get your read on this — does their concern seem legitimate to you?\"",
+      "tip": "Menos formal que 'What is your assessment?' Convida perspectiva sem impor pressão."
+    },
+    {
+      "id": "ph15",
+      "term": "We're looking at a two-speed approach.",
+      "ph": "/wiːr ˈlʊkɪŋ æt ə tuː spiːd əˈprəʊtʃ/",
+      "pt": "Estamos pensando em uma abordagem em dois ritmos / paralela.",
+      "def": "A strategy that runs two workstreams at different paces — one for quick wins and another for deeper, longer-term transformation.",
+      "ex": "\"For the turnaround, we're looking at a two-speed approach: stabilize cash flow in 90 days while redesigning the operating model.\"",
+      "tip": "Comum em projetos de transformação. Equilibra urgência de curto prazo com mudança estrutural de longo prazo."
+    },
+    {
+      "id": "ph16",
+      "term": "The numbers tell a different story.",
+      "ph": "/ðə ˈnʌmbərz tel ə ˈdɪfrənt ˈstɔːri/",
+      "pt": "Os números mostram uma realidade diferente / contradizem o que foi dito.",
+      "def": "A phrase used to introduce data that contradicts a narrative or assumption being presented, based on evidence.",
+      "ex": "\"The team believes the product is outperforming, but the numbers tell a different story — churn is up 18% this quarter.\"",
+      "tip": "Forma elegante de contestar com dados. Atribui o argumento à evidência, não a você — reduz conflito pessoal."
+    }
+  ]
+}
